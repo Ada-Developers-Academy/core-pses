@@ -1,25 +1,10 @@
-# PSE 4 - Palindrome
+# Calculator
 
-## Given this problem prompt:
+Given this problem prompt:
 
-## Given this problem prompt:
+> Build a method named `calculator` which takes two numbers and an operator as parameters, the method should return the result of the operation.
 
-Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
-
-Create a Ruby method that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `true` if the string is a palindrome.
-
-This is one example input/output for this method:
-
-| Original string as parameter | Is it a palindrome? |
-| --- | --- |
-| `"Hello, world!"` | No |
-| `"racecar"` | Yes |
-| `"noon"` | Yes |
-| `"mom"` | Yes |
-| `"kayak"` | Yes |
-
-
-## Answer the following prompts:
+Answer the following prompts:
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -27,35 +12,81 @@ This is one example input/output for this method:
 ### !challenge
 
 * type: paragraph
-* id: 20067602-05d7-4cea-94c1-1cadfc8e787e
-* title: List at least 5 questions whose answers would clarify the problem statement
+* id: 14e453c6-c3ea-4243-8657-a9cb5a576537
+* title: Asking Clarifying Questions
 * points: 1
 * topics: pse
 
 ##### !question
 
-List at least 5 questions whose answers would clarify the problem statement.
+List at least 5 questions whose answers would clarify the problem statement
 
 ##### !end-question
 
 ##### !placeholder
 
-Give five clarifying questions.
+Your questions go here
 
 ##### !end-placeholder
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+##### !hint
+
+It's always a good idea to clarify what the method will take as input and what kind of output is expected.
+
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
-Some sample clarifying questions could be:
+### !end-challenge
 
-1.  Is there some pattern required for the student ids?
-1.  What key-value pairs should the hashes contain?
-1.  What should happen if the array of names is empty?
-1.  Can id numbers be negative?
-1.  Should ids be Integers or can they be floats?
+<!-- ======================= END CHALLENGE ======================= -->
+
+2. List 2 sets of example inputs and their expected output
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: 355e71b5-707d-4108-b7da-674ffab34617
+* title: Example inputs & Outputs
+* points: 1
+* topics: pse
+
+##### !question
+
+List 2 sets of example inputs and their expected output
+
+##### !end-question
+
+##### !placeholder
+
+Two sets of inputs.
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+##### !hint
+
+Consider edge-cases like what happens when a number is 0?  
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+
+One example input/output would be:
+
+Input:
+0, 0, '/'
+Output:
+`nil` or Raise an error
+
+Input:
+5, 10, '*'
+Output: 
+50
 
 ##### !end-explanation
 
@@ -69,60 +100,36 @@ Some sample clarifying questions could be:
 ### !challenge
 
 * type: paragraph
-* id: f6c498f4-7da2-47b0-8a55-a9ea0d53864f
-* title: List 2 sets of example inputs and their expected output
+* id: 11071a4e-c983-4547-8f73-9f61e39025da
+* title: 2 Different Subproblems
 * points: 1
 * topics: pse
 
 ##### !question
 
-List 2 sets of example inputs and their expected output.
+Divide the project prompt into at least 2 different sub-problems
 
 ##### !end-question
 
 ##### !placeholder
 
-Two sets of input and their expected output.
+2 subproblems
 
 ##### !end-placeholder
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !hint
 
-### !end-challenge
+Are there any checks of input you need to do?  Are there any calculations?
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: 56e15301-9e21-4963-b3cb-a1c5e9c89f07
-* title: Two subproblems
-* points: 1
-* topics: pse
-
-##### !question
-
-Divide the project prompt into at least 2 different sub-problems.
-
-##### !end-question
-
-##### !placeholder
-
-Two subproblems
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
+Potential Subproblems include:
 
+1.  Determining the type of operation, plus, minus, etc
+1.  Doing the calculations
 
 ##### !end-explanation
 
@@ -136,20 +143,20 @@ Two subproblems
 ### !challenge
 
 * type: paragraph
-* id: c5c250c9-8f71-4a72-b42b-60cbee93e02b
-* title: How to solve a subproblem
+* id: 3a3140a9-9ef1-45e1-8d54-375ec2abef40
+* title: Logical Steps
 * points: 1
 * topics: pse
 
 ##### !question
 
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code.
+Pick one of those problems from above and write a numbered list explaining how to solve that problem without using full lines of code
 
 ##### !end-question
 
 ##### !placeholder
 
-Steps to solve a subproblem
+Write english-steps here.
 
 ##### !end-placeholder
 
@@ -168,20 +175,20 @@ Steps to solve a subproblem
 ### !challenge
 
 * type: paragraph
-* id: 52c7bf67-d5e6-4655-8c1e-7d4c10184152
-* title: Code to solve the subproblem
+* id: 0090acaa-bb9b-4e0b-b93c-0a5b73653a91
+* title: Subproblem Solution
 * points: 1
 * topics: pse
 
 ##### !question
 
-Write down a solution for your answer in #4 in code here
+Record a solution for your answer for the above subproblem in code
 
 ##### !end-question
 
 ##### !placeholder
 
-Code solution to a subproblem
+Put Ruby code here
 
 ##### !end-placeholder
 
@@ -193,9 +200,3 @@ Code solution to a subproblem
 ### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
-
-## Reminders
-
-- Finish this assignment individually.
-- The instructor will collect this at the beginning of the next lesson.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../00-about-pses/01-about-pses.md)" in unit.

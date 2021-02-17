@@ -1,19 +1,8 @@
-# PSE 3 - Hamming
+# Data Transformation
 
 ## Given this problem prompt:
 
-Imagine working on software that analyzes mutations in DNA.
-
-Create a method that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands as parameters. This method should have a return value of the number of differences between each string. For example, given these two DNA strands (strings), the method should return `7` because there are 7 differences:
-
-```
-Strand #1:   GAGCCTACTAACGGGAT
-Strand #2:   CATCGTAATGACGGCCT
-Differences: ^ ^ ^  ^ ^    ^^
-             7 in total
-```
-
-(This problem is sourced from http://rosalind.info/problems/hamm/)
+Imagine working on software that tracks students. Create a method that takes in an array of strings that represent student names. This method should return an array of hashes. Each hash should have the name of the student and a student id. The ids should **not** be consecutive numbers.
 
 ## Answer the following prompts:
 
@@ -23,7 +12,7 @@ Differences: ^ ^ ^  ^ ^    ^^
 ### !challenge
 
 * type: paragraph
-* id: 50c3b4fb-5706-482f-8300-a2e4a1c2c8ed
+* id: 4a9d2a08-fef1-4b1f-aa15-75c120f35982
 * title: List at least 5 questions whose answers would clarify the problem statement
 * points: 1
 * topics: pse
@@ -65,7 +54,7 @@ Some sample clarifying questions could be:
 ### !challenge
 
 * type: paragraph
-* id: 14f28838-7d15-413e-97ed-3dd3511949e8
+* id: 6d6af012-587a-43be-9a5d-cfcf751ed13f
 * title: List 2 sets of example inputs and their expected output
 * points: 1
 * topics: pse
@@ -85,6 +74,14 @@ Two sets of input and their expected output.
 <!-- other optional sections -->
 <!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Some example input/outputs are:
+
+1.  Input:  `["Mary", "Sally", "Ada"]`  Output:  `[{ id: 1, name: "Mary"}, { id: 3, name: "Sally"}, {id: 5, name: "Ada" }]`
+1.  Input: `[]`  Output: `[]`
+
+##### !end-explanation
 
 ### !end-challenge
 
@@ -96,7 +93,7 @@ Two sets of input and their expected output.
 ### !challenge
 
 * type: paragraph
-* id: ec0bd5c8-b262-4eba-b15a-0b6139cb479c
+* id: cd5f2995-9496-4260-bb05-7000990537b1
 * title: Two subproblems
 * points: 1
 * topics: pse
@@ -118,7 +115,11 @@ Two subproblems
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
+Potential subproblems include:
 
+1.  Calculating id numbers
+1.  Converting an array of names into an array of hashes
+1.  Ensuring id numbers are not consecutive
 
 ##### !end-explanation
 
@@ -132,7 +133,7 @@ Two subproblems
 ### !challenge
 
 * type: paragraph
-* id: 8bb89173-1352-4bd0-8fc3-b9d5e0f8e588
+* id: 395487ac-af1f-4d09-8673-14bdf0e5c64b
 * title: How to solve a subproblem
 * points: 1
 * topics: pse
@@ -164,7 +165,7 @@ Steps to solve a subproblem
 ### !challenge
 
 * type: paragraph
-* id: 84c9d1b5-ba85-417c-b04d-10ff0024f169
+* id: 7433f1f3-9f42-4809-885b-74b3203b326c
 * title: Code to solve the subproblem
 * points: 1
 * topics: pse

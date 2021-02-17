@@ -19,8 +19,8 @@ Standards:
         UID: 71d8142849851c1999d31842cddb2aa4
         Path: /about-pses/01-about-pses.md
   -
-    Title: Pse 01
-    Description: The first Ada PSE
+    Title: PSE 01
+    Description: Calculator
     UID: 0a601cc26210e6eed0bd55f8a843ca8f
     SuccessCriteria:
       - success criteria
@@ -28,10 +28,10 @@ Standards:
       -
         Type: Checkpoint
         UID: 10ddabe050188bf867ffe5c5ccb689ae
-        Path: /01-pse-01/01-wk-02-pse-checkpoint.md
+        Path: /01/calculator.checkpoint.md
   -
     Title: PSE 02
-    Description: The second problem solving exercise
+    Description: Data Transformation
     UID: 43f37536-7fe3-4a01-8832-9bad151b2d7f
     SuccessCriteria:
       - success criteria
@@ -39,10 +39,10 @@ Standards:
       -
         Type: Checkpoint
         UID: 5e834674-1c56-48f8-ae3d-ef598f3d79a7
-        Path: /02-pse02/pse-2-checkpoint.md
+        Path: /02/data-transformation.checkpoint.md
   -
     Title: PSE 03
-    Description: The hamming exercise
+    Description: Hamming
     UID: 1d305fd4-0793-406e-882d-6f6ab1d6c0e7
     SuccessCriteria:
       - success criteria
@@ -50,7 +50,7 @@ Standards:
       -
         Type: Checkpoint
         UID: 43e4b99a-7df0-4147-8bea-2f08465d0c47
-        Path: /03-pse/01-pse-03.checkpoint.md
+        Path: /03/hamming.checkpoint.md
   -      
     Title: PSE 04
     Description: Palindrome
@@ -61,10 +61,10 @@ Standards:
       -
         Type: Checkpoint
         UID: 0a9625c9-fb2b-4dbf-96f8-e1fd03a60acb
-        Path: /04-pse/01-pse-04.checkpoint.md        
+        Path: /04/palindrome.checkpoint.md        
   -
     Title: PSE 05
-    Description: Pairs with given sum
+    Description: Pairs with Given Sum
     UID: ab5d6542-f49a-419a-814e-03872bb60c84
     SuccessCriteria:
       - success criteria
@@ -72,7 +72,7 @@ Standards:
       -
         Type: Checkpoint
         UID: cebb89a0-61f0-4bc0-a889-6654045c839c
-        Path: /05-pse/01-pse-05.checkpoint.md
+        Path: /05/pairs-with-given-sum.checkpoint.md
   -
     Title: PSE 06
     Description: Merging Sorted Lists
@@ -83,7 +83,7 @@ Standards:
       -
         Type: Checkpoint
         UID: f937f38d-b86d-4607-8203-b579e1f1689e
-        Path: /06-pse/01-pse-06.checkpoint.md      
+        Path: /06/merging-sorted-lists.checkpoint.md      
   -
     Title: PSE 07
     Description: Reshape a Matrix
@@ -94,7 +94,7 @@ Standards:
       -
         Type: Checkpoint          
         UID: 6cfc6d12-7850-4236-be85-64d8a6259f07
-        Path: /07-pse/01-pse-07.checkpoint.md
+        Path: /07/reshape-a-matrix.checkpoint.md
   -
     Title: PSE 08
     Description: Kth Missing Positive Number
@@ -105,10 +105,10 @@ Standards:
       -
         Type: Checkpoint
         UID: 2b22f6b1-ca0c-4dc9-8913-b62ab2698fbe
-        Path: /08-pse/01-pse-08.checkpoint.md
+        Path: /08/kth-missing-positive-number.checkpoint.md
   -
     Title: PSE 09
-    Description: Knapsack Problem
+    Description: Knapsack
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
       - success criteria
@@ -116,5 +116,5 @@ Standards:
       -
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
-        Path: /09-pse/01-pse-09.checkpoint.md
+        Path: /09/knapsack.checkpoint.md
       

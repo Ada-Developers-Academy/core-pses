@@ -1,8 +1,21 @@
-# Data Transformation Problem
+# PSE 4 - Palindrome
 
 ## Given this problem prompt:
 
-Imagine working on software that tracks students. Create a method that takes in an array of strings that represent student names. This method should return an array of hashes. Each hash should have the name of the student and a student id. The ids should **not** be consecutive numbers.
+Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
+
+Create a Ruby method that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `true` if the string is a palindrome.
+
+This is one example input/output for this method:
+
+| Original string as parameter | Is it a palindrome? |
+| --- | --- |
+| `"Hello, world!"` | No |
+| `"racecar"` | Yes |
+| `"noon"` | Yes |
+| `"mom"` | Yes |
+| `"kayak"` | Yes |
+
 
 ## Answer the following prompts:
 
@@ -12,7 +25,7 @@ Imagine working on software that tracks students. Create a method that takes in 
 ### !challenge
 
 * type: paragraph
-* id: 4a9d2a08-fef1-4b1f-aa15-75c120f35982
+* id: 20067602-05d7-4cea-94c1-1cadfc8e787e
 * title: List at least 5 questions whose answers would clarify the problem statement
 * points: 1
 * topics: pse
@@ -54,7 +67,7 @@ Some sample clarifying questions could be:
 ### !challenge
 
 * type: paragraph
-* id: 6d6af012-587a-43be-9a5d-cfcf751ed13f
+* id: f6c498f4-7da2-47b0-8a55-a9ea0d53864f
 * title: List 2 sets of example inputs and their expected output
 * points: 1
 * topics: pse
@@ -74,14 +87,6 @@ Two sets of input and their expected output.
 <!-- other optional sections -->
 <!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation
-
-Some example input/outputs are:
-
-1.  Input:  `["Mary", "Sally", "Ada"]`  Output:  `[{ id: 1, name: "Mary"}, { id: 3, name: "Sally"}, {id: 5, name: "Ada" }]`
-1.  Input: `[]`  Output: `[]`
-
-##### !end-explanation
 
 ### !end-challenge
 
@@ -93,7 +98,7 @@ Some example input/outputs are:
 ### !challenge
 
 * type: paragraph
-* id: cd5f2995-9496-4260-bb05-7000990537b1
+* id: 56e15301-9e21-4963-b3cb-a1c5e9c89f07
 * title: Two subproblems
 * points: 1
 * topics: pse
@@ -115,11 +120,7 @@ Two subproblems
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
-Potential subproblems include:
 
-1.  Calculating id numbers
-1.  Converting an array of names into an array of hashes
-1.  Ensuring id numbers are not consecutive
 
 ##### !end-explanation
 
@@ -133,7 +134,7 @@ Potential subproblems include:
 ### !challenge
 
 * type: paragraph
-* id: 395487ac-af1f-4d09-8673-14bdf0e5c64b
+* id: c5c250c9-8f71-4a72-b42b-60cbee93e02b
 * title: How to solve a subproblem
 * points: 1
 * topics: pse
@@ -165,7 +166,7 @@ Steps to solve a subproblem
 ### !challenge
 
 * type: paragraph
-* id: 7433f1f3-9f42-4809-885b-74b3203b326c
+* id: 52c7bf67-d5e6-4655-8c1e-7d4c10184152
 * title: Code to solve the subproblem
 * points: 1
 * topics: pse
