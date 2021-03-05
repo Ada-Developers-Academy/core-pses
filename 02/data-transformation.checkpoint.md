@@ -195,4 +195,4 @@ Code solution to a subproblem
 
 - Finish this assignment individually.
 - The instructor will collect this at the beginning of the next lesson.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../00-about-pses/01-about-pses.md)" in unit.
+- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/01-about-pses.md )" in unit.
