@@ -1,189 +1,152 @@
-# PSE X: Problem Name
+# Problem Name
 
-## Given this problem prompt:
+## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a method that `<TEMPLATE: is responsible for what, as a high-level goal?>`. This method should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as parameters. This method should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
 
-## Answer the following prompts:
+## Prompts
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
-* id: <TEMPLATE>
-* title: Asking Clarifying Questions
+* id: 
+* title: Ask Clarifying Questions
 * points: 1
 * topics: pse
-
 ##### !question
 
-List at least 5 questions whose answers would clarify the problem statement
+List five or more questions whose answers would clarify the problem statement
 
 ##### !end-question
-
-##### !placeholder
-
-Your questions go here
-
-##### !end-placeholder
-
-<!-- other optional sections -->
 ##### !hint
 
-It's always a good idea to clarify what the method will take as input and what kind of output is expected.
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
 ##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-2. List 2 sets of example inputs and their expected return values.
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 2 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
-* id: <TEMPLATE>
-* title: Example inputs & Outputs
+* id: 
+* title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
-
 ##### !question
 
-List 2 sets of example inputs and their expected return values
+List two sets of example arguments and the expected return value for these arguments
 
 ##### !end-question
-
-##### !placeholder
-
-Two sets of inputs.
-
-##### !end-placeholder
-
-<!-- other optional sections -->
 ##### !hint
 
-Consider edge-cases 
+Consider unexpected test cases and edge-case situations.
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
 ##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
 
-<TEMPLATE EXPLANATION>
+Here are some example sets of inputs and outputs:
 
 ##### !end-explanation
 
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 3 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
-* id: <TEMPLATE>
-* title: 2 Different Subproblems
+* id: 
+* title: Break Down the Problem into Sub-Problems
 * points: 1
 * topics: pse
-
 ##### !question
 
-Divide the project prompt into at least 2 different sub-problems
+Divide the project prompt into at least two different sub-problems
 
 ##### !end-question
-
-##### !placeholder
-
-2 subproblems
-
-##### !end-placeholder
-
-<!-- other optional sections -->
 ##### !hint
 
-Are there any checks of input you need to do?  Are there any calculations?
+Consider:
+
+- Any requirements around checking inputs
+- Any requirements around calculations
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
 ##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
-<TEMPLATE EXPLANATION>
+Here are some example sub-problems:
+
+1.
 
 ##### !end-explanation
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 4 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
-* id: <TEMPLATE>
-* title: Logical Steps
+* id: 
+* title: Create Logical Steps
 * points: 1
 * topics: pse
-
 ##### !question
 
-Pick one of those problems from above and write a numbered list explaining how to solve that problem without using full lines of code
+Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider the following for inspiration:
 
-Write english-steps here.
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
+##### !end-hint
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 5 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
-* id: <TEMPLATE>
-* title: Subproblem Solution
+* id: 
+* title: Solve a Sub-Problem
 * points: 1
 * topics: pse
-
 ##### !question
 
-Record a solution for your answer for the above subproblem in code
+Write the pseudocode or code solution for your answer for #4
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider the following for inspiration:
 
-Put Ruby code here
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
+##### !end-hint
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
+<!-- prettier-ignore-end -->
