@@ -23,9 +23,9 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Checkpoint
+        Type: Lesson
         UID: 10ddabe050188bf867ffe5c5ccb689ae
-        Path: /01/calculator.checkpoint.md
+        Path: /01/calculator.md
   -
     Title: PSE 02
     Description: Data Transformation
