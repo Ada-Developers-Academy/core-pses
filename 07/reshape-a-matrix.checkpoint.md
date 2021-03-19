@@ -228,4 +228,4 @@ Code solution to a subproblem
 ## Reminders
 
 - Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/01-about-pses.md )" in unit.
+- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
