@@ -1,8 +1,8 @@
-# Problem Name
+# Calculator
 
 ## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on office software that has math and calculation tools as a feature. Create a function named `calculator` that is responsible for taking two numbers and a math operation (such as addition and subtraction) as parameters. This function should have a return value of the calculated math operation.
 
 ## Prompts
 
@@ -10,7 +10,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: ibbbzw
 * title: Ask Clarifying Questions
 * points: 1
 * topics: pse
@@ -35,7 +35,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: k9Zgqq
 * title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
@@ -59,6 +59,14 @@ Consider the following for inspiration:
 
 Here are some example sets of inputs and outputs:
 
+1. One example
+    - `5`, `10`, `"*"`
+    - Output: `50`
+
+1. One example
+    - Input: `0`, `0`, `"/"`
+    - Output: `None` or Raise an error
+
 ##### !end-explanation
 
 ### !end-challenge
@@ -68,7 +76,7 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: gN5kDq
 * title: Break Down the Problem into Sub-Problems
 * points: 1
 * topics: pse
@@ -95,7 +103,8 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.
+1.  Determining the type of operation, plus, minus, etc
+1.  Doing the calculations
 
 ##### !end-explanation
 ### !end-challenge
@@ -105,7 +114,7 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: tR8NJU
 * title: Create Logical Steps
 * points: 1
 * topics: pse
@@ -130,7 +139,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: U8zzmp
 * title: Solve a Sub-Problem
 * points: 1
 * topics: pse
