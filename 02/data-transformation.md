@@ -1,8 +1,8 @@
-# Problem Name
+# Data Transformation
 
 ## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on software that tracks students. Create a function named `get_student_data` that is responsible for giving back student data. This function should take in a list of student name strings. This function should have a return value of a list of dictionaries. Each dictionary should have the name of the student and a student id. The ids should **not** be consecutive numbers.
 
 ## Prompts
 
@@ -10,7 +10,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: jFQ3KB
 * title: Ask Clarifying Questions
 * points: 1
 * topics: pse
@@ -28,9 +28,15 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
-##### !explanation
+##### !explanation 
 
 Here are some example clarifying questions:
+
+1.  Is there some pattern required for the student IDs?
+1.  What key-value pairs should the student dictionaries contain?
+1.  What should happen if the list of names is empty?
+1.  Can ID numbers be negative?
+1.  Should IDs be integers? Can they be floats?
 
 ##### !end-explanation
 ### !end-challenge
@@ -40,7 +46,7 @@ Here are some example clarifying questions:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: HCdpPh
 * title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
@@ -64,6 +70,9 @@ Consider the following for inspiration:
 
 Here are some example sets of inputs and outputs:
 
+1.  Input:  `["Zahra", "Sally", "Ada"]`  Output:  `[{ id: 1, name: "Zahra"}, { id: 3, name: "Sally"}, {id: 5, name: "Ada" }]`
+1.  Input: `[]`  Output: `[]`
+
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
@@ -72,7 +81,7 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: C85RJ1
 * title: Break Down the Problem into Sub-Problems
 * points: 1
 * topics: pse
@@ -99,7 +108,9 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.
+1.  Calculating id numbers
+1.  Converting an array of names into an array of hashes
+1.  Ensuring id numbers are not consecutive
 
 ##### !end-explanation
 ### !end-challenge
@@ -109,7 +120,7 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: QD2zoX
 * title: Create Logical Steps
 * points: 1
 * topics: pse
@@ -134,7 +145,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: JuPr9m
 * title: Solve a Sub-Problem
 * points: 1
 * topics: pse
