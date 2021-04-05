@@ -33,6 +33,11 @@ Consider the following for inspiration:
 Here are some example clarifying questions:
 
 ##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least five questions
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -65,6 +70,14 @@ Consider the following for inspiration:
 Here are some example sets of inputs and outputs:
 
 ##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't 2 examples
+- The answer is wrong if either of them aren't valid/consistent with each other
+- The answer is wrong if the example inputs were not what the problem stated for valid input
+- The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -102,6 +115,12 @@ Here are some example sub-problems:
 1.
 
 ##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least two sub-problems listed
+- The answer is wrong if any of the sub-problems aren't relevant to the original problem
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -127,6 +146,12 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
+##### !rubric
+
+- The answer is wrong if it doesn't have at least two steps
+- The answer is wrong if it isn't logical to another reader
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -152,5 +177,13 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
+##### !rubric
+
+The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
+
+- The answer is wrong if it is blank
+- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
