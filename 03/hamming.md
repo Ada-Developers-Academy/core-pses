@@ -1,8 +1,21 @@
-# Problem Name
+# Hamming
 
 ## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on software that analyzes mutations in DNA.
+
+Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands as parameters. This method should have a return value of the number of differences between each string.
+
+For example, given these two DNA strands (strings), `hamming_distance` should return `7` because there are 7 differences:
+
+```
+Strand #1:   GAGCCTACTAACGGGAT
+Strand #2:   CATCGTAATGACGGCCT
+Differences: ^ ^ ^  ^ ^    ^^
+             7 in total
+```
+
+(This problem is sourced from http://rosalind.info/problems/hamm/)
 
 ## Prompts
 
@@ -10,7 +23,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 50c3b4fb-5706-482f-8300-a2e4a1c2c8ed
 * title: Ask Clarifying Questions
 * points: 1
 * topics: pse
@@ -32,10 +45,17 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
+1. What happens if the strings are two different lengths?
+1. How small can the DNA strands be? What happens if the strings are empty?
+1. Can we assume that DNA strands be made up of only "A", "C", "G", and "T"? Will there ever be any exceptions?
+1. How large can the DNA strands be?
+1. Are there ever any patterns in DNA strands?
+
 ##### !end-explanation
 ##### !rubric
 
 - The answer is wrong if there aren't at least five questions
+- The answer is wrong if there were no questions clarifying what you should do if the two strings are different lengths
 
 ##### !end-rubric
 ### !end-challenge
@@ -45,7 +65,7 @@ Here are some example clarifying questions:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 14f28838-7d15-413e-97ed-3dd3511949e8
 * title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
@@ -69,13 +89,23 @@ Consider the following for inspiration:
 
 Here are some example sets of inputs and outputs:
 
+Input:
+    - `"GAGCC"`
+    - `"CATCG"`
+Output: 3
+
+Input:
+    - `"G"`
+    - `"C"`
+Output: 1
+
 ##### !end-explanation
 ##### !rubric
 
 - The answer is wrong if there aren't 2 examples
 - The answer is wrong if either of them aren't valid/consistent with each other
-- The answer is wrong if the example inputs were not what the problem stated for valid input
-- The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+- The answer is wrong if the example inputs were not two strings for valid input
+- The answer is wrong if the example outputs were not integers or exceptions raised
 
 ##### !end-rubric
 ### !end-challenge
@@ -85,7 +115,7 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: ec0bd5c8-b262-4eba-b15a-0b6139cb479c
 * title: Break Down the Problem into Sub-Problems
 * points: 1
 * topics: pse
@@ -112,12 +142,13 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.
+1. How can I iterate over every element in both DNA strands at the same time?
+1. What's the best way for me to compare the difference between two letters in a string?
 
 ##### !end-explanation
 ##### !rubric
 
-- The answer is wrong if there aren't at least two sub-problems listed
+- The answer is wrong if there aren't at least 2 sub-problems listed
 - The answer is wrong if any of the sub-problems aren't relevant to the original problem
 
 ##### !end-rubric
@@ -128,7 +159,7 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 8bb89173-1352-4bd0-8fc3-b9d5e0f8e588
 * title: Create Logical Steps
 * points: 1
 * topics: pse
@@ -159,7 +190,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 84c9d1b5-ba85-417c-b04d-10ff0024f169
 * title: Solve a Sub-Problem
 * points: 1
 * topics: pse
