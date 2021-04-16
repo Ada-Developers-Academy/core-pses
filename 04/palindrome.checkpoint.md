@@ -1,199 +1,214 @@
-# PSE 4 - Palindrome
+# Palindrome
 
-## Given this problem prompt:
+## Problem
 
 Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 
-Create a Ruby method that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `true` if the string is a palindrome.
+Create a function named `is_palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
 
 This is one example input/output for this method:
 
 | Original string as parameter | Is it a palindrome? |
-| --- | --- |
-| `"Hello, world!"` | No |
-| `"racecar"` | Yes |
-| `"noon"` | Yes |
-| `"mom"` | Yes |
-| `"kayak"` | Yes |
+| ---------------------------- | ------------------- |
+| `"Hello, world!"`            | No                  |
+| `"racecar"`                  | Yes                 |
+| `"noon"`                     | Yes                 |
+| `"mom"`                      | Yes                 |
+| `"kayak"`                    | Yes                 |
 
+## Prompts
 
-## Answer the following prompts:
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 20067602-05d7-4cea-94c1-1cadfc8e787e
-* title: List at least 5 questions whose answers would clarify the problem statement
+* title: Ask Clarifying Questions
 * points: 1
 * topics: pse
-
 ##### !question
 
-List at least 5 questions whose answers would clarify the problem statement.
+List five or more questions whose answers would clarify the problem statement
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider the following for inspiration:
 
-Give five clarifying questions.
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !end-hint
 ##### !explanation
 
-Some sample clarifying questions could be:
+Here are some example clarifying questions:
 
-1.  Is there some pattern required for the student ids?
-1.  What key-value pairs should the hashes contain?
-1.  What should happen if the array of names is empty?
-1.  Can id numbers be negative?
-1.  Should ids be Integers or can they be floats?
+1. What should the function return if the string is not a palindrome?
+1. What should the function return if the string is an empty string, `""`?
+1. Does capitalization matter? Is this case-sensitive? Is `"Kayak"` a palindrome?
+1. What do we do with punctuation? Is `"kayak!"` a palindrome?
+1. What do we do with white space? Is `"k ayak"` a palindrome?
 
 ##### !end-explanation
+##### !rubric
 
+- The answer is wrong if there aren't at least five questions
+- They should ask about what to return if the string is not a palindrome (the problem statement intentionally does not state to return `False`)
+- They should ask about some set of special characters
+
+##### !end-rubric
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 2 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
-* type: paragraph
-* id: f6c498f4-7da2-47b0-8a55-a9ea0d53864f
-* title: List 2 sets of example inputs and their expected output
-* points: 1
-* topics: pse
-
-##### !question
-
-List 2 sets of example inputs and their expected output.
-
-##### !end-question
-
-##### !placeholder
-
-Two sets of input and their expected output.
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
 * type: paragraph
 * id: 56e15301-9e21-4963-b3cb-a1c5e9c89f07
-* title: Two subproblems
+* title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
-
 ##### !question
 
-Divide the project prompt into at least 2 different sub-problems.
+List two sets of example arguments and the expected return value for these arguments
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider unexpected test cases and edge-case situations.
 
-Two subproblems
+Consider the following for inspiration:
 
-##### !end-placeholder
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation
+##### !end-hint
+##### !explanation 
 
+Here are some example sets of inputs and outputs:
 
+1. Input: `ada`, Output: `True`
+1. Input: `Ada`, Output: `False`
 
 ##### !end-explanation
+##### !rubric
 
+- The answer is wrong if there aren't 2 examples
+- The answer is wrong if either of them aren't valid/consistent with each other
+- The answer is wrong if the example inputs were not what the problem stated for valid input
+- The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+
+##### !end-rubric
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 3 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: c5c250c9-8f71-4a72-b42b-60cbee93e02b
-* title: How to solve a subproblem
+* title: Break Down the Problem into Sub-Problems
 * points: 1
 * topics: pse
-
 ##### !question
 
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code.
+Divide the project prompt into at least two different sub-problems
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider:
 
-Steps to solve a subproblem
+- Any requirements around checking inputs
+- Any requirements around calculations
 
-##### !end-placeholder
+Consider the following for inspiration:
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
+##### !end-hint
+##### !explanation
+
+Here are some example sub-problems:
+
+1. How do we look at the first character of the string and the last character of the string at the same time?
+1. What do we do when we compare the two characters?
+1. How do we repeat this process, looking at the second character and the second-to-last character, until we've checked every character?
+
+##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least two sub-problems listed
+- The answer is wrong if any of the sub-problems aren't relevant to the original problem
+
+##### !end-rubric
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- Question 4 -->
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 52c7bf67-d5e6-4655-8c1e-7d4c10184152
-* title: Code to solve the subproblem
+* title: Create Logical Steps
 * points: 1
 * topics: pse
-
 ##### !question
 
-Write down a solution for your answer in #4 in code here
+Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
 
 ##### !end-question
+##### !hint
 
-##### !placeholder
+Consider the following for inspiration:
 
-Code solution to a subproblem
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
 
-##### !end-placeholder
+##### !end-hint
+##### !rubric
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+- The answer is wrong if it doesn't have at least two steps
+- The answer is wrong if it isn't logical to another reader
 
+##### !end-rubric
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
+<!-- Question 5 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: Cf1pAM
+* title: Solve a Sub-Problem
+* points: 1
+* topics: pse
+##### !question
 
-## Reminders
+Write the pseudocode or code solution for your answer for #4
 
-- Finish this assignment individually.
-- The instructor will collect this at the beginning of the next lesson.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
+##### !end-question
+##### !hint
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
+
+##### !end-hint
+##### !rubric
+
+The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
+
+- The answer is wrong if it is blank
+- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
+
+##### !end-rubric
+### !end-challenge
+<!-- prettier-ignore-end -->
