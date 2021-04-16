@@ -85,7 +85,7 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
-##### !explanation 
+##### !explanation
 
 Here are some example sets of inputs and outputs:
 
