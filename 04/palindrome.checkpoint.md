@@ -79,7 +79,7 @@ Here are some example clarifying questions:
 * topics: pse
 ##### !question
 
-List two sets of example arguments and the expected return value for these arguments
+List two or more sets of example arguments and the expected return value for these arguments
 
 ##### !end-question
 ##### !hint
@@ -103,7 +103,7 @@ Here are some example sets of inputs and outputs:
 ##### !end-explanation
 ##### !rubric
 
-- The answer is wrong if there aren't 2 examples
+- The answer is wrong if there aren't at least two examples
 - The answer is wrong if either of them aren't valid/consistent with each other
 - The answer is wrong if the example inputs were not what the problem stated for valid input
 - The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
@@ -127,7 +127,7 @@ Here are some example sets of inputs and outputs:
 * topics: pse
 ##### !question
 
-Divide the project prompt into at least two different sub-problems
+Divide the project prompt into two or more different sub-problems
 
 ##### !end-question
 ##### !hint
