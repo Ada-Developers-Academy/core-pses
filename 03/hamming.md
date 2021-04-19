@@ -25,7 +25,7 @@ Differences: ^ ^ ^  ^ ^    ^^
 * type: paragraph
 * id: 50c3b4fb-5706-482f-8300-a2e4a1c2c8ed
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -67,7 +67,7 @@ Here are some example clarifying questions:
 * type: paragraph
 * id: 14f28838-7d15-413e-97ed-3dd3511949e8
 * title: Consider Example Inputs and Outputs
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -117,7 +117,7 @@ Output: 1
 * type: paragraph
 * id: ec0bd5c8-b262-4eba-b15a-0b6139cb479c
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -161,7 +161,7 @@ Here are some example sub-problems:
 * type: paragraph
 * id: 8bb89173-1352-4bd0-8fc3-b9d5e0f8e588
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -192,7 +192,7 @@ Consider the following for inspiration:
 * type: paragraph
 * id: 84c9d1b5-ba85-417c-b04d-10ff0024f169
 * title: Solve a Sub-Problem
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
