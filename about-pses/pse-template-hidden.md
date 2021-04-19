@@ -12,7 +12,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 * type: paragraph
 * id: 
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -47,7 +47,7 @@ Here are some example clarifying questions:
 * type: paragraph
 * id: 
 * title: Consider Example Inputs and Outputs
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -87,7 +87,7 @@ Here are some example sets of inputs and outputs:
 * type: paragraph
 * id: 
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -130,7 +130,7 @@ Here are some example sub-problems:
 * type: paragraph
 * id: 
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -161,7 +161,7 @@ Consider the following for inspiration:
 * type: paragraph
 * id: 
 * title: Solve a Sub-Problem
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 

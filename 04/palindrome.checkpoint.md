@@ -24,7 +24,7 @@ This is one example input/output for this method:
 * type: paragraph
 * id: 20067602-05d7-4cea-94c1-1cadfc8e787e
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -67,7 +67,7 @@ Here are some example clarifying questions:
 * type: paragraph
 * id: 56e15301-9e21-4963-b3cb-a1c5e9c89f07
 * title: Consider Example Inputs and Outputs
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -110,7 +110,7 @@ Here are some example sets of inputs and outputs:
 * type: paragraph
 * id: c5c250c9-8f71-4a72-b42b-60cbee93e02b
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -155,7 +155,7 @@ Here are some example sub-problems:
 * type: paragraph
 * id: 52c7bf67-d5e6-4655-8c1e-7d4c10184152
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -186,7 +186,7 @@ Consider the following for inspiration:
 * type: paragraph
 * id: Cf1pAM
 * title: Solve a Sub-Problem
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
