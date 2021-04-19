@@ -57,6 +57,14 @@ Here are some example clarifying questions:
 - They should ask about what to return if the string is not a palindrome (the problem statement intentionally does not state to return `False`)
 - They should ask about some set of special characters
 
+Here are some example clarifying questions:
+
+1. What should the function return if the string is not a palindrome?
+1. What should the function return if the string is an empty string, `""`?
+1. Does capitalization matter? Is this case-sensitive? Is `"Kayak"` a palindrome?
+1. What do we do with punctuation? Is `"kayak!"` a palindrome?
+1. What do we do with white space? Is `"k ayak"` a palindrome?
+
 ##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
@@ -99,6 +107,11 @@ Here are some example sets of inputs and outputs:
 - The answer is wrong if either of them aren't valid/consistent with each other
 - The answer is wrong if the example inputs were not what the problem stated for valid input
 - The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+
+Here are some example sets of inputs and outputs:
+
+1. Input: `ada`, Output: `True`
+1. Input: `Ada`, Output: `False`
 
 ##### !end-rubric
 ### !end-challenge
@@ -144,6 +157,12 @@ Here are some example sub-problems:
 
 - The answer is wrong if there aren't at least two sub-problems listed
 - The answer is wrong if any of the sub-problems aren't relevant to the original problem
+
+Here are some example sub-problems:
+
+1. How do we look at the first character of the string and the last character of the string at the same time?
+1. What do we do when we compare the two characters?
+1. How do we repeat this process, looking at the second character and the second-to-last character, until we've checked every character?
 
 ##### !end-rubric
 ### !end-challenge
