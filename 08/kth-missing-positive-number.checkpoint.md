@@ -208,6 +208,109 @@ Code solution to a subproblem
 
 <!-- ======================= END CHALLENGE ======================= -->
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: 5a380194-96e2-4b87-9aa7-2fe407448e1f
+* title: [text, a short question title]
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+[markdown, your question]
+
+##### !end-question
+
+##### !placeholder
+
+[the code below is the starting code in the web editor]
+```py
+def kth_missing_positive_number(numbers, k):
+  '''
+  INPUT: List of numbers in increating order & a positive integer k
+  OUTPUT: The kth missing number
+  '''
+  pass
+```
+
+##### !end-placeholder
+
+##### !tests
+
+[the unit tests below will run against the student submission]
+```py
+import unittest
+import main as p
+import numpy as np
+
+class TestPython1(unittest.TestCase):
+  def test_example_one(self):
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 5
+
+    # Act
+    answer = p.kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(9, answer)
+
+  def test_example_2(self):
+
+    # Arrange
+    list = [1,2,3,4]
+    k = 2
+
+    # Act
+    answer = p.kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(6, answer)
+
+  def test_three(self):
+
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 5
+
+    # Act
+    answer = p.kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(9, answer)
+
+  def test_k_is_one_and_one_is_missing(self):
+
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 1
+
+    # Act
+    answer = p.kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(1, answer)
+
+    
+    
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Reminders
 
 - Finish this assignment individually.
