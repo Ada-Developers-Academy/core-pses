@@ -222,7 +222,7 @@ Code solution to a subproblem
 
 ##### !question
 
-[markdown, your question]
+Write the code to solve the problem here.  You can use the tests to guide your solution.
 
 ##### !end-question
 
