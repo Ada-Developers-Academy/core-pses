@@ -294,8 +294,6 @@ class TestPython1(unittest.TestCase):
 
     # Assert
     self.assertEqual(1, answer)
-
-    
     
 ```
 
