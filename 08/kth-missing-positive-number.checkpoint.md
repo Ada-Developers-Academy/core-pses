@@ -228,12 +228,14 @@ Code solution to a subproblem
 
 ##### !placeholder
 
+```python
 def kth_missing_positive_number(numbers, k):
-  '''
-  INPUT: List of numbers in increating order & a positive integer k
-  OUTPUT: The kth missing number
-  '''
-  pass
+    '''
+    INPUT: List of numbers in increating order & a positive integer k
+    OUTPUT: The kth missing number
+    '''
+
+    pass
 ```
 
 ##### !end-placeholder
