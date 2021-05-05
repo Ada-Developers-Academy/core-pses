@@ -4,7 +4,7 @@
 
 In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the wanted reshaped matrix, respectively.
 
 The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
 
@@ -198,26 +198,72 @@ Steps to solve a subproblem
 
 ### !challenge
 
-* type: paragraph
-* id: 46190bce-0b02-4959-9cf2-eee4b705ceb5
-* title: Code to solve the subproblem
-* points: 1
-* topics: pse
+* type: code-snippet
+* language: python3.6
+* id: de8a690a-da2d-46b0-821c-00ed6968d7d5
+* title: Coding Solution
+* points: 3
+* topics: python, pse, python-lists
 
 ##### !question
 
-Write down a solution for your answer in #4 in code here
+Write the code to solve the problem here.  You can use the tests to guide your solution.
 
 ##### !end-question
 
 ##### !placeholder
 
-Code solution to a subproblem
+```python
+def reshape_matrix(matrix, r, c):
+    '''
+    INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
+    OUTPUT: Reshaped matrix
+    '''
+    pass
+```
 
 ##### !end-placeholder
 
+##### !tests
+
+```py
+import unittest
+import main as p
+import numpy as np
+class TestPython1(unittest.TestCase):
+    def test_example_one(self):
+        # Arrange
+        matrix = [[1,2],[3,4]]
+        r = 1
+        c = 4
+        # Act
+        answer = p.reshape_matrix(matrix, r, c)
+        # Assert
+        self.assertEqual([[1,2,3,4]], answer)
+    def test_example_2(self):
+        # Arrange
+        matrix = [[1,2],[3,4]]
+        r = 2
+        c = 4
+        # Act
+        answer = p.reshape_matrix(matrix, r, c)
+        # Assert
+        self.assertEqual([[1,2],[3,4]], answer) 
+    def test_example_3(self):
+        # Arrange
+        matrix = [[1,2],[3,4],[5,6],[7,8]]
+        r = 2
+        c = 4
+        # Act
+        answer = p.reshape_matrix(matrix, r, c)
+        # Assert
+        self.assertEqual([[1,2,3,4],[5,6,7,8]], answer) 
+```
+
+##### !end-tests
+
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 <!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
