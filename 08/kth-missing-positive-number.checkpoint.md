@@ -228,8 +228,6 @@ Code solution to a subproblem
 
 ##### !placeholder
 
-[the code below is the starting code in the web editor]
-```py
 def kth_missing_positive_number(numbers, k):
   '''
   INPUT: List of numbers in increating order & a positive integer k
@@ -242,7 +240,6 @@ def kth_missing_positive_number(numbers, k):
 
 ##### !tests
 
-[the unit tests below will run against the student submission]
 ```py
 import unittest
 import main as p
