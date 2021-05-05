@@ -216,9 +216,9 @@ Code solution to a subproblem
 * type: code-snippet
 * language: python3.6
 * id: 5a380194-96e2-4b87-9aa7-2fe407448e1f
-* title: [text, a short question title]
-<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
-<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+* title: Coding Solution
+* points: 3
+* topics: python, pse, python-lists
 
 ##### !question
 
