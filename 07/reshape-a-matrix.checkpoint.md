@@ -281,7 +281,9 @@ Steps to solve a subproblem
 
 ##### !question
 
-Write the code to solve the problem here.  You can use the tests to guide your solution.
+Implement `reshape_matrix`.
+
+Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your assumptions above, and take these assumptions for this challenge.
 
 ```py
 def test_convert_2_2_to_1_4()
