@@ -295,7 +295,7 @@ def test_convert_2_2_to_1_4()
 
     assert reshaped_matrix == [[1,2,3,4]]
 
-def test_cannot_to_reshape()
+def test_cannot_reshape()
     matrix = [[1,2],[3,4]]
     r = 2
     c = 4
