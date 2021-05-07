@@ -333,7 +333,7 @@ def reshape_matrix(matrix, r, c):
 
 ```py
 import unittest
-from main import *
+from main import reshape_matrix
 import numpy as np
 class TestPython1(unittest.TestCase):
     def test_example_one(self):
