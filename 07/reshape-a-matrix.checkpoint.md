@@ -286,7 +286,7 @@ Implement `reshape_matrix`.
 Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your assumptions above, and take these assumptions for this challenge.
 
 ```py
-def test_convert_2_2_to_1_4()
+def test_convert_2_2_to_1_4():
     matrix = [[1,2],[3,4]]
     r = 1
     c = 4
@@ -295,7 +295,7 @@ def test_convert_2_2_to_1_4()
 
     assert reshaped_matrix == [[1,2,3,4]]
 
-def test_cannot_reshape()
+def test_cannot_reshape():
     matrix = [[1,2],[3,4]]
     r = 2
     c = 4
@@ -304,7 +304,7 @@ def test_cannot_reshape()
 
     assert reshaped_matrix == [[1,2],[3,4]]
 
-def test_convert_2_2_to_1_4()
+def test_convert_2_2_to_1_4():
     matrix = [[1,2],[3,4],[5,6],[7,8]]
     r = 2
     c = 4
