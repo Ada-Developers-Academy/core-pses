@@ -282,7 +282,7 @@ class TestPython1(unittest.TestCase):
     # Assert
     self.assertEqual(9, answer)
 
-  def test_k_is_one_and_one_is_missing(self):
+  def test_kth_missing_positive_number_finds_num_before_entire_given_list(self):
 
     # Arrange
     list = [2,3,4,7,11]
