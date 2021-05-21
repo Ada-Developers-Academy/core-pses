@@ -258,7 +258,7 @@ class TestPython1(unittest.TestCase):
     # Assert
     self.assertEqual(9, answer)
 
-  def test_example_2(self):
+  def test_kth_missing_positive_number_finds_num_after_entire_given_list(self):
 
     # Arrange
     list = [1,2,3,4]
