@@ -247,7 +247,7 @@ import unittest
 import main as *
 
 class TestPython1(unittest.TestCase):
-  def test_example_one(self):
+  def test_kth_missing_positive_number(self):
     # Arrange
     list = [2,3,4,7,11]
     k = 5
