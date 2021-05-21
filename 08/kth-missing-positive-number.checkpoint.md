@@ -224,20 +224,6 @@ Code solution to a subproblem
 
 Implement `kth_missing_positive_number`.  Use these tests to guide your solution.
 
-##### !end-question
-
-##### !placeholder
-
-```python
-def kth_missing_positive_number(numbers, k):
-    '''
-    INPUT: List of numbers in increating order & a positive integer k
-    OUTPUT: The kth missing number
-    '''
-
-    pass
-```
-
 <details>
   <summary>Tests converted to Pytest</summary>
   ```python
@@ -286,6 +272,20 @@ def kth_missing_positive_number(numbers, k):
   ```
 
 </details>
+
+##### !end-question
+
+##### !placeholder
+
+```python
+def kth_missing_positive_number(numbers, k):
+    '''
+    INPUT: List of numbers in increating order & a positive integer k
+    OUTPUT: The kth missing number
+    '''
+
+    pass
+```
 
 ##### !end-placeholder
 
