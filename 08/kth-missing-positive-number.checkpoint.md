@@ -244,8 +244,7 @@ def kth_missing_positive_number(numbers, k):
 
 ```py
 import unittest
-import main as p
-import numpy as np
+import main as *
 
 class TestPython1(unittest.TestCase):
   def test_example_one(self):
@@ -254,7 +253,7 @@ class TestPython1(unittest.TestCase):
     k = 5
 
     # Act
-    answer = p.kth_missing_positive_number(list, k)
+    answer = kth_missing_positive_number(list, k)
 
     # Assert
     self.assertEqual(9, answer)
@@ -266,7 +265,7 @@ class TestPython1(unittest.TestCase):
     k = 2
 
     # Act
-    answer = p.kth_missing_positive_number(list, k)
+    answer = kth_missing_positive_number(list, k)
 
     # Assert
     self.assertEqual(6, answer)
@@ -278,7 +277,7 @@ class TestPython1(unittest.TestCase):
     k = 5
 
     # Act
-    answer = p.kth_missing_positive_number(list, k)
+    answer = kth_missing_positive_number(list, k)
 
     # Assert
     self.assertEqual(9, answer)
@@ -290,7 +289,7 @@ class TestPython1(unittest.TestCase):
     k = 1
 
     # Act
-    answer = p.kth_missing_positive_number(list, k)
+    answer = kth_missing_positive_number(list, k)
 
     # Assert
     self.assertEqual(1, answer)
