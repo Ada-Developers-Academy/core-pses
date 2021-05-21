@@ -208,6 +208,105 @@ Code solution to a subproblem
 
 <!-- ======================= END CHALLENGE ======================= -->
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: 5a380194-96e2-4b87-9aa7-2fe407448e1f
+* title: Coding Solution
+* points: 3
+* topics: python, pse, python-lists
+
+##### !question
+
+Implement `kth_missing_positive_number`.  Use these tests to guide your solution.
+
+##### !end-question
+
+##### !placeholder
+
+```python
+def kth_missing_positive_number(numbers, k):
+    '''
+    INPUT: List of numbers in increating order & a positive integer k
+    OUTPUT: The kth missing number
+    '''
+
+    pass
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```py
+import unittest
+import main as *
+
+class TestPython1(unittest.TestCase):
+  def test_kth_missing_positive_number(self):
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 5
+
+    # Act
+    answer = kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(9, answer)
+
+  def test_kth_missing_positive_number_finds_num_after_entire_given_list(self):
+
+    # Arrange
+    list = [1,2,3,4]
+    k = 2
+
+    # Act
+    answer = kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(6, answer)
+
+  def test_three(self):
+
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 5
+
+    # Act
+    answer = kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(9, answer)
+
+  def test_kth_missing_positive_number_finds_num_before_entire_given_list(self):
+
+    # Arrange
+    list = [2,3,4,7,11]
+    k = 1
+
+    # Act
+    answer = kth_missing_positive_number(list, k)
+
+    # Assert
+    self.assertEqual(1, answer)
+    
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Reminders
 
 - Finish this assignment individually.
