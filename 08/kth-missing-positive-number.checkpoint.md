@@ -244,7 +244,7 @@ def kth_missing_positive_number(numbers, k):
 
 ```py
 import unittest
-import from main import kth_missing_positive_number
+from main import kth_missing_positive_number
 
 class TestPython1(unittest.TestCase):
   def test_kth_missing_positive_number(self):
