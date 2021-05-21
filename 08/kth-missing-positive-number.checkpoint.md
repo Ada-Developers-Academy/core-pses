@@ -222,7 +222,7 @@ Code solution to a subproblem
 
 ##### !question
 
-Write the code to solve the problem here.  You can use the tests to guide your solution.
+Implement `kth_missing_positive_number`.  Use these tests to guide your solution.
 
 ##### !end-question
 
