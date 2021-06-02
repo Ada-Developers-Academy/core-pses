@@ -197,7 +197,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = [5, 4, 4, 4, 8]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 23
@@ -208,7 +208,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = []
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 0
@@ -219,7 +219,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = [1, 2, 3]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 0
@@ -230,7 +230,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = [1, 6, 9]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 12
@@ -241,7 +241,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = [2, 4, 6]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 10
@@ -252,7 +252,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
         arr = [3, 4, 4, 4, 8]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         assert answer == 9
@@ -285,7 +285,7 @@ class TestPython1(unittest.TestCase):
         arr = [5, 4, 4, 4, 8]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 23)
@@ -296,7 +296,7 @@ class TestPython1(unittest.TestCase):
         arr = []
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 0)
@@ -307,7 +307,7 @@ class TestPython1(unittest.TestCase):
         arr = [1, 2, 3]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 0)
@@ -318,7 +318,7 @@ class TestPython1(unittest.TestCase):
         arr = [1, 6, 9]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 12)
@@ -329,7 +329,7 @@ class TestPython1(unittest.TestCase):
         arr = [2, 4, 6]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 10)
@@ -340,7 +340,7 @@ class TestPython1(unittest.TestCase):
         arr = [3, 4, 4, 4, 8]
 
         # Act
-        answer = unbounded_knapsack(sum, arr)
+        answer = knapsack(sum, arr)
 
         # Assert
         self.assertEqual(answer, 9)
