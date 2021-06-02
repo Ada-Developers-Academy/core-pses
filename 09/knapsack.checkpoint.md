@@ -170,37 +170,191 @@ Steps to solve a subproblem
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
+<!-- prettier-ignore -->
 ### !challenge
 
-* type: paragraph
-* id: 15a43e34-9e0b-4dde-81ff-724e5f6fb529
-* title: Code to solve the subproblem
+* type: code-snippet
+* language: python3.6
+* id: 7176204d-f1da-463c-8d46-af9229de96b2
+* title: Knapsack Coding Challenge
 * points: 1
-* topics: pse
+* topics: python, loops, lists
 
 ##### !question
 
-Write down a solution for your answer in #4 in code here
+Write a solution to the knapsack function below.  The following tests will evaluate your solution.
+
+<!-- prettier-ignore -->
+<details>
+  <summary>Tests converted to Pytest</summary>
+
+  ```python
+
+    def test_sum_23_arr_5_4_4_4_8(self):
+        # Arrange
+        sum = 23
+        arr = [5, 4, 4, 4, 8]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 23
+
+    def test_sum_zero_arr_empty(self):
+        # Arrange
+        sum = 0
+        arr = []
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 0
+
+    def test_sum_zero_arr_one_two_three(self):
+        # Arrange
+        sum = 0
+        arr = [1, 2, 3]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 0
+
+    def test_sum_tweleve_arr_one_six_nine(self):
+        # Arrange
+        sum = 12
+        arr = [1, 6, 9]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 12
+
+    def test_sum_eleven_arr_two_four_six(self):
+        # Arrange
+        sum = 11
+        arr = [2, 4, 6]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 10
+
+    def test_sum_three_arr_three_four_eight(self):
+        # Arrange
+        sum = 9
+        arr = [3, 4, 4, 4, 8]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        assert answer == 9
+  ```
+</details>
 
 ##### !end-question
 
 ##### !placeholder
 
-Code solution to a subproblem
+```py
+def knapsack(sum, arr):
+    pass
+    
+
+```
 
 ##### !end-placeholder
 
+##### !tests
+
+```py
+import unittest
+from main import knapsack
+
+class TestPython1(unittest.TestCase):
+    def test_sum_23_arr_5_4_4_4_8(self):
+        # Arrange
+        sum = 23
+        arr = [5, 4, 4, 4, 8]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 23)
+
+    def test_sum_zero_arr_empty(self):
+        # Arrange
+        sum = 0
+        arr = []
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 0)
+
+    def test_sum_zero_arr_one_two_three(self):
+        # Arrange
+        sum = 0
+        arr = [1, 2, 3]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 0)
+
+    def test_sum_tweleve_arr_one_six_nine(self):
+        # Arrange
+        sum = 12
+        arr = [1, 6, 9]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 12)
+
+    def test_sum_eleven_arr_two_four_six(self):
+        # Arrange
+        sum = 11
+        arr = [2, 4, 6]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 10)
+
+    def test_sum_three_arr_three_four_eight(self):
+        # Arrange
+        sum = 9
+        arr = [3, 4, 4, 4, 8]
+
+        # Act
+        answer = unbounded_knapsack(sum, arr)
+
+        # Assert
+        self.assertEqual(answer, 9)
+```
+
+##### !end-tests
+
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 <!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
 
 ## Reminders
 
