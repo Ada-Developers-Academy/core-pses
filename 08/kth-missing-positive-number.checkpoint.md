@@ -181,38 +181,6 @@ Steps to solve a subproblem
 
 ### !challenge
 
-* type: paragraph
-* id: 84ee89d3-e72a-456f-a8c6-9c5f35c5ac45
-* title: Code to solve the subproblem
-* points: 1
-* topics: pse
-
-##### !question
-
-Write down a solution for your answer in #4 in code here
-
-##### !end-question
-
-##### !placeholder
-
-Code solution to a subproblem
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
 * type: code-snippet
 * language: python3.6
 * id: 5a380194-96e2-4b87-9aa7-2fe407448e1f
