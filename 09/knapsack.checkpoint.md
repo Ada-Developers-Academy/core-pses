@@ -171,7 +171,6 @@ Steps to solve a subproblem
 <!-- ======================= END CHALLENGE ======================= -->
 
 
-<!-- prettier-ignore -->
 ### !challenge
 
 * type: code-snippet
@@ -351,7 +350,39 @@ class TestPython1(unittest.TestCase):
 <!-- other optional sections -->
 <!-- !hint - !end-hint (markdown, hidden, students click to view) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+##### !explanation
+
+Our solution:
+
+```python
+def knapsack(sum = 0, arr = []):
+    if len(arr) == 0 or sum == 0:
+        return 0
+    
+    if sum < min(arr):
+        return 0
+    
+    for element in arr:
+        if sum % element == 0:
+            return sum
+        
+    # A list of all booleans
+    # True if the index is in arr
+    # False otherwise
+    sums_in_arr = [False] * (sum + 1)
+    max_found_sum = 0
+    
+    for i in range(1, sum + 1):
+        for val in arr:
+            if i - val == 0 or i - val > 0 and sums_in_arr[i - val]:
+                sums_in_arr[i] = True
+                max_found_sum = i
+                
+
+    return max_found_sum
+```
+
+##### !end-explanation
 
 ### !end-challenge
 
