@@ -264,6 +264,10 @@ Write a solution to the knapsack function below.  The following tests will evalu
 
 ```py
 def knapsack(sum, arr):
+    '''
+    INPUT: Target sum and an array of numbers
+    OUTPUT: Sum nearest to (or equal to) but not exceeding the target sum
+    '''
     pass
     
 
