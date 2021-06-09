@@ -2,7 +2,52 @@
 
 ## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on software that determines the winner of a game of Tic Tac Toe. Create a function named `tictactoe` that is responsible for determing the state of a Tic Tac Toe board - Either there's no winner, it's a tie, `'X'` won, or `'O'` won. This function should take in 3x3 matrix as a parameter. Each element is either an `'X'`, `'O'`, or empty string `''`. This function should have a return value of the winner `'X'` or `'O'`, `'Tie'` (for a full board with no winner), or `None` (for a game that is still in progress).
+
+*Example 1:*
+Input:
+```
+[
+    ['X', 'O', 'X'],
+    ['O', 'O', 'X'],
+    ['X', 'X', 'O']
+]
+```
+Output: `'Tie'`
+
+*Example 2:*
+Input:
+```
+[
+    ['X', 'O', 'X'],
+    ['O', 'O', 'X'],
+    ['X', 'O', '']
+]
+```
+Output: `'O'`
+
+*Example 3:*
+Input:
+```
+[
+    ['X', 'O', 'O'],
+    ['O', 'X', 'O'],
+    ['', '', 'X']
+]
+```
+Output: `'X'`
+
+*Example 4:*
+Input:
+```
+[
+    ['X', '', 'O'],
+    ['O', 'X', 'X'],
+    ['', '', '']
+]
+```
+Output: `None`
+
 
 ## Prompts
 
@@ -31,6 +76,8 @@ Consider the following for inspiration:
 ##### !explanation
 
 Here are some example clarifying questions:
+1. What consistutes a win for `'X'` or `'O'`?
+1. What is a matrix with dimensions other than 3x3 is passed in?
 
 ##### !end-explanation
 ##### !rubric
@@ -65,11 +112,7 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
-##### !explanation
 
-Here are some example sets of inputs and outputs:
-
-##### !end-explanation
 ##### !rubric
 
 - The answer is wrong if there aren't at least two examples
@@ -112,7 +155,11 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.
+1. Check for valid input.
+1. Determine if there is a win by in the column direction.
+1. Determine if there is a win in the row direction.
+1. Determine if there is a win in the diagonal direction.
+1. Determine if there is a tie.
 
 ##### !end-explanation
 ##### !rubric
