@@ -10,7 +10,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 3d8275a0-d1ab-4189-be59-b228502b7ddf
 * title: Ask Clarifying Questions
 * points: 3
 * topics: pse
@@ -45,7 +45,7 @@ Here are some example clarifying questions:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 6c0f79b1-ed10-4f12-b492-dbf003a293c5
 * title: Consider Example Inputs and Outputs
 * points: 3
 * topics: pse
@@ -85,7 +85,7 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 7a783007-7898-4d3f-815b-b989cb760a62
 * title: Break Down the Problem into Sub-Problems
 * points: 3
 * topics: pse
@@ -128,7 +128,7 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: bb8d1391-b71a-4267-9fe8-88f2977917c4
 * title: Create Logical Steps
 * points: 3
 * topics: pse
@@ -159,7 +159,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 3b2bff25-f2ff-43ad-8531-95edf1affefc
 * title: Solve a Sub-Problem
 * points: 3
 * topics: pse
