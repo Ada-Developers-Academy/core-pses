@@ -88,7 +88,7 @@ Here are some example sets of inputs and outputs:
 * id: 7a783007-7898-4d3f-815b-b989cb760a62
 * title: Break Down the Problem into Sub-Problems
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
 Divide the project prompt into two or more different sub-problems
@@ -131,7 +131,7 @@ Here are some example sub-problems:
 * id: bb8d1391-b71a-4267-9fe8-88f2977917c4
 * title: Create Logical Steps
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
 Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
@@ -158,32 +158,70 @@ Consider the following for inspiration:
 <!-- Question 5 -->
 <!-- prettier-ignore-start -->
 ### !challenge
-* type: paragraph
+* type: code-snippet
+* language: python3.6
 * id: 3b2bff25-f2ff-43ad-8531-95edf1affefc
-* title: Solve a Sub-Problem
+* title: Code Solution
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
-Write the pseudocode or code solution for your answer for #4
+Code the solution to Tic Tac Toe
+
+<!-- prettier-ignore -->
+<details>
+  <summary>Tests converted to Pytest</summary>
+
+  ```python
+
+    def test_:
+
+  ```
+</details>
 
 ##### !end-question
-##### !hint
 
-Consider the following for inspiration:
+##### !placeholder
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+```py
+def tictactoe(board):
+    '''
+    INPUT: Tic Tac Toe board (3x3 matrix)
+    OUTPUT: Winner
+    '''
+    pass
+    
+```
 
-##### !end-hint
-##### !rubric
+##### !end-placeholder
 
-The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
+##### !tests
 
-- The answer is wrong if it is blank
-- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
+```py
+import unittest
+from main import knapsack
 
-##### !end-rubric
+class TestPython1(unittest.TestCase):
+    def test_
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+A solution:
+
+```python
+```
+
+##### !end-explanation
+
 ### !end-challenge
-<!-- prettier-ignore-end -->
+
+## Reminders
+
+- Finish this assignment individually.
+- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
