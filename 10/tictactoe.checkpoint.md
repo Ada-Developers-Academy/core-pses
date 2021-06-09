@@ -316,75 +316,75 @@ def tictactoe(board):
 import unittest
 from main import tictactoe
 
-    def test_tie(self):
-        # Arrange
-        board =[
-            ['X', 'O', 'X'],
-            ['O', 'O', 'X'],
-            ['X', 'X', 'O']
-        ]
+def test_tie(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'X', 'O']
+    ]
 
-        # Act
-        result = tictactoe(board)
+    # Act
+    result = tictactoe(board)
 
-        # Assert
-        self.assertEqual(result, 'Tie')
+    # Assert
+    self.assertEqual(result, 'Tie')
 
-    def test_incomplete(self):
-        # Arrange
-        board =[
-            ['X', 'O', 'X'],
-            ['O', 'O', 'X'],
-            ['X', '', 'O']
-        ]
+def test_incomplete(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', '', 'O']
+    ]
 
-        # Act
-        result = tictactoe(board)
+    # Act
+    result = tictactoe(board)
 
-        # Assert
-        self.assertEqual(result, None)
+    # Assert
+    self.assertEqual(result, None)
 
-    def test_col_win(self):
-        # Arrange
-        board =[
-            ['X', 'O', 'X'],
-            ['O', 'O', 'X'],
-            ['X', 'O', 'O']
-        ]
+def test_col_win(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'O', 'O']
+    ]
 
-        # Act
-        result = tictactoe(board)
+    # Act
+    result = tictactoe(board)
 
-        # Assert
-        self.assertEqual(result, 'O')
+    # Assert
+    self.assertEqual(result, 'O')
 
-    def test_row_win(self):
-        # Arrange
-        board =[
-            ['X', 'O', 'X'],
-            ['O', 'O', 'O'],
-            ['X', 'X', 'O']
-        ]
+def test_row_win(self):
+    # Arrange
+    board =[
+        ['X', 'O', 'X'],
+        ['O', 'O', 'O'],
+        ['X', 'X', 'O']
+    ]
 
-        # Act
-        result = tictactoe(board)
+    # Act
+    result = tictactoe(board)
 
-        # Assert
-        self.assertEqual(result, 'O')
+    # Assert
+    self.assertEqual(result, 'O')
 
-    def test_diag_win(self):
-        # Arrange
-        board =[
-            ['O', 'O', 'X'],
-            ['O', 'O', 'X'],
-            ['X', 'X', 'O']
-        ]
+def test_diag_win(self):
+    # Arrange
+    board =[
+        ['O', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'X', 'O']
+    ]
 
-        # Act
-        result = tictactoe(board)
+    # Act
+    result = tictactoe(board)
 
-        # Assert
-        self.assertEqual(result, 'O')
+    # Assert
+    self.assertEqual(result, 'O')
 ```
 
 ##### !end-tests
