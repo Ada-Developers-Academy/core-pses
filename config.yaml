@@ -114,4 +114,15 @@ Standards:
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
         Path: /09/knapsack.checkpoint.md
+  -
+    Title: PSE 10
+    Description: Tic Tac Toe
+    UID: 5f521cbc-b5bd-4f63-9e8f-66da369a2100
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:    
+      -
+        Type: Checkpoint
+        UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
+        Path: /10/tictactoe.checkpoint.md
       
