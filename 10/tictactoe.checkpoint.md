@@ -2,7 +2,52 @@
 
 ## Problem
 
-Imagine working on software that `<TEMPLATE: has some specific kind of purpose and context>`. Create a function named `<TEMPLATE: function name>` that is responsible for `<TEMPLATE: is responsible for what, as a high-level goal?>`. This function should take in `<TEMPLATE: specify data type and what it represents. This needs to be flexible, as question 2 of the PSE is to come up with 2 examples of input>` as a parameter. `<TEMPLATE: function details, if needed>` This function should have a return value of `<TEMPLATE: description of output>`.
+Imagine working on software that determines the winner of a game of Tic Tac Toe. Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board - Either there's no winner, it's a tie, `'X'` won, or `'O'` won. This function should take in 3x3 matrix as a parameter. Each element is either an `'X'`, `'O'`, or empty string `''`. This function should have a return value of the winner `'X'` or `'O'`, `'Tie'` (for a full board with no winner), or `None` (for a game that is still in progress).
+
+*Example 1:*
+Input:
+```
+[
+    ['X', 'O', 'X'],
+    ['O', 'O', 'X'],
+    ['X', 'X', 'O']
+]
+```
+Output: `'Tie'`
+
+*Example 2:*
+Input:
+```
+[
+    ['X', 'O', 'X'],
+    ['O', 'O', 'X'],
+    ['X', 'O', '']
+]
+```
+Output: `'O'`
+
+*Example 3:*
+Input:
+```
+[
+    ['X', 'O', 'O'],
+    ['O', 'X', 'O'],
+    ['', '', 'X']
+]
+```
+Output: `'X'`
+
+*Example 4:*
+Input:
+```
+[
+    ['X', '', 'O'],
+    ['O', 'X', 'X'],
+    ['', '', '']
+]
+```
+Output: `None`
+
 
 ## Prompts
 
@@ -10,7 +55,7 @@ Imagine working on software that `<TEMPLATE: has some specific kind of purpose a
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 3d8275a0-d1ab-4189-be59-b228502b7ddf
 * title: Ask Clarifying Questions
 * points: 3
 * topics: pse
@@ -31,6 +76,8 @@ Consider the following for inspiration:
 ##### !explanation
 
 Here are some example clarifying questions:
+1. What consistutes a win for `'X'` or `'O'`?
+1. What is a matrix with dimensions other than 3x3 is passed in?
 
 ##### !end-explanation
 ##### !rubric
@@ -45,7 +92,7 @@ Here are some example clarifying questions:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 6c0f79b1-ed10-4f12-b492-dbf003a293c5
 * title: Consider Example Inputs and Outputs
 * points: 3
 * topics: pse
@@ -65,11 +112,7 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
-##### !explanation
 
-Here are some example sets of inputs and outputs:
-
-##### !end-explanation
 ##### !rubric
 
 - The answer is wrong if there aren't at least two examples
@@ -85,10 +128,10 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: 7a783007-7898-4d3f-815b-b989cb760a62
 * title: Break Down the Problem into Sub-Problems
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
 Divide the project prompt into two or more different sub-problems
@@ -112,7 +155,11 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.
+1. Check for valid input.
+1. Determine if there is a win by in the column direction.
+1. Determine if there is a win in the row direction.
+1. Determine if there is a win in the diagonal direction.
+1. Determine if there is a tie.
 
 ##### !end-explanation
 ##### !rubric
@@ -128,10 +175,10 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 
+* id: bb8d1391-b71a-4267-9fe8-88f2977917c4
 * title: Create Logical Steps
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
 Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
@@ -158,32 +205,235 @@ Consider the following for inspiration:
 <!-- Question 5 -->
 <!-- prettier-ignore-start -->
 ### !challenge
-* type: paragraph
-* id: 
-* title: Solve a Sub-Problem
+* type: code-snippet
+* language: python3.6
+* id: 3b2bff25-f2ff-43ad-8531-95edf1affefc
+* title: Code Solution
 * points: 3
-* topics: pse
+* topics: pse 10
 ##### !question
 
-Write the pseudocode or code solution for your answer for #4
+Code the solution to Tic Tac Toe
+
+<!-- prettier-ignore -->
+<details>
+  <summary>Tests converted to Pytest</summary>
+
+  ```python
+
+        def test_tie(self):
+            # Arrange
+            board =[
+                ['X', 'O', 'X'],
+                ['O', 'O', 'X'],
+                ['X', 'X', 'O']
+            ]
+
+            # Act
+            result = tic_tac_toe_winner(board)
+
+            # Assert
+            assert result == 'Tie'
+    def test_incomplete(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', '', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        assert result == None
+
+    def test_col_win(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', 'O', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        assert result == 'O'
+
+    def test_row_win(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'O'],
+            ['X', 'X', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        assert result == 'O'
+
+    def test_diag_win(self):
+        # Arrange
+        board =[
+            ['O', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', 'X', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        assert result == 'O'
+```
+
+</details>
 
 ##### !end-question
-##### !hint
 
-Consider the following for inspiration:
+##### !placeholder
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+```py
+def tic_tac_toe_winner(board):
+    '''
+    INPUT: Tic Tac Toe board (3x3 matrix)
+    OUTPUT: Winner
+    '''
+    pass
+    
+```
 
-##### !end-hint
-##### !rubric
+##### !end-placeholder
 
-The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
+##### !tests
 
-- The answer is wrong if it is blank
-- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
+```py
+import unittest
+from main import tic_tac_toe_winner
 
-##### !end-rubric
+class TestPython1(unittest.TestCase):
+    def test_tie(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', 'X', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        self.assertEqual(result, 'Tie')
+
+    def test_incomplete(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', '', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        self.assertEqual(result, None)
+
+    def test_col_win(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', 'O', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        self.assertEqual(result, 'O')
+
+    def test_row_win(self):
+        # Arrange
+        board =[
+            ['X', 'O', 'X'],
+            ['O', 'O', 'O'],
+            ['X', 'X', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        self.assertEqual(result, 'O')
+
+    def test_diag_win(self):
+        # Arrange
+        board =[
+            ['O', 'O', 'X'],
+            ['O', 'O', 'X'],
+            ['X', 'X', 'O']
+        ]
+
+        # Act
+        result = tic_tac_toe_winner(board)
+
+        # Assert
+        self.assertEqual(result, 'O')
+```
+
+##### !end-tests
+
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+A solution:
+
+```python
+def tic_tac_toe_winner(board):
+
+    # check for row win
+    for i in range(3):
+        if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
+            return board[i][0]
+
+    # check for col win
+    for j in range(3):
+        if board[0][j] == board[1][j] and board[1][j] == board[2][j]:
+            return board[0][j]
+
+    # check for diag win
+    if board[0][0] == board[1][1] and board[1][1] == board[2][2]:
+        return board[0][0]
+    elif board[0][2] == board[1][1] and board[1][1] == board[2][0]:
+        return board[0][2]
+
+    # check for tie or incomplete
+    count = 0
+    for row in board:
+        for element in row:
+            if element != '':
+                count += 1
+    
+    if count == 9:
+        return 'Tie'
+
+    return None
+```
+
+##### !end-explanation
+
 ### !end-challenge
-<!-- prettier-ignore-end -->
+
+## Reminders
+
+- Finish this assignment individually.
+- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
