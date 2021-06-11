@@ -2,7 +2,7 @@
 
 ## Problem
 
-Imagine working on software that determines the winner of a game of Tic Tac Toe. Create a function named `tictactoe` that is responsible for determing the state of a Tic Tac Toe board - Either there's no winner, it's a tie, `'X'` won, or `'O'` won. This function should take in 3x3 matrix as a parameter. Each element is either an `'X'`, `'O'`, or empty string `''`. This function should have a return value of the winner `'X'` or `'O'`, `'Tie'` (for a full board with no winner), or `None` (for a game that is still in progress).
+Imagine working on software that determines the winner of a game of Tic Tac Toe. Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board - Either there's no winner, it's a tie, `'X'` won, or `'O'` won. This function should take in 3x3 matrix as a parameter. Each element is either an `'X'`, `'O'`, or empty string `''`. This function should have a return value of the winner `'X'` or `'O'`, `'Tie'` (for a full board with no winner), or `None` (for a game that is still in progress).
 
 *Example 1:*
 Input:
@@ -230,7 +230,7 @@ Code the solution to Tic Tac Toe
             ]
 
             # Act
-            result = tictactoe(board)
+            result = tic_tac_toe_winner(board)
 
             # Assert
             assert result == 'Tie'
@@ -243,7 +243,7 @@ Code the solution to Tic Tac Toe
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         assert result == None
@@ -257,7 +257,7 @@ Code the solution to Tic Tac Toe
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         assert result == 'O'
@@ -271,7 +271,7 @@ Code the solution to Tic Tac Toe
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         assert result == 'O'
@@ -285,7 +285,7 @@ Code the solution to Tic Tac Toe
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         assert result == 'O'
@@ -298,7 +298,7 @@ Code the solution to Tic Tac Toe
 ##### !placeholder
 
 ```py
-def tictactoe(board):
+def tic_tac_toe_winner(board):
     '''
     INPUT: Tic Tac Toe board (3x3 matrix)
     OUTPUT: Winner
@@ -313,7 +313,7 @@ def tictactoe(board):
 
 ```py
 import unittest
-from main import tictactoe
+from main import tic_tac_toe_winner
 
 class TestPython1(unittest.TestCase):
     def test_tie(self):
@@ -325,7 +325,7 @@ class TestPython1(unittest.TestCase):
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         self.assertEqual(result, 'Tie')
@@ -339,7 +339,7 @@ class TestPython1(unittest.TestCase):
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         self.assertEqual(result, None)
@@ -353,7 +353,7 @@ class TestPython1(unittest.TestCase):
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         self.assertEqual(result, 'O')
@@ -367,7 +367,7 @@ class TestPython1(unittest.TestCase):
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         self.assertEqual(result, 'O')
@@ -381,7 +381,7 @@ class TestPython1(unittest.TestCase):
         ]
 
         # Act
-        result = tictactoe(board)
+        result = tic_tac_toe_winner(board)
 
         # Assert
         self.assertEqual(result, 'O')
@@ -398,7 +398,7 @@ class TestPython1(unittest.TestCase):
 A solution:
 
 ```python
-def tictactoe(board):
+def tic_tac_toe_winner(board):
 
     # check for row win
     for i in range(3):
