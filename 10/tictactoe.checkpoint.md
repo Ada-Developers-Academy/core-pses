@@ -222,19 +222,18 @@ Code the solution to Tic Tac Toe
   ```python
 
         def test_tie(self):
-        # Arrange
-        board =[
-            ['X', 'O', 'X'],
-            ['O', 'O', 'X'],
-            ['X', 'X', 'O']
-        ]
+            # Arrange
+            board =[
+                ['X', 'O', 'X'],
+                ['O', 'O', 'X'],
+                ['X', 'X', 'O']
+            ]
 
-        # Act
-        result = tictactoe(board)
+            # Act
+            result = tictactoe(board)
 
-        # Assert
-        assert result == 'Tie'
-
+            # Assert
+            assert result == 'Tie'
     def test_incomplete(self):
         # Arrange
         board =[
