@@ -94,6 +94,17 @@ Standards:
         Path: /07/reshape-a-matrix.checkpoint.md
   -
     Title: PSE 08
+    Description: Tic Tac Toe
+    UID: 5f521cbc-b5bd-4f63-9e8f-66da369a2100
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:    
+      -
+        Type: Checkpoint
+        UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
+        Path: /10/tictactoe.checkpoint.md
+  -
+    Title: PSE 09
     Description: Kth Missing Positive Number
     UID: 104de1dc-9c42-4da8-b94f-802c36bbbd6c
     SuccessCriteria:
@@ -104,7 +115,7 @@ Standards:
         UID: 2b22f6b1-ca0c-4dc9-8913-b62ab2698fbe
         Path: /08/kth-missing-positive-number.checkpoint.md
   -
-    Title: PSE 09
+    Title: PSE 10 (skip)
     Description: Knapsack
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
@@ -114,15 +125,4 @@ Standards:
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
         Path: /09/knapsack.checkpoint.md
-  -
-    Title: PSE 10
-    Description: Tic Tac Toe
-    UID: 5f521cbc-b5bd-4f63-9e8f-66da369a2100
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:    
-      -
-        Type: Checkpoint
-        UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
-        Path: /10/tictactoe.checkpoint.md
       

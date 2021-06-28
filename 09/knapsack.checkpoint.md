@@ -1,4 +1,4 @@
-# PSE 9 - Knapsack
+# Knapsack
 
 ## Given this problem prompt:
 
