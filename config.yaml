@@ -11,21 +11,21 @@ Standards:
         Type: Lesson
         UID: 71d8142849851c1999d31842cddb2aa4
         Path: /about-pses/about-pses.md
-      -
-        Type: Lesson
-        UID: TNrFPV
-        Path: /about-pses/example-pse.md
   -
     Title: PSE 01
-    Description: Calculator
+    Description: Highest Rated
     UID: 0a601cc26210e6eed0bd55f8a843ca8f
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 10ddabe050188bf867ffe5c5ccb689ae
-        Path: /01/calculator.md
+        UID: e69885f5
+        Path: /01/highest-rated.md
+      -
+        Type: Checkpoint
+        UID: ea70e2d3
+        Path: /01/implement.checkpoint.md
   -
     Title: PSE 02
     Description: Data Transformation
