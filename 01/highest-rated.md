@@ -275,7 +275,8 @@ If `restaurants` is
     {"name": "North Star", "rating": 1},
     {"name": "South Pole", "rating": 1},
     {"name": "East Side", "rating": 5},
-    {"name": "West Egg", "rating": 5}]
+    {"name": "West Egg", "rating": 5}
+]
 ```
 
 What is the return value of `get_highest_rated`?
