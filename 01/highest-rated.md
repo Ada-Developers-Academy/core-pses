@@ -384,7 +384,7 @@ Select every statement that is true.
 * If there are no restaurants, then the function returns `None`
 * If there are two or more highest-rated restaurants, then the function returns a list containing both restaurants
 * If there are two or more highest-rated restaurants, then the function returns `None`
-* If there are two or more highest-rated restaurants, the original problem statement doesn't mention what to return.
+* If there are two or more highest-rated restaurants, the original problem statement doesn't mention what to return
 
 ##### !end-options
 ##### !answer
@@ -394,9 +394,14 @@ Select every statement that is true.
 * The function returns the data of the highest-rated restaurant
 * The highest-rated restaurant is the dictionary with the biggest value of `rating`
 * If there are no restaurants, then the function returns `None`
-* If there are two or more highest-rated restaurants, the original problem statement doesn't mention what to return.
+* If there are two or more highest-rated restaurants, the original problem statement doesn't mention what to return
 
 ##### !end-answer
+##### !hint
+
+The correct answer has six options selected.
+
+##### !end-hint
 ##### !explanation
 
 According to the original problem statement and given examples:
@@ -439,6 +444,11 @@ Select all statements that are true about the input parameter, `restaurants`.
 * Each restaurant has a `name` field and a `rating` field.
 
 ##### !end-answer
+##### !hint
+
+The correct answer has four options selected.
+
+##### !end-hint
 ##### !explanation
 
 We can find our answer in the problem statement and the examples.
@@ -489,6 +499,11 @@ Select all statements that are true.
 * We know that each restaurant contains pairs of data, such as name data and ratings data. Dictionaries are good data structures to represent each restaurant.
 
 ##### !end-answer
+##### !hint
+
+The correct answer has two options selected.
+
+##### !end-hint
 ##### !explanation
 
 We determined that `restaurants` is a list of dictionaries that represents a list of restaurants.
@@ -534,6 +549,11 @@ Select all statements that describe the data structure of what the function retu
 * If there are zero restaurants, the return value is `None`.
 
 ##### !end-answer
+##### !hint
+
+The correct answer has four options selected.
+
+##### !end-hint
 ##### !explanation
 
 Consider this statement from the original problem, and this given example:
@@ -579,6 +599,11 @@ Select all statements that are true about the return value.
 * We can represent the idea of no restaurant with `None`.
 
 ##### !end-answer
+##### !hint
+
+The correct answer has two options selected.
+
+##### !end-hint
 ##### !explanation
 
 The problem statement says to return the highest-rated restaurant.
@@ -626,6 +651,11 @@ Select all relevant questions.
 * How do we check if a restaurant has the highest rating?
 
 ##### !end-answer
+##### !hint
+
+The correct answer has two options selected.
+
+##### !end-hint
 ##### !explanation
 
 This problem asks for the "highest-rated" restaurant. That means that we only need to compare one thing: the restaurant's rating!
@@ -651,7 +681,7 @@ Based on the answer to the previous question, select the statements that will he
 ##### !end-question
 ##### !options
 
-* When we need to compare one value to another, we can use the comparison operators, `<`, `>`, `<=`, `>=`, `is`, or `not`.
+* When we need to compare one value to another, we can use the comparison operators, `<`, `>`, `<=`, `>=`, `==`, `is`, or `not`.
 * When we need to look at every item in a list, we can use loops and iteration.
 * When we need to add, subtract, multiply, divide, find the remainder, or exponentiate, we can use the arithmetic operators `+`, `-`, `*`, `/`, `%`, or `**`.
 * When we need to store more than one item, we can create a variable that references a list.
@@ -659,10 +689,15 @@ Based on the answer to the previous question, select the statements that will he
 ##### !end-options
 ##### !answer
 
-* When we need to compare one value to another, we can use the comparison operators, `<`, `>`, `<=`, `>=`, `is`, or `not`.
+* When we need to compare one value to another, we can use the comparison operators, `<`, `>`, `<=`, `>=`, `==`, `is`, or `not`.
 * When we need to look at every item in a list, we can use loops and iteration.
 
 ##### !end-answer
+##### !hint
+
+The correct answer has two options selected.
+
+##### !end-hint
 ##### !explanation
 
 This problem asks for the "highest-rated" restaurant.
