@@ -32,12 +32,6 @@ There is one restaurant in the input. Its name is "Crow's Nest," and its rating 
 
 The input is an empty list, which means that there are zero restaurants. Because there are _no_ restaurants at all, the output, or return value, of this function should be `None`.
 
-<!-- | Input (Parameters of the function)                                   | Expected Output (Return value of the function) | Explanation                                                                                                                                                                                                                                                                              |
-| -------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[{"name": "Grillby's", "rating": 1}, {"name": "Crow's Nest", "rating": 5}]` | `{"name": "Crow's Nest", "rating": 5}`             | There are two restaurants: "Grillby's" and "Crow's Nest." The rating of "Grillby's" is `1`, and the rating of "Crow's Nest" is `5`. Crow's nest has the highest rating. The return value of this function should be a dictionary, which contains the name and rating of this restaurant. |
-| `[{"name": "Crow's Nest", "rating": 1}]`                                 | `{"name": "Crow's Nest", "rating": 1}`             | There is one restaurant in the input. Its name is "Crow's Nest," and its rating is `1`. Even though there's only one restaurant, it has the highest rating in this list! The return value of this function should be a dictionary, which contains the name and rating of "Crow's Nest."  |
-| `[]`                                                                 | `None`                                         | The input is an empty list, which means that there are zero restaurants. Because there are _no_ restaurants at all, the output, or return value, of this function should be `None`.                                                                                                      | -->
-
 ## Understanding the Problem
 
 The first step to implementing the `get_highest_rated` function is to understand the problem. We need to read through the problem statement carefully to learn about every requirement. Take the time to do the following:
