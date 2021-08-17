@@ -710,3 +710,24 @@ Being the _most_ of something (such as having the "highest rating," having the "
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
+
+<!-- Question -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 0168f7ef
+* title: PSE
+##### !question
+
+What was one of the major themes of the questions in this PSE?
+
+Examples include:
+
+* Asking questions about edge cases
+* How to use dictionaries
+* Writing examples
+* Using readable variable names
+
+##### !end-question
+### !end-challenge
+<!-- prettier-ignore-end -->
