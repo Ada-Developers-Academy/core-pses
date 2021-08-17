@@ -59,7 +59,7 @@ class TestChallenge(unittest.TestCase):
         self.assertIsNone(output)
 ```
 ### !end-tests
-### !rubric
+### !explanation
 
 An example of a working implementation:
 
@@ -76,6 +76,6 @@ def get_highest_rated(restaurants):
     return highest_rated
 ```
 
-### !end-rubric
+### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->

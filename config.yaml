@@ -25,7 +25,7 @@ Standards:
       -
         Type: Checkpoint
         UID: ea70e2d3
-        Path: /01/implement.checkpoint.md
+        Path: /01/implement-highest-rated.checkpoint.md
   -
     Title: PSE 02
     Description: Data Transformation
