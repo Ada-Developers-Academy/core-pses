@@ -28,15 +28,23 @@ Standards:
         Path: /01/calculator.md
   -
     Title: PSE 02
-    Description: Data Transformation
+    Description: Adagrams
     UID: 43f37536-7fe3-4a01-8832-9bad151b2d7f
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 5e834674-1c56-48f8-ae3d-ef598f3d79a7
-        Path: /02/data-transformation.md
+        UID: ed38e612
+        Path: /02/adagrams.md
+      -
+        Type: Instructor
+        UID: 97e638ef
+        Path: /02/implement-adagrams.instructor.md
+      -
+        Type: Checkpoint
+        UID: 7747b391
+        Path: /02/implement-adagrams.checkpoint.md
   -
     Title: PSE 03
     Description: Hamming
