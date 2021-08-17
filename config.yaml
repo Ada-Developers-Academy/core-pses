@@ -23,6 +23,10 @@ Standards:
         UID: e69885f5
         Path: /01/highest-rated.md
       -
+        Type: Instructor
+        UID: c31f34cf
+        Path: /01/implement-highest-rated.instructor.md
+      -
         Type: Checkpoint
         UID: ea70e2d3
         Path: /01/implement-highest-rated.checkpoint.md
