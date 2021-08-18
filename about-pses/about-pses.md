@@ -1,57 +1,53 @@
 # About PSEs
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7bde6046-2bb4-4c2b-97bd-ac2a001e5f81&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
 ## Introduction
 
-For the first week of PSEs, instructors should cover:
+We need to solve problems with other people, whether it's in a whiteboard interview for a new job, or talking through a hard problem with a teammate.
 
-- What are PSEs?
-- What is the PSE format?
-- What tips do we have for PSEs?
-- What does an example PSE and submission look like? How does it get reviewed?
+In both of these scenarios, the most important thing is to communicate and display our thought processes while coding. Interviewers and teammates look for the ability to think like a programmer.
 
-## Overview
+But how do we demonstrate that we think like a programmer while solving problems?
 
-Problem-Solving Exercise assignments (PSEs) are weekly assignments to practice problem-solving skills.
+We demonstrate how we think like a programmer by:
 
-They are a time-boxed exercise. The exercises will touch on problem-solving skills on coding problems we've seen in the past.
+- Sharing our understanding of the problem
+- Asking the right questions
+- Talking about coding concepts in multiple different ways
+- Solving small coding problems while working towards a bigger solution
 
-### Growth Over Time
+## What Are PSEs?
 
-Our PSEs are designed to exercise parts of the brain that aren't often activated. They may start off feeling weird, and often challenging.
+Problem-Solving Exercise assignments (PSEs) are assignments to practice problem-solving skills.
 
-These exercises will get more familiar over time. There will be patterns in answers, repetition, and using similar techniques between different problems on different weeks. These exercises will become more smooth as problem-solving skills grow, more context with programming problems increases, and more tools, techniques, and experimentation happens.
+The exercises will touch on problem-solving skills on coding problems. The format has three parts:
 
-# Format of Problem-Solving Exercises
+1. A problem statement describing the code you need to write
+1. A series of questions to guide your understanding of the problem
+1. A code challenge to solve the problem
 
-Given this problem prompt:
+### How to Use PSEs
 
-> If you're given a vague description of some type of input, write code that gives a specific kind of output
+PSEs will teach us:
 
-Answer the following prompts:
+- How to go from word problem to code
+- How to word the same idea in different ways
+- How to ask the right questions
+- What to consider when considering edge cases
+- How to work with ambiguity
 
-1. List at least 5 questions whose answers would clarify the problem statement
-2. List 2 sets of example inputs and their expected output
-3. Divide the project prompt into at least 2 different sub-problems
-4. Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
-5. Write down on paper a solution for your answer in #4 in code
+PSE questions are written to guide your thought process through problem-solving.
+
+Each question is purposeful and intentional. **The questions themselves will teach you how to think through the problem**.
+
+When a question is unexpected or challenging for you, write the question down. Then answer for yourself:
+
+- Why was this question unexpected? What does this question touch on that I didn't expect?
+- Why was this question challenging? What do I need to do, learn, review, or study so that I can answer this question more easily in the future?
+
+**Constantly reflecting on PSEs** with these two questions **is the strongest way to practice** "thinking like a programmer."
 
 ## Notes & Tips
 
-- This is open note. You are free to use your notes, the Internet, your past projects and assignments, etc!
-- For question #1, you will need to list at least five questions. This should feel like a stretch! It should feel really strange and creative to think of this many questions, or more. Sometimes, you'll come up with very weird questions, and that is totally fine, as long as the questions challenge assumptions and are relevant to the problem. Later on in the program, we will encourage you all to aim for 6, 7, or 8 questions.
-- For questions #2, #3, #4, and #5, **you will need to make assumptions, and that is okay.** In other words, you will need to answer the questions you wrote in question #1.
-- Your assumptions should be consistent throughout the exercise
-- What is a sub-problem? Every problem has sub-problems, or smaller problems that need to be solved as part of the original problem.
-  - For example, in math, for solving the problem `x = ((8 + 3) * 72) / 2`, some sub-problems would be:
-    - How do you isolate problems in parentheses?
-    - How do you add?
-    - How do you multiply?
-    - How do you divide?
-- For question #3, your two sub-problems that you list do not need to make up the entire problem.
-- For question #5, you are free to write down code that you are seeing from your previous notes, projects, Internet, etc.
-- Answer question #5 last. If you need to leave an answer blank, let it be #5.
-- These are challenging exercises!
-- If your answers from last week seem similar to your answers for this week, that is okay.
-
+- It's better to slowly work on a PSE every day rather than wait until the last minute.
+- Don't procrastinate!
+- If the problem statement, question, or option sounds confusing, try re-reading it out loud.
