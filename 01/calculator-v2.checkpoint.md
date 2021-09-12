@@ -10,10 +10,11 @@ Imagine working on office software that has math and calculation tools as a feat
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: ibbbzw
+* id: 8637405e-502f-45fb-96c3-3970ff58d99f
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
+
 ##### !question
 
 List five or more questions whose answers would clarify the problem statement
@@ -35,7 +36,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: k9Zgqq
+* id: efee5fc6-bf73-43b8-9e36-daee0198ea3f
 * title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
@@ -76,9 +77,9 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: gN5kDq
+* id: 8981328e-da26-44b1-a33e-766db957c491
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -114,9 +115,9 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: tR8NJU
+* id: 5e399dfd-52c9-4d20-89b7-af854e6a1229
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -139,7 +140,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: U8zzmp
+* id: 97b0c145-0f38-4132-92f7-03a197e0aa78
 * title: Solve a Sub-Problem
 * points: 1
 * topics: pse
