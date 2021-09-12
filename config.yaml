@@ -18,35 +18,35 @@ Standards:
   -
     Title: PSE 01
     Description: Calculator
-    UID: 0a601cc26210e6eed0bd55f8a843ca8f
+    UID: 7c70d97a-faf1-4b10-8326-bdd50f5cfb77
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 10ddabe050188bf867ffe5c5ccb689ae
+        UID: 9a7c117c-783e-4d68-bdd0-e62f1fb86bcc
         Path: /01/calculator.checkpoint.md
   -
     Title: PSE 02
     Description: Data Transformation
-    UID: 43f37536-7fe3-4a01-8832-9bad151b2d7f
+    UID: 09e03083-92d7-42cc-9e06-de55f3632ec9
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 5e834674-1c56-48f8-ae3d-ef598f3d79a7
+        UID: d9148e7b-2b1f-4725-a924-834397df2a3f
         Path: /02/data-transformation.checkpoint.md
   -
     Title: PSE 03
     Description: Hamming
-    UID: 1d305fd4-0793-406e-882d-6f6ab1d6c0e7
+    UID: 2e91aea7-e884-484c-9c8f-06f9e7bde0d5
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 43e4b99a-7df0-4147-8bea-2f08465d0c47
+        UID: 5cd7df53-a89e-4218-87e5-d62ff9b4e8d3
         Path: /03/hamming.checkpoint.md
   -      
     Title: PSE 04
