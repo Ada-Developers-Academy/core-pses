@@ -18,36 +18,36 @@ Standards:
   -
     Title: PSE 01
     Description: Calculator
-    UID: 7c70d97a-faf1-4b10-8326-bdd50f5cfb77
+    UID: 9ac659b4-13a2-4faa-a8a0-869105fc1d58
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: 9a7c117c-783e-4d68-bdd0-e62f1fb86bcc
-        Path: /01/calculator-v2.checkpoint.md
+        Type: Checkpoint 
+        UID: 6f2ed3ea-269b-42cd-8c19-5ce45b2a9854
+        Path: /01/calculator.checkpoint.md
   -
     Title: PSE 02
     Description: Data Transformation
-    UID: 09e03083-92d7-42cc-9e06-de55f3632ec9
+    UID: 5198dd71-8487-4192-9e7e-f65840ccfff6
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: d9148e7b-2b1f-4725-a924-834397df2a3f
-        Path: /02/data-transformation-v2.checkpoint.md
+        Type: Checkpoint
+        UID: 6c4d42d6-da91-46e4-9f9f-bf31dfb3d523
+        Path: /02/data-transformation.checkpoint.md
   -
     Title: PSE 03
     Description: Hamming
-    UID: 2e91aea7-e884-484c-9c8f-06f9e7bde0d5
+    UID: ceb82f7e-cdcd-44dd-aa1a-85ea7ba21c56
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: 5cd7df53-a89e-4218-87e5-d62ff9b4e8d3
-        Path: /03/hamming-v2.checkpoint.md
+        Type: Checkpoint
+        UID: a696f346-07b3-46d4-85fc-da678eb67786
+        Path: /03/hamming.checkpoint.md
   -      
     Title: PSE 04
     Description: Palindrome

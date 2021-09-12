@@ -10,7 +10,7 @@ Imagine working on office software that has math and calculation tools as a feat
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 8637405e-502f-45fb-96c3-3970ff58d99f
+* id: 66686914-58c2-4d51-bddd-c67634b9c88d
 * title: Ask Clarifying Questions
 * points: 3
 * topics: pse
@@ -36,9 +36,9 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: efee5fc6-bf73-43b8-9e36-daee0198ea3f
+* id: ccecadb4-cf2a-4d91-9784-5636713e3057
 * title: Consider Example Inputs and Outputs
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -77,7 +77,7 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 8981328e-da26-44b1-a33e-766db957c491
+* id: 7ff40143-a562-4da6-a307-d1a0826df3b2
 * title: Break Down the Problem into Sub-Problems
 * points: 3
 * topics: pse
@@ -115,7 +115,7 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 5e399dfd-52c9-4d20-89b7-af854e6a1229
+* id: c4df9ef1-2d80-45d2-a00d-08df0af8cdc7
 * title: Create Logical Steps
 * points: 3
 * topics: pse
@@ -140,9 +140,9 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 97b0c145-0f38-4132-92f7-03a197e0aa78
+* id: 79f5c4fb-01f1-446d-9b24-1a9dcd25dd9f
 * title: Solve a Sub-Problem
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
