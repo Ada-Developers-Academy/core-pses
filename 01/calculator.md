@@ -4,6 +4,8 @@
 
 Imagine working on office software that has math and calculation tools as a feature. Create a function named `calculator` that is responsible for taking two numbers and a math operation (such as addition and subtraction) as parameters. This function should have a return value of the calculated math operation.
 
+Recommended Time Box: 1 hour
+
 ## Prompts
 
 <!-- Question 1 -->

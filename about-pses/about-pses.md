@@ -1,7 +1,5 @@
 # About PSEs
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7bde6046-2bb4-4c2b-97bd-ac2a001e5f81&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
 ## Introduction
 
 For the first week of PSEs, instructors should cover:
