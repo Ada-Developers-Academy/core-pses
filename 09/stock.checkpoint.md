@@ -237,15 +237,7 @@ Write a solution to the Buying Stock function below.  The following tests will e
 ##### !placeholder
 
 ```py
-<<<<<<< HEAD:09/stock.checkpoint.md
 def max_profit(arr):
-=======
-def knapsack(sum, arr):
-    '''
-    INPUT: Target sum and an array of numbers
-    OUTPUT: Sum nearest to (or equal to) but not exceeding the target sum
-    '''
->>>>>>> 234b9a62d5e42980f68001d098f39679fdf2345e:09/knapsack.checkpoint.md
     pass
     
 
