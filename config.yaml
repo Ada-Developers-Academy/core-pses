@@ -105,7 +105,7 @@ Standards:
         Path: /08/kth-missing-positive-number.checkpoint.md
   -
     Title: PSE 09
-    Description: Knapsack
+    Description: "Best Time to Buy/Sell Stock"
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
       - success criteria
