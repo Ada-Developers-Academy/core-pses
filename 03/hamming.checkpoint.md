@@ -1,8 +1,21 @@
-# Calculator
+# Hamming
 
 ## Problem
 
-Imagine working on office software that has math and calculation tools as a feature. Create a function named `calculator` that is responsible for taking two numbers and a math operation (such as addition and subtraction) as parameters. This function should have a return value of the calculated math operation.
+Imagine working on software that analyzes mutations in DNA.
+
+Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands as parameters. This method should have a return value of the number of differences between each string.
+
+For example, given these two DNA strands (strings), `hamming_distance` should return `7` because there are 7 differences:
+
+```
+Strand #1:   GAGCCTACTAACGGGAT
+Strand #2:   CATCGTAATGACGGCCT
+Differences: ^ ^ ^  ^ ^    ^^
+             7 in total
+```
+
+(This problem is sourced from http://rosalind.info/problems/hamm/)
 
 ## Prompts
 
@@ -10,9 +23,9 @@ Imagine working on office software that has math and calculation tools as a feat
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: ibbbzw
+* id: 733d51d0-bad2-4a5c-8475-68dc11e91618
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -28,6 +41,23 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
+##### !explanation
+
+Here are some example clarifying questions:
+
+1. What happens if the strings are two different lengths?
+1. How small can the DNA strands be? What happens if the strings are empty?
+1. Can we assume that DNA strands be made up of only "A", "C", "G", and "T"? Will there ever be any exceptions?
+1. How large can the DNA strands be?
+1. Are there ever any patterns in DNA strands?
+
+##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least five questions
+- The answer is wrong if there were no questions clarifying what you should do if the two strings are different lengths
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -35,9 +65,9 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: k9Zgqq
+* id: cbb95ff3-17ef-438b-9f84-755a3d184ab8
 * title: Consider Example Inputs and Outputs
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -59,16 +89,25 @@ Consider the following for inspiration:
 
 Here are some example sets of inputs and outputs:
 
-1. One example
-    - `5`, `10`, `"*"`
-    - Output: `50`
+Input:
+    - `"GAGCC"`
+    - `"CATCG"`
+Output: 3
 
-1. One example
-    - Input: `0`, `0`, `"/"`
-    - Output: `None` or Raise an error
+Input:
+    - `"G"`
+    - `"C"`
+Output: 1
 
 ##### !end-explanation
+##### !rubric
 
+- The answer is wrong if there aren't 2 examples
+- The answer is wrong if either of them aren't valid/consistent with each other
+- The answer is wrong if the example inputs were not two strings for valid input
+- The answer is wrong if the example outputs were not integers or exceptions raised
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -76,9 +115,9 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: gN5kDq
+* id: 4d19dc79-3595-4e24-a88a-78b007805cfb
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -103,10 +142,16 @@ Consider the following for inspiration:
 
 Here are some example sub-problems:
 
-1.  Determining the type of operation, plus, minus, etc
-1.  Doing the calculations
+1. How can I iterate over every element in both DNA strands at the same time?
+1. What's the best way for me to compare the difference between two letters in a string?
 
 ##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least 2 sub-problems listed
+- The answer is wrong if any of the sub-problems aren't relevant to the original problem
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -114,9 +159,9 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: tR8NJU
+* id: c7469bd0-4ff8-4d72-8dd0-5fedad6afa87
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -132,6 +177,12 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
+##### !rubric
+
+- The answer is wrong if it doesn't have at least two steps
+- The answer is wrong if it isn't logical to another reader
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -139,9 +190,9 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: U8zzmp
+* id: db9dfcdb-0176-48e7-8329-ecfd7f076b2c
 * title: Solve a Sub-Problem
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -157,5 +208,13 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
+##### !rubric
+
+The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
+
+- The answer is wrong if it is blank
+- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
+
+##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
