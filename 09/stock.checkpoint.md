@@ -290,13 +290,11 @@ class TestPython1(unittest.TestCase):
 Our solution:
 
 ```python
-def max_profit(arr):
-    max_profit = 0
-    for i in range(len(arr) - 1):
-        for j in range(i + 1, len(arr)):
-            if arr[j] - arr[i] > max_profit:
-                max_profit = arr[j] - arr[i]
-    return max_profit
+def max_profit(prices):
+    profit = 0
+    for i in range(1, len(prices)):
+        profit += max(prices[i]-prices[i-1], 0)
+    return profit
 ```
 
 ##### !end-explanation
