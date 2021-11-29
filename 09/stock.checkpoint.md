@@ -1,31 +1,41 @@
-# PSE 9 - Knapsack
+# PSE 9 - Best time to sell Stock
 
 ## Given this problem prompt:
 
-Given an array of integers and a target sum, determine the sum nearest to but not exceeding the target that can be created. To create the sum, use any element of your array zero or more times.
+You are given an integer array `prices` where `prices[i]` is the price of a given stock on the ith day.
 
-For example, if `arr = [2, 3, 4]` and your target sum is 10, you might select `[2, 2, 2, 2, 2]`, `[2, 2, 3, 3]`, `[3, 3, 4]` or `[2, 4, 4]`. In this case, you can arrive at exactly the target.
+On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
 
-**Sample Input**
+Find and return the **maximum** profit you can achieve.
 
-k = 12
-arr = [1, 6, 9]
+**Example 1:**
 
-**Sample Output**
+```
+Input: prices = [7,1,5,3,6,4]
+Output: 7
+Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+Total profit is 4 + 3 = 7.
+```
 
-12
+**Example 2:**
 
-**Sample Input**
+```
+Input: prices = [1,2,3,4,5]
+Output: 4
+Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+Total profit is 4.
+```
 
-k = 11
-arr = [2, 4, 6]
+**Example 3:**
 
-**Sample Output**
+```
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
+```
 
-10
-
-
-Sourced from:  [HackerRank](https://www.hackerrank.com/challenges/unbounded-knapsack/problem)
+Sourced from:  [Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
 ## Answer the following prompts:
 
@@ -176,13 +186,13 @@ Steps to solve a subproblem
 * type: code-snippet
 * language: python3.6
 * id: 7176204d-f1da-463c-8d46-af9229de96b2
-* title: Knapsack Coding Challenge
+* title: Buying Stock Coding Challenge
 * points: 1
 * topics: python, loops, lists
 
 ##### !question
 
-Write a solution to the knapsack function below.  The following tests will evaluate your solution.
+Write a solution to the Buying Stock function below.  The following tests will evaluate your solution.
 
 <!-- prettier-ignore -->
 <details>
@@ -190,71 +200,35 @@ Write a solution to the knapsack function below.  The following tests will evalu
 
   ```python
 
-    def test_sum_23_arr_5_4_4_4_8(self):
+    def test_profit_7_1_5_3_6_4(self):
         # Arrange
-        sum = 23
-        arr = [5, 4, 4, 4, 8]
+        arr = [7, 1, 5, 3, 6, 4]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
-        assert answer == 23
+        assert answer == 7
 
-    def test_sum_zero_arr_empty(self):
+    def test_profit_1_2_3_4_5(self):
         # Arrange
-        sum = 0
-        arr = []
+        arr = [1, 2, 3, 4, 5]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
-        assert answer == 0
+        assert answer == 4
 
-    def test_sum_zero_arr_one_two_three(self):
+    def test_profit_7_6_4_3_1(self):
         # Arrange
-        sum = 0
-        arr = [1, 2, 3]
+        arr = [7, 6, 4, 3, 1]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
         assert answer == 0
-
-    def test_sum_tweleve_arr_one_six_nine(self):
-        # Arrange
-        sum = 12
-        arr = [1, 6, 9]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        assert answer == 12
-
-    def test_sum_eleven_arr_two_four_six(self):
-        # Arrange
-        sum = 11
-        arr = [2, 4, 6]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        assert answer == 10
-
-    def test_sum_three_arr_three_four_eight(self):
-        # Arrange
-        sum = 9
-        arr = [3, 4, 4, 4, 8]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        assert answer == 9
   ```
 </details>
 
@@ -263,11 +237,7 @@ Write a solution to the knapsack function below.  The following tests will evalu
 ##### !placeholder
 
 ```py
-def knapsack(sum, arr):
-    '''
-    INPUT: Target sum and an array of numbers
-    OUTPUT: Sum nearest to (or equal to) but not exceeding the target sum
-    '''
+def max_profit(arr):
     pass
     
 
@@ -279,111 +249,53 @@ def knapsack(sum, arr):
 
 ```py
 import unittest
-from main import knapsack
+from main import max_profit
 
 class TestPython1(unittest.TestCase):
-    def test_sum_23_arr_5_4_4_4_8(self):
+    def test_profit_7_1_5_3_6_4(self):
         # Arrange
-        sum = 23
-        arr = [5, 4, 4, 4, 8]
+        arr = [7, 1, 5, 3, 6, 4]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
-        self.assertEqual(answer, 23)
+        self.assertEqual(answer, 7)
 
-    def test_sum_zero_arr_empty(self):
+    def test_profit_1_2_3_4_5(self):
         # Arrange
-        sum = 0
-        arr = []
+        arr = [1, 2, 3, 4, 5]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
-        self.assertEqual(answer, 0)
+        self.assertEqual(answer, 4)
 
-    def test_sum_zero_arr_one_two_three(self):
+    def test_profit_7_6_4_3_1(self):
         # Arrange
-        sum = 0
-        arr = [1, 2, 3]
+        arr = [7, 6, 4, 3, 1]
 
         # Act
-        answer = knapsack(sum, arr)
+        answer = max_profit(arr)
 
         # Assert
         self.assertEqual(answer, 0)
-
-    def test_sum_tweleve_arr_one_six_nine(self):
-        # Arrange
-        sum = 12
-        arr = [1, 6, 9]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        self.assertEqual(answer, 12)
-
-    def test_sum_eleven_arr_two_four_six(self):
-        # Arrange
-        sum = 11
-        arr = [2, 4, 6]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        self.assertEqual(answer, 10)
-
-    def test_sum_three_arr_three_four_eight(self):
-        # Arrange
-        sum = 9
-        arr = [3, 4, 4, 4, 8]
-
-        # Act
-        answer = knapsack(sum, arr)
-
-        # Assert
-        self.assertEqual(answer, 9)
 ```
 
 ##### !end-tests
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 Our solution:
 
 ```python
-def knapsack(sum = 0, arr = []):
-    if len(arr) == 0 or sum == 0:
-        return 0
-    
-    if sum < min(arr):
-        return 0
-    
-    for element in arr:
-        if sum % element == 0:
-            return sum
-        
-    # A list of all booleans
-    # True if the index is in arr
-    # False otherwise
-    sums_in_arr = [False] * (sum + 1)
-    max_found_sum = 0
-    
-    for i in range(1, sum + 1):
-        for val in arr:
-            if i - val == 0 or i - val > 0 and sums_in_arr[i - val]:
-                sums_in_arr[i] = True
-                max_found_sum = i
-                
-
-    return max_found_sum
+def max_profit(prices):
+    total_profit = 0
+    for i in range(1, len(prices)):
+        # if prices[i] - prices[i-1] is > 0, then we have a profit
+        total_profit += max(prices[i]-prices[i-1], 0)
+    return total_profit
 ```
 
 ##### !end-explanation
