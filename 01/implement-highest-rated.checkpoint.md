@@ -17,15 +17,15 @@ This function should take in a list of dictionaries named `restaurants` as a par
 
 | Input (Parameters of the function)                                           | Expected Output (Return value of the function) |
 | ---------------------------------------------------------------------------- | ---------------------------------------------- |
-| `[{"name": "Grillby's", "rating": 1}, {"name": "Crow's Nest", "rating": 5}]` | `{"name": "Crow's Nest", "rating": 5}`         |
-| `[{"name": "Crow's Nest", "rating": 1}]`                                     | `{"name": "Crow's Nest", "rating": 1}`         |
-| `[]`                                                                         | `None`                                         |
+| `restaurants = [{"name": "Grillby's", "rating": 1}, {"name": "Crow's Nest", "rating": 5}]` | `{"name": "Crow's Nest", "rating": 5}`         |
+| `restaurants = [{"name": "Crow's Nest", "rating": 1}]`                                     | `{"name": "Crow's Nest", "rating": 1}`         |
+| `restaurants = []`                                                                         | `None`                                         |
 
 ### !end-question
 ### !placeholder
 
 ```python
-def get_highest_rated():
+def get_highest_rated(restaurants):
     pass
 ```
 ### !end-placeholder
