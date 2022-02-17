@@ -42,10 +42,10 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-1.  What should the function return if there are multiple restaurants tied for the highest rating?
-1.  How should the function handle restaurant dictionaries with missing data (name or rating)?
-1.  How should the function handle restaurant dictionaries with keys in addition to `"name"` and `"rating"`?
-1.  How should the function handle non-numerical values for `"rating"`?
+1. What should the function return if there are multiple restaurants tied for the highest rating?
+1. How should the function handle restaurant dictionaries with missing data (name or rating)?
+1. How should the function handle restaurant dictionaries with keys in addition to `"name"` and `"rating"`?
+1. How should the function handle non-numerical values for `"rating"`?
 1. How should the function handle input that is a single dictionary (not a list)?
  
 ##### !end-explanation
