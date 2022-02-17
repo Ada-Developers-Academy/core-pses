@@ -36,7 +36,6 @@ Consider the following for inspiration:
 
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
 
 ##### !end-hint
 ##### !explanation 
