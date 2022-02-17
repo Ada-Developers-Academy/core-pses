@@ -14,7 +14,7 @@ This function should take in a list of dictionaries named `restaurants` as a par
 | -- | -- | --|
 | `restaurants = [{"name": "Grillby's", "rating": 1}, {"name": "Crow's Nest", "rating": 5}]` | `{"name": "Crow's Nest", "rating": 5}`         | There are two restaurants: "Grillby's" and "Crow's Nest." The rating of "Grillby's" is `1`, and the rating of "Crow's Nest" is `5`. "Crow's Nest" has the highest rating. The return value of this function should be a dictionary, which contains the name and rating of this restaurant. |
 | `restaurants = [{"name": "Crow's Nest", "rating": 1}]` | `{"name": "Crow's Nest", "rating": 1}`         | There is one restaurant in the input. Its name is "Crow's Nest," and its rating is `1`. Even though there's only one restaurant, it has the highest rating in this list! The return value of this function should be a dictionary, which contains the name and rating of "Crow's Nest." |
-| `restaurants = []`                              | `None`                                         | The input is an empty list, which means that there are zero restaurants. Because there are _no_ restaurants at all, the output, or return value, of this function should be `None`. |
+| `restaurants = []`                              | `None`                                         | The input is an empty list, which means that there are zero restaurants. Because there are _no_ restaurants at all, the output, or return value, of this function should be `None`. <br> *This is a common edge case to consider. In this case, it is provided. Often, behavior for this sort of edge case will need to be clarified by you!* |
 
 ## Prompts
 
@@ -45,12 +45,10 @@ Here are some example clarifying questions:
 
 1.  What should the function return if there are multiple restaurants tied for the highest rating?
 1.  How should the function handle restaurant dictionaries with missing data (name or rating)?
+1.  How should the function handle restaurant dictionaries with keys in addition to `"name"` and `"rating"`?
 1.  How should the function handle non-numerical values for `"rating"`?
-1. 
-1.
-
-
-
+1. How should the function handle input that is a single dictionary (not a list)?
+ 
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
@@ -65,9 +63,11 @@ Here are some example clarifying questions:
 * topics: pse
 ##### !question
 
-Write at least two unit tests for `get_highest_rated`. 
-* Consider at least one nominal and one edge test case.
-* What is the expected output for the given input?
+1. Use the comments provided to write at least two example input/outputs:
+    * Consider at least one nominal and one edge case.
+    * What is the expected output for the given input?
+    * You can use the examples provided in the prompt, or other examples.
+2. Write unit tests for `get_highest_rated` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 ##### !end-question
@@ -75,6 +75,12 @@ Write at least two unit tests for `get_highest_rated`.
 ##### !placeholder
 
 ```py
+# example input 2:
+# example output 2:
+
+# example input 2:
+# example output 2:
+
 def test_nominal_case():
     # ^rename with meaninful test name
     # and complete test implementation below
@@ -162,13 +168,14 @@ def test_returns_none_with_zero_restaurants(self):
 ##### !question
 
 Without writing code, describe how you would implement `get_highest_rating` in enough detail that someone else could write the code. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems. For example, 1.Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere inbetween. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
 
 ##### !placeholder
 
-Write the logical steps here...
+Write the logical steps here.
 
 ##### !end-placeholder
 
