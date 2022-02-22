@@ -8,9 +8,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: 764697e3-4aee-496f-b9c7-85d3e5118c3a
+        Path: /about-pses/example-pse.instructor.md
+      -
         Type: Lesson
         UID: 71d8142849851c1999d31842cddb2aa4
         Path: /about-pses/about-pses.md
+      -
+        Type: Lesson
+        UID: aef97120-8ddc-4bb2-ad0e-28638c523bb1
+        Path: /about-pses/example-pse.md
   -
     Title: PSE 01
     Description: Calculator
