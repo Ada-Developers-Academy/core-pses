@@ -86,10 +86,12 @@ def test_invalid_input():
     # assert
     assert result == None  
 ```
+</details>
 
 ### Create Logical Steps
 
-Without writing code, describe how you would implement get_highest_rating in enough detail that someone else could write the code.
+<details>
+<summary>Without writing code, describe how you would implement get_highest_rating in enough detail that someone else could write the code. </summary>
 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere inbetween. What's important at this stage is to think through and outline the implementation before writing code.
@@ -112,6 +114,7 @@ Without writing code, describe how you would implement get_highest_rating in eno
     - else (player_2 = "paper"), return "Player 1 wins!"
 
 ```
+<details>
 
 ### Implement Solution
 
