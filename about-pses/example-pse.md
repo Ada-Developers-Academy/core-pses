@@ -112,7 +112,7 @@ def test_invalid_input():
     - else (player_2 = "paper"), return "Player 1 wins!"
 
 ```
-<details>
+</details>
 
 ### Implement Solution
 
