@@ -28,7 +28,7 @@ The exercises will touch on problem-solving skills on coding problems. The forma
     * iii. Break down the problem into logical steps.   
 1. A code challenge to solve the problem
 
-### Learning Goals
+### How to Use PSEs
 
 PSEs will teach us:
 

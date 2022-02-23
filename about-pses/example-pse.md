@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Imagine working on software for a game of [Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).
+Imagine working on software for an online game of [Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).
 
 Create a function named `winner` that takes two arguments, the move for `player_1` and `player_2` (`"rock"`, `"paper"`, or `"scissors"`), and returns the winner (`"Player 1 wins!"`, `"Player 2 wins!"`, or `"It's a tie"`).
 
@@ -31,17 +31,23 @@ Create a function named `winner` that takes two arguments, the move for `player_
 
 ### Ask Clarifying Questions
 
-List five or more questions whose answers would clarify the problem statement.
+<details> 
+ <summary>List five or more questions whose answers would clarify the problem statement.</summary>
 
-```
-1. How should the function handle invalid user input (i.e. player_1 = "lizards")?
-2. 
-3.
-4.
-5. 
-```
+1. How should the function handle invalid user input (i.e. player_1 = ["lizards"](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock))?
+2. Should a user automatically lose if they have invalid input?
+3. What should happen if both users have invalid input?
+4. Does capitalization matter?
+5. Does extra whitespace / punctuation matter?
+6. Should anything be printed to the console?
+7. Is the speed / memory usage of this function important?
+8. Should there be a default value for each of the arguments?
+</details>
 
 ### Write Unit Tests
+
+<details>
+ <summary> Identify example inputs/outputs and write unit tests</summary>
 
 1. Use the comments provided to write at least two example input/outputs:
     * Consider at least one nominal and one edge case.
@@ -51,10 +57,10 @@ List five or more questions whose answers would clarify the problem statement.
 
 ```python
 # example input 1: player_1 = "rock", player_2 = "scissors"
-# expected output 1: "Player 1 wins!"
+# example output 1: "Player 1 wins!"
 
 # example input 2: player_1 = "rock", player_2 = "lizards"
-# expected output 2: None
+# example output 2: None
 
 # * Note: This invalid input (player_2 = "lizards") would be better handled by raising an exception, a topic covered during Unit 1.
 
@@ -91,8 +97,10 @@ Without writing code, describe how you would implement get_highest_rating in eno
 ```
 1. Check if player_1 and player_2 are in ["rock", "paper", "scissors"]
     - If not, return None
+    - If yes, continue with algorithm
 2. Check for a tie: 
     - if player_1 == player_2, return "It's a tie!"
+    - if not continue
 3. First deal with the case that player_1 == "rock"
     - if player_2 == "scissors", return "Player 1 wins!"
     - else (player_2 = "paper"), return "Player 2 wins!"
@@ -133,12 +141,12 @@ def test_invalid_input():
     result = winner(player_1, player_2)
 
     # assert
-    assert result is None  
+    assert result == None  
 ```
 
 #### Solution
 ```python
-VALID_MOVES = ["rock", "paper", "scissors"]
+VALID_MOVES = ["Rock", "Paper", "Scissors"]
 
 def winner(player_1, player_2)
     
@@ -157,13 +165,13 @@ def winner(player_1, player_2)
     # player 1 = paper
     elif player_1 == 'paper':
         if player_2 == 'rock':
-            return "Player 1 wins!"
-        else:
-            return "Player 2 wins!"
+            print("Player 1 wins!")
+        elif:
+            print("Player 2 wins!")
     # player 1 = scissors
     elif player_1 == 'scissors':
         if player_2 == 'rock':
-            return "Player 2 wins!"
-        else:
-            return "Player 1 wins!"
+            print("Player 2 wins!")
+        elif:
+            print("Player 1 wins!")
 ```
