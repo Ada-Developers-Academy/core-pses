@@ -147,7 +147,7 @@ def test_returns_none_with_zero_restaurants(self):
     output = get_highest_rated(restaurants)
     
     # assert
-    assert output == None
+    assert output is None
 ```
 
 ##### !end-explanation
