@@ -125,9 +125,7 @@ def test_picks_highest_rated_from_list():
     output = get_highest_rated(restaurants)
     
     # assert
-    assert output["name"] == "Crow's Nest"
-    assert output["rating"] == 5
-    assert len(output.keys()) == 2
+    assert output == {"name": "Crow's Nest", "rating": 5}
 
 def test_picks_from_list_of_one():
     # arrange
