@@ -10,6 +10,8 @@ This function should take in a list of dictionaries named `restaurants` as a par
 
 ### Example Input/Output
 
+<!--- ***Remember to Update this in the checkpoint if it's changed here -->
+
 |<div style="width:250px">Input (Argument of the function)</div>|<div style="width:250px">Expected Output <br> (Return value of the function)</div> |<div style="width:600px">Explanation</div> |
 | -- | -- | --|
 | `restaurants = [{"name": "Grillby's", "rating": 1}, {"name": "Crow's Nest", "rating": 5}]` | `{"name": "Crow's Nest", "rating": 5}`         | There are two restaurants: "Grillby's" and "Crow's Nest." The rating of "Grillby's" is `1`, and the rating of "Crow's Nest" is `5`. "Crow's Nest" has the highest rating. The return value of this function should be a dictionary, which contains the name and rating of this restaurant. |
