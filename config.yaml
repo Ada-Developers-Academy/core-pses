@@ -9,6 +9,10 @@ Standards:
     ContentFiles:
       -
         Type: Lesson
+        UID: aed96068-4923-4103-a85e-0dec07716345
+        Path: /about-pses/example-pses.instructor.md
+      -
+        Type: Lesson
         UID: 71d8142849851c1999d31842cddb2aa4
         Path: /about-pses/about-pses.md
       -
