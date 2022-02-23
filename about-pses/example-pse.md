@@ -46,7 +46,7 @@ List five or more questions whose answers would clarify the problem statement
 
 Here are some example clarifying questions:
 
-1. How should the function handle invalid user input (i.e. player_1 = ["lizards"](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock))?
+1. How should the function handle invalid user input (i.e. player_1 = "lizards")?
 2. Should a user automatically lose if they have invalid input?
 3. What should happen if both users have invalid input?
 4. Does capitalization matter?
@@ -148,7 +148,7 @@ def test_invalid_input():
     result = winner(player_1, player_2)
 
     # assert
-    assert result == None  
+    assert result is None  
 ```
 
 ##### !end-explanation
