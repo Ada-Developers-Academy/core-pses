@@ -209,7 +209,7 @@ Example steps:
 * type: code-snippet
 * language: python3.6
 * id: c3a9be9a-f946-4450-9b52-2fc6451a3111
-* title: PSE
+* title: Implement Solution
 ### !question
 
 Implement a solution to `winner` that implements the correct logic for the Rock, Paper, Scissors ruleset outlined above. 
@@ -255,8 +255,75 @@ import unittest
 from main import *
 
 class TestPython1(unittest.TestCase):
-  def test_always_pass(self):
-    self.assertEqual(1,1)
+    def test_invalid_returns_none(self):
+        # Arrange / Act
+        result = winner("rock", "lizard")
+
+        # Assert
+        self.assertEqual(result,None)
+
+    def test_rock_ties(self):
+        # Arrange / Act
+        result = winner("rock", "rock")
+
+        # Assert
+        self.assertEqual(result,"It's a tie!")
+
+    def test_invalid_scissors_tie(self):
+        # Arrange / Act
+        result = winner("scissors", "scissors")
+
+        # Assert
+        self.assertEqual(result,"It's a tie!")
+
+    def test_paper_ties(self):
+        # Arrange / Act
+        result = winner("paper", "paper")
+
+        # Assert
+        self.assertEqual(result,"It's a tie!")
+
+    def test_player_1_rock_beats_scissors(self):
+        # Arrange / Act
+        result = winner("rock", "scissors")
+
+        # Assert
+        self.assertEqual(result, "Player 1 wins!")
+
+    def test_player_2_rock_beats_scissors(self):
+        # Arrange / Act
+        result = winner("scissors","rock")
+
+        # Assert
+        self.assertEqual(result,"Player 2 wins!")
+
+    def test_player_1_scissor_beats_paper(self):
+        # Arrange / Act
+        result = winner("scissors","paper")
+
+        # Assert
+        self.assertEqual(result, "Player 1 wins!")
+
+    def test_player_2_scissors_beats_paper(self):
+        # Arrange / Act
+        result = winner("paper","scissors")
+
+        # Assert
+        self.assertEqual(result,"Player 2 wins!")
+
+    def test_player_1_paper_beats_rock(self):
+        # Arrange / Act
+        result = winner("paper", "rock")
+
+        # Assert
+        self.assertEqual(result, "Player 1 wins!")
+
+    def test_player_2_paper_beats_rock(self):
+        # Arrange / Act
+        result = winner("rock","paper")
+
+        # Assert
+        self.assertEqual(result,"Player 2 wins!")
 ```
 ### !end-tests
 ### !explanation
@@ -264,28 +331,33 @@ class TestPython1(unittest.TestCase):
 An example of a working implementation:
 
 ```python
+
 VALID_MOVES = ["rock", "paper", "scissors"]
 
-def winner(player_1, player_2)
+def winner(player_1, player_2):
     
     # invalid input
     if player_1 not in VALID_MOVES or player_2 not in VALID_MOVES:
         return None
+
     # tie
     if player_1 == player_2:
         return "It's a tie!"
+
     #  player 1 = rock
     elif player_1 == "rock":
         if player_2 == "scissors":
             return "Player 1 wins!"
         else:
             return "Player 2 wins!"
+
     # player 1 = paper
     elif player_1 == 'paper':
         if player_2 == 'rock':
             return "Player 1 wins!"
         else:
             return "Player 2 wins!"
+            
     # player 1 = scissors
     elif player_1 == 'scissors':
         if player_2 == 'rock':
