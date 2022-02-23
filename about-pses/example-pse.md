@@ -13,18 +13,19 @@ Create a function named `winner` that takes two arguments, the move for `player_
 |player_1 = `"rock"` <br> player_2 = `"scissors"`| `"Player 1 wins!"`|`"rock"` beats `"scissors"`|
 |player_1 = `"rock"` <br> player_2 = `"rock"`| `"It's a tie!"`|`player_1` and `player_2` played the same move|
 
-## Rock, Paper, Scissors Ruleset
-|Player 1|Player 2|Winner|
-|---|---|---|
-|Rock|Rock|Tie|
-|Paper|Paper|Tie|
-|Scissors|Scissors|Tie|
-|Rock|Paper|Player 2|
-|Rock|Scissors|Player 1|
-|Paper|Rock|Player 1|
-|Paper|Scissors|Player 2|
-|Scissors|Rock|Player 2|
-|Scissors|Paper|Player 1| 
+### Complete Rock, Paper, Scissors Ruleset
+| input (first argument)| input (second argument) | output |
+|--|--|--|
+|**player_1** |**player_2**|**return value**|
+|`"rock"`|`"rock"`|`"It's a tie!"`|
+|`"paper"`|`"paper"`|`"It's a tie!"`|
+|`"scissors"`|`"scissors"`|`"It's a tie!"`|
+|`"rock"`|`"paper"`|`"Player 2 wins!"`|
+|`"rock"`|`"scissors"`|`"Player 1 wins!"`|
+|`"paper"`|`"rock"`|`"Player 1 wins!"`|
+|`"paper"`|`"scissors"`|`"Player 2 wins!"`|
+|`"scissors"`|`"rock"`|`"Player 2 wins!"`|
+|`"scissors"`|`"paper"`|`"Player 1 wins!"`| 
 
 ## Prompts
 
