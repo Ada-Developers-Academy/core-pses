@@ -38,7 +38,7 @@ Create a function named `winner` that takes two arguments, the move for `player_
 * topics: pse
 ##### !question
 
-List five or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement
 
 ##### !end-question
 

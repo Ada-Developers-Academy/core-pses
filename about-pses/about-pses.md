@@ -23,7 +23,7 @@ The exercises will touch on problem-solving skills on coding problems. The forma
 
 1. A problem statement describing the code you need to write
 1. A series of prompts to guide your understanding of the problem and scaffold our solution.
-    * i. Ask at least five clarifying questions.
+    * i. Ask at least three clarifying questions.
     * ii. Write example input/output and unit tests for at least one nominal and one edge case.
     * iii. Break down the problem into logical steps.   
 1. A code challenge to solve the problem
