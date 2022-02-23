@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Imagine working on software for an online game of [Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).
+Imagine working on software for a game of [Rock, Paper, Scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors).
 
 Create a function named `winner` that takes two arguments, the move for `player_1` and `player_2` (`"rock"`, `"paper"`, or `"scissors"`), and returns the winner (`"Player 1 wins!"`, `"Player 2 wins!"`, or `"It's a tie"`).
 
@@ -57,10 +57,10 @@ Create a function named `winner` that takes two arguments, the move for `player_
 
 ```python
 # example input 1: player_1 = "rock", player_2 = "scissors"
-# example output 1: "Player 1 wins!"
+# expected output 1: "Player 1 wins!"
 
 # example input 2: player_1 = "rock", player_2 = "lizards"
-# example output 2: None
+# expected output 2: None
 
 # * Note: This invalid input (player_2 = "lizards") would be better handled by raising an exception, a topic covered during Unit 1.
 
@@ -99,10 +99,8 @@ def test_invalid_input():
 ```
 1. Check if player_1 and player_2 are in ["rock", "paper", "scissors"]
     - If not, return None
-    - If yes, continue with algorithm
 2. Check for a tie: 
     - if player_1 == player_2, return "It's a tie!"
-    - if not continue
 3. First deal with the case that player_1 == "rock"
     - if player_2 == "scissors", return "Player 1 wins!"
     - else (player_2 = "paper"), return "Player 2 wins!"
@@ -144,12 +142,12 @@ def test_invalid_input():
     result = winner(player_1, player_2)
 
     # assert
-    assert result == None  
+    assert result is None  
 ```
 
 #### Solution
 ```python
-VALID_MOVES = ["Rock", "Paper", "Scissors"]
+VALID_MOVES = ["rock", "paper", "scissors"]
 
 def winner(player_1, player_2)
     
@@ -168,13 +166,13 @@ def winner(player_1, player_2)
     # player 1 = paper
     elif player_1 == 'paper':
         if player_2 == 'rock':
-            print("Player 1 wins!")
-        elif:
-            print("Player 2 wins!")
+            return "Player 1 wins!"
+        else:
+            return "Player 2 wins!"
     # player 1 = scissors
     elif player_1 == 'scissors':
         if player_2 == 'rock':
-            print("Player 2 wins!")
-        elif:
-            print("Player 1 wins!")
+            return "Player 2 wins!"
+        else:
+            return "Player 1 wins!"
 ```
