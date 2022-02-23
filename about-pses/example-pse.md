@@ -148,7 +148,7 @@ def test_invalid_input():
     result = winner(player_1, player_2)
 
     # assert
-    assert result == None  
+    assert result is None  
 ```
 
 ##### !end-explanation
