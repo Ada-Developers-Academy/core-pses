@@ -29,7 +29,7 @@ This function should take in a list of dictionaries named `restaurants` as a par
 * topics: pse
 ##### !question
 
-List five or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement
 
 ##### !end-question
 ##### !hint
