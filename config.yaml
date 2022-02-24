@@ -21,37 +21,45 @@ Standards:
         Path: /about-pses/example-pse.md
   -
     Title: PSE 01
-    Description: Calculator
+    Description: Highest Rated
     UID: 0a601cc26210e6eed0bd55f8a843ca8f
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: 10ddabe050188bf867ffe5c5ccb689ae
-        Path: /01/calculator.md
+        UID: e69885f5
+        Path: /01/highest-rated.md
+      -
+        Type: Instructor
+        UID: c31f34cf
+        Path: /01/implement-highest-rated.instructor.md
+      -
+        Type: Checkpoint
+        UID: ea70e2d3
+        Path: /01/implement-highest-rated.checkpoint.md
   -
     Title: PSE 02
     Description: Data Transformation
-    UID: 43f37536-7fe3-4a01-8832-9bad151b2d7f
+    UID: 5198dd71-8487-4192-9e7e-f65840ccfff6
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: 5e834674-1c56-48f8-ae3d-ef598f3d79a7
-        Path: /02/data-transformation.md
+        Type: Checkpoint
+        UID: 6c4d42d6-da91-46e4-9f9f-bf31dfb3d523
+        Path: /02/data-transformation.checkpoint.md
   -
     Title: PSE 03
     Description: Hamming
-    UID: 1d305fd4-0793-406e-882d-6f6ab1d6c0e7
+    UID: ceb82f7e-cdcd-44dd-aa1a-85ea7ba21c56
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: 43e4b99a-7df0-4147-8bea-2f08465d0c47
-        Path: /03/hamming.md
+        Type: Checkpoint
+        UID: a696f346-07b3-46d4-85fc-da678eb67786
+        Path: /03/hamming.checkpoint.md
   -      
     Title: PSE 04
     Description: Palindrome
@@ -109,7 +117,7 @@ Standards:
         Path: /08/kth-missing-positive-number.checkpoint.md
   -
     Title: PSE 09
-    Description: Knapsack
+    Description: "Best Time to Buy/Sell Stock"
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
       - success criteria
@@ -117,7 +125,7 @@ Standards:
       -
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
-        Path: /09/knapsack.checkpoint.md
+        Path: /09/stock.checkpoint.md
   -
     Title: PSE 10
     Description: Tic Tac Toe

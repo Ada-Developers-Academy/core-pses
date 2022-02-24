@@ -1,3 +1,5 @@
+
+
 # Data Transformation
 
 ## Problem
@@ -10,9 +12,9 @@ Imagine working on software that tracks students. Create a function named `get_s
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: jFQ3KB
+* id: 59886932-f38e-4a16-8bc9-2f3c2c9e76bb
 * title: Ask Clarifying Questions
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -46,7 +48,7 @@ Here are some example clarifying questions:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: HCdpPh
+* id: a9e5d06a-3e7e-44a7-9584-07890255069b
 * title: Consider Example Inputs and Outputs
 * points: 1
 * topics: pse
@@ -81,9 +83,9 @@ Here are some example sets of inputs and outputs:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: C85RJ1
+* id: 4fab32fb-cf8f-40be-b6cf-eb6b949bb06c
 * title: Break Down the Problem into Sub-Problems
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -120,9 +122,9 @@ Here are some example sub-problems:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: QD2zoX
+* id: 5dfd3ed2-c609-4881-9415-4f819cb41bfa
 * title: Create Logical Steps
-* points: 1
+* points: 3
 * topics: pse
 ##### !question
 
@@ -145,7 +147,7 @@ Consider the following for inspiration:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: JuPr9m
+* id: dbad7079-f9d2-4131-8883-0b4fbde7e6bd
 * title: Solve a Sub-Problem
 * points: 1
 * topics: pse
