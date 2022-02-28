@@ -76,11 +76,11 @@ Here are some example clarifying questions:
 ##### !placeholder
 
 ```py
-# example input 2:
-# example output 2:
+# example input 1:
+# expected output 1:
 
 # example input 2:
-# example output 2:
+# expected output 2:
 
 def test_nominal_case():
     # ^rename with meaninful test name

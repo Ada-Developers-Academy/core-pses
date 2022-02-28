@@ -30,10 +30,115 @@ Refer to this table for the point values of each letter.
 | `"cat"`                                            | `5`             |
 | `"cabbage"`                                        | `14`            |
 | [`"quartz"`](https://en.wikipedia.org/wiki/Quartz) | `24`            |
-| `""`                                               | `0`             |
-| `"Dog"`                                            | `5`             |
-| `"DOG"`                                            | `5`             |
-| `"dOG"`                                            | `5`             |
+
+## Prompts
+
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 87058b56-6678-4ef9-b1e0-c3ebddeb4bf9
+* title: Ask Clarifying Questions
+* topics: pse
+##### !question
+
+List three or more questions whose answers would clarify the problem statement
+
+##### !end-question
+##### !hint
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Previous PSEs
+
+##### !end-hint
+##### !explanation 
+
+Here are some example clarifying questions:
+
+1. How should the function handle special characters?
+1. Should the function be case in sensitive?
+1. How should the function handle an empty string?
+ 
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 2 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: code-snippet
+* language: python3.6
+* id: 890d7045-28cb-4832-812b-d65803ce2618
+* title: Write Unit Tests
+* topics: pse
+##### !question
+
+1. Use the comments provided to write at least two example input/outputs:
+    * Consider at least one nominal and one edge case.
+    * What is the expected output for the given input?
+    * You can use the examples provided in the prompt, or other examples.
+2. Write unit tests for `get_highest_rated` for the nominal and edge cases you identified in the first step.
+
+*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
+##### !end-question
+
+##### !placeholder
+
+```py
+# example input 1:
+# expected output 1:
+
+# example input 2:
+# expected output 2:
+
+def test_nominal_case():
+    # ^rename with meaninful test name
+    # and complete test implementation below
+    pass
+    # arrange
+
+    # act
+
+    # assert
+
+def test_edge_case():
+    pass
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```py
+import unittest
+
+class TestPython1(unittest.TestCase):
+  def test_always_pass(self):
+    self.assertEqual(1,1)
+```
+
+##### !end-tests
+##### !explanation 
+
+Example tests:
+
+```python
+def test_picks_highest_rated_from_list():
+
+def test_picks_from_list_of_one():
+
+
+def test_returns_none_with_zero_restaurants(self):
+
+```
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
 
 ## Understanding the Problem
 
