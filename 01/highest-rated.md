@@ -188,6 +188,8 @@ Write the logical steps here.
 
 ### !explanation
 
+Example Steps:
+
 1. Check if restaurants is empty
     - if it's empty, return `None`
 2. Set `highest_rated` to the first element in `restaurants`

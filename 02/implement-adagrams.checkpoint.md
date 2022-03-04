@@ -114,35 +114,3 @@ def score(word):
 ### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: 085ad8a1-7dbd-49ad-aa7a-2213dd0d3c76
-* title: Create Logical Steps
-* topics: pse
-
-##### !question
-
-Without writing code, describe how you would implement `get_highest_rating` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere inbetween. What's important at this stage is to think through and outline the implementation before writing code.
-
-##### !end-question
-
-##### !placeholder
-
-Write the logical steps here.
-
-##### !end-placeholder
-
-### !explanation
-### !end-explanation
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
