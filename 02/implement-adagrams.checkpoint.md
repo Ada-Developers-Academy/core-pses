@@ -33,14 +33,15 @@ Refer to this table for the point values of each letter.
 
 | Input       | Expected Output |
 | ----------- | --------------- |
-| `"dog"`     | `5`             |
-| `"cat"`     | `5`             |
-| `"cabbage"` | `14`            |
-| `"quartz"`  | `24`            |
+| `"DOG"`     | `5`             |
+| `"CAT"`     | `5`             |
+| `"CABBAGE"` | `14`            |
+| `"QUARTY"`  | `24`            |
 | `""`        | `0`             |
 | `"Dog"`     | `5`             |
 | `"DOG"`     | `5`             |
 | `"dOG"`     | `5`             |
+| `"dOG!@)"`     | `5`             |
 
 ### !end-question
 ### !placeholder
@@ -57,14 +58,15 @@ from main import *
 
 class TestChallenge(unittest.TestCase):
     def test_scores_words(self):
-        self.assertEqual(score("dog"), 5)
-        self.assertEqual(score("cat"), 5)
-        self.assertEqual(score("cabbage"), 14)
-        self.assertEqual(score("quartz"), 24)
+        self.assertEqual(score("DOG"), 5)
+        self.assertEqual(score("CAT"), 5)
+        self.assertEqual(score("CABBAGE"), 14)
+        self.assertEqual(score("QUARTZ"), 24)
         self.assertEqual(score(""), 0)
         self.assertEqual(score("Dog"), 5)
         self.assertEqual(score("DOG"), 5)
         self.assertEqual(score("dOG"), 5)
+        self.assertEqual(score("dOG!@)"), 5)
 ```
 ### !end-tests
 ### !explanation
