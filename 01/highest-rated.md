@@ -178,6 +178,16 @@ Write the logical steps here.
 
 ##### !end-placeholder
 
+### !explanation
+
+1. Check if restaurants is empty
+    - if it's empty, return `None`
+2. Set `highest_rated` to the first element in `restaurants`
+3. Loop through restaurants and compare the current resturant rating to the `highest_restaurant` rating.
+    - If the current restaurant rating is higher, assign it to `highest_restaurant`
+4. Return `highest_rated`
+
+### !end-explanation
 
 ### !end-challenge
 
