@@ -126,6 +126,12 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
+# example input 1: word = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+# expected output 1: score(word) = 87
+
+# example input 2: word = 'dOg'
+# expected output 2: score(word) = 5
+
 def test_correct_score_for_all_letters():
     # Arrange
     word = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
