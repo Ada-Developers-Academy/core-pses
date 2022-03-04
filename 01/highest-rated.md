@@ -42,7 +42,7 @@ Consider the following for inspiration:
 ##### !end-hint
 ##### !explanation 
 
-Here are some example clarifying questions:
+Example clarifying questions:
 
 1. What should the function return if there are multiple restaurants tied for the highest rating?
 1. How should the function handle restaurant dictionaries with missing data (name or rating)?
@@ -113,17 +113,17 @@ class TestPython1(unittest.TestCase):
 
 Example tests:
 
+```python
 # example input 1:     
 # restaurants = [
 #    {"name": "Grillby's", "rating": 1},
 #    {"name": "Crow's Nest", "rating": 5}
 # ]
-# expected output 1:{"name": "Crow's Nest", "rating": 5}
+# expected output 1: {"name": "Crow's Nest", "rating": 5}
 
-# example input 2: {"name": "Crow's Nest", "rating": 1}
+# example input 2: [{"name": "Crow's Nest", "rating": 1}]
 # expected output 2: {"name": "Crow's Nest", "rating": 1}
 
-```python
 def test_picks_highest_rated_from_list():
     # arrange
     restaurants = [

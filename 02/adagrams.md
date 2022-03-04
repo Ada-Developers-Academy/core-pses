@@ -56,7 +56,7 @@ Consider the following for inspiration:
 ##### !end-hint
 ##### !explanation 
 
-Here are some example clarifying questions:
+Example clarifying questions:
 
 1. How should the function handle special characters?
 1. Should the function be case in sensitive?
@@ -71,7 +71,7 @@ Here are some example clarifying questions:
 ### !challenge
 * type: code-snippet
 * language: python3.6
-* id: 890d7045-28cb-4832-812b-d65803ce2618
+* id: 6aceed45-c06a-498a-9f20-2db592be3469
 * title: Write Unit Tests
 * topics: pse
 ##### !question
@@ -132,6 +132,9 @@ Example tests:
 # example input 2: word = 'dOg'
 # expected output 2: score(word) = 5
 
+# example input 3: word = 'dOg!@)'
+# expected output 3: score(word) = 5
+
 def test_correct_score_for_all_letters():
     # Arrange
     word = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -176,7 +179,7 @@ def test_ignores_special_characters():
 ### !challenge
 
 * type: paragraph
-* id: 085ad8a1-7dbd-49ad-aa7a-2213dd0d3c76
+* id: 852cbbe5-22f0-4c14-921b-a33a1e10535c
 * title: Create Logical Steps
 * topics: pse
 
