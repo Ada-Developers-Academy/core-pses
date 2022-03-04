@@ -113,6 +113,16 @@ class TestPython1(unittest.TestCase):
 
 Example tests:
 
+# example input 1:     
+# restaurants = [
+#    {"name": "Grillby's", "rating": 1},
+#    {"name": "Crow's Nest", "rating": 5}
+# ]
+# expected output 1:{"name": "Crow's Nest", "rating": 5}
+
+# example input 2: {"name": "Crow's Nest", "rating": 1}
+# expected output 2: {"name": "Crow's Nest", "rating": 1}
+
 ```python
 def test_picks_highest_rated_from_list():
     # arrange
@@ -135,9 +145,7 @@ def test_picks_from_list_of_one():
     output = get_highest_rated(restaurants)
     
     # assert
-    assert output["name"] == "Crow's Nest"
-    assert output["rating"] == 1
-    assert len(output.keys()) == 2
+    assert output == {"name": "Crow's Nest", "rating": 1}
 
 def test_returns_none_with_zero_restaurants(self):
     # arrange
