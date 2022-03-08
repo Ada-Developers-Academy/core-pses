@@ -95,7 +95,7 @@ Example clarifying questions:
 # expected output 2:
 
 def test_nominal_case():
-    # ^rename with meaninful test name
+    # ^rename with meaningful test name
     # and complete test implementation below
     pass
     # arrange
@@ -105,7 +105,7 @@ def test_nominal_case():
     # assert
 
 def test_edge_case():
-    # ^rename with meaninful test name
+    # ^rename with meaningful test name
     # and complete test implementation below
     pass
     
