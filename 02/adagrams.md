@@ -144,6 +144,8 @@ Example tests:
 # expected output 3: score(word) = 5
 
 def test_correct_score_for_all_letters():
+    # nominal test case
+
     # Arrange
     word = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -154,6 +156,8 @@ def test_correct_score_for_all_letters():
     assert result == 87
 
 def test_case_insensitive():
+    # nominal test case
+
     # Arrange
     word = 'dOg'
 
@@ -164,7 +168,8 @@ def test_case_insensitive():
     assert result == 5
 
 def test_ignores_special_characters():
-    def test_case_insensitive():
+    # edge test case
+    
     # Arrange
     word = 'dOg!@)'
 
