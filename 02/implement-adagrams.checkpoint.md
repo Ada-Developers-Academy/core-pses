@@ -47,7 +47,7 @@ Refer to this table for the point values of each letter.
 ### !placeholder
 
 ```python
-def score():
+def score(word):
     pass
 ```
 ### !end-placeholder
