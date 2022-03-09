@@ -42,7 +42,7 @@ Consider the following for inspiration:
 ##### !end-hint
 ##### !explanation 
 
-Here are some example clarifying questions:
+Example clarifying questions:
 
 1. What should the function return if there are multiple restaurants tied for the highest rating?
 1. How should the function handle restaurant dictionaries with missing data (name or rating)?
@@ -76,14 +76,14 @@ Here are some example clarifying questions:
 ##### !placeholder
 
 ```py
-# example input 2:
-# example output 2:
+# example input 1:
+# expected output 1:
 
 # example input 2:
-# example output 2:
+# expected output 2:
 
 def test_nominal_case():
-    # ^rename with meaninful test name
+    # ^rename with meaningful test name
     # and complete test implementation below
     pass
     # arrange
@@ -93,7 +93,15 @@ def test_nominal_case():
     # assert
 
 def test_edge_case():
+    # ^rename with meaningful test name
+    # and complete test implementation below
     pass
+    
+    # arrange
+    
+    # act
+    
+    # assert
 ```
 
 ##### !end-placeholder
@@ -114,7 +122,19 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
+# example input 1:     
+# restaurants = [
+#    {"name": "Grillby's", "rating": 1},
+#    {"name": "Crow's Nest", "rating": 5}
+# ]
+# expected output 1: {"name": "Crow's Nest", "rating": 5}
+
+# example input 2: [{"name": "Crow's Nest", "rating": 1}]
+# expected output 2: {"name": "Crow's Nest", "rating": 1}
+
 def test_picks_highest_rated_from_list():
+    # nominal test case
+
     # arrange
     restaurants = [
             {"name": "Grillby's", "rating": 1},
@@ -128,6 +148,8 @@ def test_picks_highest_rated_from_list():
     assert output == {"name": "Crow's Nest", "rating": 5}
 
 def test_picks_from_list_of_one():
+    # edge test case
+
     # arrange
     restaurants = [{"name": "Crow's Nest", "rating": 1}]
 
@@ -135,11 +157,11 @@ def test_picks_from_list_of_one():
     output = get_highest_rated(restaurants)
     
     # assert
-    assert output["name"] == "Crow's Nest"
-    assert output["rating"] == 1
-    assert len(output.keys()) == 2
+    assert output == {"name": "Crow's Nest", "rating": 1}
 
 def test_returns_none_with_zero_restaurants(self):
+    # edge test case
+
     # arrange
     restaurants = []
 
@@ -178,6 +200,18 @@ Write the logical steps here.
 
 ##### !end-placeholder
 
+### !explanation
+
+Example Steps:
+
+1. Check if restaurants is empty
+    - if it's empty, return `None`
+2. Set `highest_rated` to the first element in `restaurants`
+3. Loop through restaurants and compare the current resturant rating to the `highest_restaurant` rating.
+    - If the current restaurant rating is higher, assign it to `highest_restaurant`
+4. Return `highest_rated`
+
+### !end-explanation
 
 ### !end-challenge
 
