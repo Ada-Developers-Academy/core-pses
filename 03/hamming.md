@@ -11,8 +11,8 @@ For example, given these two DNA strands (strings), `hamming_distance` should re
 |Example Input | Expected Ouput |
 |--|--|
 |`strand1 = "GAGCCTACTAACGGGAT"` <br> `strand2 = "CATCGTAATGACGGCCT"` | `7`|
-Explanation:
 
+Explanation:
 ```
 Strand #1:   GAGCCTACTAACGGGAT
 Strand #2:   CATCGTAATGACGGCCT
@@ -20,7 +20,7 @@ Differences: ^ ^ ^  ^ ^    ^^
              7 in total
 ```
 
-(This problem is sourced from http://rosalind.info/problems/hamm/)
+(This problem is sourced from [http://rosalind.info/problems/hamm/](http://rosalind.info/problems/hamm/))
 
 ## Prompts
 
@@ -62,8 +62,10 @@ Here are some example clarifying questions:
 
 <!-- Question 2 -->
 <!-- prettier-ignore-start -->
+
 ### !challenge
-* type: paragraph
+* type: code-snippet
+* language: python3.6
 * id: cbb95ff3-17ef-438b-9f84-755a3d184ab8
 * title: Write Unit Tests
 * topics: pse
@@ -108,7 +110,6 @@ def test_edge_case():
     
     # assert
 ```
-
 ##### !end-placeholder
 
 ##### !tests
@@ -155,8 +156,7 @@ def test_ignores_special_characters():
 
     # Act/Assert
     with pytest.raises(ValueError):
-        hamming_distance(strand1, strand2)
-    
+        hamming_distance(strand1, strand2)   
 ```
 
 ##### !end-explanation
