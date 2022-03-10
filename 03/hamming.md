@@ -168,105 +168,35 @@ def test_ignores_special_characters():
 ### !challenge
 * type: paragraph
 * id: 4d19dc79-3595-4e24-a88a-78b007805cfb
-* title: Break Down the Problem into Sub-Problems
-* points: 3
+* title: Create Logical Steps
 * topics: pse
 ##### !question
 
-Divide the project prompt into at least two different sub-problems
+Without writing code, describe how you would implement `get_highest_rating` in enough detail that someone else could write the code. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
+* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-##### !hint
 
-Consider:
+##### !placeholder
 
-- Any requirements around checking inputs
-- Any requirements around calculations
+Write the logical steps here.
 
-Consider the following for inspiration:
+##### !end-placeholder
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+### !explanation
 
-##### !end-hint
-##### !explanation
+Example Steps: 
 
-Here are some example sub-problems:
-
-1. How can I iterate over every element in both DNA strands at the same time?
-1. What's the best way for me to compare the difference between two letters in a string?
+1. Check if the strands are the same length
+    - If they're different lengths, raise an exception
+2. Initialize a variable `distance` to 0
+3. Iterate through the characters in the strings using a for in range loop
+4. Check if the characters at corresponding indices are the same
+    - If they're different, incremenet `distance`
+5. Return `distance`
 
 ##### !end-explanation
-##### !rubric
 
-- The answer is wrong if there aren't at least 2 sub-problems listed
-- The answer is wrong if any of the sub-problems aren't relevant to the original problem
-
-##### !end-rubric
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- Question 4 -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: c7469bd0-4ff8-4d72-8dd0-5fedad6afa87
-* title: Create Logical Steps
-* points: 3
-* topics: pse
-##### !question
-
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
-
-##### !end-question
-##### !hint
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-##### !rubric
-
-- The answer is wrong if it doesn't have at least two steps
-- The answer is wrong if it isn't logical to another reader
-
-##### !end-rubric
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- Question 5 -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: db9dfcdb-0176-48e7-8329-ecfd7f076b2c
-* title: Solve a Sub-Problem
-* points: 3
-* topics: pse
-##### !question
-
-Write the pseudocode or code solution for your answer for #4
-
-##### !end-question
-##### !hint
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-##### !rubric
-
-The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
-
-- The answer is wrong if it is blank
-- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
-
-##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->

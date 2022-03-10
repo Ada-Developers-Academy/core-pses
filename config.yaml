@@ -75,7 +75,7 @@ Standards:
       -
         Type: Checkpoint
         UID: a696f346-07b3-46d4-85fc-da678eb67786
-        Path: /03/hamming.checkpoint.md
+        Path: /03/implement-hamming.checkpoint.md
   -      
     Title: PSE 04
     Description: Palindrome
