@@ -1,12 +1,17 @@
 # Hamming
 
-## Problem
+## Problem Statment
 
 Imagine working on software that analyzes mutations in DNA.
 
-Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands as parameters. This method should have a return value of the number of differences between each string.
+Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands of the same length as parameters. This method should have a return value of the number of differences between each string.
 
 For example, given these two DNA strands (strings), `hamming_distance` should return `7` because there are 7 differences:
+
+|Example Input | Expected Ouput |
+|--|--|
+|`strand1 = "GAGCCTACTAACGGGAT"` <br> `strand2 = "CATCGTAATGACGGCCT"` | `7`|
+Explanation:
 
 ```
 Strand #1:   GAGCCTACTAACGGGAT
@@ -25,11 +30,10 @@ Differences: ^ ^ ^  ^ ^    ^^
 * type: paragraph
 * id: 733d51d0-bad2-4a5c-8475-68dc11e91618
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 ##### !question
 
-List five or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement
 
 ##### !end-question
 ##### !hint
@@ -52,12 +56,7 @@ Here are some example clarifying questions:
 1. Are there ever any patterns in DNA strands?
 
 ##### !end-explanation
-##### !rubric
 
-- The answer is wrong if there aren't at least five questions
-- The answer is wrong if there were no questions clarifying what you should do if the two strings are different lengths
-
-##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -66,48 +65,101 @@ Here are some example clarifying questions:
 ### !challenge
 * type: paragraph
 * id: cbb95ff3-17ef-438b-9f84-755a3d184ab8
-* title: Consider Example Inputs and Outputs
-* points: 3
+* title: Write Unit Tests
 * topics: pse
 ##### !question
 
-List two sets of example arguments and the expected return value for these arguments
+1. Use the comments provided to write at least two example input/outputs:
+    * Consider at least one nominal and one edge case.
+    * What is the expected output for the given input?
+    * You can use the examples provided in the prompt, or other examples.
+2. Write unit tests for `score` for the nominal and edge cases you identified in the first step.
+
+*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
 ##### !end-question
-##### !hint
+##### !placeholder
 
-Consider unexpected test cases and edge-case situations.
+```py
+# example input 1:
+# expected output 1:
 
-Consider the following for inspiration:
+# example input 2:
+# expected output 2:
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+def test_nominal_case():
+    # ^rename with meaningful test name
+    # and complete test implementation below
+    pass
+    # arrange
 
-##### !end-hint
+    # act
+
+    # assert
+
+def test_edge_case():
+    # ^rename with meaningful test name
+    # and complete test implementation below
+    pass
+    
+    # arrange
+    
+    # act
+    
+    # assert
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```py
+import unittest
+
+class TestPython1(unittest.TestCase):
+  def test_always_pass(self):
+    self.assertEqual(1,1)
+```
+
+##### !end-tests
 ##### !explanation 
 
-Here are some example sets of inputs and outputs:
+Example tests:
 
-Input:
-    - `"GAGCC"`
-    - `"CATCG"`
-Output: 3
+```python
+# example input 1: strand1 = "GAGCCTACTAACGGGAT", strand2 = "CATCGTAATGACGGCCT"
+# expected output 1: hamming_distance(strand1, strand2) = 7
 
-Input:
-    - `"G"`
-    - `"C"`
-Output: 1
+# example input 2: strand1 = "GAG", strand2 = ""
+# expected output 2: ValueError: Strands must be the same length
+
+def test_correct_score_for_all_letters():
+    # nominal test case
+
+    # Arrange
+    strand1 = "GAGCCTACTAACGGGAT"
+    strand2 = "CATCGTAATGACGGCCT"
+
+    # Act
+    result = hamming_distance(strand1, strand2)
+
+    # Assert
+    assert result == 7
+
+def test_ignores_special_characters():
+    # edge test case
+
+    # Arrange
+    strand1 = "GAG"
+    strand2 = ""
+
+    # Act/Assert
+    with pytest.raises(ValueError):
+        hamming_distance(strand1, strand2)
+    
+```
 
 ##### !end-explanation
-##### !rubric
-
-- The answer is wrong if there aren't 2 examples
-- The answer is wrong if either of them aren't valid/consistent with each other
-- The answer is wrong if the example inputs were not two strings for valid input
-- The answer is wrong if the example outputs were not integers or exceptions raised
-
-##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
