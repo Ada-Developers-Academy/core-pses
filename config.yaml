@@ -65,9 +65,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: d7aa63a9-1797-4f71-963a-67eadad331c6
+        Path: /03/implement-hamming.instructor.md
+      -
+        Type: Lesson
+        UID: 1347008a-8d71-4a06-860b-408d596999e0
+        Path: /03/hamming.md
+      -
         Type: Checkpoint
         UID: a696f346-07b3-46d4-85fc-da678eb67786
-        Path: /03/hamming.checkpoint.md
+        Path: /03/implement-hamming.checkpoint.md
   -      
     Title: PSE 04
     Description: Palindrome
