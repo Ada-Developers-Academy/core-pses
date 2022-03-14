@@ -27,7 +27,7 @@ For example, given these two DNA strands (strings), `hamming_distance` should re
 ### !placeholder
 
 ```python
-def hamming(strand1, strand2):
+def hamming_distance(strand1, strand2):
     pass
 ```
 ### !end-placeholder
