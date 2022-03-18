@@ -167,7 +167,7 @@ def test_ignores_capitalization():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `hamming_distance` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `palindrome` in enough detail that someone else could write the code. 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
@@ -183,13 +183,19 @@ Write the logical steps here.
 
 Example Steps: 
 
-1. Check if the strands are the same length
-    - If they're different lengths, raise an exception
-2. Initialize a variable `distance` to 0
-3. Iterate through the characters in the strings using a for in range loop
-4. Check if the characters at corresponding indices are the same
-    - If they're different, incremenet `distance`
-5. Return `distance`
+1. Check that the input is a string.
+    - If it is not, raise an exception
+2. Convert input to lowercase.
+3. Initialize one pointer to move forward through the string, and one pointer to move backwards through the string.
+4. Create a while loop that keeps looping until we are midway through the string.
+5. Check if the character at index of the forward pointer is alphanumeric
+    - If not, increment the pointer
+6. Check if the character at index of the backwards pointer is alphanumeric
+    - If not, decrement the pointer
+7. Check if the characters at the forward/backward pointers match
+    - If not, return `False`
+8. Increment/decrement the start and end pointers respectively.
+9. Return `True` once the loop has finished executing. 
 
 ##### !end-explanation
 
