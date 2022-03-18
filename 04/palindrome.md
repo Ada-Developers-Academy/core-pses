@@ -6,7 +6,7 @@ Imagine working on software that processes text. A palindrome is a word, phrase,
 
 Create a function named `is_palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
 
-This is one example input/output for this method:
+### Examples
 
 | Original string as parameter | Is it a palindrome? |
 | ---------------------------- | ------------------- |
