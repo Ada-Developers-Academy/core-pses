@@ -2,6 +2,8 @@
 
 Examples of working implementations:
 
+Solutions both assume input must be a String, ignore case, and consider only alphanumeric input.
+
 ```python
 def palindrome(s):
     if type(s) != str:
