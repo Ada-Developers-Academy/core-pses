@@ -123,35 +123,35 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
-# example input 1: strand1 = "GAGCCTACTAACGGGAT", strand2 = "CATCGTAATGACGGCCT"
-# expected output 1: hamming_distance(strand1, strand2) = 7
+# example input 1: s = "kayak"
+# expected output 1: palindrome(s) = True
 
-# example input 2: strand1 = "GAG", strand2 = ""
-# expected output 2: ValueError: Strands must be the same length
+# example input 2: s = "Kayak"
+# expected output 2: palindrome(s) = True
 
-def test_correct_score_for_all_letters():
+def test_true_for_single_word_palindrome():
     # nominal test case
 
     # Arrange
-    strand1 = "GAGCCTACTAACGGGAT"
-    strand2 = "CATCGTAATGACGGCCT"
+    s = "kayak"
 
     # Act
-    result = hamming_distance(strand1, strand2)
+    result = palindrome(s)
 
     # Assert
-    assert result == 7
+    assert result == True
 
-def test_ignores_special_characters():
+def test_ignores_capitalization():
     # edge test case
 
     # Arrange
-    strand1 = "GAG"
-    strand2 = ""
+    s = "Kayak"
 
-    # Act/Assert
-    with pytest.raises(ValueError):
-        hamming_distance(strand1, strand2)   
+    # Act
+    result = palindrome(s)
+
+    # Assert
+    assert result == True  
 ```
 
 ##### !end-explanation
