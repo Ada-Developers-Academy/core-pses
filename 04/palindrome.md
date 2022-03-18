@@ -187,14 +187,14 @@ Example Steps:
     - If it is not, raise an exception
 2. Convert input to lowercase.
 3. Initialize one pointer to move forward through the string, and one pointer to move backwards through the string.
-4. Create a while loop that keeps looping until we are midway through the string.
+4. Create a while loop that keeps looping until the pointers have passed each other.
 5. Check if the character at index of the forward pointer is alphanumeric
     - If not, increment the pointer
 6. Check if the character at index of the backwards pointer is alphanumeric
     - If not, decrement the pointer
 7. Check if the characters at the forward/backward pointers match
     - If not, return `False`
-8. Increment/decrement the start and end pointers respectively.
+8. Increment/decrement the forward and backward pointers respectively.
 9. Return `True` once the loop has finished executing. 
 
 ##### !end-explanation
