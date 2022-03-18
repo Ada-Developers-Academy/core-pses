@@ -1,9 +1,16 @@
 # Instructor: Palindrome
 
-An example of a working implementation:
+Examples of working implementations:
 
 ```python
 def palindrome(s):
-    reverse = s[::-1]
-    return s == reverse
+    if type(s) != str:
+        raise TypeError('Input must be a string')
+    sequence = ''
+    for char in s:
+        if char.isalnum():
+            sequence += char
+    sequence.lower() 
+    reverse = sequence[::-1]
+    return sequence == reverse
 ```
