@@ -2,9 +2,9 @@
 
 ## Problem
 
-Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sums` It finds the number of pairs of numbers in a list which add up to a given sum. This function should take in a list of whole numbers and a given sum as a parameters. This function should have a return value of the integer of number of pairs.
+Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sums` It finds the number of pairs of numbers in a list which add up to a given target. This function should take in a list of whole numbers and a target as parameters. This function should have a return value of the integer of number of pairs.
 
-| List                    | Sum | Number of pairs |
+| numbers                 | target | Number of pairs |
 | ----------------------- | --- | --------------- |
 | [1, 2, 4, 5]            | 6   | 2               |
 | [97, 51, 49, 35, 3, 65] | 100 | 3               |
@@ -23,7 +23,7 @@ Sourced from: [Geeks for Geeks](https://www.geeksforgeeks.org/count-pairs-with-g
 * topics: pse
 ##### !question
 
-List five or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement
 
 ##### !end-question
 ##### !hint
