@@ -1,4 +1,4 @@
-# Implement `pairs_with_given_sums`
+# Implement pairs_with_given_sums
 
 <!-- prettier-ignore-start -->
 ### !challenge

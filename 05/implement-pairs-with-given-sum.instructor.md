@@ -1,1 +1,1 @@
-# Instructor: Implement `pairs_with_given_sums`
+# Instructor: Implement pairs_with_given_sums
