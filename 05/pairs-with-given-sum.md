@@ -35,46 +35,122 @@ Consider the following for inspiration:
 - Any past PSEs you may have
 
 ##### !end-hint
-##### !rubric
+### !explanation
 
-- The answer is wrong if there aren't at least five questions
+Here are some example clarifying questions:
 
-##### !end-rubric
+1. How does the function handle non-numeric elements in the list of `numbers`?
+1. What is the behavior for a non-numeric `target`?
+1. Can each of the numbers be used more than once in a pair that sums to the target?
+1. What is the behavior for an empty list?
+
+##### !end-explanation
+
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
 <!-- Question 2 -->
 <!-- prettier-ignore-start -->
+
 ### !challenge
-* type: paragraph
-* id: 4159ce83-6a0b-4278-bc97-4731b40275a5
-* title: Consider Example Inputs and Outputs
-* points: 3
+* type: code-snippet
+* language: python3.6
+* id: 068f00d6-4519-454f-a913-80216d9e26c8
+* title: Write Unit Tests
 * topics: pse
 ##### !question
 
-List two or more sets of example arguments and the expected return value for these arguments
+1. Use the comments provided to write at least two example input/outputs:
+    * Consider at least one nominal and one edge case.
+    * What is the expected output for the given input?
+    * You can use the examples provided in the prompt, or other examples.
+2. Write unit tests for `pairs_with_a_given_sum` for the nominal and edge cases you identified in the first step.
+
+*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
 ##### !end-question
-##### !hint
+##### !placeholder
 
-Consider unexpected test cases and edge-case situations.
+```py
+# example input 1:
+# expected output 1:
 
-Consider the following for inspiration:
+# example input 2:
+# expected output 2:
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+def test_nominal_case():
+    # ^rename with meaningful test name
+    # and complete test implementation below
+    pass
+    # arrange
 
-##### !end-hint
-##### !rubric
+    # act
 
-- The answer is wrong if there aren't at least two examples
-- The answer is wrong if either of them aren't valid/consistent with each other
-- The answer is wrong if the example inputs were not what the problem stated for valid input
-- The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+    # assert
 
-##### !end-rubric
+def test_edge_case():
+    # ^rename with meaningful test name
+    # and complete test implementation below
+    pass
+    
+    # arrange
+    
+    # act
+    
+    # assert
+```
+##### !end-placeholder
+
+##### !tests
+
+```py
+import unittest
+
+class TestPython1(unittest.TestCase):
+  def test_always_pass(self):
+    self.assertEqual(1,1)
+```
+
+##### !end-tests
+##### !explanation 
+
+Example tests:
+
+```python
+# example input 1: numbers = [1, 2, 4, 5], target = 6            
+# expected output 1: hamming_distance(numbers, target) = 2
+
+# example input 2: numbers = [1, 2, 4, 5, 1], target = 6  
+# expected output 2: hamming_distance(numbers, target) = 2 (assumption: the number 5 can only be used in one pair)
+
+def test_finds_two_pairs():
+    # nominal test case
+
+    # Arrange
+    numbers = [1, 2, 4, 5]
+    target = 6
+
+    # Act
+    result = pairs_with_given_sum(numbers, target)
+
+    # Assert
+    assert result == 2
+
+def test_finds_two_pairs_with_duplicate_number():
+    # edge test case
+    
+    # Arrange
+    numbers = [1, 2, 4, 5, 1]
+    target = 6
+
+    # Act
+    result = pairs_with_given_sum(numbers, target)
+
+    # Assert
+    assert result == 2 
+```
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
@@ -83,97 +159,34 @@ Consider the following for inspiration:
 ### !challenge
 * type: paragraph
 * id: 03d126b0-86dc-49db-9647-563c37c3711b
-* title: Break Down the Problem into Sub-Problems
-* points: 3
-* topics: pse
-##### !question
-
-Divide the project prompt into two or more different sub-problems
-
-##### !end-question
-##### !hint
-
-Consider:
-
-- Any requirements around checking inputs
-- Any requirements around calculations
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-##### !rubric
-
-- The answer is wrong if there aren't at least two sub-problems listed
-- The answer is wrong if any of the sub-problems aren't relevant to the original problem
-
-##### !end-rubric
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- Question 4 -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: 5c9fe7e4-9116-40ab-b211-1dd95170b489
 * title: Create Logical Steps
 * points: 3
 * topics: pse
 ##### !question
 
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
+Without writing code, describe how you would implement `pairs_with_given_sum` in enough detail that someone else could write the code. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
+* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-##### !hint
 
-Consider the following for inspiration:
+##### !placeholder
 
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+Write the logical steps here.
 
-##### !end-hint
-##### !rubric
+##### !end-placeholder
 
-- The answer is wrong if it doesn't have at least two steps
-- The answer is wrong if it isn't logical to another reader
+### !explanation
 
-##### !end-rubric
-### !end-challenge
-<!-- prettier-ignore-end -->
+Example Steps for an O(n^2) solution: 
 
-<!-- Question 5 -->
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: 3cb202ac-6a9c-4e64-bcb7-9719444d3b3a
-* title: Solve a Sub-Problem
-* points: 3
-* topics: pse
-##### !question
+1. Check for valid input
+2. Loop through the `numbers` from the first number to the second last number using a `for i in range...` loop.
+3. Loop through the `numbers` from `i+1` to the last number using a `for j in range...` loop.
+4. If `numbers[i] + numbers[j]` is equal to the target, incremement a counter by 1.
+5. return the value of the counter
 
-Write the pseudocode or code solution for your answer for #4
+### !end-explanation
 
-##### !end-question
-##### !hint
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-##### !rubric
-
-The point of this exercise is not fully check if the code is correct at the moment, but to practice writing code outside of a text editor.
-
-- The answer is wrong if it is blank
-- The answer is wrong if it is obviously incorrect code (ie writing `print("Oops!")` for the entire response)
-
-##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
