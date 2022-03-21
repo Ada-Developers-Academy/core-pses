@@ -1,4 +1,4 @@
-# Implement pairs_with_given_sums
+# Implement pairs_with_given_sum
 
 <!-- prettier-ignore-start -->
 ### !challenge
@@ -9,13 +9,22 @@
 * points: 3
 ### !question
 
-Imagine ...
+Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sum` It finds the number of pairs of `numbers` in a list which add up to a given `target`. This function should take in a list of whole `numbers` and a `target` as parameters. This function should have a return value of the integer of number of pairs.
+
+| numbers                 | target | Number of pairs (return value)|
+| ----------------------- | --- | --------------- |
+| [1, 2, 4, 5]            | 6   | 2               |
+| [97, 51, 49, 35, 3, 65] | 100 | 3               |
+
+When considering example inputs and outputs, you likely considered edge cases. Your solution is only required to handle the nominal cases. As times allows, consider how to handle the edge cases you identified.
+
+Sourced from: [Geeks for Geeks](https://www.geeksforgeeks.org/count-pairs-with-given-sum/)
 
 ### !end-question
 ### !placeholder
 
 ```python
-def pairs_with_given_sums(numbers, target):
+def pairs_with_given_sum(numbers, target):
     pass
 ```
 ### !end-placeholder
@@ -31,7 +40,7 @@ class TestChallenge(unittest.TestCase):
         target = 6
 
         # Act
-        result = pairs_with_given_sums(numbers, target)
+        result = pairs_with_given_sum(numbers, target)
 
         # Assert
         self.assertEqual(result, 2)
@@ -42,7 +51,7 @@ class TestChallenge(unittest.TestCase):
         target = 100
 
         # Act
-        result = pairs_with_given_sums(numbers, target)
+        result = pairs_with_given_sum(numbers, target)
 
         # Assert
         self.assertEqual(result, 3)

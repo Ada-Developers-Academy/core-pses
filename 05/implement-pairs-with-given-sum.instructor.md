@@ -14,10 +14,17 @@ def pairs_with_given_sum(numbers, target):
 
 An example of a working implementation, with time complexity O(n).
 This solution handles the edge case test where there are dplicate numbers/pairs in the list.
+These tests are not included in the code challenge, but are great to review as time allows.
 
 ```python
 def pairs_with_given_sum(numbers, target):
     numbers_dict = {}
+    for number in numbers:
+        if number in numbers_dict:
+            numbers_dict[number] += 1
+        else:
+            numbers_dict[number] = 1
+    
     total = 0
     for number in numbers:
         difference = target-number
@@ -26,13 +33,6 @@ def pairs_with_given_sum(numbers, target):
             numbers_dict[difference] -= 1
             if number in numbers_dict:
                 numbers_dict[number] -= 1
-            else:
-                numbers_dict[number] = 0
-        elif number in numbers_dict:
-            number += 1
-        else:
-            numbers_dict[number] = 1
-
     return total
 ```
 
@@ -59,5 +59,16 @@ def test_finds_four_pairs_when_pair_duplicated():
     result = pairs_with_given_sum(numbers, target)
 
     # Assert
-    assert result == 3
+    assert result == 4
+
+def test_finds_two_duplicate_numbers():
+    # Arrange
+    numbers = [5, 5, 5, 5]
+    target = 10
+
+    # Act
+    result = pairs_with_given_sum(numbers, target)
+
+    # Assert
+    assert result == 2
 ```
