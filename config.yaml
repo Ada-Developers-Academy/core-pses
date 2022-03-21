@@ -8,7 +8,7 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
+        Type: Instructor
         UID: aed96068-4923-4103-a85e-0dec07716345
         Path: /about-pses/example-pse.instructor.md
       -
