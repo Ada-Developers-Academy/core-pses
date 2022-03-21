@@ -1,6 +1,6 @@
 # Instructor: Implement pairs_with_given_sum
 
-An example of a working implementation, with time complexity O(n^2):
+An example of a working implementation, with time complexity O(n<sup>2</sup>):
 
 ```python
 def pairs_with_given_sum(numbers, target):

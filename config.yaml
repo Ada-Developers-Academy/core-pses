@@ -95,7 +95,7 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Instructor
+        Type: Lesson
         UID: cebb89a0-61f0-4bc0-a889-6654045c839c
         Path: /05/pairs-with-given-sum.md
       -

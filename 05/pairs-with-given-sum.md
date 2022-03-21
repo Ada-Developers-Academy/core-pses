@@ -178,13 +178,13 @@ Write the logical steps here.
 
 ### !explanation
 
-Example Steps for an O(n^2) solution: 
+Example Steps for an O(n<sup>2</sup>) solution: 
 
 1. Check for valid input
 2. Loop through the `numbers` from the first number to the second last number using a `for i in range...` loop.
 3. Loop through the `numbers` from `i+1` to the last number using a `for j in range...` loop.
 4. If `numbers[i] + numbers[j]` is equal to the target, incremement a counter by 1.
-5. return the value of the counter
+5. Return the value of the counter
 
 ### !end-explanation
 
