@@ -166,7 +166,7 @@ def test_invalid_input():
 
 ##### !question
 
-Without writing code, describe how you would implement `get_highest_rating` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `winner` in enough detail that someone else could write the code. 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere inbetween. What's important at this stage is to think through and outline the implementation before writing code.
 
