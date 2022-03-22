@@ -22,7 +22,7 @@ Create a function named `is_palindrome` that determines if a string is a palindr
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 733d51d0-bad2-4a5c-8475-68dc11e91618
+* id: b3294ca0-b085-49e7-890f-e839e3a9efac
 * title: Ask Clarifying Questions
 * topics: pse
 ##### !question
@@ -61,7 +61,7 @@ Here are some example clarifying questions:
 ### !challenge
 * type: code-snippet
 * language: python3.6
-* id: cbb95ff3-17ef-438b-9f84-755a3d184ab8
+* id: 3e891984-c84a-4b0c-9e2b-b652391ab7bc
 * title: Write Unit Tests
 * topics: pse
 ##### !question
@@ -162,7 +162,7 @@ def test_ignores_capitalization():
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 4d19dc79-3595-4e24-a88a-78b007805cfb
+* id: 374a4f64-cb87-4bf5-9faf-8d3199048491
 * title: Create Logical Steps
 * topics: pse
 ##### !question
