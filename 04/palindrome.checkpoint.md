@@ -23,6 +23,8 @@ Create a function named `is_palindrome` that determines if a string is a palindr
 | `"mom"`                      | Yes                 |
 | `"kayak"`                    | Yes                 |
 
+When considering example inputs and outputs, you likely considered edge cases. Your solution is only required to handle the nominal cases. As times allows, consider how to handle the edge cases you identified.
+
 ### !end-question
 ### !placeholder
 
