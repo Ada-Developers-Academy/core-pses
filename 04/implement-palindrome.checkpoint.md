@@ -1,10 +1,10 @@
-# Palindrome
+# Implement Palindrome
 
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: code-snippet
 * language: python3.6
-* id: 911f2970
+* id: 506644ae
 * title: PSE
 * points: 3
 ### !question
