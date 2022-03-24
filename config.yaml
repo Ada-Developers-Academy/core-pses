@@ -103,9 +103,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Checkpoint
+        Type: Lesson
+        UID: 2b426e2c-dd8a-4b02-8aca-8a1fe9aed6af
+        Path: /05/implement-pairs-with-given-sum.instructor.md
+      -
+        Type: Lesson
         UID: cebb89a0-61f0-4bc0-a889-6654045c839c
-        Path: /05/pairs-with-given-sum.checkpoint.md
+        Path: /05/pairs-with-given-sum.md
+      -
+        Type: Checkpoint
+        UID: 7c6d5b64-150b-4ece-a88c-c06ad0dd1581
+        Path: /05/implement-pairs-with-given-sum.checkpoint.md
   -
     Title: PSE 06
     Description: Merging Sorted Lists
