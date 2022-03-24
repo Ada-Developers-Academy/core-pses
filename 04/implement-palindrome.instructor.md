@@ -21,10 +21,42 @@ def palindrome(s):
             start += 1
         if not s[end].isalnum():
             end -= 1
-        if s[start].lower() != s[end].lower():
+        elif s[start].lower() != s[end].lower():
             return False
         else:
             start += 1
             end -= 1
     return True
+```
+Edge case tests for validating input, ignoring case, and considering only alphanumeric characters.
+
+```python
+
+    def test_raise_type_error_when_non_string_input(self):
+        # Arrange
+        s = []
+
+        # Assert
+        with pytest.raises(TypeError):
+            palindrome(s) # Act
+
+    def test_ignores_case(self):
+        # Arrange
+        s = 'Kayak'
+
+        # Act
+        result = palindrome(s)
+
+        # Assert
+        assert result == True
+
+    def test_ignores_non_alphanumeric_chars(self):
+        # Arrange
+        s = '5kayak .5'
+
+        # Act
+        result = palindrome(s)
+
+        # Assert
+        assert result == True
 ```

@@ -49,7 +49,7 @@ class TestChallenge(unittest.TestCase):
         result = palindrome(s)
 
         # Assert
-        assert result == True
+        self.assertEqual(result, True)
 
     def test_false_for_not_palindrome(self):
         # Arrange
@@ -59,7 +59,7 @@ class TestChallenge(unittest.TestCase):
         result = palindrome(s)
 
         # Assert
-        assert result == False
+        self.assertEqual(result, False)
 ```
 ### !end-tests
 
