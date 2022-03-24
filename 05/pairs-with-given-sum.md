@@ -118,10 +118,10 @@ Example tests:
 
 ```python
 # example input 1: numbers = [1, 2, 4, 5], target = 6            
-# expected output 1: hamming_distance(numbers, target) = 2
+# expected output 1: pairs_with_a_given_sum(numbers, target) = 2
 
 # example input 2: numbers = [1, 2, 4, 5, 1], target = 6  
-# expected output 2: hamming_distance(numbers, target) = 2 (assumption: the number 5 can only be used in one pair)
+# expected output 2: pairs_with_a_given_sum(numbers, target) = 2 (assumption: the number 5 can only be used in one pair)
 
 def test_finds_two_pairs():
     # nominal test case

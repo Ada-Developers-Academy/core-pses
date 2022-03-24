@@ -13,7 +13,7 @@ def pairs_with_given_sum(numbers, target):
 ```
 
 An example of a working implementation, with time complexity O(n).
-This solution handles the edge case test where there are dplicate numbers/pairs in the list.
+This solution handles the edge case test where there are duplicate numbers/pairs in the list.
 These tests are not included in the code challenge, but are great to review as time allows.
 
 ```python
