@@ -39,7 +39,7 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-- What about empty lists
+- What about empty lists?
 - What to do about elements of equal value? for example `[3]` and `[3]`, do both go in result?
 - Can numbers be negative?
 
