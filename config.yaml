@@ -103,7 +103,7 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
+        Type: Instructor
         UID: 2b426e2c-dd8a-4b02-8aca-8a1fe9aed6af
         Path: /05/implement-pairs-with-given-sum.instructor.md
       -
@@ -121,6 +121,14 @@ Standards:
     SuccessCriteria:
       - success criteria
     ContentFiles:
+      -
+        Type: Instructor
+        UID: e7c59d8f-b349-4da1-af97-10d0fad11070
+        Path: /06/merging-sorted-lists.instructor.md
+      -
+        Type: Lesson
+        UID: f915967b-7b81-46b3-b716-40958c0b88ea
+        Path: /06/merging-sorted-lists.md
       -
         Type: Checkpoint
         UID: f937f38d-b86d-4607-8203-b579e1f1689e
