@@ -32,7 +32,7 @@ Edge case tests for validating input, ignoring case, and considering only alphan
 
 ```python
 
-    def test_raise_type_error_when_non_string_input(self):
+    def test_raise_type_error_when_non_string_input():
         # Arrange
         s = []
 
@@ -40,7 +40,7 @@ Edge case tests for validating input, ignoring case, and considering only alphan
         with pytest.raises(TypeError):
             palindrome(s) # Act
 
-    def test_ignores_case(self):
+    def test_ignores_case():
         # Arrange
         s = 'Kayak'
 
@@ -50,7 +50,7 @@ Edge case tests for validating input, ignoring case, and considering only alphan
         # Assert
         assert result == True
 
-    def test_ignores_non_alphanumeric_chars(self):
+    def test_ignores_non_alphanumeric_chars():
         # Arrange
         s = '5kayak .5'
 
