@@ -84,9 +84,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: e3c48f85-3196-4a81-ab3a-ea5805c74c16
+        Path: /04/implement-palindrome.instructor.md 
+      -
+        Type: Lesson
+        UID: 1b14dee4-2b73-4c8c-8c75-5297a328b23f
+        Path: /04/palindrome.md 
+      -
         Type: Checkpoint
         UID: 0a9625c9-fb2b-4dbf-96f8-e1fd03a60acb
-        Path: /04/palindrome.checkpoint.md        
+        Path: /04/implement-palindrome.checkpoint.md        
   -
     Title: PSE 05
     Description: Pairs with Given Sum
