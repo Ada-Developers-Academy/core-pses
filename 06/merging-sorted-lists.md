@@ -189,25 +189,25 @@ Write the logical steps here.
 
 ### !explanation
 
-Example Steps for an O(n<sup>2</sup>) solution:
+Example Steps for an O(n) solution:
 
 1. Check for valid input
-1. set i to 0 and j to 0
-1. create result as an empty list
-1. while i < length of list 1 and j < length of list 2
-    - if list[i] < list[j]
-        - append list[i] to result
-        - increment i
+1. set `i` to 0 and `j` to 0
+1. initialize `result` as an empty list
+1. while `i` < length of `list1` and `j` < length of `list2`
+    - if `list1[i]` < `list2[j]`
+        - append `list1[i]` to `result`
+        - increment `i`
     - else
-        - append list[j] to result
-        - increment j
-1. while i < length of list 1
-    - append list[i] to result
-    - increment i
-1. while j < length of list 2
-    - append list[j] to result
-    - increment j
-1. return result
+        - append `list2[j]` to `result`
+        - increment `j`
+1. while `i` < length of `list1`
+    - append `list1[i]` to `result`
+    - increment `i`
+1. while `j `< length of `list2`
+    - append `list2[j]` to `result`
+    - increment `j`
+1. return `result`
 
 ### !end-explanation
 
