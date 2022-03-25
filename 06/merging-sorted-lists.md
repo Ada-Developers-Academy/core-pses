@@ -39,9 +39,10 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-- What about empty lists?
-- What to do about elements of equal value? for example `[3]` and `[3]`, do both go in result?
-- Can numbers be negative?
+- How does the function handle empty lists?
+- How does the function sort elements of equal value? 
+    - For example: `list1 = [3]` and `list2 = [3]`. Are both values include in returned list?
+- Can numbers in the input lists be negative?
 
 ##### !end-explanation
 ##### !rubric
