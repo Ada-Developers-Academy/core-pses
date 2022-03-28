@@ -141,6 +141,14 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: 70923d5e-8822-4bf5-8c67-36478513edaa
+        Path: /07/reshape-a-matrix.instructor.md
+      -
+        Type: Lesson
+        UID: d0f2934f-9f3d-4bd6-b853-fb098b71662c
+        Path: /07/reshape-a-matrix.md
+      -
         Type: Checkpoint          
         UID: 6cfc6d12-7850-4236-be85-64d8a6259f07
         Path: /07/reshape-a-matrix.checkpoint.md
