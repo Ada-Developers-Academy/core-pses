@@ -72,10 +72,9 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-- How does the function handle empty lists?
-- How does the function sort elements of equal value? 
-    - For example: `list1 = [3]` and `list2 = [3]`. Are both values include in returned list?
+- How does the function handle an empty list?
 - Can numbers in the input lists be negative?
+- Can the list be only ascending or descending numbers?
 
 ##### !end-explanation
 
