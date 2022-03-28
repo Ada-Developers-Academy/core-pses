@@ -3,7 +3,7 @@
 ## O(n) Solution
 
 ```py
-def kth_missing_positive_number(arr: List[int], k: int) -> int:
+def kth_missing_positive_number(arr, k):
     # if the kth missing is less than arr[0]
     if k <= arr[0] - 1:
         return k
