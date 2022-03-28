@@ -114,3 +114,59 @@ def score(word):
 ### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
+
+### !challenge
+
+* type: short-answer
+* id: a921de8e-2c8f-4ea5-99a4-35c0546e355b
+* title: What is the time complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the time complexity of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Time Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
+
+### !challenge
+
+* type: short-answer
+* id: d43dc69c-2ee9-4b8d-8d3d-27e73a222ce2
+* title: What is the space complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the space complexity of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Space Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
