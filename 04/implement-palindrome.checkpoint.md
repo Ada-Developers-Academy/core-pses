@@ -65,3 +65,59 @@ class TestChallenge(unittest.TestCase):
 
 ### !end-challenge
 <!-- prettier-ignore-end -->
+
+### !challenge
+
+* type: short-answer
+* id: d9a44610-10a8-4a2e-9532-2cca7acd1c93
+* title: What is the time complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the time complexity of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Time Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
+
+### !challenge
+
+* type: short-answer
+* id: e2d65d62-f902-454b-a780-81902fa8c9f9
+* title: What is the space complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the space complexity of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Space Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
