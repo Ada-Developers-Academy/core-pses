@@ -174,6 +174,14 @@ Standards:
       - success criteria
     ContentFiles:    
       -
+        Type: Instructor
+        UID: ab236e40-e715-4d71-989e-3bbc83af1ff6
+        Path: /10/tic-tac-toe.instructor.md
+      -
+        Type: Lesson
+        UID: 70fa597f-364e-4497-8b66-fc4693c44f8e
+        Path: /10/tic-tac-toe.md
+      -
         Type: Checkpoint
         UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
         Path: /10/tictactoe.checkpoint.md
