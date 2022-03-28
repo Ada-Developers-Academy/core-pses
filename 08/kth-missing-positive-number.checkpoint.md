@@ -169,6 +169,71 @@ class TestPython1(unittest.TestCase):
 
 <!-- ======================= END CHALLENGE ======================= -->
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+
+### !challenge
+
+* type: short-answer
+* id: 70178554-c412-45bb-80c9-1b10de5f75cb
+* title: What is your time complexity?
+* points: 1
+* topics: Big-O
+
+##### !question
+
+What is the time complexity (Big O) of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Time Complexity
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+
+### !challenge
+
+* type: short-answer
+* id: 143195b2-0991-4c74-9b81-88c2438e9f5f
+* title: What is your space complexity
+* points: 1
+* topics: Big-O
+
+##### !question
+
+What is the space complexity (Big O) of your solution?
+
+##### !end-question
+
+##### !placeholder
+
+Space Complexity
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Reminders
 
 - Finish this assignment individually.
