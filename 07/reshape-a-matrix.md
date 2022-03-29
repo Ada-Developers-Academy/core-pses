@@ -266,7 +266,7 @@ Pick one of those problems from #3 and write a numbered list explaining how to s
 
 ##### !placeholder
 
-Steps to solve a subproblem
+List logical steps to solve the problem
 
 ##### !end-placeholder
 
