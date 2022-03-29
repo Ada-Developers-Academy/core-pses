@@ -167,16 +167,13 @@ class TestPython1(unittest.TestCase):
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 
 ### !challenge
 
 * type: short-answer
 * id: 70178554-c412-45bb-80c9-1b10de5f75cb
 * title: What is your time complexity?
-* points: 1
+* points: 0
 * topics: Big-O
 
 ##### !question
@@ -200,16 +197,13 @@ Time Complexity
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 
 ### !challenge
 
 * type: short-answer
 * id: 143195b2-0991-4c74-9b81-88c2438e9f5f
 * title: What is your space complexity
-* points: 1
+* points: 0
 * topics: Big-O
 
 ##### !question
@@ -231,10 +225,3 @@ Space Complexity
 ##### !end-answer
 
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-## Reminders
-
-- Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.

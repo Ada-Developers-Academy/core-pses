@@ -46,7 +46,6 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/kth-missing-positive-num
 * type: paragraph
 * id: d0bbf25f-3aa8-4849-9d6e-fa5112ebe2cc
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 
 ##### !question
@@ -186,7 +185,6 @@ def test_empty_lists():
 * type: paragraph
 * id: 9deb4772-73ad-4f8f-ba65-ae645ed33a65
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 ##### !question
 
