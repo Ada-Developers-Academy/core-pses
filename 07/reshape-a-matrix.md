@@ -83,7 +83,6 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 * type: paragraph
 * id: 931b7218-6fc5-4fd5-9b6c-7945856a6041
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 
 ##### !question
