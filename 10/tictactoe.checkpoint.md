@@ -283,7 +283,7 @@ def tic_tac_toe_winner(board):
 * type: short-answer
 * id: 647d774c-443d-4c03-9e18-170c075289b4
 * title: What is the time complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
@@ -311,7 +311,7 @@ Time Complexity?
 * type: short-answer
 * id: fc625c83-dda0-43ba-a23f-252d97d0cc7b
 * title: What is the space complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
@@ -334,8 +334,3 @@ Space Complexity?
 
 ### !end-challenge
 
-
-## Reminders
-
-- Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.

@@ -206,7 +206,6 @@ def test_tied():
 * type: paragraph
 * id: dfe2e816-9e1d-411d-84db-fd086fe82027
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 ##### !question
 
