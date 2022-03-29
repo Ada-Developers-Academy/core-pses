@@ -48,7 +48,7 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sel
 * language: python3.6
 * id: 7176204d-f1da-463c-8d46-af9229de96b2
 * title: Buying Stock Coding Challenge
-* points: 1
+* points: 3
 * topics: python, loops, lists
 
 ##### !question
@@ -170,7 +170,7 @@ def max_profit(prices):
 * type: short-answer
 * id: 9707003f-e842-446b-9c39-e90e62a9da85
 * title: What is the time complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, python, lists
 
 ##### !question
@@ -202,7 +202,7 @@ Time Complexity?
 * type: short-answer
 * id: db5f2381-7288-442c-835e-0972ae72973a
 * title: What is the space complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, python, lists
 
 ##### !question

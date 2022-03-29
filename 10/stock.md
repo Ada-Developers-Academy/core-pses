@@ -51,7 +51,6 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sel
 * type: paragraph
 * id: cd479b36-b9c5-40d8-8c8c-1befa3de6174
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 ##### !question
 
@@ -207,7 +206,6 @@ def test_list_1_all_before_list_2():
 * type: paragraph
 * id: 17165b99-d816-42fa-a6da-d6e25265bb92
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 ##### !question
 
