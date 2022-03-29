@@ -279,7 +279,3 @@ Steps to solve a subproblem
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-## Reminders
-
-- Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
