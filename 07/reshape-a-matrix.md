@@ -254,7 +254,6 @@ def test_list_1_all_before_list_2():
 * type: paragraph
 * id: 1ece1eb2-0d72-4068-9ca6-f77ca49d73c5
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 
 ##### !question
