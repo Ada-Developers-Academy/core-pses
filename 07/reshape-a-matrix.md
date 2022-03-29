@@ -270,10 +270,20 @@ Steps to solve a subproblem
 
 ##### !end-placeholder
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+### !explanation
+
+Example Steps:
+1. Store the number of rows and number of columns in the matrix in variables `row` and `column`
+2. If `row`*`column` does not equal `r`*`c`, return the `matrix`
+3. Initialize an empty list `reshaped_matrix`
+4. Iterate through the number of rows
+5. Initialize a new row 
+6. Iterate through the columns
+7. Append the correct item to the new row
+8. Append the new row to the `reshaped_matrix`
+9. return the `reshaped_matrix`
+
+### !end-explanation
 
 ### !end-challenge
 
