@@ -54,7 +54,6 @@ Output: `None`
 * type: paragraph
 * id: 7c868708-8d15-4d5f-a5e9-3301a62feaef
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 ##### !question
 
