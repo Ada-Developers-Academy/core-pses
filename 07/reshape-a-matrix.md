@@ -2,7 +2,7 @@
 
 ## Problem
 
-In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
+In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
 
 You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the wanted reshaped matrix, respectively.
 
@@ -83,7 +83,6 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 * type: paragraph
 * id: 931b7218-6fc5-4fd5-9b6c-7945856a6041
 * title: Ask Clarifying Questions
-* points: 3
 * topics: pse
 
 ##### !question
@@ -255,12 +254,13 @@ def test_list_1_all_before_list_2():
 * type: paragraph
 * id: 1ece1eb2-0d72-4068-9ca6-f77ca49d73c5
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 
 ##### !question
 
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
+Without writing code, describe how you would implement `reshape_matrix` in enough detail that someone else could write the code. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
+* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
 
