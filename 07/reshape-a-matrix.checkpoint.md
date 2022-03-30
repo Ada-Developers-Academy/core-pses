@@ -213,7 +213,7 @@ def reshape_matrix(matrix, r, c):
 * type: short-answer
 * id: 976fd220-e3f3-41f4-adb2-908e30d1e363
 * title: What is the time complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
@@ -241,7 +241,7 @@ Time Complexity?
 * type: short-answer
 * id: 7bb7f05e-257c-43ba-a811-8900cfd622e9
 * title: What is the space complexity of your solution?
-* points: 1
+* points: 0
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
@@ -263,10 +263,3 @@ Space Complexity?
 ##### !end-answer
 
 ### !end-challenge
-
-
-
-## Reminders
-
-- Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
