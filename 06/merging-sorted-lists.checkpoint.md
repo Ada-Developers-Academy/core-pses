@@ -94,7 +94,7 @@ class TestPython1(unittest.TestCase):
 
 ##### !question
 
-What is the time complexity of your solution?
+What is the time complexity of your solution? Explain.
 
 ##### !end-question
 
@@ -122,7 +122,7 @@ Time Complexity?
 
 ##### !question
 
-What is the space complexity of your solution?
+What is the space complexity of your solution? Explain.
 
 ##### !end-question
 
