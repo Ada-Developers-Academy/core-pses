@@ -240,13 +240,13 @@ Time Complexity?
 
 * type: short-answer
 * id: 7bb7f05e-257c-43ba-a811-8900cfd622e9
-* title: What is the space complexity of your solution? Explain.
+* title: What is the space complexity of your solution?
 * points: 1
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
 
-What is the space complexity of your solution?
+What is the space complexity of your solution? Explain.
 
 ##### !end-question
 
