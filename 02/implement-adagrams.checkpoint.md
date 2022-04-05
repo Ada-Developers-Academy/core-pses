@@ -113,4 +113,3 @@ def score(word):
 
 ### !end-explanation
 ### !end-challenge
-<!-- prettier-ignore-end -->
