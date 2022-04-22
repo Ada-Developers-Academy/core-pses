@@ -218,7 +218,7 @@ def reshape_matrix(matrix, r, c):
 
 ##### !question
 
-What is the time complexity of your solution? Explain.
+What is the time complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
 
@@ -246,7 +246,7 @@ Time Complexity?
 
 ##### !question
 
-What is the space complexity of your solution? Explain.
+What is the space complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
 
