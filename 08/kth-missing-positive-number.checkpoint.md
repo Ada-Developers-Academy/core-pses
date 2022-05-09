@@ -202,7 +202,7 @@ Time Complexity?
 
 * type: short-answer
 * id: 143195b2-0991-4c74-9b81-88c2438e9f5f
-* title: What is your space complexity
+* title: What is the space complexity of your solution?
 * points: 0
 * topics: Big-O
 
