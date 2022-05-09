@@ -178,7 +178,7 @@ class TestPython1(unittest.TestCase):
 
 ##### !question
 
-What is the time complexity (Big O) of your solution?
+What is the time complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
 
