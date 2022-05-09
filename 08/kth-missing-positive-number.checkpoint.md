@@ -173,7 +173,7 @@ class TestPython1(unittest.TestCase):
 * type: short-answer
 * id: 70178554-c412-45bb-80c9-1b10de5f75cb
 * title: What is the time complexity of your solution?
-* points: 0
+* points: 1
 * topics: Big-O
 
 ##### !question
