@@ -208,7 +208,7 @@ Time Complexity?
 
 ##### !question
 
-What is the space complexity (Big O) of your solution?
+What is the space complexity of your solution?  Explain. Define your variable(s).
 
 ##### !end-question
 
