@@ -160,6 +160,14 @@ Standards:
       - success criteria
     ContentFiles:    
       -
+        Type: Instructor
+        UID: 46a263cb-93ca-46aa-9f92-6fe2806feb8c
+        Path: /08/kth-missing-positive-number.instructor.md
+      -
+        Type: Lesson
+        UID: 5f9600c6-07b7-4970-b124-73c9486d0238
+        Path: /08/kth-missing-positive-number.md
+      -
         Type: Checkpoint
         UID: 2b22f6b1-ca0c-4dc9-8913-b62ab2698fbe
         Path: /08/kth-missing-positive-number.checkpoint.md
