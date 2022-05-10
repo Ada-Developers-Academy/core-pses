@@ -170,7 +170,7 @@ def max_profit(prices):
 * type: short-answer
 * id: 9707003f-e842-446b-9c39-e90e62a9da85
 * title: What is the time complexity of your solution?
-* points: 0
+* points: 1
 * topics: Big-O, python, lists
 
 ##### !question
