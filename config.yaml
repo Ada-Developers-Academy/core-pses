@@ -173,6 +173,25 @@ Standards:
         Path: /08/kth-missing-positive-number.checkpoint.md
   -
     Title: PSE 09
+    Description: Tic Tac Toe
+    UID: 5f521cbc-b5bd-4f63-9e8f-66da369a2100
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:    
+      -
+        Type: Instructor
+        UID: ab236e40-e715-4d71-989e-3bbc83af1ff6
+        Path: /09/tic-tac-toe.instructor.md
+      -
+        Type: Lesson
+        UID: 70fa597f-364e-4497-8b66-fc4693c44f8e
+        Path: /09/tic-tac-toe.md
+      -
+        Type: Checkpoint
+        UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
+        Path: /09/tictactoe.checkpoint.md
+  -
+    Title: PSE 10
     Description: "Best Time to Buy/Sell Stock"
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
@@ -181,24 +200,12 @@ Standards:
       -
         Type: Instructor
         UID: 8832a461-5fbc-4fcf-84a5-3444561b53cc
-        Path: /09/stock.instructor.md
+        Path: /10/stock.instructor.md
       -
         Type: Lesson
         UID: 3c5d7780-b34c-4daa-938b-4bf9f13da0ca
-        Path: /09/stock.md
+        Path: /10/stock.md
       -
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
-        Path: /09/stock.checkpoint.md
-  -
-    Title: PSE 10
-    Description: Tic Tac Toe
-    UID: 5f521cbc-b5bd-4f63-9e8f-66da369a2100
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:    
-      -
-        Type: Checkpoint
-        UID: 7bee6de0-766a-49b2-b5d4-5d142cab76d7
-        Path: /10/tictactoe.checkpoint.md
-      
+        Path: /10/stock.checkpoint.md 
