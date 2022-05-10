@@ -283,7 +283,7 @@ def tic_tac_toe_winner(board):
 * type: short-answer
 * id: 647d774c-443d-4c03-9e18-170c075289b4
 * title: What is the time complexity of your solution?
-* points: 0
+* points: 1
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
