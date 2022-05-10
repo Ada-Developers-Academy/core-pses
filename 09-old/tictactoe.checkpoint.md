@@ -48,6 +48,161 @@ Input:
 ```
 Output: `None`
 
+
+## Prompts
+
+<!-- Question 1 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 3d8275a0-d1ab-4189-be59-b228502b7ddf
+* title: Ask Clarifying Questions
+* points: 3
+* topics: pse
+##### !question
+
+List five or more questions whose answers would clarify the problem statement
+
+##### !end-question
+##### !hint
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
+
+##### !end-hint
+##### !explanation
+
+Here are some example clarifying questions:
+1. What consistutes a win for `'X'` or `'O'`?
+1. What is a matrix with dimensions other than 3x3 is passed in?
+
+##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least five questions
+
+##### !end-rubric
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 2 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 6c0f79b1-ed10-4f12-b492-dbf003a293c5
+* title: Consider Example Inputs and Outputs
+* points: 3
+* topics: pse
+##### !question
+
+List two or more sets of example arguments and the expected return value for these arguments
+
+##### !end-question
+##### !hint
+
+Consider unexpected test cases and edge-case situations.
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
+
+##### !end-hint
+
+##### !rubric
+
+- The answer is wrong if there aren't at least two examples
+- The answer is wrong if either of them aren't valid/consistent with each other
+- The answer is wrong if the example inputs were not what the problem stated for valid input
+- The answer is wrong if the example outputs were not what the problem stated or raised errors/exceptions
+
+##### !end-rubric
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 3 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 7a783007-7898-4d3f-815b-b989cb760a62
+* title: Break Down the Problem into Sub-Problems
+* points: 3
+* topics: pse 10
+##### !question
+
+Divide the project prompt into two or more different sub-problems
+
+##### !end-question
+##### !hint
+
+Consider:
+
+- Any requirements around checking inputs
+- Any requirements around calculations
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
+
+##### !end-hint
+##### !explanation
+
+Here are some example sub-problems:
+
+1. Check for valid input.
+1. Determine if there is a win by in the column direction.
+1. Determine if there is a win in the row direction.
+1. Determine if there is a win in the diagonal direction.
+1. Determine if there is a tie.
+
+##### !end-explanation
+##### !rubric
+
+- The answer is wrong if there aren't at least two sub-problems listed
+- The answer is wrong if any of the sub-problems aren't relevant to the original problem
+
+##### !end-rubric
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 4 -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: bb8d1391-b71a-4267-9fe8-88f2977917c4
+* title: Create Logical Steps
+* points: 3
+* topics: pse 10
+##### !question
+
+Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
+
+##### !end-question
+##### !hint
+
+Consider the following for inspiration:
+
+- [About PSEs](../about-pses/about-pses.md)
+- [Our example PSE with example answers](../about-pses/example-pse.md)
+- Any past PSEs you may have
+
+##### !end-hint
+##### !rubric
+
+- The answer is wrong if it doesn't have at least two steps
+- The answer is wrong if it isn't logical to another reader
+
+##### !end-rubric
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- Question 5 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: code-snippet
@@ -278,59 +433,7 @@ def tic_tac_toe_winner(board):
 
 ### !end-challenge
 
-### !challenge
+## Reminders
 
-* type: short-answer
-* id: 647d774c-443d-4c03-9e18-170c075289b4
-* title: What is the time complexity of your solution?
-* points: 1
-* topics: Big-O, Python, lists, matrices
-
-##### !question
-
-What is the time complexity of your solution? Explain. Define your variable(s).
-
-##### !end-question
-
-##### !placeholder
-
-Time Complexity?
-
-##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
-
-### !end-challenge
-
-### !challenge
-
-* type: short-answer
-* id: fc625c83-dda0-43ba-a23f-252d97d0cc7b
-* title: What is the space complexity of your solution?
-* points: 1
-* topics: Big-O, Python, lists, matrices
-
-##### !question
-
-What is the space complexity of your solution? Explain. Define your variable(s).
-
-##### !end-question
-
-##### !placeholder
-
-Space Complexity?
-
-##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
-
-### !end-challenge
-
+- Finish this assignment individually.
+- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.

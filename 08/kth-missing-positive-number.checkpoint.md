@@ -1,4 +1,4 @@
-# PSE 8 - Kth Missing Positive Number
+# Implement Kth Missing Positive Number
 
 ## Given this problem prompt
 

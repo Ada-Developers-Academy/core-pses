@@ -1,4 +1,4 @@
-# PSE 10 - Best time to sell Stock
+# Implement Best time to sell Stock
 
 ## Given this problem prompt:
 
