@@ -36,7 +36,7 @@ Refer to this table for the point values of each letter.
 | `"DOG"`     | `5`             |
 | `"CAT"`     | `5`             |
 | `"CABBAGE"` | `14`            |
-| `"QUARTY"`  | `24`            |
+| `"QUARTZ"`  | `24`            |
 | `""`        | `0`             |
 | `"Dog"`     | `5`             |
 | `"DOG"`     | `5`             |
@@ -113,4 +113,3 @@ def score(word):
 
 ### !end-explanation
 ### !end-challenge
-<!-- prettier-ignore-end -->

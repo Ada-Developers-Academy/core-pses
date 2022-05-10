@@ -72,201 +72,6 @@ The given r and c are all positive.
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 
-## Prompts:
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: 931b7218-6fc5-4fd5-9b6c-7945856a6041
-* title: Ask Clarifying Questions
-* points: 3
-* topics: pse
-
-##### !question
-
-List five or more questions whose answers would clarify the problem statement
-
-##### !end-question
-
-##### !placeholder
-
-Give five clarifying questions.
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation
-
-Here are some example clarifying questions:
-
-1.  Is there some pattern required for the student ids?
-1.  What key-value pairs should the hashes contain?
-1.  What should happen if the array of names is empty?
-1.  Can id numbers be negative?
-1.  Should ids be Integers or can they be floats?
-
-##### !end-explanation
-
-##### !hint
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-
-##### !rubric
-
-- The answer is wrong if there aren't at least five questions
-- They should ask about what to return if the string is not a palindrome (the problem statement intentionally does not state to return `False`)
-- They should ask about some set of special characters
-##### !end-rubric
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: 34970927-cb7b-459f-b6be-673474b0b8a0
-* title: Consider Example Inputs and Outputs
-* points: 3
-* topics: pse
-
-##### !question
-
-List two or more sets of example arguments and the expected return value for these arguments
-
-##### !end-question
-
-##### !placeholder
-
-Two sets of input and their expected output.
-
-##### !end-placeholder
-
-##### !hint
-
-Consider unexpected test cases and edge-case situations.
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: af200ac9-1c79-4fb4-b7be-b70c7721778b
-* title: Break Down the Problem into Sub-Problems
-* points: 3
-* topics: pse
-
-##### !question
-
-Divide the project prompt into two or more different sub-problems
-
-##### !end-question
-
-##### !placeholder
-
-Two subproblems
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !hint
-
-Consider:
-
-- Any requirements around checking inputs
-- Any requirements around calculations
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
-
-##### !end-hint
-##### !explanation
-Here are some example sub-problems:
-
-1. How do we decide whether its possible to reshape the matrix?
-1. How do we create the new lists that the values will go into?
-1. How do we move the appropriate values into the new lists?
-
-##### !end-explanation
-##### !rubric
-
-- The answer is wrong if there aren't at least two sub-problems listed
-- The answer is wrong if any of the sub-problems aren't relevant to the original problem
-
-##### !end-rubric
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: 1ece1eb2-0d72-4068-9ca6-f77ca49d73c5
-* title: Create Logical Steps
-* points: 3
-* topics: pse
-
-##### !question
-
-Pick one of those problems from #3 and write a numbered list explaining how to solve that problem without using full lines of code
-
-##### !end-question
-
-##### !placeholder
-
-Steps to solve a subproblem
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -344,6 +149,7 @@ class TestPython1(unittest.TestCase):
         answer = reshape_matrix(matrix, r, c)
         # Assert
         self.assertEqual([[1,2,3,4]], answer)
+
     def test_example_2(self):
         # Arrange
         matrix = [[1,2],[3,4]]
@@ -353,6 +159,7 @@ class TestPython1(unittest.TestCase):
         answer = reshape_matrix(matrix, r, c)
         # Assert
         self.assertEqual([[1,2],[3,4]], answer) 
+        
     def test_example_3(self):
         # Arrange
         matrix = [[1,2],[3,4],[5,6],[7,8]]
@@ -401,7 +208,58 @@ def reshape_matrix(matrix, r, c):
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-## Reminders
+### !challenge
 
-- Finish this assignment individually.
-- If you'd like a full list of our tips, hints, and notes, please bring up the document "[About Problem Solving Exercises](../about-pses/about-pses.md )" in unit.
+* type: short-answer
+* id: 976fd220-e3f3-41f4-adb2-908e30d1e363
+* title: What is the time complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the time complexity of your solution? Explain. Define your variable(s).
+
+##### !end-question
+
+##### !placeholder
+
+Time Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
+
+### !challenge
+
+* type: short-answer
+* id: 7bb7f05e-257c-43ba-a811-8900cfd622e9
+* title: What is the space complexity of your solution?
+* points: 1
+* topics: Big-O, Python, lists, matrices
+
+##### !question
+
+What is the space complexity of your solution? Explain. Define your variable(s).
+
+##### !end-question
+
+##### !placeholder
+
+Space Complexity?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+### !end-challenge
