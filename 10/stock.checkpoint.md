@@ -202,7 +202,7 @@ Time Complexity?
 * type: short-answer
 * id: db5f2381-7288-442c-835e-0972ae72973a
 * title: What is the space complexity of your solution?
-* points: 0
+* points: 1
 * topics: Big-O, python, lists
 
 ##### !question
