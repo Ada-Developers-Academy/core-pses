@@ -288,7 +288,7 @@ def tic_tac_toe_winner(board):
 
 ##### !question
 
-What is the time complexity of your solution?
+What is the time complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
 
