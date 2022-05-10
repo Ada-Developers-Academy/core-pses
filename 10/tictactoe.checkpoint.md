@@ -311,7 +311,7 @@ Time Complexity?
 * type: short-answer
 * id: fc625c83-dda0-43ba-a23f-252d97d0cc7b
 * title: What is the space complexity of your solution?
-* points: 0
+* points: 1
 * topics: Big-O, Python, lists, matrices
 
 ##### !question
