@@ -179,6 +179,14 @@ Standards:
       - success criteria
     ContentFiles:    
       -
+        Type: Instructor
+        UID: 8832a461-5fbc-4fcf-84a5-3444561b53cc
+        Path: /09/stock.instructor.md
+      -
+        Type: Lesson
+        UID: 3c5d7780-b34c-4daa-938b-4bf9f13da0ca
+        Path: /09/stock.md
+      -
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
         Path: /09/stock.checkpoint.md
