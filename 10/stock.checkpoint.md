@@ -207,7 +207,7 @@ Time Complexity?
 
 ##### !question
 
-What is the space complexity of your answer?
+What is the space complexity of your answer? Explain. Define your variable(s).
 
 ##### !end-question
 
