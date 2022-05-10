@@ -175,7 +175,7 @@ def max_profit(prices):
 
 ##### !question
 
-What is the time complexity of your answer?
+What is the time complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
 
