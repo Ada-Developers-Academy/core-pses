@@ -108,7 +108,7 @@ Implement `kth_missing_positive_number`.  Use these tests to guide your solution
 ```python
 def kth_missing_positive_number(numbers, k):
     '''
-    INPUT: List of positive numbers in increating order & a positive integer k
+    INPUT: List of positive integers in increasing order & a positive integer k
 
     OUTPUT: The kth missing number
     '''
