@@ -210,9 +210,9 @@ Example Steps for an O(n) solution:
     * `return k`
 1. Set `index` to `0`
 2. `k = k - arr[0] - 1 
-    * `k` will be decremented to represent the number of remaining missing nums. This line accounts for missing nums before arr[0]`.
+    * `k` will be decremented to represent the number of remaining missing nums. This line accounts for missing nums before `arr[0]`.
 4. `while index < len(arr) - 1`
-    * `current_missing = arr[index + 1] - arr[index] - 1` if `index`>0`
+    * `current_missing = arr[index + 1] - arr[index] - 1`
         *  `current_missing` represents how many missing numbers between `arr[index + 1]` and `arr[index]`
     * `if k <= current_missing  
         *  We found the original kth missing number. The value is `arr[index] + k`. We return it and exit the loop.
