@@ -209,12 +209,17 @@ Example Steps for an O(n) solution:
 1. if `k < arr[0]`
     * `return k`
 1. Set `index` to `0`
-1. `while index < len(arr) - 1`
-    * `current_missing = arr[index + 1] - arr[index] - 1`
-    * `if k <= current_missing`
+2. `k = k - arr[0] - 1 
+    * `k` will be decremented to represent the number of remaining missing nums. This line accounts for missing nums before arr[0]`.
+4. `while index < len(arr) - 1`
+    * `current_missing = arr[index + 1] - arr[index] - 1` if `index`>0`
+        *  `current_missing` represents how many missing numbers between `arr[index + 1]` and `arr[index]`
+    * `if k <= current_missing  
+        *  We found the original kth missing number. The value is `arr[index] + k`. We return it and exit the loop.
         * `return arr[index] + k`
     * `k = k - current_missing`
-1. return the last element of the list plus the remaining value of `k`.
+    * `index = index + 1`
+5. return the last element of the list plus the remaining value of `k`.
 
 ### !end-explanation
 
