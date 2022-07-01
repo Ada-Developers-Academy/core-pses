@@ -10,9 +10,9 @@ def reshape_matrix(matrix, r, c):
     INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
     OUTPUT: Reshaped matrix
     '''
-
     originalRows = len(matrix)
     originalColumns = len(matrix[0])
+    
     if originalRows * originalColumns != r * c:
         return matrix
     
