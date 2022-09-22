@@ -2,7 +2,7 @@
 Standards:
   -
     Title: About Problem-Solving Exercises
-    Description: About PSEs
+    Description: "Required: About PSEs"
     UID: de695bcc40c90003ead81729ffd35342
     SuccessCriteria:
       - success criteria
