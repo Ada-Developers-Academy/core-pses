@@ -28,7 +28,27 @@ Sourced from: [Leetcode](https://leetcode.com/problems/rotate-list/)
 ##### !placeholder
 
 ```py
-def merge_lists(list1, list2):
+# DO NOT MODIFY THE NODE CLASS
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value 
+        # if next is None, this is the last element in the list
+        self.next = next
+
+    def __eq__(self, other):
+        '''
+        Understanding this function is NOT necessary for solving the problem;
+        it is only used for the assertions.
+        Feel free to explore your curiosity of how this works after the interview :)
+        '''
+        try:
+            return (type(other) == Node and 
+                    self.value == other.value and 
+                    self.next == other.next)
+        except RecursionError:
+            raise Exception("Linked list has a cycle or is too large")
+
+def rotate_list(head, k):
     pass
 ```
 
@@ -41,35 +61,71 @@ import unittest
 from main import *
 
 class TestPython1(unittest.TestCase):
-  def test_given_example_one(self):
-      # Arrange
-      list1 = [1, 2, 4, 5]
-      list2 = [6]
+    def test_given_example_one(self):
+        # Arrange
+        lst = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+        expected = Node('e',  Node('a', Node('b', Node('c', Node('d')))))
 
-      #  Act
-      result = merge_lists(list1, list2)
-      # Assert
-      self.assertEqual([1, 2, 4, 5, 6], result)
+        #  Act
+        result = rotate_list(lst, 1)
 
-  def test_given_example_two(self):
-      # Arrange
-      list1 = [-30, -10, 0, 15, 16]
-      list2 = [-20, -5, 5]
+        # Assert
+        self.assertEqual(result, expected)
 
-      #  Act
-      result = merge_lists(list1, list2)
-      # Assert
-      self.assertEqual([-30, -20, -10, -5, 0, 5, 15, 16], result)
+    def test_given_example_two(self):
+        # Arrange
+        lst = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+        expected = Node('d', Node('e', Node('a', Node('b', Node('c')))))
 
-  def test_list1_1_2_3_4_6_list2_5_7(self):
-      # Arrange
-      list1 = [1, 2, 3, 4, 6]
-      list2 = [5, 7]
+        #  Act
+        result = rotate_list(lst, 2)
 
-      #  Act
-      result = merge_lists(list1, list2)
-      # Assert
-      self.assertEqual([1, 2, 3, 4, 5, 6, 7], result)
+        # Assert
+        self.assertEqual(result, expected)
+
+    def test_given_example_three(self):
+        # Arrange
+        lst = Node('1', Node('2'))
+        expected = Node('2', Node('1'))
+
+        #  Act
+        result = rotate_list(lst, 5)
+        
+        # Assert
+        self.assertEqual(result, expected)
+
+    def test_k_is_multiple_of_ll_length(self):
+        # Arrange
+        lst = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+        expected = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+
+        # Act
+        result = rotate_list(lst, 10)
+
+        # Assert
+        self.assertEqual(result, expected)
+
+    def test_k_is_zero(self):
+        # Arrange
+        lst = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+        expected = Node('a', Node('b', Node('c', Node('d', Node('e')))))
+
+        # Act
+        result = rotate_list(lst, 0)
+
+        # Assert
+        self.assertEqual(result, expected)
+
+    def test_k_is_longer_than_ll_length(self):
+        # Arrange
+        lst = Node(55, Node(8, Node(2, Node(99))))
+        expected = Node(2, Node(99, Node(55, Node(8))))
+        
+        # Act
+        result = rotate_list(lst, 6)
+
+        # Assert
+        self.assertEqual(result, expected)
 ```
 
 ##### !end-tests
