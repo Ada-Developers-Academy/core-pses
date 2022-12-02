@@ -29,15 +29,15 @@ Standards:
       -
         Type: Instructor
         UID: d7aa63a9-1797-4f71-963a-67eadad331c6
-        Path: /01/implement-hamming.instructor.md
+        Path: /03/implement-hamming.instructor.md
       -
         Type: Lesson
         UID: 1347008a-8d71-4a06-860b-408d596999e0
-        Path: /01/hamming.md
+        Path: /03/hamming.md
       -
         Type: Checkpoint
         UID: a696f346-07b3-46d4-85fc-da678eb67786
-        Path: /01/implement-hamming.checkpoint.md
+        Path: /03/implement-hamming.checkpoint.md
   -      
     Title: PSE 02
     Description: Palindrome
@@ -48,15 +48,15 @@ Standards:
       -
         Type: Instructor
         UID: e3c48f85-3196-4a81-ab3a-ea5805c74c16
-        Path: /02/implement-palindrome.instructor.md 
+        Path: /04/implement-palindrome.instructor.md 
       -
         Type: Lesson
         UID: 1b14dee4-2b73-4c8c-8c75-5297a328b23f
-        Path: /02/palindrome.md 
+        Path: /04/palindrome.md 
       -
         Type: Checkpoint
         UID: 0a9625c9-fb2b-4dbf-96f8-e1fd03a60acb
-        Path: /02/implement-palindrome.checkpoint.md        
+        Path: /04/implement-palindrome.checkpoint.md        
   -
     Title: PSE 03
     Description: Pairs with Given Sum
@@ -67,15 +67,15 @@ Standards:
       -
         Type: Instructor
         UID: 2b426e2c-dd8a-4b02-8aca-8a1fe9aed6af
-        Path: /03/implement-pairs-with-given-sum.instructor.md
+        Path: /05/implement-pairs-with-given-sum.instructor.md
       -
         Type: Lesson
         UID: cebb89a0-61f0-4bc0-a889-6654045c839c
-        Path: /03/pairs-with-given-sum.md
+        Path: /05/pairs-with-given-sum.md
       -
         Type: Checkpoint
         UID: 7c6d5b64-150b-4ece-a88c-c06ad0dd1581
-        Path: /03/implement-pairs-with-given-sum.checkpoint.md
+        Path: /05/implement-pairs-with-given-sum.checkpoint.md
   -
     Title: PSE 04
     Description: Merging Sorted Lists
@@ -86,34 +86,15 @@ Standards:
       -
         Type: Instructor
         UID: e7c59d8f-b349-4da1-af97-10d0fad11070
-        Path: /04/merging-sorted-lists.instructor.md
+        Path: /06/merging-sorted-lists.instructor.md
       -
         Type: Lesson
         UID: f915967b-7b81-46b3-b716-40958c0b88ea
-        Path: /04/merging-sorted-lists.md
+        Path: /06/merging-sorted-lists.md
       -
         Type: Checkpoint
         UID: f937f38d-b86d-4607-8203-b579e1f1689e
-        Path: /04/merging-sorted-lists.checkpoint.md  
-  # -
-  #   Title: PSE 05
-  #   Description: Linked Lists
-  #   UID: 3253d4dd-bf5c-484b-8481-2d85f3844213
-  #   SuccessCriteria:
-  #     - success criteria
-  #   ContentFiles:
-  #     -
-  #       Type: Instructor
-  #       UID: e7c59d8f-b349-4da1-af97-10d0fad11070
-  #       Path: /06/merging-sorted-lists.instructor.md
-  #     -
-  #       Type: Lesson
-  #       UID: f915967b-7b81-46b3-b716-40958c0b88ea
-  #       Path: /06/merging-sorted-lists.md
-  #     -
-  #       Type: Checkpoint
-  #       UID: f937f38d-b86d-4607-8203-b579e1f1689e
-  #       Path: /06/merging-sorted-lists.checkpoint.md        
+        Path: /06/merging-sorted-lists.checkpoint.md      
   -
     Title: PSE 05
     Description: Reshape a Matrix
