@@ -189,7 +189,7 @@ def test_nominal_list():
     expected = Node('d', Node('e', Node('a', Node('b', Node('c')))))
 
     # Act
-    result = rotate(lst, 2)
+    result = rotate_list(lst, 2)
 
     # Assert
     assert result == expected
@@ -200,7 +200,7 @@ def test_k_is_zero():
     expected = Node('a', Node('b', Node('c', Node('d', Node('e')))))
 
     # Act
-    result = rotate(lst, 0)
+    result = rotate_list(lst, 0)
 
     # Assert
     assert result == expected
@@ -213,7 +213,7 @@ def test_k_longer_than_list_length():
     expected = Node(2, Node(99, Node(55, Node(8))))
 
     # Act
-    result = merge_lists(lst, 6)
+    result = roate_list(lst, 6)
 
     # Assert
     assert result == expected
