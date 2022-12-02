@@ -29,15 +29,15 @@ Standards:
       -
         Type: Instructor
         UID: d7aa63a9-1797-4f71-963a-67eadad331c6
-        Path: /03/implement-hamming.instructor.md
+        Path: /01/implement-hamming.instructor.md
       -
         Type: Lesson
         UID: 1347008a-8d71-4a06-860b-408d596999e0
-        Path: /03/hamming.md
+        Path: /01/hamming.md
       -
         Type: Checkpoint
         UID: a696f346-07b3-46d4-85fc-da678eb67786
-        Path: /03/implement-hamming.checkpoint.md
+        Path: /01/implement-hamming.checkpoint.md
   -      
     Title: PSE 02
     Description: Palindrome
@@ -48,15 +48,15 @@ Standards:
       -
         Type: Instructor
         UID: e3c48f85-3196-4a81-ab3a-ea5805c74c16
-        Path: /04/implement-palindrome.instructor.md 
+        Path: /02/implement-palindrome.instructor.md 
       -
         Type: Lesson
         UID: 1b14dee4-2b73-4c8c-8c75-5297a328b23f
-        Path: /04/palindrome.md 
+        Path: /02/palindrome.md 
       -
         Type: Checkpoint
         UID: 0a9625c9-fb2b-4dbf-96f8-e1fd03a60acb
-        Path: /04/implement-palindrome.checkpoint.md        
+        Path: /02/implement-palindrome.checkpoint.md        
   -
     Title: PSE 03
     Description: Pairs with Given Sum
@@ -67,15 +67,15 @@ Standards:
       -
         Type: Instructor
         UID: 2b426e2c-dd8a-4b02-8aca-8a1fe9aed6af
-        Path: /05/implement-pairs-with-given-sum.instructor.md
+        Path: /03/implement-pairs-with-given-sum.instructor.md
       -
         Type: Lesson
         UID: cebb89a0-61f0-4bc0-a889-6654045c839c
-        Path: /05/pairs-with-given-sum.md
+        Path: /03/pairs-with-given-sum.md
       -
         Type: Checkpoint
         UID: 7c6d5b64-150b-4ece-a88c-c06ad0dd1581
-        Path: /05/implement-pairs-with-given-sum.checkpoint.md
+        Path: /03/implement-pairs-with-given-sum.checkpoint.md
   -
     Title: PSE 04
     Description: Merging Sorted Lists
@@ -86,15 +86,15 @@ Standards:
       -
         Type: Instructor
         UID: e7c59d8f-b349-4da1-af97-10d0fad11070
-        Path: /06/merging-sorted-lists.instructor.md
+        Path: /04/merging-sorted-lists.instructor.md
       -
         Type: Lesson
         UID: f915967b-7b81-46b3-b716-40958c0b88ea
-        Path: /06/merging-sorted-lists.md
+        Path: /04/merging-sorted-lists.md
       -
         Type: Checkpoint
         UID: f937f38d-b86d-4607-8203-b579e1f1689e
-        Path: /06/merging-sorted-lists.checkpoint.md   
+        Path: /04/merging-sorted-lists.checkpoint.md   
   -
     Title: PSE 05
     Description: Rotate Linked List
@@ -124,15 +124,15 @@ Standards:
       -
         Type: Instructor
         UID: 70923d5e-8822-4bf5-8c67-36478513edaa
-        Path: /07/reshape-a-matrix.instructor.md
+        Path: /06/reshape-a-matrix.instructor.md
       -
         Type: Lesson
         UID: d0f2934f-9f3d-4bd6-b853-fb098b71662c
-        Path: /07/reshape-a-matrix.md
+        Path: /06/reshape-a-matrix.md
       -
         Type: Checkpoint          
         UID: 6cfc6d12-7850-4236-be85-64d8a6259f07
-        Path: /07/reshape-a-matrix.checkpoint.md
+        Path: /06/reshape-a-matrix.checkpoint.md
   -
     Title: PSE 07
     Description: Kth Missing Positive Number
@@ -143,15 +143,15 @@ Standards:
       -
         Type: Instructor
         UID: 46a263cb-93ca-46aa-9f92-6fe2806feb8c
-        Path: /08/kth-missing-positive-number.instructor.md
+        Path: /07/kth-missing-positive-number.instructor.md
       -
         Type: Lesson
         UID: 5f9600c6-07b7-4970-b124-73c9486d0238
-        Path: /08/kth-missing-positive-number.md
+        Path: /07/kth-missing-positive-number.md
       -
         Type: Checkpoint
         UID: 2b22f6b1-ca0c-4dc9-8913-b62ab2698fbe
-        Path: /08/kth-missing-positive-number.checkpoint.md
+        Path: /07/kth-missing-positive-number.checkpoint.md
   -
     Title: PSE 10
     Description: "Best Time to Buy/Sell Stock"
