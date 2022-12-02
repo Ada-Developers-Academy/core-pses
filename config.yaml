@@ -95,25 +95,25 @@ Standards:
         Type: Checkpoint
         UID: f937f38d-b86d-4607-8203-b579e1f1689e
         Path: /04/merging-sorted-lists.checkpoint.md  
-  # -
-  #   Title: PSE 05
-  #   Description: Linked Lists
-  #   UID: 3253d4dd-bf5c-484b-8481-2d85f3844213
-  #   SuccessCriteria:
-  #     - success criteria
-  #   ContentFiles:
-  #     -
-  #       Type: Instructor
-  #       UID: e7c59d8f-b349-4da1-af97-10d0fad11070
-  #       Path: /06/merging-sorted-lists.instructor.md
-  #     -
-  #       Type: Lesson
-  #       UID: f915967b-7b81-46b3-b716-40958c0b88ea
-  #       Path: /06/merging-sorted-lists.md
-  #     -
-  #       Type: Checkpoint
-  #       UID: f937f38d-b86d-4607-8203-b579e1f1689e
-  #       Path: /06/merging-sorted-lists.checkpoint.md        
+  -
+    Title: PSE 05
+    Description: Linked Lists
+    UID: 52b1f9a1-ec9d-4a85-8cb9-1d0572dbd085
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Instructor
+        UID: a94eb084-66a8-4136-bf9d-2da892358098
+        Path: /05/rotate-linked-list.instructor.md
+      -
+        Type: Lesson
+        UID: e1875d82-9122-484b-96ea-369624cee079
+        Path: /05/rotate-linked-list.md
+      -
+        Type: Checkpoint
+        UID: e2fc8cfc-e98f-4df9-8f5e-a5f5f0118ae6
+        Path: /05/rotate-linked-list.checkpoint.md        
   -
     Title: PSE 05
     Description: Reshape a Matrix
