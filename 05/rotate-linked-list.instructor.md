@@ -44,7 +44,7 @@ def rotate_list(head, k):
 
 # O(n) solution
 ```python
-def rotate(head, k):
+def rotate_list(head, k):
     '''
     Our strategy will be to split the list into two parts, and then put the 
     second part in front. E.g. rotate 1->2->3->4->5 by 2 will look like:
