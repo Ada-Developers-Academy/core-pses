@@ -167,7 +167,7 @@ def max_profit(prices):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 9707003f-e842-446b-9c39-e90e62a9da85
 * title: What is the time complexity of your solution?
 * points: 1
@@ -185,12 +185,6 @@ Time Complexity?
 
 ##### !end-placeholder
 
-##### !answer
-
-/.+/
-
-##### !end-answer
-
 ### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
@@ -199,7 +193,7 @@ Time Complexity?
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: db5f2381-7288-442c-835e-0972ae72973a
 * title: What is the space complexity of your solution?
 * points: 1
@@ -216,12 +210,6 @@ What is the space complexity of your answer? Explain. Define your variable(s).
 Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
 

@@ -170,7 +170,7 @@ class TestPython1(unittest.TestCase):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 70178554-c412-45bb-80c9-1b10de5f75cb
 * title: What is the time complexity of your solution?
 * points: 1
@@ -188,19 +188,13 @@ Time Complexity?
 
 ##### !end-placeholder
 
-##### !answer
-
-/.+/
-
-##### !end-answer
-
 
 ### !end-challenge
 
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 143195b2-0991-4c74-9b81-88c2438e9f5f
 * title: What is the space complexity of your solution?
 * points: 1
@@ -214,14 +208,8 @@ What is the space complexity of your solution?  Explain. Define your variable(s)
 
 ##### !placeholder
 
-Space Complexity
+Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
