@@ -6,7 +6,7 @@
 * type: code-snippet
 * language: python3.6
 * id: 48651a9f-90c7-490a-90ab-0ef771f47170
-* title: Merging Sorted Lists
+* title: Rotate Linked List
 * points: 3
 * topics: python, lists, bigO
 

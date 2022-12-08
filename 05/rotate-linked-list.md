@@ -73,7 +73,7 @@ Here are some example clarifying questions:
 
 *Note: The `==` operator for the `Node` class has been defined such that comparing the head nodes of two linked lists using this operator will check that the two lists are equal.*
 
-*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
+*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run against your unit tests.*
 
 ##### !end-question
 ##### !placeholder
