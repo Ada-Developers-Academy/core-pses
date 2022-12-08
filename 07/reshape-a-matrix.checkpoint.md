@@ -210,7 +210,7 @@ def reshape_matrix(matrix, r, c):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 976fd220-e3f3-41f4-adb2-908e30d1e363
 * title: What is the time complexity of your solution?
 * points: 1
@@ -238,7 +238,7 @@ Time Complexity?
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 7bb7f05e-257c-43ba-a811-8900cfd622e9
 * title: What is the space complexity of your solution?
 * points: 1
@@ -255,11 +255,5 @@ What is the space complexity of your solution? Explain. Define your variable(s).
 Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge

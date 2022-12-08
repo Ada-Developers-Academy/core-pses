@@ -280,7 +280,7 @@ def tic_tac_toe_winner(board):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: 647d774c-443d-4c03-9e18-170c075289b4
 * title: What is the time complexity of your solution?
 * points: 1
@@ -298,17 +298,11 @@ Time Complexity?
 
 ##### !end-placeholder
 
-##### !answer
-
-/.+/
-
-##### !end-answer
-
 ### !end-challenge
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: fc625c83-dda0-43ba-a23f-252d97d0cc7b
 * title: What is the space complexity of your solution?
 * points: 1
@@ -325,12 +319,6 @@ What is the space complexity of your solution? Explain. Define your variable(s).
 Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
 
