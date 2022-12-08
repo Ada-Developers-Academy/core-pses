@@ -208,7 +208,7 @@ What is the space complexity of your solution?  Explain. Define your variable(s)
 
 ##### !placeholder
 
-Space Complexity
+Space Complexity?
 
 ##### !end-placeholder
 
