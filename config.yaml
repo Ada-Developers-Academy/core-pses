@@ -153,7 +153,7 @@ Standards:
         UID: 2b22f6b1-ca0c-4dc9-8913-b62ab2698fbe
         Path: /07/kth-missing-positive-number.checkpoint.md
   -
-    Title: PSE 10
+    Title: PSE 08
     Description: "Best Time to Buy/Sell Stock"
     UID: 893115f8-70b1-419b-9326-9b4fb2c60f39
     SuccessCriteria:
@@ -162,12 +162,12 @@ Standards:
       -
         Type: Instructor
         UID: 8832a461-5fbc-4fcf-84a5-3444561b53cc
-        Path: /10/stock.instructor.md
+        Path: /08/stock.instructor.md
       -
         Type: Lesson
         UID: 3c5d7780-b34c-4daa-938b-4bf9f13da0ca
-        Path: /10/stock.md
+        Path: /08/stock.md
       -
         Type: Checkpoint
         UID: 80c3108d-1015-4ecc-a7ae-226ff4c76eed
-        Path: /10/stock.checkpoint.md 
+        Path: /08/stock.checkpoint.md 
