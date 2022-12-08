@@ -144,7 +144,7 @@ class TestPython1(unittest.TestCase):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: da542df1-77b0-401d-b5e4-e73549b69556
 * title: What is the time complexity of your solution?
 * points: 1
@@ -162,17 +162,11 @@ Time Complexity?
 
 ##### !end-placeholder
 
-##### !answer
-
-/.+/
-
-##### !end-answer
-
 ### !end-challenge
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: e5552c1a-db8e-48ba-9ae9-1c91eedd20aa
 * title: What is the space complexity of your solution?
 * points: 1
@@ -189,11 +183,5 @@ What is the space complexity of your solution? Explain. Define your variable(s).
 Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
