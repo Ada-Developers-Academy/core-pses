@@ -238,7 +238,7 @@ Example Steps for a recursive, O(n) solution:
 
 1. Create helper function (this will have one argument, which is the current node whose height we are calculating)
 1. In helper function, deal with the edge case of a node that is None (height is 0)
-1. In helper function, return `1 + max(self.helper(current_node.left), helper(current_node.right))`
+1. In helper function, return `1 + max(helper(current_node.left), helper(current_node.right))`
 1. In main height function, deal with edge case of root node being None
 1. In main height function, call helper function with the root.
 
