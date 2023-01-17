@@ -68,7 +68,7 @@ class TestChallenge(unittest.TestCase):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: eac1535f-27ee-43a3-9c43-fcb4732e64d4
 * title: What is the time complexity of your solution?
 * points: 1
@@ -86,17 +86,12 @@ Time Complexity?
 
 ##### !end-placeholder
 
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: ee2558a7-b6c3-4b1e-bd83-e901cd39f17b
 * title: What is the space complexity of your solution?
 * points: 1
@@ -113,11 +108,5 @@ What is the space complexity of your solution? Explain. Define your variable(s) 
 Space Complexity?
 
 ##### !end-placeholder
-
-##### !answer
-
-/.+/
-
-##### !end-answer
 
 ### !end-challenge
