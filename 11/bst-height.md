@@ -72,7 +72,7 @@ Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-de
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: cd479b36-b9c5-40d8-8c8c-1befa3de6174
+* id: 5b8678ea-cbf2-45e3-824e-987dff657020
 * title: Ask Clarifying Questions
 * topics: pse
 ##### !question
@@ -116,7 +116,7 @@ Here are some example clarifying questions:
 ### !challenge
 * type: code-snippet
 * language: python3.6
-* id: 0f72eb75-455c-48ed-9868-337a32e2c86d
+* id: 20767bcf-d43f-46ec-a19d-4fa9b27a2f01
 * title: Write Unit Tests
 * topics: pse
 ##### !question
@@ -214,7 +214,7 @@ def test_empty_tree():
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 17165b99-d816-42fa-a6da-d6e25265bb92
+* id: 68012502-30a7-46fe-bf96-c9a346cb5632
 * title: Create Logical Steps
 * topics: pse
 ##### !question

@@ -69,7 +69,7 @@ Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-de
 
 * type: code-snippet
 * language: python3.6
-* id: 7176204d-f1da-463c-8d46-af9229de96b2
+* id: a292383f-196c-4e98-91ff-6ce22059bcb1
 * title: BST Height Coding Challenge
 * points: 3
 * topics: python, bst, traversals
@@ -258,7 +258,7 @@ def height(self):
 ### !challenge
 
 * type: short-answer
-* id: 9707003f-e842-446b-9c39-e90e62a9da85
+* id: ed25526f-88eb-4b45-aa4e-b340dba3d367
 * title: What is the time complexity of your solution?
 * points: 1
 * topics: Big-O, python
@@ -290,7 +290,7 @@ Time Complexity?
 ### !challenge
 
 * type: short-answer
-* id: db5f2381-7288-442c-835e-0972ae72973a
+* id: fda55052-b2c2-401d-b870-39d7080042dc
 * title: What is the space complexity of your solution?
 * points: 1
 * topics: Big-O, python
