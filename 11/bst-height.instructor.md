@@ -1,28 +1,40 @@
-# Instructor: Max Profit
+# Instructor: BST Height
 
-## O(n) Solution
+## Recursive Solution - O(n)
 
 ```py
-def max_profit(prices):
-    total_profit = 0
-    for i in range(1, len(prices)):
-        # if prices[i] - prices[i-1] is > 0, then we have a profit
-        total_profit += max(prices[i]-prices[i-1], 0)
-    return total_profit
+def height_helper(self, current_node):
+        if not current_node:
+            return 0
+
+        return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
+    
+def height(self):
+    return self.height_helper(self.root)
 ```
 
-## Brute Force O(n<sup>2</sup>)
-
-This is a very common solution to this problem.
+## Iterative Solution - O(n)
 
 ```py
-def maxProfit(prices: List[int]) -> int:
-    max_profit = 0
-    for i in range(len(prices) - 1):
-        for j in range(i + 1, len(prices)):
-            profit = prices[j] - prices[i]
-            if profit > max_profit:
-                max_profit = profit
-                
-    return max_profit
+from collections import deque
+def height(self):
+    if self.root is None:
+        return 0
+
+    q = deque()
+    q.append(self.root)
+    height = 0
+
+    while q:
+        height += 1
+        node_count = len(q)
+
+        for _ in range(node_count):
+            current = q.popleft()
+            if current.left:
+                q.append(current.left)
+            if current.right:
+                q.append(current.right)
+        
+    return height
 ```
