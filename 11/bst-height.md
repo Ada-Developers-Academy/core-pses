@@ -1,4 +1,4 @@
-# Calcualte BST Height
+# Calculate BST Height
 
 ## Given this problem prompt:
 
