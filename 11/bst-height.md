@@ -1,46 +1,69 @@
-# Best time to sell Stock
+# Calcualte BST Height
 
 ## Given this problem prompt:
 
-You are given an integer array `prices` where `prices[i]` is the price of a given stock on the ith day.
+Given classes `Tree` and `TreeNode` which respectively represent a binary search tree and a node in a binary search tree, implement a function, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
 
-On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
+The `height` function is a part of the `Tree` class and accepts one argument: `self`. This argument may be used to access the `root` of the binary search tree.
 
-Find and return the **maximum** profit you can achieve.
+Calculate and return the *height* of the binary search tree.
 
 **Example 1:**
 
 ```
-Input: prices = [7,1,5,3,6,4]
-Output: 7
-Explanation: Buy on day 2 (price = 1) and sell on day 3
-   (price = 5), profit = 5-1 = 4.
-Then buy on day 4 (price = 3) and sell on day 5 
-   (price = 6), profit = 6-3 = 3.
-Total profit is 4 + 3 = 7.
+Input: 
+
+                10   <-- root
+               /  \
+              2    32
+            /  \     
+           1    5
+
+Output: 3
+Explanation: The maximum amount of nodes from the root to a leaf is 3 nodes (including the root).
+
+The path from 10 -> 32 contains 2 nodes.
+The path from 10 -> 2 -> 1 contains 3 nodes.
+The path from 10 -> 2 -> 5 also contains 3 nodes.
+
+We want to return 3 here as that is the maximum amount of nodes from the root to any leaf in the tree.
 ```
 
 **Example 2:**
 
 ```
-Input: prices = [1,2,3,4,5]
+Input:
+             22  <--- root
+           /    \
+          /      \
+         10       43
+       /   \    /   \
+      6    12  38     55
+     / \      
+    3   8    
+
 Output: 4
-Explanation: Buy on day 1 (price = 1) and sell on 
-    day 5 (price = 5), profit = 5-1 = 4.
-Total profit is 4.
+Explanation: The maximum amount of nodes from the root to a leaf is 4 nodes (including the root).
+
+The path from 22 -> 10 -> 6 -> 3 contains 4 nodes.
+The path from 22 -> 10 -> 6 -> 8 contains 4 nodes.
+The path from 22 -> 10 -> 12 contains 3 nodes.
+The path from 22 -> 43 -> 38 contains 3 nodes.
+The path from 22 -> 43 -> 55 contains 3 nodes.
+
+We want to return 4 here as that is the maximum amount of nodes from the root to any leaf in the tree.
 ```
 
 **Example 3:**
 
 ```
-Input: prices = [7,6,4,3,1]
-Output: 0
-Explanation: There is no way to make a positive profit, so
-    we never buy the stock to achieve the maximum 
-    profit of 0.
+Input: 
+            12 <-- root
+Output: 1
+Explanation: The root is the only node in the tree, and therefore is itself a leaf. So the height of the tree would be 1 in this nominal case.
 ```
 
-Sourced from:  [Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
 
 
 ## Prompts
@@ -71,9 +94,9 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-- How does the function handle an empty list?
-- Can numbers in the input lists be negative?
-- Can the list be only ascending or descending numbers?
+- What should I do if invalid input is passed in?
+- What type of data will be stored in the values of the TreeNodes?
+- Is the tree guaranteed to be balanced?
 
 ##### !end-explanation
 
@@ -102,7 +125,7 @@ Here are some example clarifying questions:
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
-2. Write unit tests for `max_profit` for the nominal and edge cases you identified in the first step.
+2. Write unit tests for `height` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
@@ -158,42 +181,29 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
-def test_two_nominal_lists():
+def test_two_nominal_case():
     # nominal test case
     # Arrange
-    stocks = [7,1,5,3,6,4]
+    root = TreeNode(12)
+    root.left = TreeNode(5)
+    root.right = TreeNode(17)
 
     # Act
-    result = max_profit(stocks)
+    result = height(root)
 
     # Assert
-    assert result == 7
+    assert result == 2
 
-def test_empty_lists():
+def test_empty_tree():
     # edge test case
     # Arrange
-    stocks = []
+    root = None
 
     # Act
-    result = max_profit(stocks)
+    result = height(root)
 
     # Assert
     assert result == 0
-
-    # Assert
-    assert result == []
-
-def test_list_1_all_before_list_2():
-    # alternative test case
-    # Arrange
-    stocks = [7,6,5,4,3,1]
-
-    # Act
-    result = max_profit(stocks)
-
-    # Assert
-    assert result == 0
-
 ```
 
 ##### !end-explanation
@@ -209,7 +219,7 @@ def test_list_1_all_before_list_2():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `max_profit` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `height` in enough detail that someone else could write the code. 
 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
@@ -224,16 +234,13 @@ Write the logical steps here.
 
 ### !explanation
 
-Example Steps for an O(n) solution:
+Example Steps for a recursive, O(n) solution:
 
-1. Check for valid input
-1. set `total` to `0`
-1. set `index` to `1`
-1. `while index < len(stocks)`
-    *  if `stocks[index - 1] > stocks[index]`
-        * `total = total + stocks[index - 1] - stocks[index]` 
-    * `index = index + 1`
-1. `return total`
+1. Create helper function (this will have one argument, which is the current node whose height we are calculating)
+1. In helper function, deal with the edge case of a node that is None (height is 0)
+1. In helper function, return `1 + max(self.helper(current_node.left), helper(current_node.right))`
+1. In main height function, deal with edge case of root node being None
+1. In main height function, call helper function with the root.
 
 ### !end-explanation
 
