@@ -226,7 +226,27 @@ def height(self):
 Our iterative solution:
 
 ```python
+from collections import deque
+def height(self):
+    if self.root is None:
+        return 0
 
+    q = deque()
+    q.append(self.root)
+    height = 0
+
+    while q:
+        height += 1
+        node_count = len(q)
+
+        for _ in range(node_count):
+            current = q.popleft()
+            if current.left:
+                q.append(current.left)
+            if current.right:
+                q.append(current.right)
+        
+    return height
 ```
 
 ##### !end-explanation
