@@ -226,8 +226,9 @@ def height(self):
 Our iterative solution:
 
 ```python
-from collections import deque
 def height(self):
+    from collections import deque
+    
     if self.root is None:
         return 0
 
