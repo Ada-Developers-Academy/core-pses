@@ -1,8 +1,8 @@
 # Calculate BST Height
 
-## Given this problem prompt:
+## Problem
 
-Given classes `Tree` and `TreeNode` which respectively represent a binary search tree and a node in a binary search tree, implement a function, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
+Given classes `Tree` and `TreeNode` which represent a binary search tree and a node in a binary search tree, implement a function respectively, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
 
 The `height` function is a part of the `Tree` class and accepts one argument: `self`. This argument may be used to access the `root` of the binary search tree.
 
@@ -26,7 +26,7 @@ The path from 10 -> 32 contains 2 nodes.
 The path from 10 -> 2 -> 1 contains 3 nodes.
 The path from 10 -> 2 -> 5 also contains 3 nodes.
 
-We want to return 3 here as that is the maximum amount of nodes from the root to any leaf in the tree.
+The function should return 3 here as that is the maximum amount of nodes from the root to any leaf in the tree.
 ```
 
 **Example 2:**
@@ -51,7 +51,7 @@ The path from 22 -> 10 -> 12 contains 3 nodes.
 The path from 22 -> 43 -> 38 contains 3 nodes.
 The path from 22 -> 43 -> 55 contains 3 nodes.
 
-We want to return 4 here as that is the maximum amount of nodes from the root to any leaf in the tree.
+The function should return 4 here as that is the maximum amount of nodes from the root to any leaf in the tree.
 ```
 
 **Example 3:**
@@ -60,7 +60,7 @@ We want to return 4 here as that is the maximum amount of nodes from the root to
 Input: 
             12 <-- root
 Output: 1
-Explanation: The root is the only node in the tree, and therefore is itself a leaf. So the height of the tree would be 1 in this nominal case.
+Explanation: The root is the only node in the tree, and therefore is itself a leaf. So the height of the tree would be 1.
 ```
 
 Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
@@ -95,7 +95,7 @@ Consider the following for inspiration:
 Here are some example clarifying questions:
 
 - What should I do if invalid input is passed in?
-- What type of data will be stored in the values of the TreeNodes?
+- What type of data will be stored in the values of the `TreeNode`s?
 - Is the tree guaranteed to be balanced?
 
 ##### !end-explanation
