@@ -2,7 +2,7 @@
 
 ## Problem
 
-Given class `TreeNode` which represents a node in a binary search tree, implement a function, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
+Given class `TreeNode` which represents a node in a binary search tree, implement a function, `height`, determining the height of the tree with the given `root` node. The height of the tree is the *maximum* depth from the root node to a leaf node.
 
 The `height` function accepts one argument: `root`, which is the root of the tree of which we would like to calculate the height.
 
