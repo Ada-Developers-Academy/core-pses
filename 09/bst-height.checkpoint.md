@@ -173,11 +173,19 @@ class TestPython1(unittest.TestCase):
 Our recursive solution:
 
 ```python
+# recursive helper function that accepts the current node as an argument
 def height_helper(self, current_node):
-        if not current_node:
-            return 0
+    # base case for our recursive function; checks if the current node is None
+    if not current_node:
+        # the function returns a height of 0 for a tree with 0 nodes
+        return 0
 
-        return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
+    # our recursive calls
+    # the first call recursively calculates the height for the left side of the tree
+    # the second call recursively calculates the height of the right side of the tree
+    # the max of these two calls is calculated by the max function
+    # we then add 1 to whatever is returned from the max function, to account for our current node
+    return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
     
 def height(self):
     return self.height_helper(self.root)
@@ -186,27 +194,43 @@ def height(self):
 Our iterative solution:
 
 ```python
+# this iterative solution uses a breadth first traversal
+# of the tree, keeping track of how many levels of the tree
+# which have been traversed.
 def height(self):
+    # import deque, which will be used to handle the queue
     from collections import deque
 
+    # if the root is None, return a height of 0
     if self.root is None:
         return 0
 
+    # initialize the queue
     q = deque()
+    # append the root of the tree to the queue
     q.append(self.root)
+    # counter for calculating the height
     height = 0
 
+    # while the queue is not empty
     while q:
+        # add one to the height 
         height += 1
+        # keep count of the number of tree nodes on this level
         node_count = len(q)
 
+        # loop through all of the nodes on this level, adding all of their children to the queue
         for _ in range(node_count):
+            # pop off the next node in the queue
             current = q.popleft()
+            # if it has a left child, add the left child to the queue
             if current.left:
                 q.append(current.left)
+            # if it has a right child, add the right child to the queue
             if current.right:
                 q.append(current.right)
-        
+    
+    # return the height of the tree
     return height
 ```
 
@@ -218,7 +242,7 @@ def height(self):
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: ed25526f-88eb-4b45-aa4e-b340dba3d367
 * title: What is the time complexity of your solution?
 * points: 1
@@ -252,7 +276,7 @@ Time Complexity?
 
 ### !challenge
 
-* type: short-answer
+* type: paragraph
 * id: fda55052-b2c2-401d-b870-39d7080042dc
 * title: What is the space complexity of your solution?
 * points: 1
