@@ -185,7 +185,7 @@ def height_helper(current_node):
     # the second call recursively calculates the height of the right side of the tree
     # the max of these two calls is calculated by the max function
     # we then add 1 to whatever is returned from the max function, to account for our current node
-    return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
+    return max(height_helper(current_node.left), height_helper(current_node.right)) + 1
     
 def height(root):
     return height_helper(root)
