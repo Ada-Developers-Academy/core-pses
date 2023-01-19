@@ -93,7 +93,7 @@ class TreeNode:
         self.left = None
         self.right = None
     
-def height(self):
+def height(root):
     pass
 
 ```
