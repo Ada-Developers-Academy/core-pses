@@ -18,8 +18,8 @@ def height(root):
 ## Iterative Solution - O(n) time, O(w) space (where w is the # of nodes in the widest level in the tree)
 
 ```py
-from collections import deque
 def height(root):
+    from collections import deque
     if root is None:
         return 0
 

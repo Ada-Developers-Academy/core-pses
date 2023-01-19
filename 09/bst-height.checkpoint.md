@@ -151,19 +151,19 @@ class TestPython1(unittest.TestCase):
       self.empty_tree = TreeExtended()
 
   def test_height_of_empty_tree_is_zero(self):
-    self.assertEqual(0, height(self.empty_tree))
+    self.assertEqual(0, height(self.empty_tree.root))
   
   def test_height_of_one_node_tree_is_one(self):
     self.empty_tree.add(5, "Peter")
 
-    self.assertEqual(1, height(self.empty_tree))
+    self.assertEqual(1, height(self.empty_tree.root))
 
   def test_height_of_many_node_tree(self):
-    self.assertEqual(4, height(self.tree_with_nodes))
+    self.assertEqual(4, height(self.tree_with_nodes.root))
 
     self.tree_with_nodes.add(2, "pasta")
     self.tree_with_nodes.add(2.5, "bread")
-    self.assertEqual(5, height(self.tree_with_nodes))
+    self.assertEqual(5, height(self.tree_with_nodes.root))
 ```
 
 ##### !end-tests
