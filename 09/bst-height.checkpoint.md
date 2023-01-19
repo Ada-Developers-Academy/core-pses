@@ -2,9 +2,9 @@
 
 ## Problem
 
-Given classes `Tree` and `TreeNode` which represent a binary search tree and a node in a binary search tree respectively, implement a function, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
+Given class `TreeNode` which represents a node in a binary search tree, implement a function, `height`, determining the height of the tree. The height of the tree is the *maximum* depth from the root node to a leaf node.
 
-The `height` function is a part of the `Tree` class and accepts one argument: `self`. This argument may be used to access the `root` of the binary search tree.
+The `height` function accepts one argument: `root`, which is the root of the tree of which we would like to calculate the height.
 
 Calculate and return the *height* of the binary search tree.
 
@@ -92,13 +92,9 @@ class TreeNode:
         self.value = val
         self.left = None
         self.right = None
-
-class Tree:
-    def __init__(self):
-        self.root = None
     
-    def height(self):
-        pass
+def height(self):
+    pass
 
 ```
 
@@ -109,6 +105,10 @@ class Tree:
 ```py
 import unittest
 from main import *
+
+class Tree:
+    def __init__(self):
+        self.root = None
 
 class TreeExtended(Tree):
 
@@ -151,19 +151,19 @@ class TestPython1(unittest.TestCase):
       self.empty_tree = TreeExtended()
 
   def test_height_of_empty_tree_is_zero(self):
-    self.assertEqual(0,self.empty_tree.height())
+    self.assertEqual(0, height(self.empty_tree))
   
   def test_height_of_one_node_tree_is_one(self):
     self.empty_tree.add(5, "Peter")
 
-    self.assertEqual(1, self.empty_tree.height())
+    self.assertEqual(1, height(self.empty_tree))
 
   def test_height_of_many_node_tree(self):
-    self.assertEqual(4, self.tree_with_nodes.height())
+    self.assertEqual(4, height(self.tree_with_nodes))
 
     self.tree_with_nodes.add(2, "pasta")
     self.tree_with_nodes.add(2.5, "bread")
-    self.assertEqual(5, self.tree_with_nodes.height())
+    self.assertEqual(5, height(self.tree_with_nodes))
 ```
 
 ##### !end-tests
@@ -174,7 +174,7 @@ Our recursive solution:
 
 ```python
 # recursive helper function that accepts the current node as an argument
-def height_helper(self, current_node):
+def height_helper(current_node):
     # base case for our recursive function; checks if the current node is None
     if not current_node:
         # the function returns a height of 0 for a tree with 0 nodes
@@ -187,8 +187,8 @@ def height_helper(self, current_node):
     # we then add 1 to whatever is returned from the max function, to account for our current node
     return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
     
-def height(self):
-    return self.height_helper(self.root)
+def height(root):
+    return height_helper(root)
 ```
 
 Our iterative solution:
@@ -197,18 +197,18 @@ Our iterative solution:
 # this iterative solution uses a breadth first traversal
 # of the tree, keeping track of how many levels of the tree
 # which have been traversed.
-def height(self):
+def height(root):
     # import deque, which will be used to handle the queue
     from collections import deque
 
     # if the root is None, return a height of 0
-    if self.root is None:
+    if root is None:
         return 0
 
     # initialize the queue
     q = deque()
     # append the root of the tree to the queue
-    q.append(self.root)
+    q.append(root)
     # counter for calculating the height
     height = 0
 
