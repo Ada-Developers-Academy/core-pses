@@ -76,47 +76,7 @@ Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-de
 
 ##### !question
 
-Write a solution to the BST Height function below.  The following tests will evaluate your solution.
-
-<!-- prettier-ignore -->
-<details>
-  <summary>Tests converted to Unittest</summary>
-
-  ```python
-    def setUp(self) -> None:
-
-        def tree_with_nodes() -> TreeExtended():
-            t = TreeExtended()
-            t.add(5, "Peter")
-            t.add(3, "Paul")
-            t.add(1, "Mary")
-            t.add(10, "Karla")
-            t.add(15, "Ada")
-            t.add(25, "Kari")
-            return t
-        
-        self.empty_tree = TreeExtended()
-        self.tree_with_nodes = tree_with_nodes()
-    
-    def tearDown(self) -> None:
-        self.empty_tree = TreeExtended()
-
-    def test_height_of_empty_tree_is_zero(self):
-        self.assertEqual(0,self.empty_tree.height())
-    
-    def test_height_of_one_node_tree_is_one(self):
-        self.empty_tree.add(5, "Peter")
-
-        self.assertEqual(1, self.empty_tree.height())
-
-    def test_height_of_many_node_tree(self):
-        self.assertEqual(4, self.tree_with_nodes.height())
-
-        self.tree_with_nodes.add(2, "pasta")
-        self.tree_with_nodes.add(2.5, "bread")
-        self.assertEqual(5, self.tree_with_nodes.height())
-```
-</details>
+Write a solution to the BST Height function below.
 
 ##### !end-question
 
