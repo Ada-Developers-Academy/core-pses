@@ -1,6 +1,8 @@
 # Instructor: BST Height
 
-## Recursive Solution - O(n)
+Please note the tree is not guaranteed to be balanced; the space complexity for a solution may be affected.
+
+## Recursive Solution - O(n) time, O(n) space
 
 ```py
 def height_helper(self, current_node):
@@ -13,7 +15,7 @@ def height(self):
     return self.height_helper(self.root)
 ```
 
-## Iterative Solution - O(n)
+## Iterative Solution - O(n) time, O(w) space (where w is the # of nodes in the widest level in the tree)
 
 ```py
 from collections import deque

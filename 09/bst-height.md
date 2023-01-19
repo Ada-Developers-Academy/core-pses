@@ -127,7 +127,7 @@ Here are some example clarifying questions:
     * You can use the examples provided in the prompt, or other examples.
 2. Write unit tests for `height` for the nominal and edge cases you identified in the first step.
 
-*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
+*Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run against your unit tests.*
 
 ##### !end-question
 
@@ -237,8 +237,8 @@ Write the logical steps here.
 Example Steps for a recursive, O(n) solution:
 
 1. Create helper function (this will have one argument, which is the current node whose height we are calculating)
-1. In helper function, deal with the edge case of a node that is None (height is 0)
-1. In helper function, return `1 + max(helper(current_node.left), helper(current_node.right))`
+1. In helper function, deal with the edge case of a node that is None
+1. In helper function, return 1 (to count the current level) + maximum(helper on current's left and right subtrees)
 1. In main height function, deal with edge case of root node being None
 1. In main height function, call helper function with the root.
 
