@@ -189,4 +189,23 @@ Standards:
       -
         Type: Checkpoint
         UID: cc82ba05-6ea8-4058-9fc4-965ac473db25
-        Path: /09/bst-height.checkpoint.md 
+        Path: /09/bst-height.checkpoint.md
+  -
+    Title: PSE 10
+    Description: "Components of a Graph"
+    UID: 3a33bc98-db54-481b-98f5-b7c347cf3e8e
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:    
+      -
+        Type: Instructor
+        UID: 4d6af5c8-deba-4b7b-a1ed-a72738fbc78e
+        Path: /10/graph-components.instructor.md
+      -
+        Type: Lesson
+        UID: 18b52680-52ad-4119-bf70-4ce584172e17
+        Path: /10/graph-components.md
+      -
+        Type: Checkpoint
+        UID: fa3725eb-b4ad-4ac5-90a7-2ebf15c3bdbd
+        Path: /10/graph-components.checkpoint.md 
