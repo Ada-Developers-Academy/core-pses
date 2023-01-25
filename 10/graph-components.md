@@ -2,7 +2,9 @@
 
 ## Problem
 
-Given an undirected graph represented by an adjacency dictionary, `g`, return a list of lists containing all of the subgraphs in the graph. Each element in the outer list will represent a subgraph in the graph. Each element in the inner lists will contain all of the nodes in a subgraph. Please note the items in the inner lists must be sorted.
+Given an undirected graph represented by an adjacency dictionary, `g`, return a list of lists containing all of the subgraphs in the graph. Each element in the outer list will represent a subgraph in the graph. Each element in the inner lists will contain all of the nodes in a subgraph. 
+
+Please note the items in the inner lists *must be sorted* from least to greatest. The outer list containing the subgraphs does not need to be sorted.
 
 The goal is to return a list of lists containing all of the subgraphs in graph `g`. 
 
