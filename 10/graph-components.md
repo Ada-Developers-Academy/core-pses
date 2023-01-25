@@ -1,69 +1,66 @@
-# Calculate BST Height
+# Components of a Graph
 
 ## Problem
 
-Given class `TreeNode` which represents a node in a binary search tree, implement a function, `height`, determining the height of the tree with the given `root` node. The height of the tree is the *maximum* depth from the root node to a leaf node.
+Given an undirected graph represented by an adjacency dictionary, `g`, return a list of lists containing all of the subgraphs in the graph. Each element in the outer list will represent a subgraph in the graph. Each element in the inner lists will contain all of the nodes in a subgraph. Please note the items in the inner lists must be sorted.
 
-The `height` function accepts one argument: `root`, which is the root of the tree of which we would like to calculate the height.
-
-Calculate and return the *height* of the binary search tree.
+The goal is to return a list of lists containing all of the subgraphs in graph `g`. 
 
 **Example 1:**
+
+![example graph 1](./images/graph1.png)
 
 ```
 Input: 
 
-                10   <-- root
-               /  \
-              2    32
-            /  \     
-           1    5
+g = {
+    1: [2],
+    2: [1, 3],
+    3: [2],
+    4: [5],
+    5: [4]
+}
 
-Output: 3
-Explanation: The maximum amount of nodes from the root to a leaf is 3 nodes (including the root).
-
-The path from 10 -> 32 contains 2 nodes.
-The path from 10 -> 2 -> 1 contains 3 nodes.
-The path from 10 -> 2 -> 5 also contains 3 nodes.
-
-The function should return 3 here as that is the maximum amount of nodes from the root to any leaf in the tree.
+Output: [[1, 2, 3], [4,5]]
+Explanation: The nodes 1, 2, & 3 are all connected together, and thus comprise a list in the output. Similarly, the nodes 4 & 5 are connected to each other, and comprise another list in the output.
 ```
 
 **Example 2:**
 
+![example graph 2](./images/graph2.png)
+
 ```
 Input:
-             22  <--- root
-           /    \
-          /      \
-         10       43
-       /   \    /   \
-      6    12  38     55
-     / \      
-    3   8    
 
-Output: 4
-Explanation: The maximum amount of nodes from the root to a leaf is 4 nodes (including the root).
+g = {
+    "A": ["B", "C"],
+    "B": ["A", "C"],
+    "C": ["A", "B"],
+    "D": ["E"],
+    "E": ["D"],
+    "F": []
+}
 
-The path from 22 -> 10 -> 6 -> 3 contains 4 nodes.
-The path from 22 -> 10 -> 6 -> 8 contains 4 nodes.
-The path from 22 -> 10 -> 12 contains 3 nodes.
-The path from 22 -> 43 -> 38 contains 3 nodes.
-The path from 22 -> 43 -> 55 contains 3 nodes.
-
-The function should return 4 here as that is the maximum amount of nodes from the root to any leaf in the tree.
+Output: [["A", "B", "C"], ["D", "E"], ["F"]]
+Explanation: The nodes A, B, and C are all connected, so will be an item in the list. Nodes D and E are connected, so will be another item in the resulting list. Finally, node F is not connected to any other node, so it is the only item in the final list.
 ```
 
 **Example 3:**
 
+![example graph 3](./images/graph3.png)
+
 ```
 Input: 
-            12 <-- root
-Output: 1
-Explanation: The root is the only node in the tree, and therefore is itself a leaf. So the height of the tree would be 1.
+
+g = {
+    "B": []
+}
+
+Output: [["B"]]
+Explanation: Node B is the only node in the graph, so the function will return a list containing one list, which will contain one item, node B.
 ```
 
-Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
+Adapted from:  [GeeksForGeeks](https://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/)
 
 
 ## Prompts
@@ -94,9 +91,9 @@ Consider the following for inspiration:
 
 Here are some example clarifying questions:
 
-- What should I do if invalid input is passed in?
-- What type of data will be stored in the values of the `TreeNode`s?
-- Is the tree guaranteed to be balanced?
+- What type of data will be stored in the graph?
+- Is the graph guaranteed to have a valid input?
+- Is the graph guaranteed to have data? Is it guaranteed the graph will not be empty?
 
 ##### !end-explanation
 
@@ -125,7 +122,7 @@ Here are some example clarifying questions:
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
-2. Write unit tests for `height` for the nominal and edge cases you identified in the first step.
+2. Write unit tests for `components` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run against your unit tests.*
 
@@ -181,29 +178,33 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
-def test_two_nominal_case():
-    # nominal test case
+def test_components_nominal(self):
     # Arrange
-    root = TreeNode(12)
-    root.left = TreeNode(5)
-    root.right = TreeNode(17)
+    g = {
+        "A": ["B", "C"],
+        "B": ["A", "C"],
+        "C": ["A", "B"],
+        "D": ["E"],
+        "E": ["D"],
+        "F": []
+    }
 
     # Act
-    result = height(root)
+    answer = components(g)
+    answer.sort()
 
     # Assert
-    assert result == 2
+    self.assertEqual(answer, sorted([["A", "B", "C"], ["D", "E"], ["F"]]))
 
-def test_empty_tree():
-    # edge test case
+def test_components_empty_graph(self):
     # Arrange
-    root = None
+    g = {}
 
     # Act
-    result = height(root)
+    answer = components(g)
 
     # Assert
-    assert result == 0
+    self.assertEqual(answer, [])
 ```
 
 ##### !end-explanation
@@ -219,7 +220,7 @@ def test_empty_tree():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `height` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `components` in enough detail that someone else could write the code. 
 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
@@ -234,13 +235,16 @@ Write the logical steps here.
 
 ### !explanation
 
-Example Steps for a recursive, O(n) solution:
+Example Steps for a solution utilizing depth first search
 
-1. Create helper function (this will have one argument, which is the current node whose height we are calculating)
-1. In helper function, deal with the edge case of a node that is None
-1. In helper function, return 1 (to count the current level) + maximum(helper on current's left and right subtrees)
-1. In main height function, deal with edge case of root node being None
-1. In main height function, call helper function with the root.
+1. Create a helper function to run depth first search on a subgraph
+1. In the main function, create variables to hold the resulting list of subgraphs and a variable to hold the list of all visited nodes
+1. For each node in the graph:
+    1. If the node has not been visited:
+        1. Create a temporary list to hold all of the nodes in the subgraph
+        1. Perform a depth first traversal on the subgraph using the helper function
+        1. Add the temporary list containing the subgraph to the list of subgraphs
+1. Return the list of subgraphs
 
 ### !end-explanation
 
