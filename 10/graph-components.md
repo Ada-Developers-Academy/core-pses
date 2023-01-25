@@ -93,7 +93,7 @@ Here are some example clarifying questions:
 
 - What type of data will be stored in the graph?
 - Is the graph guaranteed to have a valid input?
-- Is the graph guaranteed to have data? Is it guaranteed the graph will not be empty?
+- Is the graph guaranteed to have data? Can the graph be empty?
 
 ##### !end-explanation
 
