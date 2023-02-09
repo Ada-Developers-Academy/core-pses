@@ -51,7 +51,7 @@ class TestChallenge(unittest.TestCase):
         output1 = get_highest_rated(restaurants1)
         output2 = get_highest_rated(restaurants2)
         output3 = get_highest_rated(restaurants3)
-        # 
+         
         self.assertEqual(output1["name"], "Crow's Nest")
         self.assertEqual(output1["rating"], 5)
         self.assertEqual(len(output1.keys()), 2)
