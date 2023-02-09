@@ -11,7 +11,7 @@
 
 Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 
-Create a function named `is_palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
+Create a function named `palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
 
 ## Examples
 
