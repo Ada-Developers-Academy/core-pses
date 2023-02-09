@@ -91,7 +91,7 @@ Implement `reshape_matrix`.
 Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your assumptions above, and take these assumptions for this challenge.
 
 ```py
-def test_convert_2_2_to_1_4():
+def test_convert_two_by_two_to_one_by_four():
     matrix = [[1,2],[3,4]]
     r = 1
     c = 4
@@ -109,7 +109,7 @@ def test_cannot_reshape():
 
     assert reshaped_matrix == [[1,2],[3,4]]
 
-def test_convert_4_2_to_2_4():
+def test_convert_four_by_two_to_two_by_four():
     matrix = [[1,2],[3,4],[5,6],[7,8]]
     r = 2
     c = 4
@@ -161,7 +161,7 @@ class TestPython1(unittest.TestCase):
         # Assert
         self.assertEqual([[1,2,3,4]], answer)
 
-    def test_example_2(self):
+    def test_example_two(self):
         # Arrange
         matrix = [[1,2],[3,4]]
         r = 2
@@ -171,7 +171,7 @@ class TestPython1(unittest.TestCase):
         # Assert
         self.assertEqual([[1,2],[3,4]], answer) 
         
-    def test_example_3(self):
+    def test_example_three(self):
         # Arrange
         matrix = [[1,2],[3,4],[5,6],[7,8]]
         r = 2
