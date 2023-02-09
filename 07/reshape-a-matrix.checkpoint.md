@@ -109,7 +109,7 @@ def test_cannot_reshape():
 
     assert reshaped_matrix == [[1,2],[3,4]]
 
-def test_convert_2_2_to_1_4():
+def test_convert_4_2_to_2_4():
     matrix = [[1,2],[3,4],[5,6],[7,8]]
     r = 2
     c = 4
@@ -117,6 +117,17 @@ def test_convert_2_2_to_1_4():
     reshaped_matrix = reshape_matrix(matrix, r, c)
 
     assert reshaped_matrix == [[1,2,3,4],[5,6,7,8]]
+
+def test_three_by_three_to_nine_by_one(self):
+        # Arrange
+        matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
+        r = 9
+        c = 1 
+        # Act
+        answer = reshape_matrix(matrix, r, c)
+        # Assert
+        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], answer)
+
 ```
 
 ##### !end-question
@@ -168,7 +179,18 @@ class TestPython1(unittest.TestCase):
         # Act
         answer = reshape_matrix(matrix, r, c)
         # Assert
-        self.assertEqual([[1,2,3,4],[5,6,7,8]], answer) 
+        self.assertEqual([[1,2,3,4],[5,6,7,8]], answer)
+
+    def test_three_by_three_to_nine_by_one(self):
+        # Arrange
+        matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
+        r = 9
+        c = 1 
+        # Act
+        answer = reshape_matrix(matrix, r, c)
+        # Assert
+        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], answer)
+
 ```
 
 ##### !end-tests
@@ -187,20 +209,30 @@ def reshape_matrix(matrix, r, c):
     INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
     OUTPUT: Reshaped matrix
     '''
-    rows = len(matrix)
-    columns = len(matrix[0])
-
-    if rows*columns != r*c:
+    originalRows = len(matrix)
+    originalColumns = len(matrix[0])
+    
+    # if rows * cols of original matrix is not 
+    # equal to given r * c
+    # not possible to transform matrix into desired shape 
+    if originalRows * originalColumns != r * c:
+        # return original matrix
         return matrix
 
-    reshaped_matrix = []
+    # flatten the original matrix
+    flattened = []
+    for row in matrix:
+        for elt in row:
+            flattened.append(elt)
+    
+    # create result matrix
+    new_matrix = []
     for i in range(r):
-        new_row = []
-        for j in range(i*columns, (i+1)*columns):
-            new_row+=matrix[j]
-        reshaped_matrix.append(new_row)
-        
-    return reshaped_matrix
+        row_start = c * i
+        row_end = c *(i + 1)
+        new_row = flattend[row_start : row_end]
+        new_matrix.append(new_row)
+    return new_matrix
 ```
 #### !end-explanation
 

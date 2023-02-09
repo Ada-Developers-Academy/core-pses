@@ -31,7 +31,7 @@ def reshape_matrix(matrix, r, c):
     for i in range(r):
         row_start = c * i
         row_end = c *(i + 1)
-        new_row = flattend[row_start : row_end]
+        new_row = flattened[row_start : row_end]
         new_matrix.append(new_row)
     return new_matrix
 ```
