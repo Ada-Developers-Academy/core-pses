@@ -4,7 +4,7 @@
 
 Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
 
-Find the kth positive integer that is missing from this array.
+Find the kth positive integer that is not present in the array.
 
 **Example 1:**
 
@@ -24,15 +24,6 @@ Explanation: The missing positive integers
     are [5,6,7,...]. The 2nd missing
     positive integer is 6.
 ``` 
-
-**Constraints:**
-
-```
-1 <= arr.length <= 1000
-1 <= arr[i] <= 1000
-1 <= k <= 1000
-arr[i] < arr[j] for 1 <= i < j <= arr.length
-```
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/kth-missing-positive-number/)
 
