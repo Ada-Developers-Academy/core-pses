@@ -23,7 +23,7 @@ Sourced from: [Leetcode](https://leetcode.com/problems/merge-sorted-array/)
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
 
 ##### !end-question
 ##### !hint
