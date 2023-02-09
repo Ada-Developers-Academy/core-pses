@@ -226,7 +226,7 @@ def test_empty_lists():
     # Assert
     assert result == []
 
-def test_list_1_all_before_list_2():
+def test_list_one_all_before_list_two():
     # alternative edge test case
     # Arrange
     matrix = [[1,2], [3,4]]
