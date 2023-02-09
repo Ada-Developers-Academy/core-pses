@@ -13,18 +13,25 @@ def reshape_matrix(matrix, r, c):
     originalRows = len(matrix)
     originalColumns = len(matrix[0])
     
+    # if rows * cols of original matrix is not 
+    # equal to given r * c
+    # not possible to transform matrix into desired shape 
     if originalRows * originalColumns != r * c:
+        # return original matrix
         return matrix
-    
-    new_row = []
-    new_matrix = []
-    for i in range(originalRows):
-        for j in range(originalColumns):
-            new_row.append(matrix[i][j])
 
-            if len(new_row) == c:
-                new_matrix.append(new_row)
-                new_row = []
+    # flatten the original matrix
+    flattened = []
+    for row in matrix:
+        for elt in row:
+            flattened.append(elt)
     
+    # create result matrix
+    new_matrix = []
+    for i in range(r):
+        row_start = c * i
+        row_end = c *(i + 1)
+        new_row = flattend[row_start : row_end]
+        new_matrix.append(new_row)
     return new_matrix
 ```
