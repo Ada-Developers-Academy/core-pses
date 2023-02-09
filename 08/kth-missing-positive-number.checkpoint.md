@@ -28,9 +28,7 @@ Explanation: The missing positive integers are
 **Constraints:**
 
 ```
-1 <= arr.length <= 1000
-1 <= arr[i] <= 1000
-1 <= k <= 1000
+1 <= k
 arr[i] < arr[j] for 1 <= i < j <= arr.length
 ```
 
