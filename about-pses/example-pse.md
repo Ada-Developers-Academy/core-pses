@@ -13,7 +13,7 @@ Create a function named `winner` that takes two arguments, the move for `player_
 |player_1 = `"rock"` <br> player_2 = `"scissors"`| `"Player 1 wins!"`|`"rock"` beats `"scissors"`|
 |player_1 = `"rock"` <br> player_2 = `"rock"`| `"It's a tie!"`|`player_1` and `player_2` played the same move|
 
-### Complete Rock, Paper, Scissors Ruleset
+### Complete Rock, Paper, Scissors Rules
 | input (first argument)| input (second argument) | output |
 |--|--|--|
 |**player_1** |**player_2**|**return value**|
@@ -38,7 +38,7 @@ Create a function named `winner` that takes two arguments, the move for `player_
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement
+List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
 
 ##### !end-question
 
@@ -89,7 +89,7 @@ Here are some example clarifying questions:
 # expected output 2:
 
 def test_nominal_case():
-    # ^rename with meaninful test name
+    # ^rename with meaningful test name
     # and complete test implementation below
     pass
     # arrange
@@ -168,7 +168,7 @@ def test_invalid_input():
 
 Without writing code, describe how you would implement `winner` in enough detail that someone else could write the code. 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere inbetween. What's important at this stage is to think through and outline the implementation before writing code.
+* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
 
@@ -212,7 +212,7 @@ Example steps:
 * title: Implement Solution
 ### !question
 
-Implement a solution to `winner` that implements the correct logic for the Rock, Paper, Scissors ruleset outlined above. 
+Implement a solution to `winner` that implements the correct logic for the Rock, Paper, Scissors rules outlined above. 
 
 Below is a selection of the unit tests.
 
