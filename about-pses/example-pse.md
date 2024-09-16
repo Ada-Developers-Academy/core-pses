@@ -206,21 +206,25 @@ Write the logical steps here.
 ##### !end-placeholder
 
 ##### !explanation
+It may feel cumbersome to write out the steps in detail, but it can be a helpful exercise to think through the problem before writing code. This is also a great way to practice speaking _about_ coding, which we'll need to become comfortable with for interviews and other professional settings.
+
+<br>
+
 Example steps:
 
-1. Check if player_1 and player_2 are in ["rock", "paper", "scissors"]
+1. Check whether both player_1 and player_2 are one of "rock", "paper", or "scissors"
     - If not, return None
 2. Check for a tie: 
-    - if player_1 == player_2, return "It's a tie!"
-3. First deal with the case that player_1 == "rock"
-    - if player_2 == "scissors", return "Player 1 wins!"
-    - else (player_2 = "paper"), return "Player 2 wins!"
-4. Next deal with the case that player_1 == "paper"
-    - if player_2 == "rock", return "Player 1 wins!"
-    - else (player_2 = "scissors"), return "Player 2 wins!"
-5. Next deal with the case that player_1 == "scissors"
-    - if player_2 == "rock", return "Player 2 wins!"
-    - else (player_2 = "paper"), return "Player 1 wins!"
+    - if player_1 is the same as player_2, return "It's a tie!"
+3. First deal with the case that player_1 is "rock"
+    - if player_2 is "scissors", return "Player 1 wins!"
+    - otherwise (player_2 must be "paper"), return "Player 2 wins!"
+4. Next deal with the case that player_1 is "paper"
+    - if player_2 is "rock", return "Player 1 wins!"
+    - otherwise (player_2 must be "scissors"), return "Player 2 wins!"
+5. Otherwise player_1 must be "scissors"
+    - if player_2 is "rock", return "Player 2 wins!"
+    - otherwise (player_2 must be "paper"), return "Player 1 wins!"
 
 ##### !end-explanation
 
