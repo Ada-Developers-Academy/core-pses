@@ -383,15 +383,15 @@ def winner(player_1, player_2):
             return "Player 2 wins!"
 
     # player 1 = paper
-    elif player_1 == 'paper':
-        if player_2 == 'rock':
+    elif player_1 == "paper":
+        if player_2 == "rock":
             return "Player 1 wins!"
         else:
             return "Player 2 wins!"
             
     # player 1 = scissors
-    elif player_1 == 'scissors':
-        if player_2 == 'rock':
+    else:
+        if player_2 == "rock":
             return "Player 2 wins!"
         else:
             return "Player 1 wins!"
