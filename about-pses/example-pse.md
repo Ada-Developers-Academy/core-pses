@@ -136,6 +136,14 @@ class TestPython1(unittest.TestCase):
 ##### !end-tests
 ##### !explanation 
 
+The submission for this prompt only saves your input. The tests are not evaluated, nor is the syntax even checked. Please take care with your own syntax and how the tests are written, as _anything_ we submit will be marked "Correct."
+
+<br>
+
+Consider writing tests that capture decisions you made with your clarifying questions. For example, if you decided to return `None` for invalid input, you should write a test that checks that behavior. If you decided to return an error, you should write a test that checks for that error. If you decided to ignore invalid input, you should write a test that checks that the function works correctly with valid input.
+
+<br>
+
 Example input/output and tests:
 
 ```python
@@ -145,7 +153,7 @@ Example input/output and tests:
 # example input 2: player_1 = "rock", player_2 = "lizards"
 # expected output 2: None
 
-# * Note: This invalid input (player_2 = "lizards") would be better handled by raising an exception, a topic covered during Unit 1.
+# Note: This invalid input (player_2 = "lizards") might be better handled by raising an error, a topic covered during Unit 1.
 
 def test_rock_beats_scissors():
     # arrange
