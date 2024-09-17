@@ -1,41 +1,52 @@
-# Instructor: Implement Adagrams
+# Instructor: Implement Calculate Cart Total
 
 An example of a working implementation:
 
 ```python
-def score(word):
-    total_score = 0
-    for character in word:
-        letter = character.upper()
-        if letter in "AEIOULNRST":
-            total_score += 1
-        elif letter in "DG":
-            total_score += 2
-        elif letter in "BCMP":
-            total_score += 3
-        elif letter in "FHVWY":
-            total_score += 4
-        elif letter in "K":
-            total_score += 5
-        elif letter in "JX":
-            total_score += 8
-        elif letter in "QZ":
-            total_score += 10
+def calculate_total(cart):
+    total = 0.0
 
-    return total_score
+    for item in cart:
+        item_lowercase = item.lower()
+        if item_lowercase == "apple":
+            total += 0.75
+        elif item_lowercase == "beans":
+            total += 2.0
+        elif item_lowercase == "cheese":
+            total += 2.5
+        elif item_lowercase == "chicken":
+            total += 4
+        elif item_lowercase == "flour":
+            total += 1.75
+        elif item_lowercase == "onion":
+            total += 0.5
+        elif item_lowercase == "orange":
+            total += 0.85
+        elif item_lowercase == "lettuce":
+            total += 1.25
+        elif item_lowercase == "milk":
+            total += 3.0
+        elif item_lowercase == "tomato":
+            total += 0.45
+
+    return total
 ```
 
 Another example of a working implementation:
 
 ```python
-def score(word):
-    scores = {
-        "A": 1, "E": 1, "I": 1, "O": 1, "U": 1, "L": 1, "N": 1, "R": 1, "S": 1, "T": 1, "D": 2, "G": 2, "B": 3, "C": 3, "M": 3, "P": 3, "F": 4, "H": 4, "V": 4, "W": 4, "Y": 4, "K": 5, "J": 8, "X": 8, "Q": 10, "Z": 10
+def calculate_total(cart):
+    prices = {
+        "apple": 0.75,  "beans": 2.0, "cheese": 2.5, "chicken": 4.0, 
+        "flour": 1.75, "onion": 0.5, "orange": 0.85, "lettuce": 1.25, 
+        "milk": 3.0, "tomato": 0.45
     }
-    total_score = 0
-    for letter in word:
-        if letter.upper() in scores:
-            total_score += scores[letter.upper()]
+    total = 0
+    
+    for item in cart:
+        item_lowercase = item.lower()
+        if item_lowercase in prices:
+            total += prices[item_lowercase]
 
-    return total_score
+    return total
 ```

@@ -73,6 +73,7 @@ An example of a working implementation:
 ```python
 def calculate_total(cart):
     total = 0.0
+
     for item in cart:
         item_lowercase = item.lower()
         if item_lowercase == "apple":
@@ -104,11 +105,12 @@ Another example of a working implementation:
 ```python
 def calculate_total(cart):
     prices = {
-        "Apple": 0.75,  "Beans": 2.0, "Cheese": 2.5, "Chicken": 4.0, 
-        "Flour": 1.75, "Onion": 0.5, "Orange": 0.85, "Lettuce": 1.25, 
-        "Milk": 3.0, "Tomato": 0.45
+        "apple": 0.75,  "beans": 2.0, "cheese": 2.5, "chicken": 4.0, 
+        "flour": 1.75, "onion": 0.5, "orange": 0.85, "lettuce": 1.25, 
+        "milk": 3.0, "tomato": 0.45
     }
     total = 0
+    
     for item in cart:
         item_lowercase = item.lower()
         if item_lowercase in prices:
