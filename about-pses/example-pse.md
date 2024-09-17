@@ -44,17 +44,43 @@ List three or more questions whose answers would clarify the problem statement. 
 
 ##### !explanation 
 
-Here are some example clarifying questions:
+The following list provides some example clarifying questions, as well as what we might decide for ourselves is the answer. Several of these questions show examples of how we might think about the same issue in different ways. For example, questions 1, 2, and 3 are all about how to handle invalid input, but they each conceive of the problem slightly differently. Questions 4 and 5 are both getting at what variations in input would be considered valid or invalid. Questions 6 and 7 are about how to handle the possibility of extending the game to include more moves or more players. Notice that, even though we decide to stick with a more focused implementation for those questions, thinking through what some logical extensions might be (and in an interview context, bringing them up with the interviewer) can show that we're thinking about the problem in a broader context.
 
-1. How should the function handle invalid user input (i.e. player_1 = "lizards")?
-2. Should a user automatically lose if they have invalid input?
-3. What should happen if both users have invalid input?
-4. Does capitalization matter?
-5. Does extra whitespace / punctuation matter?
-6. Should anything be printed to the console?
-7. Is the speed / memory usage of this function important?
-8. Should there be a default value for each of the arguments?
- 
+<br>
+
+This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision.
+
+<br>
+
+Try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific, and an interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we _could_ observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about questions that would help us understand the problem better and make decisions about how to approach it.
+
+<br>
+
+As stated, this list contains several questions that overlap in what they are asking as an example of different perspectives. Try not to include multiple questions about the same topic in your own questions. For example, if we ask about how to handle invalid input, we only need to ask once, not in three different ways as we have here, especially since the sample answers here are contradictory!
+
+1. **How should the function handle invalid user input (i.e. player_1 = "lizard")?** 
+    * The prompt doesn't specify how to handle invalid input, so I'll return `None`, which would allow the caller of my function to detect that there was an input I wasn't expecting. The caller could then decide how to handle that situation. This is also a convenient decision because, I'll only need to look for valid winning combinations, and if I don't find one, I can return `None`.
+2. **Should a user automatically lose if they have invalid input?** 
+    * I'll assume the input cannot be invalid. My function must be part of a larger system (something must be calling it!) and that system should handle input validation. This way, I can focus on the core logic of the scoring and not worry about input validation.
+3. **What should happen if both users have invalid input?** 
+    * While both players providing invalid input could be considered a tie, I don't want the function to act as though everything was fine if an input was invalid, so I'll return `None` if either player has invalid input. This way, the caller can detect that something went wrong and decide how to handle it. A drawback of this approach is that the caller can't tell _which_ input was invalid, only that one of them was.
+4. **Does capitalization matter?** 
+    * I'll assume that the input is case-insensitive, so I'll convert the input to lowercase before comparing it to the valid moves. This way, the caller can provide input in any case they like, and the function will still work. This could be helpful if this code was incorporated into a mobile platform where the device might auto-capitalize the first letter of a word.
+5. **Does extra whitespace / punctuation matter?** 
+    * I'll assume that my function is part of a larger game (something must be calling my function, right?) and that the caller will handle input validation. I will implement my logic looking only for the exact strings "rock", "paper", and "scissors". This way, the caller can handle any input validation they need to do, and I can focus on the core logic of the scoring.
+6. **I'm familiar with a variant of rock, paper, scissors that includes additional throws (lizard and Spock). Should I keep my approach focused on the basic rules, or should I use an implementation that could be extended to game variants?**
+    * While I could write a helper function that accepts a data structure that encodes the valid moves and what beats what, I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
+7. **When friends use rock, paper, scissors to make decisions, there are often more than two players. Should I keep my approach focused on the basic rules, or should I use an implementation that could be extended to support multiple players simultaneously?** 
+    * While I could write a helper function that accepts a list of moves made by all players, the multiplayer version introduces a few complications into resolving a round that I'd like to avoid for now. I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
+
+<br>
+
+We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to ask all our clarifying questions before we start working on the problem.
+
+<br>
+
+Even if we make a decision about how to handle a particular issue here, the unit tests may lead us to reconsider that decision. For example, if we decide to return `None` for invalid input, but the unit tests expect an error to be raised, we may need to change our implementation, but there's no need to come back and update the clarifying questions. The important thing is to think through the problem and make a decision based on the information we have at the time. When the tests differ from our initial thoughts, we can think of that as a case where the interviewer has given us new information that we need to incorporate into our solution.
+
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
@@ -117,6 +143,14 @@ class TestPython1(unittest.TestCase):
 ##### !end-tests
 ##### !explanation 
 
+The submission for this prompt only saves your input. The tests are not evaluated, nor is the syntax even checked. Please take care with your own syntax and how the tests are written, as _anything_ we submit will be marked "Correct."
+
+<br>
+
+Consider writing tests that capture decisions you made with your clarifying questions. For example, if you decided to return `None` for invalid input, you should write a test that checks that behavior. If you decided to return an error, you should write a test that checks for that error. If you decided to ignore invalid input, you should write a test that checks that the function works correctly with valid input.
+
+<br>
+
 Example input/output and tests:
 
 ```python
@@ -126,7 +160,7 @@ Example input/output and tests:
 # example input 2: player_1 = "rock", player_2 = "lizards"
 # expected output 2: None
 
-# * Note: This invalid input (player_2 = "lizards") would be better handled by raising an exception, a topic covered during Unit 1.
+# Note: This invalid input (player_2 = "lizards") might be better handled by raising an error, a topic covered during Unit 1.
 
 def test_rock_beats_scissors():
     # arrange
@@ -179,21 +213,33 @@ Write the logical steps here.
 ##### !end-placeholder
 
 ##### !explanation
+It may feel cumbersome to write out the steps in detail, but it can be a helpful exercise to think through the problem before writing code. This is also a great way to practice speaking _about_ coding, which we'll need to become comfortable with for interviews and other professional settings.
+
+<br>
+
+In particular, talking through the steps can give an interviewer insight into whether we understand the prompt as intended, and in the event of a misunderstanding, can provide an opportunity for them to give us more information before we get too deep into an implementation. It can also help us catch potential issues early, like if we realize that we're not sure how to handle a certain edge case, or that we're not sure how to implement a certain part of the logic.
+
+<br>
+
+During an interview, we'd still want to be careful not to spend _too_ much time on this step. Mostly we'd like to get an overall sense of the problem and an outline of how we might approach it, then move on to writing code. But during PSEs, we'd like a bit more detail for the practice.
+
+<br>
+
 Example steps:
 
-1. Check if player_1 and player_2 are in ["rock", "paper", "scissors"]
+1. Check whether both player_1 and player_2 are one of "rock", "paper", or "scissors"
     - If not, return None
 2. Check for a tie: 
-    - if player_1 == player_2, return "It's a tie!"
-3. First deal with the case that player_1 == "rock"
-    - if player_2 == "scissors", return "Player 1 wins!"
-    - else (player_2 = "paper"), return "Player 2 wins!"
-4. Next deal with the case that player_1 == "paper"
-    - if player_2 == "rock", return "Player 1 wins!"
-    - else (player_2 = "scissors"), return "Player 2 wins!"
-5. Next deal with the case that player_1 == "scissors"
-    - if player_2 == "rock", return "Player 2 wins!"
-    - else (player_2 = "paper"), return "Player 1 wins!"
+    - if player_1 is the same as player_2, return "It's a tie!"
+3. First deal with the case that player_1 is "rock"
+    - if player_2 is "scissors", return "Player 1 wins!"
+    - otherwise (player_2 must be "paper"), return "Player 2 wins!"
+4. Next deal with the case that player_1 is "paper"
+    - if player_2 is "rock", return "Player 1 wins!"
+    - otherwise (player_2 must be "scissors"), return "Player 2 wins!"
+5. Otherwise player_1 must be "scissors"
+    - if player_2 is "rock", return "Player 2 wins!"
+    - otherwise (player_2 must be "paper"), return "Player 1 wins!"
 
 ##### !end-explanation
 
@@ -352,15 +398,15 @@ def winner(player_1, player_2):
             return "Player 2 wins!"
 
     # player 1 = paper
-    elif player_1 == 'paper':
-        if player_2 == 'rock':
+    elif player_1 == "paper":
+        if player_2 == "rock":
             return "Player 1 wins!"
         else:
             return "Player 2 wins!"
             
     # player 1 = scissors
-    elif player_1 == 'scissors':
-        if player_2 == 'rock':
+    else:
+        if player_2 == "rock":
             return "Player 2 wins!"
         else:
             return "Player 1 wins!"
