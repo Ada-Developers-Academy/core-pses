@@ -217,6 +217,14 @@ It may feel cumbersome to write out the steps in detail, but it can be a helpful
 
 <br>
 
+In particular, talking through the steps can give an interviewer insight into whether we understand the prompt as intended, and in the event of a misunderstanding, can provide an opportunity for them to give us more information before we get too deep into an implementation. It can also help us catch potential issues early, like if we realize that we're not sure how to handle a certain edge case, or that we're not sure how to implement a certain part of the logic.
+
+<br>
+
+During an interview, we'd still want to be careful not to spend _too_ much time on this step. Mostly we'd like to get an overall sense of the problem and an outline of how we might approach it, then move on to writing code. But during PSEs, we'd like a bit more detail for the practice.
+
+<br>
+
 Example steps:
 
 1. Check whether both player_1 and player_2 are one of "rock", "paper", or "scissors"
