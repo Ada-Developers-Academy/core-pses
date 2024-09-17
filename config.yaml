@@ -40,7 +40,7 @@ Standards:
         Path: /01/implement-highest-rated.checkpoint.md
   -
     Title: PSE 02
-    Description: Adagrams
+    Description: Calculate Cart Total
     UID: e2a3cbde-4cac-4b47-abb3-87564462ab2a
     SuccessCriteria:
       - success criteria
@@ -48,15 +48,15 @@ Standards:
       -
         Type: Lesson
         UID: 87250cbe
-        Path: /02/adagrams.md
+        Path: /02/calculate-cart-total.md
       -
         Type: Instructor
         UID: 43859c74
-        Path: /02/implement-adagrams.instructor.md
+        Path: /02/implement-calculate-cart-total.instructor.md
       -
         Type: Checkpoint
         UID: 21c2af2f
-        Path: /02/implement-adagrams.checkpoint.md
+        Path: /02/implement-calculate-cart-total.checkpoint.md
   -
     Title: PSE 03
     Description: Hamming
