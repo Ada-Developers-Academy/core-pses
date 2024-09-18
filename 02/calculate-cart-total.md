@@ -29,7 +29,7 @@ Refer to this table for the price of each item carried by the store.
 | ----- | --------------- |
 | `["Cheese"]` | `2.5` |
 | `["Chicken", "Flour", "Milk"]` | `8.75` |
-| `["Orange", "Apple", "Tomato", "Orange"]` | `2.9` |
+| `["Tomato", "Orange", "Beans", "Apple"]` | `4.05` |
 | `[]` | `0.0` |
 
 ## Prompts
@@ -60,9 +60,13 @@ Consider the following for inspiration:
 Example clarifying questions:
 
 1. How should the function handle special characters?
-1. Should the function be case in sensitive?
+1. Should the function be case insensitive?
 1. How should the function handle invalid input like numbers?
- 
+1. What should the function do if an item isn't in the price list?
+1. Inventories and prices often change. Should I structure my code to anticipate changes to the price data?
+1. Can the same item appear in the cart more than once?
+1. Is there a maximum number of items allowed in the shopping cart?
+
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
@@ -212,10 +216,10 @@ Write the logical steps here.
 
 Example Steps: 
 
-1. Create a dictionary `prices` with key-value pairs for each available item and its corresponding price.
+1. Create a dictionary `prices` with key-value pairs for each available item, stored in lower case, and its corresponding price.
 2. Initialize a variable named `total` to `0.0`
 3. Loop through the items in the list `cart`
-    - Check if the current item is in the `prices` dictionary using a function like `.lower` to compare case-insensitively.
+    - Check if the current item is in the `prices` dictionary converting each cart item to lower case to compare case-insensitively.
     - If the current item is in `prices`, add the value of the item to the variable `total`
 4. Return `total`
 

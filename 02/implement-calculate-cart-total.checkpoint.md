@@ -36,7 +36,7 @@ Refer to this table for the price of each item carried by the store.
 | ----- | --------------- |
 | `["Cheese"]` | `2.5` |
 | `["Chicken", "Flour", "Milk"]` | `8.75` |
-| `["Orange", "Apple", "Tomato", "Orange"]` | `2.9` |
+| `["Tomato", "Orange", "Beans", "Apple"]` | `4.05` |```
 | `[]` | `0.0` |
 
 ### !end-question
