@@ -198,7 +198,7 @@ Example Steps for an O(n) solution:
 
 1. Check for valid input
 2. If `k` is smaller than the first value in the input list `arr`, return `k`
-1. Create a loop over the input `arr` that starts at the first element of `arr` and ends before the last element of `arr`. 
+1. Create a loop over the input `arr` that starts at the first element of `arr` and ends one iteration before the last element of `arr`. 
 2. Inside the loop, for each element in `arr`:
     1. Check if there are numbers missing between the current element and the next element in `arr`. Store the difference between the next element and the current element of `arr` in a new variable `missing_count`.
     2. if `k` is less than or equal to `missing_count`, return the value of `arr` at `index` plus `k` 
