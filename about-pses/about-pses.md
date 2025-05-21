@@ -22,11 +22,12 @@ Problem-Solving Exercise assignments (PSEs) are assignments to practice problem-
 The exercises will touch on problem-solving skills on coding problems. The format has three parts:
 
 1. A problem statement describing the code you need to write
-1. A series of prompts to guide your understanding of the problem and scaffold our solution.
-    * i. Ask at least three clarifying questions.
-    * ii. Write example input/output and unit tests for at least one nominal and one edge case.
-    * iii. Break down the problem into logical steps.   
-1. A code challenge to solve the problem
+2. A series of prompts to guide your understanding of the problem and scaffold our solution:
+    1. Describe your understanding of the problem requirements based on the problem statement and examples
+    2. Ask at least three clarifying questions that would give you new information about the problem
+    3. Write example inputs/outputs and unit tests for at least one nominal and one edge case  
+    4. Break down the problem into logical steps
+3. A code challenge to solve the problem
 
 ### Learning Goals
 
