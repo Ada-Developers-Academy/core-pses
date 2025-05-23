@@ -15,7 +15,7 @@ Examples:
 
 ```
 
-Given the problem statement and examples above, please review the list of my questions about the problem and my reasoning for asking them below. In your answer, do not include any code or implementation information about the problem. I only want to focus on asking questions to clarify the problem. I would also like to hear about other questions that would help clarify the problem. For any new questions, please share information about why we would want to ask that new question, and what we would learn about the problem from asking it.
+Given the problem statement and examples above, please review the list of my questions about the problem and my reasoning for asking them below. In your answer, do not include any code or implementation information about the problem. Assume that input validation is handled ahead of this function unless it is explicitly mentioned in the problem statement or examples, the focus should be on the core of the problem. I only want to focus on asking questions to clarify the problem. I would also like to hear about other questions that would help clarify the problem. For any new questions, please share information about why we would want to ask that new question, and what we would learn about the problem from asking it.
 
 My Questions:
 ```
