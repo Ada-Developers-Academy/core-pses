@@ -204,7 +204,7 @@ In the box below, please submit:
 - Did ChatGPT suggest updates to the questions you asked? 
     - If so, what updates and why?
 - Did ChatGPT suggest any new questions?
-- What questions and why would they be useful?
+    - If so, what questions and why would they be useful?
 
 ##### !end-hint
 ##### !explanation 
@@ -353,8 +353,11 @@ def test_invalid_input():
 Without writing code, describe how you would implement `winner` in enough detail that someone else could write the code. 
 
 As you write your steps, keep the following guidelines in mind:
-* We want to think about a general approach rather than what the code would look like line-by-line. It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example: 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. As such, they should not include code syntax in the description.
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
@@ -426,7 +429,6 @@ In the box below, please submit:
    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
 2. Your reflections and summary of the discussion with ChatGPT
 
-
 ##### !end-question
 ##### !explanation
 
@@ -437,8 +439,12 @@ As an example, let’s say we used the logical steps in the explanation for the 
 Chat Link: 
 https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62
 
+<br>
+
 ChatGPT said my approach to solving the Rock, Paper, Scissors problem was clear, mostly well-structured, and logically sound. It gave positive feedback around how I handled input validation, ties, and all win/loss scenarios, which showed I understood the rules. Overall, my steps were detailed enough for someone else to implement a solution.
- 
+
+<br>
+
 I was reminded to make my explanation more language-agnostic since terms like “if” and “return” felt a bit too close to code. ChatGPT suggested softening that language and focusing more on logic than syntax. ChatGPT also shared I could improve my steps by:
 - clearly labeling each step by purpose (e.g., validation, tie check, winner logic) 
 - clarifying that input validation is only needed when bad inputs are possible
