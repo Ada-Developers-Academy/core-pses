@@ -128,7 +128,8 @@ Try not to pose questions that are too specific to the implementation. For examp
 
 <br>
 
-As stated, this list contains several questions that overlap in what they are asking as an example of different perspectives. Try not to include multiple questions about the same topic in your own questions. For example, if we ask about how to handle invalid input, we only need to ask once, not in three different ways as we have here, especially since the sample answers here are contradictory!
+As stated, this list contains several questions that overlap in what they are asking as an example of different perspectives. *Try not to include multiple questions about the same topic in your own questions.*
+- For example, if we ask about how to handle invalid input, we only need to ask once, not in three different ways as we have here, especially since the sample answers here are contradictory!
 
 1. **What should happen if both users have invalid input?**
     - While both players providing invalid input could be considered a tie, I don't want the function to act as though everything was fine if an input was invalid.
@@ -147,7 +148,7 @@ As stated, this list contains several questions that overlap in what they are as
     - While I could write a helper function that accepts a data structure that encodes the valid moves and what beats what, I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
 6. **When friends use rock, paper, scissors to make decisions, there are often more than two players. Should I keep my approach focused on the basic rules for 2 players?**
     - I want to know if I should I use an implementation that could be extended to support multiple players simultaneously.
-    - While I could write a helper function that accepts a list of moves made by all players, the multiplayer version introduces a few complications into resolving a round that I'd like to avoid for now. I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
+    - While I could write a helper function that accepts a list of moves made by all players, the multiplayer version increases the scope of the problem. I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
 
 <br>
 
