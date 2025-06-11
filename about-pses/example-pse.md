@@ -12,7 +12,6 @@ Create a function named `winner` that takes two arguments, the move for `player_
 |--|--|--|
 |player_1 = `"rock"` <br> player_2 = `"scissors"`|`"Player 1 wins!"`|`"rock"` beats `"scissors"`|
 |player_1 = `"rock"` <br> player_2 = `"rock"`|`"It's a tie!"`|`player_1` and `player_2` played the same move|
-|player_1 = `"rock"` <br> player_2 = `"lizards"`|`None`|`player_2` played an invalid move, so we cannot determine a winner|
 
 ### Complete Rock, Paper, Scissors Rules
 | input (first argument)| input (second argument) | output |
@@ -50,6 +49,7 @@ Further questions to ask as you read through the problem statement and examples:
 - What is the goal of the function?
 - What are the types of the expected inputs and outputs?
 - Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
 - What do the examples show us about the values that are allowed or invalid for our inputs?
 - What do the examples tell us about the return value in different scenarios?
 
@@ -73,14 +73,14 @@ The function should return a string indicating the result of the game:
 - "Player 1 wins!" if player 1's move beats player 2's.
 - "Player 2 wins!" if player 2's move beats player 1's.
 - "It's a tie!" if both players make the same move.
-- If either player’s move is not “rock”, “paper”, or “scissors”, return `None`
+- If either player’s move is not "rock", "paper", or "scissors", return `None`
 
 <br>
 
 When determining who wins:
-- “rock” beats "scissors"
-- "scissors" beats “paper”
-- “paper” beats “rock”
+- "rock" beats "scissors"
+- "scissors" beats "paper"
+- "paper" beats "rock"
 - If both players choose the same move, it results in a tie.
 
 ##### !end-explanation
@@ -135,7 +135,7 @@ As stated, this list contains several questions that overlap in what they are as
     - While both players providing invalid input could be considered a tie, I don't want the function to act as though everything was fine if an input was invalid.
     - I'll return `None` if either player has invalid input. This way, the caller can detect that something went wrong and decide how to handle it. A drawback of this approach is that the caller can't tell _which_ input was invalid, only that one of them was.
 2. **Does capitalization matter?**
-    - I want to know whether we need to tell the difference between “Rock” and “rock”
+    - I want to know whether we need to tell the difference between "Rock" and "rock"
     - I will assume that all input will be lowercase as shown in the Rock, Paper, Scissors rules on Learn
 3. **Does extra whitespace / punctuation matter?**
     - I want to know whether inputs like " rock " or "rock!" are valid or should be rejected.
@@ -214,7 +214,7 @@ Everyone’s questions and conversation with ChatGPT will be a little different,
 
 ```text
 1. Does capitalization matter?
-    - I want to know whether we need to tell the difference between “Rock” and “rock” 
+    - I want to know whether we need to tell the difference between "Rock" and "rock" 
 2. Does extra whitespace / punctuation matter?
     - I want to know whether inputs like " rock " or "rock!" are valid or should be rejected. 
 3. Should anything be printed to the console?
@@ -301,7 +301,7 @@ The submission for this prompt only saves your input. The tests are not evaluate
 
 <br>
 
-Consider writing tests that capture decisions you made with your clarifying questions. For example, if you decided to return `None` for invalid input, you should write a test that checks that behavior. If you decided to return an error, you should write a test that checks for that error. If you decided to ignore invalid input, you should write a test that checks that the function works correctly with valid input.
+Consider writing tests that capture decisions you made when reviewing your observations and clarifying questions. For example, in the sample observations, we noted that from the rules and examples we know that either player could win, or there could be a tie – which could be a positive edge case. For code in a production environment, we would want to check all of these scenarios, but for a PSE, we can pick either player winning as our nominal test case and use the tie scenario as our positive edge case.
 
 <br>
 
@@ -311,12 +311,10 @@ Example input/output and tests:
 # example input 1: player_1 = "rock", player_2 = "scissors"
 # expected output 1: "Player 1 wins!"
 
-# example input 2: player_1 = "rock", player_2 = "lizards"
-# expected output 2: None
+# example input 2: player_1 = "rock", player_2 = "rock"
+# expected output 2: "It's a tie!"
 
-# Note: This invalid input (player_2 = "lizards") might be better handled by raising an error, a topic covered during Unit 1.
-
-def test_rock_beats_scissors():
+def test_winner_player_1_rock_beats_scissors():
     # arrange
     player_1 = "rock"
     player_2 = "scissors"
@@ -327,16 +325,16 @@ def test_rock_beats_scissors():
     # assert
     assert result == "Player 1 wins!"
 
-def test_invalid_input():
+def test_winner_both_rock_results_in_tie():
     # arrange
     player_1 = "rock"
-    player_2 = "lizards"
+    player_2 = "rock"
 
     # act
     result = winner(player_1, player_2)
 
     # assert
-    assert result is None  
+    assert result == "It's a tie!"  
 ```
 
 ##### !end-explanation
@@ -446,7 +444,7 @@ ChatGPT said my approach to solving the Rock, Paper, Scissors problem was clear,
 
 <br>
 
-I was reminded to make my explanation more language-agnostic since terms like “if” and “return” felt a bit too close to code. ChatGPT suggested softening that language and focusing more on logic than syntax. ChatGPT also shared I could improve my steps by:
+I was reminded to make my explanation more language-agnostic since terms like "if" and "return" felt a bit too close to code. ChatGPT suggested softening that language and focusing more on logic than syntax. ChatGPT also shared I could improve my steps by:
 - clearly labeling each step by purpose (e.g., validation, tie check, winner logic) 
 - clarifying that input validation is only needed when bad inputs are possible
 
@@ -467,7 +465,7 @@ Implement a solution to `winner` that implements the correct logic for the Rock,
 Below is a selection of the unit tests.
 
 ```python
-def test_rock_beats_scissors():
+def test_winner_player_1_rock_beats_scissors():
     # arrange
     player_1 = "rock"
     player_2 = "scissors"
@@ -478,16 +476,16 @@ def test_rock_beats_scissors():
     # assert
     assert result == "Player 1 wins!"
 
-def test_invalid_input():
+def test_winner_both_rock_returns_tie():
     # arrange
     player_1 = "rock"
-    player_2 = "lizards"
+    player_2 = "rock"
 
     # act
     result = winner(player_1, player_2)
 
     # assert
-    assert result is None  
+    assert result == "It's a tie!"  
 ```
 
 ### !end-question
@@ -504,28 +502,21 @@ import unittest
 from main import *
 
 class TestPython1(unittest.TestCase):
-    def test_invalid_returns_none(self):
-        # Arrange / Act
-        result = winner("rock", "lizard")
-
-        # Assert
-        self.assertEqual(result,None)
-
-    def test_rock_ties(self):
+    def test_rock_tie(self):
         # Arrange / Act
         result = winner("rock", "rock")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_invalid_scissors_tie(self):
+    def test_scissors_tie(self):
         # Arrange / Act
         result = winner("scissors", "scissors")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_paper_ties(self):
+    def test_paper_tie(self):
         # Arrange / Act
         result = winner("paper", "paper")
 
@@ -580,15 +571,7 @@ class TestPython1(unittest.TestCase):
 An example of a working implementation:
 
 ```python
-
-VALID_MOVES = ["rock", "paper", "scissors"]
-
 def winner(player_1, player_2):
-    
-    # invalid input
-    if player_1 not in VALID_MOVES or player_2 not in VALID_MOVES:
-        return None
-
     # tie
     if player_1 == player_2:
         return "It's a tie!"
