@@ -33,14 +33,26 @@ Create a function named `winner` that takes two arguments, the move for `player_
 ### !challenge
 * type: paragraph
 * id: 6957fd47-9dba-48b9-ac9c-38315cda0b28
-* title: Gather Information
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-Use the box below to describe your understanding of the problem. Format the information in whatever way makes sense for you to organize your thoughts and review the contents as you continue with the upcoming prompts. Consider:
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
 - What do we know about the problem? 
 - What assumptions can we make based on the information in the problem statement? 
 - What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+List 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question:
+- Include information on why that observation is important or why you are asking the question
+  - For each observation, answer how that observation will affect your approach to the problem
+  - For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. Feel free to format the information in the box below in whatever manner makes sense for you to organize your thoughts and review the contents as you continue with the upcoming prompts. 
 
 ##### !end-question
 ##### !hint
@@ -50,113 +62,59 @@ Further questions to ask as you read through the problem statement and examples:
 - What are the types of the expected inputs and outputs?
 - Are there any restrictions on any of the inputs?
   - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
-- What do the examples show us about the values that are allowed or invalid for our inputs?
+- What do the examples show us about the data types and values that are allowed for our inputs?
 - What do the examples tell us about the return value in different scenarios?
-
-##### !end-hint
-##### !explanation 
-
-We want to pull as much information out of the prompt and into a format that is easy for us to review and use to organize our thoughts. One of many possible examples of what this could look like:
-
-<br>
-
-I need to implement a function called `winner`.
-- The function takes two string arguments: `player_1` and `player_2`.
-- Each argument represents a move for player_1 or player_2 and will be one of the following values: 
-    - "rock" 
-    - "paper" 
-    - "scissors"
-
-<br>
-
-The function should return a string indicating the result of the game:
-- "Player 1 wins!" if player 1's move beats player 2's.
-- "Player 2 wins!" if player 2's move beats player 1's.
-- "It's a tie!" if both players make the same move.
-- If either player’s move is not "rock", "paper", or "scissors", return `None`
-
-<br>
-
-When determining who wins:
-- "rock" beats "scissors"
-- "scissors" beats "paper"
-- "paper" beats "rock"
-- If both players choose the same move, it results in a tie.
-
-##### !end-explanation
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: 164a62ea-f936-4c6a-8b74-6d8248ba9c9d
-* title: Ask Clarifying Questions
-* topics: pse
-##### !question
-
-Before you begin solving this problem, take a moment to think like a professional software engineer. What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code? 
-
-<br>
-
-List three or more questions whose answers would clarify the problem statement. For each question:
-- Include information on why we are asking the question - what are we hoping to clarify by asking this?
-- Provide an answer which includes the effect your decision would have on how you would approach the problem.
-
-<br>
-
-As you come up with questions, assume that error handling for invalid data is managed outside the function. We want to focus on questions that affect the core behavior of the function we will write. 
-
-##### !end-question
-##### !hint
-
-- Reflect on what you stated about the problem above, what questions would give you new information?
+- Reflect on the observations you have made so far, what questions would give you new information?
 - Assume error handling for invalid data is managed outside the function. 
 
 ##### !end-hint
 ##### !explanation 
 
-The following list provides some example clarifying questions, as well as what we might decide for ourselves is the answer. Several of these questions show examples of how we might think about the same issue in different ways. For example, questions 2 and 3 are both getting at what variations in input would be considered valid or invalid. Questions 5 and 6 are about how to handle the possibility of extending the game to include more moves or more players. Notice that, even though we decide to stick with a more focused implementation for those questions, thinking through what some logical extensions might be (and in an interview context, bringing them up with the interviewer) can show that we're thinking about the problem in a broader context.
+We want to pull as much information out of the prompt and into a format that is easy for us to review and use to organize our thoughts. This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
+
+When coming up with questions, try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific. An interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). 
+
+We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we could observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. 
+
+In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about observations and questions that would help us understand the problem better and make decisions about how to approach it.
+
+One of many possible sample responses could look like:
 
 <br>
 
-This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision.
+1. I need to implement a function called `winner` that takes two arguments: `player_1` and `player_2`.
+  - This means I need to create a function definition with two parameters named exactly `player_1` and `player_2`.
+
+2. Each argument represents a move for player_1 or player_2 and will be one of "rock", "paper", or "scissors".
+  - The values shown are strings, so I can assume the inputs will be strings holding one of these 3 values and that I will need to compare the strings in some way to find a winner.
+
+3. The function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
+  - Aside from checking if someone wins, I need to consider the edge case where the players could tie
+
+4. The second input/output example shows both players choosing "rock" and the result is a tie
+  - I am hypothesizing that two players choosing the same move results in a tie. 
+  - This is supported by the table of rules further below that shows the result as "It's a tie!" any time both players choose the same move.
+
+5. The table of rules contains text "input (first argument)" and "input (second argument)"
+  - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2
+  - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`
+
+6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock"
+  - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner
+
+7. Does capitalization matter?
+  - I want to know whether we need to tell the difference between "Rock" and "rock"
+  - I will assume that all input will be lowercase as shown in the Rock, Paper, Scissors rules on Learn
 
 <br>
 
-Try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific, and an interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we _could_ observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about questions that would help us understand the problem better and make decisions about how to approach it.
+We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may note something we missed before or realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to note everything or ask all our clarifying questions before we start working on the problem.
 
 <br>
 
-As stated, this list contains several questions that overlap in what they are asking as an example of different perspectives. *Try not to include multiple questions about the same topic in your own questions.*
-- For example, if we ask about how to handle invalid input, we only need to ask once, not in three different ways as we have here, especially since the sample answers here are contradictory!
-
-1. **What should happen if both users have invalid input?**
-    - While both players providing invalid input could be considered a tie, I don't want the function to act as though everything was fine if an input was invalid.
-    - I'll return `None` if either player has invalid input. This way, the caller can detect that something went wrong and decide how to handle it. A drawback of this approach is that the caller can't tell _which_ input was invalid, only that one of them was.
-2. **Does capitalization matter?**
-    - I want to know whether we need to tell the difference between "Rock" and "rock"
-    - I will assume that all input will be lowercase as shown in the Rock, Paper, Scissors rules on Learn
-3. **Does extra whitespace / punctuation matter?**
-    - I want to know whether inputs like " rock " or "rock!" are valid or should be rejected.
-    - I will assume we are getting clean input without any extra characters as shown in the Rock, Paper, Scissors rules on Learn
-4. **Should anything be printed to the console?**
-    - I know that we want to return the result of the match based on the problem statement, but I want to know if we should also print the result for the user to see.
-    - Since the output examples do not mention anything printed out, I will assume that we are only returning the result as a string
-5. **I'm familiar with a variant of rock, paper, scissors that includes additional throws (lizard and Spock). Should I keep my approach focused on the basic rules, or should I use an implementation that could be extended to game variants?**
-    - I want to know if my implementation needs to be flexible enough to extend it with additional game rules.
-    - While I could write a helper function that accepts a data structure that encodes the valid moves and what beats what, I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
-6. **When friends use rock, paper, scissors to make decisions, there are often more than two players. Should I keep my approach focused on the basic rules for 2 players?**
-    - I want to know if I should I use an implementation that could be extended to support multiple players simultaneously.
-    - While I could write a helper function that accepts a list of moves made by all players, the multiplayer version increases the scope of the problem. I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
-
-<br>
-
-We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to ask all our clarifying questions before we start working on the problem.
-
-<br>
-
-Even if we make a decision about how to handle a particular issue here, the unit tests may lead us to reconsider that decision. For example, if we decide to return `None` for invalid input, but the unit tests expect an error to be raised, we may need to change our implementation, but there's no need to come back and update the clarifying questions. The important thing is to think through the problem and make a decision based on the information we have at the time. When the tests differ from our initial thoughts, we can think of that as a case where the interviewer has given us new information that we need to incorporate into our solution.
+Even if we make a decision about how to handle a particular issue here, the unit tests may lead us to reconsider that decision. If that happens, it's okay and is a part of the development process! There's no need to come back and update the "Describe Your Understanding" section. 
+- The important thing is to think through the problem and make a decision based on the information we have at the time. 
+- When the tests differ from our initial thoughts, we can think of that as a case where the interviewer has given us new information that we need to incorporate into our solution.
 
 ##### !end-explanation
 ### !end-challenge
@@ -166,11 +124,16 @@ Even if we make a decision about how to handle a particular issue here, the unit
 ### !challenge
 * type: paragraph
 * id: d14c0645-1681-4874-ba8c-37e1bb19262d
-* title: Review Clarifying Questions
+* title: Review Observations & Questions
 * topics: pse
 ##### !question
 
-While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the questions we wrote above. Our goals are to: 
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
 - ensure we are asking questions that will tell us new information about the problem space
 - check our understanding of the information we expect to get from those questions
 - uncover other questions that could be useful to ask
