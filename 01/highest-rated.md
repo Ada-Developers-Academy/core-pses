@@ -173,7 +173,7 @@ Everyone’s questions and conversation with ChatGPT will be a little different,
 
 <br>
 
-As an example, let’s say we used the questions and explanations from the “Explanation” section of the previous question to create our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we used the questions and explanations from the "Explanation" section of the previous question to create our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
