@@ -193,7 +193,7 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 <br>
 
 ** Note ** 
-We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
+We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.
 
 <br>
 
@@ -407,21 +407,23 @@ As an example, let’s say we used the sample response from the "Logical Steps" 
 <br>
 
 ** Note ** 
-We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
+We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.
 
 <br>
 
-Chat Link: [https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62](https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62)
+Chat Link: [https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1](https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1)
 
 <br>
 
-ChatGPT said my approach to solving the Rock, Paper, Scissors problem was clear, mostly well-structured, and logically sound. It gave positive feedback around how I handled input validation, ties, and all win/loss scenarios, which showed I understood the rules. Overall, my steps were detailed enough for someone else to implement a solution.
+I received feedback that my approach was clear, and my logical steps that didn’t rely on Python specific syntax, which made it easy to understand. I made good use of logic by handling ties first and explaining each outcome clearly, showing I understood the reasoning behind the rules. 
 
 <br>
 
-I was reminded to make my explanation more language-agnostic since terms like "if" and "return" felt a bit too close to code. ChatGPT suggested softening that language and focusing more on logic than syntax. ChatGPT also shared I could improve my steps by:
-- clearly labeling each step by purpose (e.g., validation, tie check, winner logic) 
-- clarifying that input validation is only needed when bad inputs are possible
+An area mentioned for improvement is to keep my language more consistent in how I describe outcomes and reasoning. For example, I could phrase outcomes in a way that explains why a player wins, not just that they win. Another suggestion was to consider alternative ways of structuring the logic, like grouping by winning relationships (e.g., “rock beats scissors”). This structure shows I grasp the underlying game logic, not just how to implement it procedurally. 
+
+<br>
+
+Overall, I’m on the right track, and with small tweaks to my phrasing and logic organization, I can make my solutions even stronger and more flexible.
 
 ##### !end-explanation
 ### !end-challenge
