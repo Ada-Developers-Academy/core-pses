@@ -69,37 +69,49 @@ Further questions to ask as you read through the problem statement and examples:
 ##### !end-hint
 ##### !explanation 
 
-We want to pull as much information out of the prompt as we can and format that info in a way that is easy for us to review and use to organize our thoughts. This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
+We want to pull as much information out of the prompt as we can and format that info in a way that is easy for us to review and use to organize our thoughts. 
+
+<br>
+
+This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
+
+<br>
 
 When coming up with questions, try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific. An interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). 
 
+<br>
+
 We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we could observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. 
 
+<br>
+
 In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about observations and questions that would help us understand the problem better and make decisions about how to approach it.
+
+<br>
 
 One of many possible sample responses could look like:
 
 <br>
 
 1. I need to implement a function called `winner` that takes two arguments: `player_1` and `player_2`.
-  - This means I need to create a function definition with two parameters named exactly `player_1` and `player_2`.
+    - This means I need to create a function definition with two parameters named exactly `player_1` and `player_2`.
 
 2. Each argument represents a move for player_1 or player_2 and will be one of "rock", "paper", or "scissors".
-  - The values shown are strings, so I can assume the inputs will be strings holding one of these 3 values and that I will need to compare the strings in some way to find a winner.
+    - The values shown are strings, so I can assume the inputs will be strings holding one of these 3 values and that I will need to compare the strings in some way to find a winner.
 
 3. The function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
-  - Aside from checking if someone wins, I need to consider the edge case where the players could tie
+    - Aside from checking if someone wins, I need to consider the edge case where the players could tie
 
 4. The second input/output example shows both players choosing "rock" and the result is a tie
-  - I am hypothesizing that two players choosing the same move results in a tie. 
-  - This is supported by the table of rules further below that shows the result as "It's a tie!" any time both players choose the same move.
+    - I am hypothesizing that two players choosing the same move results in a tie. 
+    - This is supported by the table of rules further below that shows the result as "It's a tie!" any time both players choose the same move.
 
 5. The table of rules contains text "input (first argument)" and "input (second argument)"
-  - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2
-  - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`
+    - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2
+    - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`
 
 6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock"
-  - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner
+    - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner
 
 <br>
 
@@ -139,16 +151,16 @@ Our goals are to:
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md )
 2. Share the filled in prompt with an AI tool like ChatGPT
-3. After the initial review, ask at least one follow up question using the AI tool that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
-  - ensure your understanding of the analysis of the observations
-  - get more details on the information we could get from asking particular questions
-  - learn more about new information shared by the tool
+3. After the initial review, ask *at least one* follow up question using the AI tool that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
 4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
 
 <br>
 
 In the box below, please submit:
-1. A shareable link to your conversation in ChatGPT 
+1. A shareable link to your conversation in ChatGPT
     - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
 2. Your reflections and summary of the discussion with ChatGPT
 
@@ -179,8 +191,13 @@ Everyone’s observations & questions, and conversation with ChatGPT will be a l
 Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
-** Note ** We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
-Chat link: https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696 
+
+** Note ** 
+We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
+
+<br>
+
+Chat link: [https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696](https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696) 
 
 <br>
 
@@ -355,7 +372,7 @@ Example steps:
 * topics: pse
 ##### !question
 
-We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
 - the steps make sense for the problem being solved
 - the steps are not missing important steps or scenarios
 - the steps are agnostic of any particular language – steps should not include code syntax.
@@ -365,26 +382,33 @@ We want to know if we are laying out an approach to the coding problem that make
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
-2. Share the prompt with an AI tool like ChatGPT
-3. Hold a discussion with the tool to ensure our Logical Steps meet the goals listed above and understand areas where we could add clarity or better meet our goals
-4. Reflect on the information shared by the AI tool and summarize its findings
+2. Share the filled in prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
 
 <br>
 
 In the box below, please submit:
 1. A shareable link to your conversation in ChatGPT
-   - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
 2. Your reflections and summary of the discussion with ChatGPT
 
 ##### !end-question
 ##### !explanation
 
-As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we used the sample response from the "Logical Steps" question above to fill in the prompt template. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
-Chat Link: 
-https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62
+** Note ** 
+We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
+
+<br>
+
+Chat Link: [https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62](https://chatgpt.com/share/682fa106-d1f8-8005-9313-6471c059de62)
 
 <br>
 
