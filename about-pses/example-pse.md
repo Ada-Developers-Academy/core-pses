@@ -138,9 +138,12 @@ Our goals are to:
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md )
-2. Share the prompt with an AI tool like ChatGPT
-3. Hold a discussion with the tool to ensure our understanding of what new information we would get from the initial questions submitted, and what other questions we might want to ask.
-4. Reflect on the information shared by the AI tool and summarize its findings
+2. Share the filled in prompt with an AI tool like ChatGPT
+3. After the initial review, ask at least one follow up question using the AI tool that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+  - ensure your understanding of the analysis of the observations
+  - get more details on the information we could get from asking particular questions
+  - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
 
 <br>
 
@@ -159,34 +162,24 @@ In the box below, please submit:
 <br>
 
 **Summarizing the Review**
-- Did ChatGPT uncover anything about the questions you asked that you hadn’t considered?
-- Did ChatGPT suggest updates to the questions you asked? 
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
     - If so, what updates and why?
-- Did ChatGPT suggest any new questions?
-    - If so, what questions and why would they be useful?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
 
 ##### !end-hint
 ##### !explanation 
 
-Everyone’s questions and conversation with ChatGPT will be a little different, and thus the summaries will look a little different. As an example, let’s say we used the questions and explanations below to create our prompt:
-
-```text
-1. Does capitalization matter?
-    - I want to know whether we need to tell the difference between "Rock" and "rock" 
-2. Does extra whitespace / punctuation matter?
-    - I want to know whether inputs like " rock " or "rock!" are valid or should be rejected. 
-3. Should anything be printed to the console?
-    - I know that we want to return the result of the match based on the problem statement, but should we also print the result for the user? 
-4. Should there be a default value for each of the arguments? 
-    - I want to know whether the function is intended to be flexible and forgiving with missing inputs, or if both arguments are strictly required.
-```
+Everyone’s observations & questions, and conversation with ChatGPT will be a little different, thus, the summaries will look a little different. As an example, let’s say we used the sample response from "Describe Your Understanding" above to fill in the prompt template.
 
 <br>
 
 Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
-
+** Note ** We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
 Chat link: https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696 
 
 <br>
@@ -259,7 +252,7 @@ The submission for this prompt only saves your input. The tests are not evaluate
 
 <br>
 
-Consider writing tests that capture decisions you made when reviewing your observations and clarifying questions. For example, in the sample observations, we noted that from the rules and examples we know that either player could win, or there could be a tie – which could be a positive edge case. For code in a production environment, we would want to check all of these scenarios, but for a PSE, we can pick either player winning as our nominal test case and use the tie scenario as our positive edge case.
+Consider writing tests that capture decisions you made when reviewing your observations and clarifying questions. For example, in the sample observations, we noted that from the rules and examples we know that either player could win, or there could be a tie – which could be a positive edge case. For code in a production environment, we would want to check all of the possible scenarios, but for a PSE, we can pick either player winning with "rock", "paper", or "scissors" as our nominal test case and use one of the tie scenarios as a positive edge case.
 
 <br>
 
@@ -338,20 +331,17 @@ During an interview, we'd still want to be careful not to spend _too_ much time 
 <br>
 
 Example steps:
-
-1. Check whether both player_1 and player_2 are one of "rock", "paper", or "scissors"
-    - if not, return None
-2. Check for a tie: 
+1. Check for a tie: 
     - if player_1 is the same as player_2, return "It's a tie!"
-3. First deal with the case that player_1 is "rock"
+2. First deal with the case that player_1 is "rock"
     - if player_2 is "scissors", return "Player 1 wins!"
-    - otherwise (player_2 must be "paper"), return "Player 2 wins!"
-4. Next deal with the case that player_1 is "paper"
+    - otherwise player_2 must be "paper", return "Player 2 wins!"
+3. Next deal with the case that player_1 is "paper"
     - if player_2 is "rock", return "Player 1 wins!"
-    - otherwise (player_2 must be "scissors"), return "Player 2 wins!"
-5. Otherwise player_1 must be "scissors"
+    - otherwise player_2 must be "scissors", return "Player 2 wins!"
+4. Otherwise player_1 must be "scissors"
     - if player_2 is "rock", return "Player 2 wins!"
-    - otherwise (player_2 must be "paper"), return "Player 1 wins!"
+    - otherwise player_2 must be "paper", return "Player 1 wins!"
 
 ##### !end-explanation
 ### !end-challenge
@@ -460,63 +450,63 @@ import unittest
 from main import *
 
 class TestPython1(unittest.TestCase):
-    def test_rock_tie(self):
+    def test_winner_both_rock_returns_tie(self):
         # Arrange / Act
         result = winner("rock", "rock")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_scissors_tie(self):
+    def test_winner_both_scissors_returns_tie(self):
         # Arrange / Act
         result = winner("scissors", "scissors")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_paper_tie(self):
+    def test_winner_both_paper_returns_tie(self):
         # Arrange / Act
         result = winner("paper", "paper")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_player_1_rock_beats_scissors(self):
+    def test_winner_player_1_rock_beats_scissors(self):
         # Arrange / Act
         result = winner("rock", "scissors")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_rock_beats_scissors(self):
+    def test_winner_player_2_rock_beats_scissors(self):
         # Arrange / Act
         result = winner("scissors","rock")
 
         # Assert
         self.assertEqual(result,"Player 2 wins!")
 
-    def test_player_1_scissor_beats_paper(self):
+    def test_winner_player_1_scissor_beats_paper(self):
         # Arrange / Act
         result = winner("scissors","paper")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_scissors_beats_paper(self):
+    def test_winner_player_2_scissors_beats_paper(self):
         # Arrange / Act
         result = winner("paper","scissors")
 
         # Assert
         self.assertEqual(result,"Player 2 wins!")
 
-    def test_player_1_paper_beats_rock(self):
+    def test_winner_player_1_paper_beats_rock(self):
         # Arrange / Act
         result = winner("paper", "rock")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_paper_beats_rock(self):
+    def test_winner_player_2_paper_beats_rock(self):
         # Arrange / Act
         result = winner("rock","paper")
 
