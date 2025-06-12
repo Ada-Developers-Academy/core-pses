@@ -70,7 +70,7 @@ Further questions to ask as you read through the problem statement and examples:
 ##### !end-hint
 ##### !explanation 
 
-We want to pull as much information out of the prompt and into a format that is easy for us to review and use to organize our thoughts. This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
+We want to pull as much information out of the prompt as we can and format that info in a way that is easy for us to review and use to organize our thoughts. This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
 
 When coming up with questions, try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific. An interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). 
 
@@ -102,10 +102,6 @@ One of many possible sample responses could look like:
 6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock"
   - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner
 
-7. Does capitalization matter?
-  - I want to know whether we need to tell the difference between "Rock" and "rock"
-  - I will assume that all input will be lowercase as shown in the Rock, Paper, Scissors rules on Learn
-
 <br>
 
 We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may note something we missed before or realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to note everything or ask all our clarifying questions before we start working on the problem.
@@ -136,13 +132,13 @@ Our goals are to:
 - confirm if our observations and assumptions make sense in the context of the code problem
 - ensure we are asking questions that will tell us new information about the problem space
 - check our understanding of the information we expect to get from those questions
-- uncover other questions that could be useful to ask
-- understand why those other questions could be helpful
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
 
 <br>
 
 For this question we will:
-1. Build a prompt using [the template linked here](../shared-resources/questions-review-prompt-template.md)
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md )
 2. Share the prompt with an AI tool like ChatGPT
 3. Hold a discussion with the tool to ensure our understanding of what new information we would get from the initial questions submitted, and what other questions we might want to ask.
 4. Reflect on the information shared by the AI tool and summarize its findings
@@ -374,12 +370,12 @@ We want to know if we are laying out an approach to the coding problem that make
 - the steps make sense for the problem being solved
 - the steps are not missing important steps or scenarios
 - the steps are agnostic of any particular language – steps should not include code syntax.
-- the steps are written with enough detail for another person to understand how to create a solution to the problem description
+- the steps are written with enough detail for another Python developer to understand how to create a solution
 
 <br>
 
 For this question we will:
-1. Build a prompt using [the template linked here](../shared-resources/steps-review-prompt-template.md)
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
 2. Share the prompt with an AI tool like ChatGPT
 3. Hold a discussion with the tool to ensure our Logical Steps meet the goals listed above and understand areas where we could add clarity or better meet our goals
 4. Reflect on the information shared by the AI tool and summarize its findings
