@@ -7,12 +7,12 @@ I am a software development student studying Python. I am practicing how to brea
 The problem statement and examples for the coding problem I am looking at are below:
 Problem Statement:
 ```
-
+Copy & paste problem statement here
 ```
 
 Examples:
 ```
-
+Copy & paste examples here
 ```
 
 I would like assistance reviewing the steps that I came up with to approach the coding problem above. In your response, do not include any code to solve the problem. Assume that input validation is handled ahead of this function unless it is explicitly mentioned in the problem statement or examples, the focus should be on the core of the problem. If my approach is missing steps or scenarios, include information about what is missing and why that step is important. I would also like help evaluating: 
@@ -23,5 +23,5 @@ I would like assistance reviewing the steps that I came up with to approach the 
 
 My Approach:
 ```
-
+Copy & paste your logical steps here
 ```
