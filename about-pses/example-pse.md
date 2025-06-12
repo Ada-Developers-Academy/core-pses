@@ -193,19 +193,19 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 <br>
 
 ** Note ** 
-We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
+We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the tool where you held the conversation.
 
 <br>
 
-Chat link: [https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696](https://chatgpt.com/share/682fa17f-b1a8-8005-9dec-301093934696) 
+Chat link: [https://gist.github.com/ada-instructors/8d1dd2bcb00e3ce86ca061c5f2509c14](https://gist.github.com/ada-instructors/8d1dd2bcb00e3ce86ca061c5f2509c14) 
 
 <br>
 
-I got positive feedback on the clarifying questions I asked for a coding problem. My questions about capitalization and whitespace were highlighted as especially strong, since they help define input handling. 
+I received positive feedback that my observations about the coding problem were clear, accurate, and well-supported by the examples and rules provided, such as my reasoning about how the rules work (like same move = tie and player position matters). I didn't list any clarifying questions, so I got suggestions for some around whether the inputs are guaranteed to be lowercase or always valid. These questions help reveal if I need to handle errors or normalize data, even though those aspects are outside the scope of the PSE. 
 
 <br>
 
-A couple of my other questions about printing output and default values were seen as less critical, but still thoughtful. ChatGPT suggested additional questions I could ask to better understand scope and edge cases, like whether only certain inputs are valid, if the rules could vary, or if input types are always strings. It also recommended asking about player name customization and whether the function is meant for backend use or a user interface. 
+One helpful insight was that there are only nine possible input combinations, making it easy to fully test the function. This makes testing straightforward because the entire input space is small, finite, and fully specified. The feedback encouraged me to keep cross-checking examples with logic and to ask clarifying questions early.
 
 ##### !end-explanation
 ### !end-challenge
