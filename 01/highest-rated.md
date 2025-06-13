@@ -156,7 +156,7 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 
 <br>
 
-Chat link: <url to your chat>
+Chat link: <url to the conversation>
 
 <br>
 
@@ -372,15 +372,15 @@ As an example, let’s say we used the logical steps in the explanation for the 
 
 <br>
 
-Chat Link: https://chatgpt.com/share/682fa890-6278-8005-8e17-085ebb1fea57 
+Chat Link: <url to the conversation>
 
 <br>
 
-ChatGPT said the approach was clear, logically structured, and aligned with the problem requirements. It highlighted strengths like language-agnostic phrasing, thoughtful handling of edge cases, and simple, easy-to-follow steps. 
+The review said I broke the problem down into logical steps that correctly handle both regular and edge cases, like an empty list. It also confirmed that my plan makes sense and could be followed in any language, not just Python. 
 
-<br>
+It was suggested that I improve the clarity by explaining why each step matters, not just what to do. For example, I could mention that we check for an empty list because there would be nothing to rate, so returning `None` is appropriate. 
 
-Suggestions for improvements were things like refining explanations for clarity, especially why certain steps are done, and improving the iteration logic by starting from the second item in the list. Overall, ChatGPT suggested minor tweaks to improve clarity and communication, but affirmed that the core approach was solid.
+My steps use the first item in the list as our starting highest item. The review mentioned that I should be clear what I'm looping over because of this, which made me curious why. I asked a follow up question and the response made me realize I should loop through the list starting from the second restaurant to avoid the redundancy of comparing the first item to itself. 
 
 ##### !end-explanation
 ### !end-challenge
