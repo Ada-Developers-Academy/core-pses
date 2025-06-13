@@ -100,18 +100,18 @@ One of many possible sample responses could look like:
     - The values shown are strings, so I can assume the inputs will be strings holding one of these 3 values and that I will need to compare the strings in some way to find a winner.
 
 3. The function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
-    - Aside from checking if someone wins, I need to consider the edge case where the players could tie
+    - Aside from checking if someone wins, I need to consider the edge case where the players could tie.
 
 4. The second input/output example shows both players choosing "rock" and the result is a tie
     - I am hypothesizing that two players choosing the same move results in a tie. 
     - This is supported by the table of rules further below that shows the result as "It's a tie!" any time both players choose the same move.
 
 5. The table of rules contains text "input (first argument)" and "input (second argument)"
-    - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2
-    - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`
+    - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2.
+    - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`.
 
-6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock"
-    - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner
+6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock".
+    - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner.
 
 <br>
 
@@ -149,7 +149,7 @@ Our goals are to:
 <br>
 
 For this question we will:
-1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md )
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
 2. Share the filled in prompt with an AI tool like ChatGPT
 3. After the initial review, ask *at least one* follow up question using the AI tool that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
     - ensure your understanding of the analysis of the observations
