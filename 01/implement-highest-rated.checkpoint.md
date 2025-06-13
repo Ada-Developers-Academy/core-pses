@@ -37,33 +37,37 @@ import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_get_highest_rated_returns_highest_rated_in_list(self):
-        restaurants1 = [{"name": "Grillby's", "rating": 1},
+    def test_get_highest_rated_returns_highest_rated_when_last(self):
+        restaurants = [{"name": "Grillby's", "rating": 1},
                        {"name": "Crow's Nest", "rating": 5}]
 
-        restaurants2 = [{"name": "Communion", "rating": 5},
+        output = get_highest_rated(restaurants)
+         
+        self.assertEqual(output["name"], "Crow's Nest")
+        self.assertEqual(output["rating"], 5)
+        self.assertEqual(len(output.keys()), 2)
+
+
+    def test_get_highest_rated_returns_highest_rated_when_first(self):
+        restaurants = [{"name": "Communion", "rating": 5},
                        {"name": "Fat's Chicken", "rating": 4}]
 
-        restaurants3 = [{"name": "A guy on the street giving away granola bars", "rating": 1},
+        output = get_highest_rated(restaurants)
+
+        self.assertEqual(output["name"], "Communion")
+        self.assertEqual(output["rating"], 5)
+        self.assertEqual(len(output.keys()), 2)
+
+    def test_get_highest_rated_returns_highest_in_middle_of_list(self):
+        restaurants = [{"name": "A guy on the street giving away granola bars", "rating": 1},
                        {"name": "Soul", "rating": 4},
                        {"name": "Dick's", "rating": 2}]
 
-        output1 = get_highest_rated(restaurants1)
-        output2 = get_highest_rated(restaurants2)
-        output3 = get_highest_rated(restaurants3)
-         
-        self.assertEqual(output1["name"], "Crow's Nest")
-        self.assertEqual(output1["rating"], 5)
-        self.assertEqual(len(output1.keys()), 2)
+        output = get_highest_rated(restaurants)
 
-        self.assertEqual(output2["name"], "Communion")
-        self.assertEqual(output2["rating"], 5)
-        self.assertEqual(len(output2.keys()), 2)
-
-        self.assertEqual(output3["name"], "Soul")
-        self.assertEqual(output3["rating"], 4)
-        self.assertEqual(len(output3.keys()), 2)
-
+        self.assertEqual(output["name"], "Soul")
+        self.assertEqual(output["rating"], 4)
+        self.assertEqual(len(output.keys()), 2)
 
     def test_get_highest_rated_one_restaurant_returns_dict(self):
         restaurants = [{"name": "Crow's Nest", "rating": 1}]
