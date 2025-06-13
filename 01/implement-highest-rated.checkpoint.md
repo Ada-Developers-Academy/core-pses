@@ -37,7 +37,7 @@ import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_picks_highest_rated_from_list(self):
+    def test_get_highest_rated_returns_highest_rated_in_list(self):
         restaurants1 = [{"name": "Grillby's", "rating": 1},
                        {"name": "Crow's Nest", "rating": 5}]
 
@@ -65,7 +65,7 @@ class TestChallenge(unittest.TestCase):
         self.assertEqual(len(output3.keys()), 2)
 
 
-    def test_picks_from_list_of_one(self):
+    def test_get_highest_rated_one_restaurant_returns_dict(self):
         restaurants = [{"name": "Crow's Nest", "rating": 1}]
 
         output = get_highest_rated(restaurants)
@@ -73,7 +73,7 @@ class TestChallenge(unittest.TestCase):
         self.assertEqual(output["rating"], 1)
         self.assertEqual(len(output.keys()), 2)
 
-    def test_returns_none_with_zero_restaurants(self):
+    def test_get_highest_rated_empty_list_returns_none(self):
         restaurants = []
 
         output = get_highest_rated(restaurants)
