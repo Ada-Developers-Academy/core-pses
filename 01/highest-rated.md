@@ -156,7 +156,7 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 
 <br>
 
-Chat link: <url to the conversation>
+Chat link: `<url to the conversation>`
 
 <br>
 
@@ -372,13 +372,13 @@ As an example, let’s say we used the logical steps in the explanation for the 
 
 <br>
 
-Chat Link: <url to the conversation>
+Chat Link: `<url to the conversation>`
 
 <br>
 
-The review said I broke the problem down into logical steps that correctly handle both regular and edge cases, like an empty list. It also confirmed that my plan makes sense and could be followed in any language, not just Python. 
+The review said I broke the problem down into logical steps that correctly handle both regular and edge cases, like an empty list. It also confirmed that my plan makes sense and could be followed in any language, not just Python. It was suggested that I improve the clarity by explaining why each step matters, not just what to do. For example, I could mention that we check for an empty list because there would be nothing to rate, so returning `None` is appropriate. 
 
-It was suggested that I improve the clarity by explaining why each step matters, not just what to do. For example, I could mention that we check for an empty list because there would be nothing to rate, so returning `None` is appropriate. 
+<br>
 
 My steps use the first item in the list as our starting highest item. The review mentioned that I should be clear what I'm looping over because of this, which made me curious why. I asked a follow up question and the response made me realize I should loop through the list starting from the second restaurant to avoid the redundancy of comparing the first item to itself. 
 

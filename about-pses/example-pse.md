@@ -192,8 +192,9 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 
 <br>
 
-** Note ** 
-We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.
+*Note:*
+
+*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
 
 <br>
 
@@ -406,8 +407,9 @@ As an example, let’s say we used the sample response from the "Logical Steps" 
 
 <br>
 
-** Note ** 
-We are using a gist link in this example to ensure the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.
+*Note:*
+
+*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
 
 <br>
 
