@@ -23,15 +23,26 @@ This function should take in a list of dictionaries named `restaurants` as a par
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 00337d8b-9f33-43d8-8821-b6c0d8b3369f
-* title: Gather Information
+* id: d10ece96-af0b-4f22-a55d-b630ea9b582f
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-Use the box below to describe your understanding of the problem. Format the information in whatever way makes sense for you to organize your thoughts and review the contents as you continue with the upcoming prompts. Consider:
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
 - What do we know about the problem? 
 - What assumptions can we make based on the information in the problem statement? 
 - What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question
+- For each observation, answer how that observation will affect your approach to the problem
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
 ##### !hint
@@ -40,84 +51,43 @@ Further questions to ask as you read through the problem statement and examples:
 - What is the goal of the function?
 - What are the types of the expected inputs and outputs?
 - Are there any restrictions on any of the inputs?
-- What do the examples show us about the values that are allowed or invalid for our inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
 - What do the examples tell us about the return value in different scenarios?
-
-##### !end-hint
-##### !explanation 
-
-We want to pull as much information out of the prompt and into a format that is easy for us to review and use to organize our thoughts. One of many possible examples of what this could look like:
-
-<br>
-
-Based on the problem statement I see that I am creating a function named `get_highest_rated`. In this function:
-- There is one parameter, a list where each element is a dictionary
-- Our return value is the restaurant with the highest rating
-
-<br>
-
-Based on the examples I see:
-- Each dictionary in the input contains a `name` and `rating` key
-- The function should return the whole dictionary that represents a particular restaurant, not just the name
-- The input list could have a single element or no elements
-- If there are no elements in the input list, I should return `None` since there is no restaurant to return.
-
-
-##### !end-explanation
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- prettier-ignore-start -->
-### !challenge
-* type: paragraph
-* id: d10ece96-af0b-4f22-a55d-b630ea9b582f
-* title: Ask Clarifying Questions
-* topics: pse
-##### !question
-
-Before you begin solving this problem, take a moment to think like a professional software engineer. What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code? 
-
-<br>
-
-List three or more questions whose answers would clarify the problem statement. For each question:
-- Include information on why we are asking the question - what are we hoping to clarify by asking this?
-- Provide an answer which includes the effect your decision would have on how you would approach the problem.
-
-<br>
-
-As you come up with questions, assume that error handling for invalid data is managed outside the function. We want to focus on questions that affect the core behavior of the function we will write.
-
-##### !end-question
-##### !hint
-
-- Reflect on what you stated about the problem above, what questions would give you new information?
+- Reflect on the observations you have made so far, what questions would give you new information?
 - Assume error handling for invalid data is managed outside the function. 
 
-<br>
-
-Consider the following for inspiration:
-
-- [About PSEs](../about-pses/about-pses.md)
-- [Our example PSE with example answers](../about-pses/example-pse.md)
-
 ##### !end-hint
 ##### !explanation 
 
-Example clarifying questions and reasoning:
+One of many possible responses could look like:
 
-1. What should the function return if there are multiple restaurants tied for the highest rating?
+1. In the problem statement I see that the goal of the function is to find the highest rated restaurant 
+    - This means I will have some input that I need to compare and I will need some way to track what is the current highest rated element.
+
+2. I also see the line "This function should take in a list of dictionaries named `restaurants` as a parameter." as well as infomration that the dictionaries will include the restaurant information including a rating.
+    - This means that I will likey need to iterate over the list and look inside each dictionary to make a comparison using the dictionary's `rating` value
+
+3. This function should have a return value of the restaurant with the highest rating.
+    - Since the restaurants are represented by dictionaries, I probably need to return the whole dictionary that represents the highest rated restaurant. This theory is supported by the example inputs & outputs which show a dictionary as the expected return value.
+
+4. The example inputs & outputs show that each dictionary in the input contains a `name` key with a string value and a `rating` key with a numerical value.
+    - We can use the numerical value of the `rating` key to make our logical comparisons and find the restaurant with the highest `rating` value.
+
+5. What should the function return if there are multiple restaurants tied for the highest rating?
     - There could be multiple restaurants with the same rating, I want to know if it is important whether we return the first found vs. last found
     - I will return the first restaurant found with the highest rating
-2. Can the `rating` value be a float, or will it only ever be an integer?
-    - I want to know if we need to consider fractional numbers at all when designing our implementation
+
+6. Can the `rating` value be a float, or will it only ever be an integer?
+    - This does not change the logical comparisons to check which is higher rated, but it would affect whether I write tests that also confirm everything works as expected with float inputs.
     - I will assume the rating will only be integers as in the examples
-3. Can the list contain duplicate restaurant entries (same name and rating)?
-    - I want to know if fully duplicate restaurants should be filtered out or considered like any other restaurant
-    - I will assume that we are given a list of unique restaurants with no duplicates
-4. How should the function handle non-numerical values for `rating`?
-    - We cannot compare two restaurants if the rating is missing, I want to know if we should try to convert the value to a number, skip the restaurant, or raise an error
-    - Since this is around error handling, I will assume error handling has been managed outside the function and that the data received by the function has a valid format
- 
+
+7. Based on the second example input/output, if there is only one element in the list of restaurants, we return the one restaurant
+    - Since there are no other restaurants to compare it to, if there is only one element, it is technically the highest rated restuarant in the input so we return it
+
+8. Based on the last example input/output if the list is empty, we should return `None`
+    - The list is a valid list, but if there are no elements to compare, the function cannot do it's work, so we return `None`. 
+
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
