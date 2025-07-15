@@ -54,8 +54,7 @@ Further questions to ask as you read through the problem statement and examples:
   - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
 - What do the examples show us about the data types and values that are allowed for our inputs?
 - What do the examples tell us about the return value in different scenarios?
-- Reflect on the observations you have made so far, what questions would give you new information?
-- Assume error handling for invalid data is managed outside the function. 
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
 ##### !end-hint
 ##### !explanation 
@@ -114,8 +113,8 @@ Our goals are to:
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
-2. Share the filled in prompt with an AI tool like ChatGPT
-3. After the initial review, ask *at least one* follow up question using the AI tool that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
     - ensure your understanding of the analysis of the observations
     - get more details on the information we could get from asking particular questions
     - learn more about new information shared by the tool
@@ -156,7 +155,7 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 
 <br>
 
-Chat link: `<url to the conversation>`
+Chat link: `<url to your conversation>`
 
 <br>
 
@@ -299,7 +298,7 @@ def test_get_highest_rated_empty_list_returns_none(self):
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `get_highest_rated` in enough detail that another Python developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+Without writing code, describe how you would implement `get_highest_rated` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
 - The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
 - It is okay to leave some of the finer details to be worked out in the implementation itself!
 
@@ -345,13 +344,13 @@ We want to know if we are laying out an approach to the coding problem that make
 - the steps make sense for the problem being solved
 - the steps are not missing important steps or scenarios
 - the steps are agnostic of any particular language – steps should not include code syntax.
-- the steps are written with enough detail for another Python developer to understand how to create a solution
+- the steps are written with enough detail for another developer to understand how to create a solution
 
 <br>
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
-2. Share the filled in prompt with an AI tool like ChatGPT
+2. Share the completed prompt with an AI tool like ChatGPT
 3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
     - areas where we could add clarity
     - edge cases we might have missed
@@ -372,7 +371,7 @@ As an example, let’s say we used the logical steps in the explanation for the 
 
 <br>
 
-Chat Link: `<url to the conversation>`
+Chat Link: `<url to your conversation>`
 
 <br>
 
