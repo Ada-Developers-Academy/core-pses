@@ -51,7 +51,9 @@ In the box below, list 5 or more observations about the problem or questions who
 
 <br>
 
-As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. Examples of invalid data we don't need to manage may include:
+- Mismatched data types: If a function expects a string, you may assume it will receive a string. This follows for nested data as well.
+- String Sanitization: You may assume strings will not include invalid characters.
 
 ##### !end-question
 ##### !hint
@@ -114,7 +116,8 @@ One of many possible sample responses could look like:
 
 <br>
 
-We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may note something we missed before or realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to note everything or ask all our clarifying questions before we start working on the problem.
+We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may note something we missed before or realize that we need to ask a clarifying question. 
+- This is a normal part of the problem-solving process! We don't need to note everything or ask all our clarifying questions before we start working on the problem.
 
 <br>
 
@@ -183,7 +186,8 @@ In the box below, please submit:
 ##### !end-hint
 ##### !explanation 
 
-Everyone’s observations & questions, and conversation with ChatGPT will be a little different, thus, the summaries will look a little different. As an example, let’s say we used the sample response from "Describe Your Understanding" above to fill in the prompt template.
+Everyone’s observations, questions, and following conversation with ChatGPT will be a little different, thus, the summaries will look a little different. For this example, we'll use the questions and explanations from the "Explanation" section of the previous question as examples to create our prompt. 
+- After you submit a response in Learn, you'll see "Show Explanation" appear. When it is clicked a section will expand to reveal an explanation. If you have not yet, try it out above to see the data we're working with!
 
 <br>
 

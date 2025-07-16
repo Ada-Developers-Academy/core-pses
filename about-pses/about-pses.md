@@ -17,6 +17,7 @@ Problem-Solving Exercise assignments (PSEs) are assignments to practice problem-
 
 Interviews are conducted in a setting that enables discussion and thinking out loud. As a result, the practice in PSEs will be an imperfect approximation, but the act of thinking about and rehearsing how we can word these ideas is valuable preparation. In these exercises, we will write down what would mostly be talked through in an actual interview. 
 - During an interview, writing some of the discussion points down can still be useful but our notes there would likely not be to the same level of detail as the responses for PSEs.
+- Additionally, our PSEs will ask you to use AI tools to further explore and supplement your initial findings. You will likely not have access to AI tools in an Interview.
 
 These exercises will touch on problem-solving skills for coding problems. The format has three parts:
 1. A problem statement describing the code we need to write
