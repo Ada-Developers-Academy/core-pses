@@ -113,7 +113,7 @@ One of many possible responses could look like:
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: f9ad5047-e187-4213-9a8a-fae368cf813b
+* id: f9ad5047-e187-4213-9a8a-fae368cf814c
 * title: Review Observations & Questions
 * topics: pse
 ##### !question
@@ -209,8 +209,8 @@ Overall, I’m thinking through different scenarios, but I could use practice tu
 2. Write unit tests for `calculate_total` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
-##### !end-question
 
+##### !end-question
 ##### !placeholder
 
 ```py
@@ -243,7 +243,6 @@ def test_edge_case():
 ```
 
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -311,44 +310,102 @@ def test_invalid_items_not_added_to_total():
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
 * id: 852cbbe5-22f0-4c14-921b-a33a1e10535c
 * title: Create Logical Steps
 * topics: pse
-
 ##### !question
 
-Without writing code, describe how you would implement `calculate_total` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+Without writing code, describe how you would implement `calculate_total` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
+
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps: 
 
-1. Create a dictionary `prices` with key-value pairs for each available item, stored in lower case, and its corresponding price.
-2. Initialize a variable named `total` to `0.0`
-3. Loop through the items in the list `cart`
-    - Check if the current item is in the `prices` dictionary converting each cart item to lower case to compare case-insensitively.
-    - If the current item is in `prices`, add the value of the item to the variable `total`
-4. Return `total`
+1. Create a dictionary to hold the price data. 
+    - The keys are the available item names as strings and the values are the prices of those items.
+2. Initialize a variable to `0.0` to accumulate our prices sum.
+3. Loop through the items in the input list `cart`
+    - case-insensitively, check if the current item is in our prices data
+    - If the current item is in the price data, add the value of the item to our running total variable. Otherwise ignore the current item and move on.
+4. Once the loop ends, return the variable holding the total price
 
 ### !end-explanation
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 3237e637-3679-4302-bac2-3ac3f11da0f3
+* title: Review Logical Steps
+* topics: pse
+##### !question
 
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
 
+<br>
 
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+The feedback said that my steps followed a clear and logical structure, and I avoided Python-specific syntax, which made the approach more flexible. 
+
+<br>
+
+One suggestion was to briefly explain why certain data structures are useful. When talking about the prices dictionary, I could have noted that it was useful for speeding up item lookups. I also learned that assumptions (like ignoring unknown items or handling case differences) should be stated explicitly instead of silently added to the logic. This helps others understand that I’m making intentional decisions, not misinterpreting the problem. 
+
+<br>
+
+Overall, my approach was solid, and I better understand how to improve communication, especially around assumptions and decision-making.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
