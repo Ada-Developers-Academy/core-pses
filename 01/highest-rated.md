@@ -91,6 +91,7 @@ One of many possible responses could look like:
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
 * id: f9ad5047-e187-4213-9a8a-fae368cf813b
