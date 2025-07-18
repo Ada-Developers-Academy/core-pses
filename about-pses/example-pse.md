@@ -10,8 +10,8 @@ Create a function named `winner` that takes two arguments, the move for `player_
 
 | Input (Argument of the function) | Expected Output (Return value of the function) | Explanation|
 |--|--|--|
-|player_1 = `"rock"` <br> player_2 = `"scissors"`| `"Player 1 wins!"`|`"rock"` beats `"scissors"`|
-|player_1 = `"rock"` <br> player_2 = `"rock"`| `"It's a tie!"`|`player_1` and `player_2` played the same move|
+|player_1 = `"rock"` <br> player_2 = `"scissors"`|`"Player 1 wins!"`|`"rock"` beats `"scissors"`|
+|player_1 = `"rock"` <br> player_2 = `"rock"`|`"It's a tie!"`|`player_1` and `player_2` played the same move|
 
 ### Complete Rock, Paper, Scissors Rules
 | input (first argument)| input (second argument) | output |
@@ -29,64 +29,192 @@ Create a function named `winner` that takes two arguments, the move for `player_
 
 ## Prompts
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
-* id: 164a62ea-f936-4c6a-8b74-6d8248ba9c9d
-* title: Ask Clarifying Questions
+* id: 6957fd47-9dba-48b9-ac9c-38315cda0b28
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question
+- For each observation, answer how that observation will affect your approach to the problem
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. Examples of invalid data we don't need to manage may include:
+- Mismatched data types: If a function expects a string, you may assume it will receive a string. This follows for nested data as well.
+- String Sanitization: You may assume strings will not include invalid characters.
 
 ##### !end-question
+##### !hint
 
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
+
+##### !end-hint
 ##### !explanation 
 
-The following list provides some example clarifying questions, as well as what we might decide for ourselves is the answer. Several of these questions show examples of how we might think about the same issue in different ways. For example, questions 1, 2, and 3 are all about how to handle invalid input, but they each conceive of the problem slightly differently. Questions 4 and 5 are both getting at what variations in input would be considered valid or invalid. Questions 6 and 7 are about how to handle the possibility of extending the game to include more moves or more players. Notice that, even though we decide to stick with a more focused implementation for those questions, thinking through what some logical extensions might be (and in an interview context, bringing them up with the interviewer) can show that we're thinking about the problem in a broader context.
+We want to pull as much information out of the prompt as we can and format that info in a way that is easy for us to review and use to organize our thoughts. 
 
 <br>
 
-This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision.
+This prompt is pretty tightly specified, making it potentially more difficult to come up with clarifying questions in addition to observations. For future PSEs, there may be areas around edge cases, or sometimes even aspects of the core logic that may be more open to interpretation. Try to keep an eye out for areas of logic where it feels like you could make a decision about how to handle it, and then ask a question that would help you make that decision!
 
 <br>
 
-Try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific, and an interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we _could_ observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about questions that would help us understand the problem better and make decisions about how to approach it.
+When coming up with questions, try not to pose questions that are too specific to the implementation. For example, "Should I use a dictionary to store the winning combinations?" is too specific. An interviewer is likely to leave choices about an implementation to us (and we should be prepared to justify our decisions). 
 
 <br>
 
-As stated, this list contains several questions that overlap in what they are asking as an example of different perspectives. Try not to include multiple questions about the same topic in your own questions. For example, if we ask about how to handle invalid input, we only need to ask once, not in three different ways as we have here, especially since the sample answers here are contradictory!
-
-1. **How should the function handle invalid user input (i.e. player_1 = "lizard")?** 
-    * The prompt doesn't specify how to handle invalid input, so I'll return `None`, which would allow the caller of my function to detect that there was an input I wasn't expecting. The caller could then decide how to handle that situation. This is also a convenient decision because, I'll only need to look for valid winning combinations, and if I don't find one, I can return `None`.
-2. **Should a user automatically lose if they have invalid input?** 
-    * I'll assume the input cannot be invalid. My function must be part of a larger system (something must be calling it!) and that system should handle input validation. This way, I can focus on the core logic of the scoring and not worry about input validation.
-3. **What should happen if both users have invalid input?** 
-    * While both players providing invalid input could be considered a tie, I don't want the function to act as though everything was fine if an input was invalid, so I'll return `None` if either player has invalid input. This way, the caller can detect that something went wrong and decide how to handle it. A drawback of this approach is that the caller can't tell _which_ input was invalid, only that one of them was.
-4. **Does capitalization matter?** 
-    * I'll assume that the input is case-insensitive, so I'll convert the input to lowercase before comparing it to the valid moves. This way, the caller can provide input in any case they like, and the function will still work. This could be helpful if this code was incorporated into a mobile platform where the device might auto-capitalize the first letter of a word.
-5. **Does extra whitespace / punctuation matter?** 
-    * I'll assume that my function is part of a larger game (something must be calling my function, right?) and that the caller will handle input validation. I will implement my logic looking only for the exact strings "rock", "paper", and "scissors". This way, the caller can handle any input validation they need to do, and I can focus on the core logic of the scoring.
-6. **I'm familiar with a variant of rock, paper, scissors that includes additional throws (lizard and Spock). Should I keep my approach focused on the basic rules, or should I use an implementation that could be extended to game variants?**
-    * While I could write a helper function that accepts a data structure that encodes the valid moves and what beats what, I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
-7. **When friends use rock, paper, scissors to make decisions, there are often more than two players. Should I keep my approach focused on the basic rules, or should I use an implementation that could be extended to support multiple players simultaneously?** 
-    * While I could write a helper function that accepts a list of moves made by all players, the multiplayer version introduces a few complications into resolving a round that I'd like to avoid for now. I'll assume that I should focus on the basic rules for now. This way, I can get a working solution faster, and if I need to extend the game later, I can refactor my code to be more flexible.
+We should also avoid questions that change the observable behavior of a prompt. While we shouldn't ask about changing parameters or return values, or modifying behavior to something that conflicts with the prompt, we could observe the requirements of the prompt, and mention how we might approach it if it were solely up to us. 
 
 <br>
 
-We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may realize that we need to ask a clarifying question. This is a normal part of the problem-solving process. So don't feel like we need to ask all our clarifying questions before we start working on the problem.
+In an interview setting, this can give a sense of our thought process, and convey familiarity with the language over all, opening up space for a discussion. Ideally, we should think about observations and questions that would help us understand the problem better and make decisions about how to approach it.
 
 <br>
 
-Even if we make a decision about how to handle a particular issue here, the unit tests may lead us to reconsider that decision. For example, if we decide to return `None` for invalid input, but the unit tests expect an error to be raised, we may need to change our implementation, but there's no need to come back and update the clarifying questions. The important thing is to think through the problem and make a decision based on the information we have at the time. When the tests differ from our initial thoughts, we can think of that as a case where the interviewer has given us new information that we need to incorporate into our solution.
+One of many possible sample responses could look like:
+
+<br>
+
+1. I need to implement a function called `winner` that takes two arguments: `player_1` and `player_2`.
+    - This means I need to create a function definition with two parameters named exactly `player_1` and `player_2`.
+
+2. Each argument represents a move for `player_1` or `player_2` and will be one of "rock", "paper", or "scissors".
+    - The values shown are strings, so I can assume the inputs will be strings holding one of these 3 values and that I will need to compare the strings in some way to find a winner.
+
+3. The function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
+    - Aside from checking if someone wins, I need to consider the edge case where the players could tie.
+
+4. The second input/output example shows both players choosing "rock" and the result is a tie
+    - I am hypothesizing that two players choosing the same move results in a tie. 
+    - This is supported by the table of rules further below that shows the result as "It's a tie!" any time both players choose the same move.
+
+5. The table of rules contains text "input (first argument)" and "input (second argument)"
+    - This tells me when deciding who is the winner, I need to be mindful that the first argument's value always represents player_1 and the second argument represents player_2.
+    - This is supported by the first example where `player_1 = "rock"` and `player_2 = "scissors"`, and the result was `"Player 1 wins!"`.
+
+6. Based on the table of rules: "rock" beats "scissors", "scissors" beats "paper", "paper" beats "rock".
+    - When developing my solution, I will use these rules to guide the conditional statements I need to write to determine the winner.
+
+<br>
+
+We should keep in mind that sometimes, areas of clarification may not jump out at us when we first read the prompt. It's completely OK to think through the prompt, and even start working on it. As we start to write code, we may note something we missed before or realize that we need to ask a clarifying question. 
+- This is a normal part of the problem-solving process! We don't need to note everything or ask all our clarifying questions before we start working on the problem.
+
+<br>
+
+Even if we make a decision about how to handle a particular issue here, the unit tests may lead us to reconsider that decision. If that happens, it's okay and is a part of the development process! There's no need to come back and update the "Describe Your Understanding" section. 
+- The important thing is to think through the problem and make a decision based on the information we have at the time. 
+- When the tests differ from our initial thoughts, we can think of that as a case where the interviewer has given us new information that we need to incorporate into our solution.
 
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: d14c0645-1681-4874-ba8c-37e1bb19262d
+* title: Review Observations & Questions
+* topics: pse
+##### !question
 
-<!-- Question 2 -->
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
+- ensure we are asking questions that will tell us new information about the problem space
+- check our understanding of the information we expect to get from those questions
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !hint
+
+**Troubleshooting**
+- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
+- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
+
+<br>
+
+**Summarizing the Review**
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
+    - If so, what updates and why?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
+
+##### !end-hint
+##### !explanation 
+
+Everyone’s observations, questions, and following conversation with ChatGPT will be a little different, thus, the summaries will look a little different. For this example, we'll use the questions and explanations from the "Explanation" section of the previous question as examples to create our prompt. 
+- After you submit a response in Learn, you'll see "Show Explanation" appear. When it is clicked a section will expand to reveal an explanation. If you have not yet, try it out above to see the data we're working with!
+
+<br>
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+*Note:*
+
+*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
+
+<br>
+
+Chat link: [https://gist.github.com/ada-instructors/8d1dd2bcb00e3ce86ca061c5f2509c14](https://gist.github.com/ada-instructors/8d1dd2bcb00e3ce86ca061c5f2509c14) 
+
+<br>
+
+I received positive feedback that my observations about the coding problem were clear, accurate, and well-supported by the examples and rules provided, such as my reasoning about how the rules work (like same move = tie and player position matters). I didn't list any clarifying questions, so I got suggestions for some around whether the inputs are guaranteed to be lowercase or always valid. These questions help reveal if I need to handle errors or normalize data, even though those aspects are outside the scope of the PSE. 
+
+<br>
+
+One helpful insight was that there are only nine possible input combinations, making it easy to fully test the function. This makes testing straightforward because the entire input space is small, finite, and fully specified. The feedback encouraged me to keep cross-checking examples with logic and to ask clarifying questions early.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: code-snippet
@@ -104,7 +232,6 @@ Even if we make a decision about how to handle a particular issue here, the unit
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 ##### !end-question
-
 ##### !placeholder
 
 ```py
@@ -129,7 +256,6 @@ def test_edge_case():
 ```
 
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -147,7 +273,7 @@ The submission for this prompt only saves your input. The tests are not evaluate
 
 <br>
 
-Consider writing tests that capture decisions you made with your clarifying questions. For example, if you decided to return `None` for invalid input, you should write a test that checks that behavior. If you decided to return an error, you should write a test that checks for that error. If you decided to ignore invalid input, you should write a test that checks that the function works correctly with valid input.
+Consider writing tests that capture decisions you made when reviewing your observations and clarifying questions. For example, in the sample observations, we noted that from the rules and examples we know that either player could win, or there could be a tie – which could be a positive edge case. For code in a production environment, we would want to check all of the possible scenarios, but for a PSE, we can pick either player winning with "rock", "paper", or "scissors" as our nominal test case and use one of the tie scenarios as a positive edge case.
 
 <br>
 
@@ -157,12 +283,10 @@ Example input/output and tests:
 # example input 1: player_1 = "rock", player_2 = "scissors"
 # expected output 1: "Player 1 wins!"
 
-# example input 2: player_1 = "rock", player_2 = "lizards"
-# expected output 2: None
+# example input 2: player_1 = "rock", player_2 = "rock"
+# expected output 2: "It's a tie!"
 
-# Note: This invalid input (player_2 = "lizards") might be better handled by raising an error, a topic covered during Unit 1.
-
-def test_rock_beats_scissors():
+def test_winner_player_1_rock_beats_scissors():
     # arrange
     player_1 = "rock"
     player_2 = "scissors"
@@ -173,46 +297,51 @@ def test_rock_beats_scissors():
     # assert
     assert result == "Player 1 wins!"
 
-def test_invalid_input():
+def test_winner_both_rock_results_in_tie():
     # arrange
     player_1 = "rock"
-    player_2 = "lizards"
+    player_2 = "rock"
 
     # act
     result = winner(player_1, player_2)
 
     # assert
-    assert result is None  
+    assert result == "It's a tie!"  
 ```
 
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 2bf3b413-e220-46aa-a99a-6c5f3d9715a9
 * title: Create Logical Steps
 * topics: pse
-
 ##### !question
 
-Without writing code, describe how you would implement `winner` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+Without writing code, describe how you would implement `winner` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
+
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ##### !explanation
+
 It may feel cumbersome to write out the steps in detail, but it can be a helpful exercise to think through the problem before writing code. This is also a great way to practice speaking _about_ coding, which we'll need to become comfortable with for interviews and other professional settings.
 
 <br>
@@ -226,29 +355,84 @@ During an interview, we'd still want to be careful not to spend _too_ much time 
 <br>
 
 Example steps:
-
-1. Check whether both player_1 and player_2 are one of "rock", "paper", or "scissors"
-    - If not, return None
-2. Check for a tie: 
+1. Check for a tie: 
     - if player_1 is the same as player_2, return "It's a tie!"
-3. First deal with the case that player_1 is "rock"
+2. First deal with the case that player_1 is "rock"
     - if player_2 is "scissors", return "Player 1 wins!"
-    - otherwise (player_2 must be "paper"), return "Player 2 wins!"
-4. Next deal with the case that player_1 is "paper"
+    - otherwise player_2 must be "paper", return "Player 2 wins!"
+3. Next deal with the case that player_1 is "paper"
     - if player_2 is "rock", return "Player 1 wins!"
-    - otherwise (player_2 must be "scissors"), return "Player 2 wins!"
-5. Otherwise player_1 must be "scissors"
+    - otherwise player_2 must be "scissors", return "Player 2 wins!"
+4. Otherwise player_1 must be "scissors"
     - if player_2 is "rock", return "Player 2 wins!"
-    - otherwise (player_2 must be "paper"), return "Player 1 wins!"
+    - otherwise player_2 must be "paper", return "Player 1 wins!"
 
 ##### !end-explanation
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: eb41ea7a-cbdf-46d7-b48d-a03bebe872f7
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the sample response from the "Logical Steps" question above to fill in the prompt template. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+*Note:*
+
+*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
+
+<br>
+
+Chat Link: [https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1](https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1)
+
+<br>
+
+I received feedback that my approach was clear, and my logical steps that didn’t rely on Python specific syntax, which made it easy to understand. I made good use of logic by handling ties first and explaining each outcome clearly, showing I understood the reasoning behind the rules. 
+
+<br>
+
+An area mentioned for improvement is to keep my language more consistent in how I describe outcomes and reasoning. For example, I could phrase outcomes in a way that explains why a player wins, not just that they win. Another suggestion was to consider alternative ways of structuring the logic, like grouping by winning relationships (e.g., “rock beats scissors”). This structure shows I grasp the underlying game logic, not just how to implement it procedurally. 
+
+<br>
+
+Overall, I’m on the right track, and with small tweaks to my phrasing and logic organization, I can make my solutions even stronger and more flexible.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
 ### !challenge
@@ -263,7 +447,7 @@ Implement a solution to `winner` that implements the correct logic for the Rock,
 Below is a selection of the unit tests.
 
 ```python
-def test_rock_beats_scissors():
+def test_winner_player_1_rock_beats_scissors():
     # arrange
     player_1 = "rock"
     player_2 = "scissors"
@@ -274,18 +458,17 @@ def test_rock_beats_scissors():
     # assert
     assert result == "Player 1 wins!"
 
-def test_invalid_input():
+def test_winner_both_rock_returns_tie():
     # arrange
     player_1 = "rock"
-    player_2 = "lizards"
+    player_2 = "rock"
 
     # act
     result = winner(player_1, player_2)
 
     # assert
-    assert result is None  
+    assert result == "It's a tie!"  
 ```
-
 
 ### !end-question
 ### !placeholder
@@ -301,70 +484,63 @@ import unittest
 from main import *
 
 class TestPython1(unittest.TestCase):
-    def test_invalid_returns_none(self):
-        # Arrange / Act
-        result = winner("rock", "lizard")
-
-        # Assert
-        self.assertEqual(result,None)
-
-    def test_rock_ties(self):
+    def test_winner_both_rock_returns_tie(self):
         # Arrange / Act
         result = winner("rock", "rock")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_invalid_scissors_tie(self):
+    def test_winner_both_scissors_returns_tie(self):
         # Arrange / Act
         result = winner("scissors", "scissors")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_paper_ties(self):
+    def test_winner_both_paper_returns_tie(self):
         # Arrange / Act
         result = winner("paper", "paper")
 
         # Assert
         self.assertEqual(result,"It's a tie!")
 
-    def test_player_1_rock_beats_scissors(self):
+    def test_winner_player_1_rock_beats_scissors(self):
         # Arrange / Act
         result = winner("rock", "scissors")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_rock_beats_scissors(self):
+    def test_winner_player_2_rock_beats_scissors(self):
         # Arrange / Act
         result = winner("scissors","rock")
 
         # Assert
         self.assertEqual(result,"Player 2 wins!")
 
-    def test_player_1_scissor_beats_paper(self):
+    def test_winner_player_1_scissor_beats_paper(self):
         # Arrange / Act
         result = winner("scissors","paper")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_scissors_beats_paper(self):
+    def test_winner_player_2_scissors_beats_paper(self):
         # Arrange / Act
         result = winner("paper","scissors")
 
         # Assert
         self.assertEqual(result,"Player 2 wins!")
 
-    def test_player_1_paper_beats_rock(self):
+    def test_winner_player_1_paper_beats_rock(self):
         # Arrange / Act
         result = winner("paper", "rock")
 
         # Assert
         self.assertEqual(result, "Player 1 wins!")
 
-    def test_player_2_paper_beats_rock(self):
+    def test_winner_player_2_paper_beats_rock(self):
         # Arrange / Act
         result = winner("rock","paper")
 
@@ -377,15 +553,7 @@ class TestPython1(unittest.TestCase):
 An example of a working implementation:
 
 ```python
-
-VALID_MOVES = ["rock", "paper", "scissors"]
-
 def winner(player_1, player_2):
-    
-    # invalid input
-    if player_1 not in VALID_MOVES or player_2 not in VALID_MOVES:
-        return None
-
     # tie
     if player_1 == player_2:
         return "It's a tie!"
@@ -413,6 +581,10 @@ def winner(player_1, player_2):
 ```
 
 ### !end-explanation
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
