@@ -97,7 +97,7 @@ One of many possible responses could look like:
 
 5. The problem description and examples do not show what to do if an item in `cart` does not have a price.
     - I could raise an error, but that would prevent summing the rest of the items in `cart`. 
-    - Since a customer would likely still want to check out with their items even if one item is not avilable, I will ignore any items that we do not have a rpice for and return the sum for the available items.
+    - Since a customer would likely still want to check out with their items even if one item is not available, I will ignore any items that we do not have a price for and return the sum for the available items.
 
 6. Can an item appear in `cart` more than once?
     - The examples don't show duplicate items in the input `cart`, but there is nothing in the description that says folks cannot buy multiples of an item. 
