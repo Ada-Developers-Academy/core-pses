@@ -70,6 +70,8 @@ Further questions to ask as you read through the problem statement and examples:
 - What do the examples tell us about the return value in different scenarios?
 - Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
 Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
