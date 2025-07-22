@@ -4,7 +4,9 @@
 
 Imagine working on software that analyzes mutations in DNA.
 
-Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands of the same length as parameters. This method should have a return value of the number of differences between each string.
+Create a function named `hamming_distance` that calculates the number of differences between two DNA strands (aka two strings). This method should take in two different DNA strands as inputs and the return value should be the number of differences between each string. 
+- Input strings are guaranteed to be non-empty and only contain the characters “G”, “A”, “T”, & “C”. 
+- A hamming distance can only be calculated if the inputs are the same length. 
 
 For example, given these two DNA strands (strings), `hamming_distance` should return `7` because there are 7 differences:
 
@@ -24,45 +26,75 @@ Differences: ^ ^ ^  ^ ^    ^^
 
 ## Prompts
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
 * id: 733d51d0-bad2-4a5c-8475-68dc11e91618
-* title: Ask Clarifying Questions
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question
+- For each observation, answer how that observation will affect your approach to the problem
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
 ##### !hint
 
-Consider the following for inspiration:
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
+Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+- Previous PSEs
 
 ##### !end-hint
 ##### !explanation
 
+One of many possible responses could look like:
+
+1. The problem statement says that we are calculating "the number of differences between two DNA strands (aka two strings)" and "This method should have a return value of the number of differences between each string."
+    - This tells me that we are calculating something based on two inputs and we are returning a numeric type. 
+    - Since we are counting differences which are typically whole numbers and the example shows a return value of "7", I'm inferring that we should return an integer.
+
+2. In the problem statement is says "two DNA strands (aka two strings)" and "This method should take in two different DNA strands of the same length as parameters."
+    - This tells me that the function `hamming_distance` should have two inputs that are both strings
+    - 
+
 Here are some example clarifying questions:
 
 1. What happens if the strings are two different lengths?
-1. How small can the DNA strands be? What happens if the strings are empty?
-1. Can we assume that DNA strands be made up of only "A", "C", "G", and "T"? Will there ever be any exceptions?
-1. How large can the DNA strands be?
-1. Are there ever any patterns in DNA strands?
+2. How small can the DNA strands be? What happens if the strings are empty?
+3. Can we assume that DNA strands be made up of only "A", "C", "G", and "T"? Will there ever be any exceptions?
+4. How large can the DNA strands be?
+5. Are there ever any patterns in DNA strands?
 
 ##### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
-
 ### !challenge
 * type: code-snippet
 * language: python3.6
