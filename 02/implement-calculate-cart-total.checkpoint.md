@@ -53,17 +53,69 @@ import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_scores_words(self):
-        self.assertEqual(calculate_total(["Cheese", "Chicken"]), 6.5)
-        self.assertEqual(calculate_total(["apple"]), 0.75)
-        self.assertEqual(calculate_total(["LETTUCE"]), 1.25)
-        self.assertEqual(calculate_total(["BeAnS"]), 2.0)
-        self.assertEqual(calculate_total([]), 0.0)
+    def test_calculate_total_capitalized_items(self):
+        items = ["Cheese", "Chicken"]
+        expected = 6.5
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+    def test_calculate_total_lowercase_item(self):
+        items = ["apple"]
+        expected = 0.75
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+    def test_calculate_total_uppercased_item(self):
+        items = ["LETTUCE"]
+        expected = 1.25
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+    def test_calculate_total_mixed_case_item(self):
+        items = ["BeAnS"]
+        expected = 2.0
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+    def test_calculate_total_no_items(self):
+        items = []
+        expected = 0.0
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
         self.assertEqual(calculate_total(["Lemon", "Onion"]), 0.5)
         self.assertEqual(calculate_total(["Orange", "Orange", "Orange"]), 2.55)
         all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
                     "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
         self.assertEqual(calculate_total(all_items), 17.05)
+
+    def test_calculate_total_one_item_no_price(self):
+        items = ["Lemon", "Onion"]
+        expected = 0.5
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+        self.assertEqual(calculate_total(["Orange", "Orange", "Orange"]), 2.55)
+        all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
+                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
+        self.assertEqual(calculate_total(all_items), 17.05)
+
+    def test_calculate_total_duplicate_items(self):
+        items = ["Orange", "Orange", "Orange"]
+        expected = 2.55
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
+
+        all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
+                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
+        self.assertEqual(calculate_total(all_items), 17.05)
+
+    def test_calculate_total_one_of_each_item(self):
+        items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
+                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
+        expected = 17.05
+        result = calculate_total(items)
+        self.assertEqual(result, expected)
 ```
 ### !end-tests
 ### !explanation
