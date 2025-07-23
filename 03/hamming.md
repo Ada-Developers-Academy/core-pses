@@ -42,8 +42,8 @@ Before you begin solving this problem, take a moment to think like a professiona
 
 <br>
 
-In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question
-- For each observation, answer how that observation will affect your approach to the problem
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question.
+- For each observation, answer how that observation will affect your approach to the problem.
 - For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
 
 <br>
