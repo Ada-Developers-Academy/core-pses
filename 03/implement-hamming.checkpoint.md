@@ -37,7 +37,7 @@ import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_counts_correct_number_diffs(self):
+    def test_hamming_distance_counts_correct_number_diffs(self):
         # Arrange
         strand1 = "GAGCCTACTAACGGGAT"
         strand2 = "CATCGTAATGACGGCCT"
@@ -48,10 +48,10 @@ class TestChallenge(unittest.TestCase):
         # Assert
         self.assertEqual(result, 7)
 
-    def test_raises_exception_for_different_lengths(self):
+    def test_hamming_distance_raises_error_for_unequal_lengths(self):
         # Arrange
         strand1 = "GAG"
-        strand2 = ""
+        strand2 = "G"
 
         # Act
         with self.assertRaises(ValueError):
