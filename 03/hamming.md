@@ -168,7 +168,7 @@ I got feedback that my observations show I’m thinking critically about what’
 
 <br>
 
-One suggestion was to be more precise with language, like clarifying that “different” strands just means “two inputs,” not that they must differ in content. Another improvement I could make is explaining *why* I’d raise an error for unequal string lengths. The feedback also gave me ideas for new questions to ask, like clarifying whether inputs are guaranteed to be uppercased. I was encouraged to continue considering edge cases as I move forward.
+One suggestion was to be more precise with language, like clarifying that “different” strands just means “two inputs,” not that they must differ in content. Another improvement I could make is explaining why I’d raise an error for unequal string lengths. The feedback also gave me ideas for new questions to ask, like clarifying whether inputs are guaranteed to be uppercased. I was encouraged to continue considering edge cases as I move forward.
 
 ##### !end-explanation
 ### !end-challenge
