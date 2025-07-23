@@ -83,32 +83,17 @@ class TestChallenge(unittest.TestCase):
         result = calculate_total(items)
         self.assertEqual(result, expected)
 
-        self.assertEqual(calculate_total(["Lemon", "Onion"]), 0.5)
-        self.assertEqual(calculate_total(["Orange", "Orange", "Orange"]), 2.55)
-        all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
-                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
-        self.assertEqual(calculate_total(all_items), 17.05)
-
-    def test_calculate_total_one_item_no_price(self):
+    def test_calculate_total_with_item_with_no_price(self):
         items = ["Lemon", "Onion"]
         expected = 0.5
         result = calculate_total(items)
         self.assertEqual(result, expected)
-
-        self.assertEqual(calculate_total(["Orange", "Orange", "Orange"]), 2.55)
-        all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
-                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
-        self.assertEqual(calculate_total(all_items), 17.05)
 
     def test_calculate_total_duplicate_items(self):
         items = ["Orange", "Orange", "Orange"]
         expected = 2.55
         result = calculate_total(items)
         self.assertEqual(result, expected)
-
-        all_items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
-                    "Onion", "Orange", "Lettuce", "Milk", "Tomato"]
-        self.assertEqual(calculate_total(all_items), 17.05)
 
     def test_calculate_total_one_of_each_item(self):
         items = ["Apple", "Beans", "Cheese", "Chicken", "Flour", 
