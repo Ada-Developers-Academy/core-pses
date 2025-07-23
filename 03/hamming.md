@@ -88,7 +88,7 @@ One of many possible responses could look like:
 4. What should we do if the inputs are not the same length? There is a note in the problem statement that a hamming distance can only be calculated if the inputs are the same length. 
     - Nothing in the problem statement says that the inputs are guaranteed to be the same length. This means that we might need to check if they are the same length before trying to compare the strings. For this problem, if the input strings are not the same length, I will raise an error.
 
-5. Looking at the example and explanation, the return value should be the number of characters that are different between the two strings.The explanation of the example points out the indices where each charater is different. 
+5. Looking at the example and explanation, the return value should be the number of characters that are different between the two strings. The explanation of the example points out the indices where each charater is different. 
     - We need to compare the inputs character-by-character at the same position in each string, to find the differences. This means we need to choose a loop that will allow us to iterate over both strings at the same time. 
 
 ##### !end-explanation
@@ -168,7 +168,7 @@ I got feedback that my observations show I’m thinking critically about what’
 
 <br>
 
-One suggestion was to be more precise with language, like clarifying that “different” strands just means “two inputs,” not that they must differ in content. Another improvement I could make is explaining *why* I’d raise an error for unequal string lengths. The feedback also gave me ideas for new questions to ask, like whether inputs are guaranteed to be uppercased. I was encouraged to continue considering edge cases as I move forward.
+One suggestion was to be more precise with language, like clarifying that “different” strands just means “two inputs,” not that they must differ in content. Another improvement I could make is explaining *why* I’d raise an error for unequal string lengths. The feedback also gave me ideas for new questions to ask, like clarifying whether inputs are guaranteed to be uppercased. I was encouraged to continue considering edge cases as I move forward.
 
 ##### !end-explanation
 ### !end-challenge
