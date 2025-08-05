@@ -14,12 +14,11 @@ Create a function named `check_palindrome` that determines if a string is a pali
 | `"nascar"`                   | `False`                  |
 | `"racecar"`                  | `True`                 |
 | `"noon"`                     | `True`                 |
-| `"mom"`                      | `True`                 |
-| `"kayak"`                    | `True`                 |
+| `"Mom"`                      | `True`                 |
+| `"Kayak"`                    | `True`                 |
 
 ## Prompts
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -71,24 +70,26 @@ One of many possible responses could look like:
 1. The problem statement says we need to determine if the input is a palindrome and that a palindrome is a word, phrase, or sequence that reads the same backward as forward.
     - This tells me that I will have an input that I need to iterate over in such a way that I can check elements at the front and back of the input at the same time.
 
-2. In the problem statement, I see that I should return `True` if the string is a palindrome. The examples inputs & outputs show both `True` and `False` return values.
+2. Since a palindrome needs to read the same way backwards as forwards, as I'm iterating, as soon as I find letters that don't match at their corresponding positions, I know the input is not a palindrome.
+    - This means that as soon as I find characters that do not match, I can exit the function; I don't need to keep iterating through the input.
+
+3. In the problem statement, I see that I should return `True` if the string is a palindrome. The examples inputs & outputs show both `True` and `False` return values.
     - While the problem statement doesn't explicitly say we should return `False` if the input is not a Palindrome, the examples show me that we should return `False` if we determine the input is not a palindrome.
 
-3. What should the function return if the string is not a palindrome?
-4. What should the function return if the string is an empty string, `""`?
-5. Does capitalization matter? Is this case-sensitive? Is `"Kayak"` a palindrome?
-6. What do we do with punctuation? Is `"kayak!"` a palindrome?
-7. What do we do with white space? Is `"k ayak"` a palindrome?
-8. Do we accept input other than strings such as lists or integers?
+4. What should the function return if the input is an empty string, `""`?
+    - The problem statement and examples don't cover this scenario. Since an empty string is the same backwards as forwards, I will assume that I should return `True`.
+
+5. Taking a look at the examples, I see all lowercased as well as strings with capitlaization at the front that both return `True`.
+    - Since palindromes with a single capitalized letter should return `True` according to the examples, I know that whaen I compare letters, the comparison must be case-insensitive.
+
+6. How should the function handle characters that are not letters like punctuation and white space? Is `"kayak!"` a palindrome?
+    - Nothing in the problem statement or examples shows that we should ignore characters that are part of the input string. Therefore, I will assume that I should leave any non-alphabetic characters in the input and take them into account when determining if a string is a palindrome.
 
 ##### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
-
 ### !challenge
 * type: code-snippet
 * language: python3.6
