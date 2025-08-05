@@ -4,17 +4,18 @@
 
 Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 
-Create a function named `palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
+Create a function named `check_palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
 
 ### Examples
 
-| Original string as parameter | Is it a palindrome? |
+| Example Input | Expected Output |
 | ---------------------------- | ------------------- |
-| `"Hello, world!"`            | No                  |
-| `"racecar"`                  | Yes                 |
-| `"noon"`                     | Yes                 |
-| `"mom"`                      | Yes                 |
-| `"kayak"`                    | Yes                 |
+| `"Hello, world!"`            | `False`                  |
+| `"nascar"`                   | `False`                  |
+| `"racecar"`                  | `True`                 |
+| `"noon"`                     | `True`                 |
+| `"mom"`                      | `True`                 |
+| `"kayak"`                    | `True`                 |
 
 ## Prompts
 
@@ -23,32 +24,62 @@ Create a function named `palindrome` that determines if a string is a palindrome
 ### !challenge
 * type: paragraph
 * id: b3294ca0-b085-49e7-890f-e839e3a9efac
-* title: Ask Clarifying Questions
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question.
+- For each observation, answer how that observation will affect your approach to the problem.
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
 ##### !hint
 
-Consider the following for inspiration:
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
+Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+- Previous PSEs
 
 ##### !end-hint
 ##### !explanation
 
-Here are some example clarifying questions:
+One of many possible responses could look like:
 
-1. What should the function return if the string is not a palindrome?
-1. What should the function return if the string is an empty string, `""`?
-1. Does capitalization matter? Is this case-sensitive? Is `"Kayak"` a palindrome?
-1. What do we do with punctuation? Is `"kayak!"` a palindrome?
-1. What do we do with white space? Is `"k ayak"` a palindrome?
-1. Do we accept input other than strings such as lists or integers?
+1. The problem statement says we need to determine if the input is a palindrome and that a palindrome is a word, phrase, or sequence that reads the same backward as forward.
+    - This tells me that I will have an input that I need to iterate over in such a way that I can check elements at the front and back of the input at the same time.
+
+2. In the problem statement, I see that I should return `True` if the string is a palindrome. The examples inputs & outputs show both `True` and `False` return values.
+    - While the problem statement doesn't explicitly say we should return `False` if the input is not a Palindrome, the examples show me that we should return `False` if we determine the input is not a palindrome.
+
+3. What should the function return if the string is not a palindrome?
+4. What should the function return if the string is an empty string, `""`?
+5. Does capitalization matter? Is this case-sensitive? Is `"Kayak"` a palindrome?
+6. What do we do with punctuation? Is `"kayak!"` a palindrome?
+7. What do we do with white space? Is `"k ayak"` a palindrome?
+8. Do we accept input other than strings such as lists or integers?
 
 ##### !end-explanation
 
