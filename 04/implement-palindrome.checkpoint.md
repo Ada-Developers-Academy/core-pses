@@ -11,17 +11,18 @@
 
 Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 
-Create a function named `palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
+Create a function named `check_palindrome` that determines if a string is a palindrome. This method should take in one string as a parameter. This method should return `True` if the string is a palindrome.
 
 ## Examples
 
-| Original string as parameter | Is it a palindrome? |
+| Example Input | Expected Output |
 | ---------------------------- | ------------------- |
-| `"Hello, world!"`            | No                  |
-| `"racecar"`                  | Yes                 |
-| `"noon"`                     | Yes                 |
-| `"mom"`                      | Yes                 |
-| `"kayak"`                    | Yes                 |
+| `"Hello, world!"`            | `False`             |
+| `"nascar"`                   | `False`             |
+| `"racecar"`                  | `True`              |
+| `"noon"`                     | `True`              |
+| `"Mom"`                      | `True`              |
+| `"Kayak"`                    | `True`              |
 
 When considering example inputs and outputs, you likely considered edge cases. Your solution is only required to handle the nominal cases. As times allows, consider how to handle the edge cases you identified.
 
@@ -29,7 +30,7 @@ When considering example inputs and outputs, you likely considered edge cases. Y
 ### !placeholder
 
 ```python
-def palindrome(s):
+def check_palindrome(s):
     pass
 ```
 ### !end-placeholder
@@ -41,22 +42,22 @@ import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_true_for_palindrome(self):
+    def test_check_palindrome_true_for_palindrome(self):
         # Arrange
         s = "kayak"
 
         # Act
-        result = palindrome(s)
+        result = check_palindrome(s)
 
         # Assert
         self.assertEqual(result, True)
 
-    def test_false_for_not_palindrome(self):
+    def test_check_palindrome_false_if_not_palindrome(self):
         # Arrange
         s = "hello"
 
         # Act
-        result = palindrome(s)
+        result = check_palindrome(s)
 
         # Assert
         self.assertEqual(result, False)

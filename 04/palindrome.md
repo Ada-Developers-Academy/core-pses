@@ -181,7 +181,7 @@ Some suggestions for improvement included refining how I describe missing behavi
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
-2. Write unit tests for `palindrome` for the nominal and edge cases you identified in the first step.
+2. Write unit tests for `check_palindrome` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
@@ -235,10 +235,10 @@ Example tests:
 
 ```python
 # example input 1: s = "kayak"
-# expected output 1: palindrome(s) = True
+# expected output 1: check_palindrome(s) = True
 
 # example input 2: s = "Kayak"
-# expected output 2: palindrome(s) = True
+# expected output 2: check_palindrome(s) = True
 
 def test_true_for_single_word_palindrome():
     # nominal test case
@@ -247,7 +247,7 @@ def test_true_for_single_word_palindrome():
     s = "kayak"
 
     # Act
-    result = palindrome(s)
+    result = check_palindrome(s)
 
     # Assert
     assert result == True
@@ -259,7 +259,7 @@ def test_ignores_capitalization():
     s = "Kayak"
 
     # Act
-    result = palindrome(s)
+    result = check_palindrome(s)
 
     # Assert
     assert result == True  
@@ -278,7 +278,7 @@ def test_ignores_capitalization():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `palindrome` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `check_palindrome` in enough detail that someone else could write the code. 
 * It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
 * Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
 
