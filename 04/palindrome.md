@@ -308,3 +308,57 @@ Example Steps:
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 883f0fbe-2715-4c24-b949-2fdcbe8f9470
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+The review shared that I’m avoiding code syntax and focusing on behavior, and that my steps all support the overall goal. A few suggestions were around being more specific, such as how I describe the loop. I could clarify that the loop stops as soon as a mismatch is found, and that if the loop finishes without issues, we return `True`.
+
+<br>
+
+I also learned why going only halfway through the string is more efficient. Comparisons only need to go halfway since we check mirrored characters from both ends, which avoids repeat comparisons. Overall, my structure was strong, but adding precision and a few clarifying details would make my explanation easier for others to follow.
+
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
