@@ -10,12 +10,12 @@ Create a function named `check_palindrome` that determines if a string is a pali
 
 | Example Input | Expected Output |
 | ---------------------------- | ------------------- |
-| `"Hello, world!"`            | `False`                  |
-| `"nascar"`                   | `False`                  |
-| `"racecar"`                  | `True`                 |
-| `"noon"`                     | `True`                 |
-| `"Mom"`                      | `True`                 |
-| `"Kayak"`                    | `True`                 |
+| `"Hello, world!"`            | `False`             |
+| `"nascar"`                   | `False`             |
+| `"racecar"`                  | `True`              |
+| `"noon"`                     | `True`              |
+| `"Mom"`                      | `True`              |
+| `"Kayak"`                    | `True`              |
 
 ## Prompts
 
@@ -217,7 +217,6 @@ def test_edge_case():
     # assert
 ```
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -240,7 +239,7 @@ Example tests:
 # example input 2: s = "Kayak"
 # expected output 2: check_palindrome(s) = True
 
-def test_true_for_single_word_palindrome():
+def test_check_palindrome_true_for_single_word_palindrome():
     # nominal test case
 
     # Arrange
@@ -252,7 +251,7 @@ def test_true_for_single_word_palindrome():
     # Assert
     assert result == True
 
-def test_ignores_capitalization():
+def test_check_palindrome_ignores_capitalization():
     # edge test case
 
     # Arrange
