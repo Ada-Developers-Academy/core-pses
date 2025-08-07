@@ -268,7 +268,6 @@ def test_check_palindrome_ignores_capitalization():
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 3 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -277,37 +276,35 @@ def test_check_palindrome_ignores_capitalization():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `check_palindrome` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+Without writing code, describe how you would implement `check_palindrome` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
+
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps: 
 
-1. Check that the input is a string.
-    - If it is not, raise an exception
-2. Convert input to lowercase.
-3. Initialize one pointer to move forward through the string, and one pointer to move backwards through the string.
-4. Create a while loop that keeps looping until the pointers have passed each other.
-5. Check if the character at index of the forward pointer is alphanumeric
-    - If not, increment the pointer
-6. Check if the character at index of the backwards pointer is alphanumeric
-    - If not, decrement the pointer
-7. Check if the characters at the forward/backward pointers match
-    - If not, return `False`
-8. Increment/decrement the forward and backward pointers respectively.
-9. Return `True` once the loop has finished executing. 
+1. Convert input to lowercase.
+2. Loop over the length of the input
+3. Start by comparing the first and last element of the input. If the letters are not the same, return `False`. 
+    - Each iteration of the loop we will move one character towards the middle of the string and then make the same comparison.
+4.  Return `True` once the loop has finished executing. 
 
 ##### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
