@@ -352,7 +352,7 @@ Chat Link: `<url to your conversation>`
 
 <br>
 
-The review shared that I’m avoiding code syntax and focusing on behavior, and that my steps all support the overall goal. A few suggestions were around being more specific, such as how I describe the loop. I could clarify that the loop stops as soon as a mismatch is found, and that if the loop finishes without issues, we return `True`.
+The review shared that I’m avoiding code syntax and focusing on behavior, and that my steps all support the overall goal. A few suggestions were around being more specific, such as how I describe the loop. I could clarify that the loop stops as soon as a mismatch is found, and that if the loop finishes without issues, we return "True".
 
 <br>
 
