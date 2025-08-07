@@ -79,11 +79,90 @@ One of many possible responses could look like:
 4. What should the function return if the input is an empty string, `""`?
     - The problem statement and examples don't cover this scenario. Since an empty string is the same backwards as forwards, I will assume that I should return `True`.
 
-5. Taking a look at the examples, I see all lowercased as well as strings with capitlaization at the front that both return `True`.
+5. Taking a look at the examples, I see both lowercased input and input with capitalization at the front that both return `True`.
     - Since palindromes with a single capitalized letter should return `True` according to the examples, I know that whaen I compare letters, the comparison must be case-insensitive.
 
 6. How should the function handle characters that are not letters like punctuation and white space? Is `"kayak!"` a palindrome?
     - Nothing in the problem statement or examples shows that we should ignore characters that are part of the input string. Therefore, I will assume that I should leave any non-alphabetic characters in the input and take them into account when determining if a string is a palindrome.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 06aaf99b-ff22-47dd-b3b7-4ea930a796f6
+* title: Review Observations & Questions
+* topics: pse
+##### !question
+
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
+- ensure we are asking questions that will tell us new information about the problem space
+- check our understanding of the information we expect to get from those questions
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !hint
+
+**Troubleshooting**
+- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
+- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
+
+<br>
+
+**Summarizing the Review**
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
+    - If so, what updates and why?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
+
+##### !end-hint
+##### !explanation 
+
+For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+
+<br>
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat link: `<url to your conversation>`
+
+<br>
+
+My feedback said my notes about how input should behave, such as edge cases like empty strings or punctuation, were clear and relevant. 
+
+<br>
+
+Some suggestions for improvement included refining how I describe missing behavior in the examples and calling out inconsistencies between the problem description and the actual examples. I was encouraged to look for mismatches like these and use them to guide clarifying questions. Practicing this can help uncover hidden rules or edge cases early. 
 
 ##### !end-explanation
 ### !end-challenge
