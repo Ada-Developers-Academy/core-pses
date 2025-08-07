@@ -2,10 +2,10 @@
 
 ## Problem
 
-Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sum` It finds the number of pairs of `numbers` in a list which add up to a given `target`. This function should take in a list of whole `numbers` and a `target` as parameters. This function should have a return value of the integer of number of pairs.
+Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sum`. It finds the total pairs of numbers in a list which add up to a given target value. This function should take in a list, `numbers`, of whole numbers and a `target` as parameters. This function should return an integer representing the number of pairs.
 
-| numbers                 | target | Number of pairs (return value)|
-| ----------------------- | --- | --------------- |
+| numbers | target | Number of pairs (return value)|
+| ------- | ------ | --------------- |
 | [1, 2, 4, 5]            | 6   | 2               |
 | [97, 51, 49, 35, 3, 65] | 100 | 3               |
 
@@ -13,45 +13,78 @@ Sourced from: [Geeks for Geeks](https://www.geeksforgeeks.org/count-pairs-with-g
 
 ## Prompts
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
 * id: 43ea9dc8-d8bf-4210-bffa-313201683be5
-* title: Ask Clarifying Questions
-* points: 3
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question.
+- For each observation, answer how that observation will affect your approach to the problem.
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
 ##### !hint
 
-Consider the following for inspiration:
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
+Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+- Previous PSEs
 
 ##### !end-hint
 ### !explanation
 
-Here are some example clarifying questions:
+One of many possible responses could look like:
 
-1. How does the function handle non-numeric elements in the list of `numbers`?
-1. What is the behavior for a non-numeric `target`?
-1. Can each of the numbers be used more than once in a pair that sums to the target?
-1. What is the behavior for an empty list?
+1. The problem statement and examples show that we should return the total number of pairs that create the "target", not the actual pairs themselves.
+    - This means that we only need to count matching pairs, we do not need to store or return them.
+
+2. Looking at the first example, given the inputs numbers = [1, 2, 4, 5] with target = 6, there are two unique pairs: [1, 5] and [2, 4] and the expected output is "2". 
+    - This means that however we iterate through the input "numbers" we should not double count pairs. I will need some way to keep track of the numbers that have been used in pairs as I go.
+
+3. Can a number can be reused in more than one pair?
+    - It isn't mentioned in the problem statement and the examples do not include repeated numbers or duplicate pairs. Since nothing says that numbers should be used more than once, I will assume a number can only be used in a single pair.
+    - If I am assuming a number can only be used in a single pair, as with the previous observation, I will need to keep track of the used numbers.
+
+4. The problem uses the phrase “list of whole numbers,” which usually means non-negative integers.
+    - If numbers are non-negative, I don’t need to worry about negative values in calculations or checking for negative complements
+
+5. Can the same number be used in a pair with itself? For example if number = [5, 5] and target = 10, would that be 1 pair?
+    - The examples don’t show duplicate entries in the inputs, but as long as the number appears in the list twice nothing shows that it would not be allowed. I will assume that a number can be paired with itself if it appears in "numbers" at least twice and the sum equals "target".
+
+6. How should the function handle an empty list?
+    - There are no values to try to sum, so I will assume that we will return 0 since no pairs can be summed to reach the target.
 
 ##### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
-
 ### !challenge
 * type: code-snippet
 * language: python3.6
