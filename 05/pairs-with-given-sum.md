@@ -230,7 +230,7 @@ Example tests:
 # example input 2: numbers = [1, 2, 4, 5, 1], target = 6  
 # expected output 2: pairs_with_a_given_sum(numbers, target) = 2 (assumption: the number 5 can only be used in one pair)
 
-def test_finds_two_pairs():
+def test_pairs_with_a_given_sum_finds_two_pairs():
     # nominal test case
 
     # Arrange
@@ -243,7 +243,7 @@ def test_finds_two_pairs():
     # Assert
     assert result == 2
 
-def test_finds_two_pairs_with_duplicate_number():
+def test_pairs_with_a_given_sum_finds_two_pairs_with_duplicate_number():
     # edge test case
     
     # Arrange
@@ -266,33 +266,37 @@ def test_finds_two_pairs_with_duplicate_number():
 * type: paragraph
 * id: 03d126b0-86dc-49db-9647-563c37c3711b
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `pairs_with_given_sum` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+Without writing code, describe how you would implement `pairs_with_given_sum` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
+
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
-Example Steps for an O(n<sup>2</sup>) solution: 
+Example Steps for an O(n<sup>2</sup>) approach: 
 
-1. Check for valid input
-2. Loop through the `numbers` from the first number to the second last number using a `for i in range...` loop.
-3. Loop through the `numbers` from `i+1` to the last number using a `for j in range...` loop.
-4. If `numbers[i] + numbers[j]` is equal to the target, incremement a counter by 1.
-5. Return the value of the counter
+1. Loop through the input `numbers` from the first number to the second last number
+2. Create a nested loop that starts one value past the current index of the outer loop, and then iterates until the last number in the input `numbers`
+3. If the current value of the outer loop summed with the current value of the inner loop is equal to the target, incremement a counter by 1.
+4. Return the value of the counter
 
 ### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
