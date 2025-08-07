@@ -233,20 +233,20 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
-# example input 1: s = "kayak"
-# expected output 1: check_palindrome(s) = True
+# example input 1: to_check = "kayak"
+# expected output 1: check_palindrome(to_check) = True
 
-# example input 2: s = "Kayak"
-# expected output 2: check_palindrome(s) = True
+# example input 2: to_check = "Kayak"
+# expected output 2: check_palindrome(to_check) = True
 
 def test_check_palindrome_true_for_single_word_palindrome():
     # nominal test case
 
     # Arrange
-    s = "kayak"
+    to_check = "kayak"
 
     # Act
-    result = check_palindrome(s)
+    result = check_palindrome(to_check)
 
     # Assert
     assert result == True
@@ -255,10 +255,10 @@ def test_check_palindrome_ignores_capitalization():
     # edge test case
 
     # Arrange
-    s = "Kayak"
+    to_check = "Kayak"
 
     # Act
-    result = check_palindrome(s)
+    result = check_palindrome(to_check)
 
     # Assert
     assert result == True  

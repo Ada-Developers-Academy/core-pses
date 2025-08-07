@@ -33,85 +33,91 @@ When considering example inputs and outputs, you likely considered edge cases. Y
 def check_palindrome(s):
     pass
 ```
+
 ### !end-placeholder
-
-
 ### !tests
+
 ```python
 import unittest
 from main import *
 
 class TestChallenge(unittest.TestCase):
-    def test_check_palindrome_true_for_palindrome(self):
+    def test_check_palindrome_true_for_single_word_palindrome(self):
         # Arrange
-        s = "kayak"
+        to_check = "kayak"
 
         # Act
-        result = check_palindrome(s)
+        result = check_palindrome(to_check)
 
         # Assert
         self.assertEqual(result, True)
 
     def test_check_palindrome_false_if_not_palindrome(self):
         # Arrange
-        s = "hello"
+        to_check = "hello"
 
         # Act
-        result = check_palindrome(s)
+        result = check_palindrome(to_check)
 
         # Assert
         self.assertEqual(result, False)
-```
-### !end-tests
 
+    def test_check_palindrome_ignores_capitalization():
+        # Arrange
+        to_check = "Kayak"
+
+        # Act
+        result = check_palindrome(to_check)
+
+        # Assert
+        assert result == True 
+```
+
+### !end-tests
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: d9a44610-10a8-4a2e-9532-2cca7acd1c93
 * title: What is the time complexity of your solution?
 * points: 1
 * topics: Big-O, Python, lists, matrices
-
 ##### !question
 
 What is the time complexity of your solution? Explain.
 
 ##### !end-question
-
 ##### !placeholder
 
 Time Complexity?
 
 ##### !end-placeholder
-
 ##### !answer
 
 /.+/
 
 ##### !end-answer
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: e2d65d62-f902-454b-a780-81902fa8c9f9
 * title: What is the space complexity of your solution?
 * points: 1
 * topics: Big-O, Python, lists, matrices
-
 ##### !question
 
 What is the space complexity of your solution? Explain.
 
 ##### !end-question
-
 ##### !placeholder
 
 Space Complexity?
 
 ##### !end-placeholder
 ### !end-challenge
+<!-- prettier-ignore-end -->
