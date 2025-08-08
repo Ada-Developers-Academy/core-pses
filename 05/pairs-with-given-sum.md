@@ -292,11 +292,68 @@ Write the logical steps here.
 
 Example Steps for an O(n<sup>2</sup>) approach: 
 
-1. Loop through the input `numbers` from the first number to the second last number
-2. Create a nested loop that starts one value past the current index of the outer loop, and then iterates until the last number in the input `numbers`
-3. If the current value of the outer loop summed with the current value of the inner loop is equal to the target, incremement a counter by 1.
+1. Create an empty set to store the indices of numbers we use to make pairs and initialize a counter at zero.
+2. Loop through the input `numbers` from the first number to the second last number
+3. Create a nested loop that starts one index past the current index of the outer loop. It should iterate until the last number in the input `numbers`. Each iteration:
+    - Check if the current indices of the outer and inner loops are already in the set of used indices. 
+        - If either index has been used, continue.
+    - If both indices have not been used, check if the current value of the outer loop summed with the current value of the inner loop is equal to the target. 
+        - If so, increment a counter by 1 and add the current indices of the outer and inner loop to the set of used indices.
 4. Return the value of the counter
 
 ### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 772ff0fe-4cf0-47be-a386-fbb427f5d9a0
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+The AI tool gave positive feedback that I included a length check before doing any comparison. One suggestion was to clarify how the loop compares the two strings, specifically that Hamming distance relies on comparing characters at the same index. Making that change could better show I understand both the logic and the reasoning behind the algorithm. 
+
+<br>
+
+Other suggestions were to expand the initialization step to explain what the counter is tracking and soften how I phrased the error condition (to leave room for interpretation depending on the context or language). Overall, they said my steps were strong and that another developer could follow them, but that small clarifications would make my explanation more precise and reliable. 
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
