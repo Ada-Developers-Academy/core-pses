@@ -4,10 +4,10 @@
 
 Imagine working on software that processes lists of numbers. Create a function named `pairs_with_given_sum`. It finds the total pairs of numbers in a list which add up to a given target value. This function should take in a list, `numbers`, of whole numbers and a `target` as parameters. This function should return an integer representing the number of pairs.
 
-| numbers | target | Number of pairs (return value)|
-| ------- | ------ | ----------------------------- |
-| [1, 2, 4, 5]            | 6   | 2                |
-| [97, 51, 49, 35, 3, 65] | 100 | 3                |
+| numbers                 | target | Number of pairs (return value)|
+| ----------------------- | ------ | --------------- |
+| [1, 2, 4, 5]            | 6      | 2               |
+| [97, 51, 49, 35, 3, 65] | 100    | 3               |
 
 Sourced from: [Geeks for Geeks](https://www.geeksforgeeks.org/count-pairs-with-given-sum/)
 
