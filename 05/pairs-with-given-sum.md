@@ -348,11 +348,12 @@ Chat Link: `<url to your conversation>`
 
 <br>
 
-The AI tool gave positive feedback that I included a length check before doing any comparison. One suggestion was to clarify how the loop compares the two strings, specifically that Hamming distance relies on comparing characters at the same index. Making that change could better show I understand both the logic and the reasoning behind the algorithm. 
+The feedback I received said I did a good job describing the logic in a language-agnostic way, and my nested loop design was correct and avoided duplicate or reversed pairs. 
 
-<br>
-
-Other suggestions were to expand the initialization step to explain what the counter is tracking and soften how I phrased the error condition (to leave room for interpretation depending on the context or language). Overall, they said my steps were strong and that another developer could follow them, but that small clarifications would make my explanation more precise and reliable. 
+I got helpful feedback on a few points that I can use in the future:
+- I could be more explicit about some assumptions, like the rule that each number can only be used in one pair. 
+- I could also clarify decisions like why I’m tracking indices instead of values to manage duplicate numbers. 
+- I was given tips on how to describe my loop ranges more precisely so other developers can better follow my logic. 
 
 ##### !end-explanation
 ### !end-challenge
