@@ -74,6 +74,25 @@ class TestChallenge(unittest.TestCase):
 ```
 
 ### !end-tests
+### !explanation
+
+An example of a working implementation:
+
+```python
+def check_palindrome(to_check):
+    start = 0
+    end = len(s) - 1
+
+    while start < end:
+        if to_check[start].lower() != to_check[end].lower():
+            return False
+        else:
+            start += 1
+            end -= 1
+
+    return True
+```
+### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
