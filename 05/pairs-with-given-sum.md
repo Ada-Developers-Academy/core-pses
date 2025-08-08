@@ -74,8 +74,8 @@ One of many possible responses could look like:
 4. The problem uses the phrase “list of whole numbers,” which usually means non-negative integers.
     - If numbers are non-negative, I don’t need to worry about negative values in calculations or checking for negative complements
 
-5. Can the same number be used in a pair with itself? For example if number = [5, 5] and target = 10, would that be 1 pair?
-    - The examples don’t show duplicate entries in the inputs, but as long as the number appears in the list twice nothing shows that it would not be allowed. I will assume that a number can be paired with itself if it appears in "numbers" at least twice and the sum equals "target".
+5. Can the same number be used in a pair with itself? For example if "numbers" = [5, 5] and "target" = 10, would that be 1 pair?
+    - The examples don’t show duplicate entries in the inputs, but as long as the number appears in the list twice nothing shows that it would be invalid. I will assume that a number can be paired with itself if it appears in "numbers" at least twice and the sum equals "target".
 
 6. How should the function handle an empty list?
     - There are no values to try to sum, so I will assume that we will return 0 since no pairs can be summed to reach the target.
@@ -153,7 +153,7 @@ Chat link: `<url to your conversation>`
 
 <br>
 
-The feedback shared that my observations about counting pairs rather than listing them, avoiding double-counting, and checking whether numbers can be reused were mentioned as relevant and well-reasoned. One helpful reminder based on my follow up question was to be cautious about terms like “whole numbers,” since they can be used differently depending on context. The review also suggested some additional clarifying questions, like whether order matters in a pair. Overall, I’m on the right track and need to keep building the habit of verifying assumptions. 
+The feedback shared that my observations about counting pairs rather than listing them, avoiding double-counting, and checking whether numbers can be reused were relevant and well-reasoned. One helpful reminder based on my follow up question was to be cautious about terms like “whole numbers,” since they can be used differently depending on context. The review also suggested some additional clarifying questions, like whether order matters in a pair. Overall, I’m on the right track and can benefit from continuing to build a habit of verifying assumptions. 
 
 ##### !end-explanation
 ### !end-challenge
@@ -297,7 +297,7 @@ Example Steps for an O(n<sup>2</sup>) approach:
 3. Create a nested loop that starts one index past the current index of the outer loop. It should iterate until the last number in the input `numbers`. Each iteration:
     - Check if the current indices of the outer and inner loops are already in the set of used indices. 
         - If either index has been used, continue.
-    - If both indices have not been used, check if the current value of the outer loop summed with the current value of the inner loop is equal to the target. 
+    - If both indices have not been used, check if the current value of the outer loop summed with the current value of the inner loop is equal to the `target`. 
         - If so, increment a counter by 1 and add the current indices of the outer and inner loop to the set of used indices.
 4. Return the value of the counter
 
