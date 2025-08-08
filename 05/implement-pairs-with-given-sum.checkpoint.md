@@ -67,10 +67,12 @@ An example of a working implementation, with time complexity O(n<sup>2</sup>):
 ```python
 def pairs_with_given_sum(numbers, target):
     total = 0
+
     for outer_index in range(len(numbers) - 1):
         for inner_index in range(outer_index + 1, len(numbers)):
             if numbers[outer_index] + numbers[inner_index] == target:
                 total += 1
+
     return total
 ```
 
