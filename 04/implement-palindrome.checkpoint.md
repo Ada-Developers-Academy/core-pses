@@ -30,7 +30,7 @@ When considering example inputs and outputs, you likely considered edge cases. Y
 ### !placeholder
 
 ```python
-def check_palindrome(s):
+def check_palindrome(to_check):
     pass
 ```
 
@@ -62,7 +62,7 @@ class TestChallenge(unittest.TestCase):
         # Assert
         self.assertEqual(result, False)
 
-    def test_check_palindrome_ignores_capitalization():
+    def test_check_palindrome_ignores_capitalization(self):
         # Arrange
         to_check = "Kayak"
 
@@ -81,7 +81,7 @@ An example of a working implementation:
 ```python
 def check_palindrome(to_check):
     start = 0
-    end = len(s) - 1
+    end = len(to_check) - 1
 
     while start < end:
         if to_check[start].lower() != to_check[end].lower():
