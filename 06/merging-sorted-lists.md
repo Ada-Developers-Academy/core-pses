@@ -361,7 +361,15 @@ Chat Link: `<url to your conversation>`
 
 <br>
 
+According to the review, I did well at setting up two separate pointers, keeping the steps language-agnostic, and handling edge cases like duplicates values and input lists of different lengths. I was given some helpful suggestions on how I could make a few parts clearer:
 
+- One improvement is to use consistent, descriptive names for the pointers and explain that they track positions in the lists.
+- I should clarify how I handle ties and why I chose that rule, especially since the problem didn’t define stable merging.
+- It could also be helpful to explain why it’s okay to append the rest of a list after the main loop (since the lists are already sorted).
+
+<br>
+
+I want to keep these in mind since tweaks like improving my language consistency and clarifying my decisions will make my approaches in the future easier to understand and discuss with others.
 
 ##### !end-explanation
 ### !end-challenge
