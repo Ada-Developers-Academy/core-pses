@@ -67,6 +67,36 @@ class TestPython1(unittest.TestCase):
 ```
 
 ##### !end-tests
+### !explanation
+
+An example of an O(n) implementation:
+
+```python
+def merge_lists(list1, list2):
+    pointer1 = 0
+    pointer2 = 0
+    result = []
+
+    while pointer1 < len(list1) and pointer2 < len(list2):
+        if list1[pointer1] < list2[pointer2]:
+            result.append(list1[pointer1])
+            pointer1 += 1
+        else:
+            result.append(list2[pointer2])
+            pointer2 += 1
+
+    while pointer1 < len(list1):
+        result.append(list1[pointer1])
+        pointer1 += 1
+
+    while pointer2 < len(list2):
+        result.append(list2[pointer2])
+        pointer2 += 1
+        
+    return result
+```
+
+### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
