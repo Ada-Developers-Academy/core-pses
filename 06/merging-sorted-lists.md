@@ -67,8 +67,8 @@ One of many possible responses could look like:
 2. Both of the input lists are sorted, and the return value should be in sorted order as well.
     - If I know the inputs are sorted, I can look at the values from the front to back and know they are increasing. If I iterate in the same direction, I can build my return value in sorted order by comparing the elements of the inputs and choosing the smaller value.
 
-3. Are floats or fractional numbers allowed? 
-    - The problem description says the inputs will be whole numbers, so I can assume that I will not see floats in the input. However, if floats were allowed, it should be trivial to use the same comparison process to create the sorted output.
+3. Are duplicate numbers allowed, and should duplicates be preserved?
+    - The examples shown do not have any duplicated numbers between the two input lists but nothing in the problem statement says that the numbers will be unique between the inputs, or that we should filter anything out for the return value. I will assume that all duplicate values should be kept in the output.
 
 4. How should the function handle the scenario where one or both of the input lists is empty?
     - An empty list would have no elements to add to the output. 
@@ -152,7 +152,11 @@ Chat link: `<url to your conversation>`
 
 <br>
 
+ChatGPT noted that I did a good job focusing on details that influence understanding. My point about both inputs being sorted was accurate, and in the future I should confirm if “sorted” means non-decreasing. Also, when asking about duplicates I want to remember that they might exist within a single list as well as between lists. 
 
+<br>
+
+The review suggested an extra clarification around whether stability matters. It explained that “stable merge” would mean keeping a consistent order for duplicates and that clarifying if a merge should be stable can help avoid misunderstandings. Overall, my analysis was solid, but adding these kinds of clarifications in the future would make my explanations more complete!
 
 ##### !end-explanation
 ### !end-challenge
@@ -225,7 +229,7 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
-def test_two_nominal_lists():
+def test_merge_lists_second_input_one_element():
     # nominal test case
     # Arrange
     list1 = [1, 2, 4, 6]
@@ -237,7 +241,7 @@ def test_two_nominal_lists():
     # Assert
     assert result == [1, 2, 3, 4, 5, 6]
 
-def test_empty_lists():
+def test_merge_lists_empty_inputs_returns_empty_list():
     # edge test case
     # Arrange
     list1 = []
@@ -249,7 +253,7 @@ def test_empty_lists():
     # Assert
     assert result == []
 
-def test_list_1_all_before_list_2():
+def test_merge_lists_list_1_all_before_list_2():
     # alternative test case
     # Arrange
     list1 = [-50, -25, 0]
@@ -266,7 +270,7 @@ def test_list_1_all_before_list_2():
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
-<!-- Question 3 -->
+
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
