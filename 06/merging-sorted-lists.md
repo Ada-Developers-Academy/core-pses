@@ -276,46 +276,93 @@ def test_merge_lists_list_1_all_before_list_2():
 * type: paragraph
 * id: 1f6d0c1e-df66-454b-a6e8-61ce8726b859
 * title: Create Logical Steps
-* points: 3
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `merge_lists` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `merge_lists` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps for an O(n) solution:
 
-1. Check for valid input
-1. set `i` to 0 and `j` to 0
-1. initialize `result` as an empty list
-1. while `i` < length of `list1` and `j` < length of `list2`
-    - if `list1[i]` < `list2[j]`
-        - append `list1[i]` to `result`
-        - increment `i`
-    - else
-        - append `list2[j]` to `result`
-        - increment `j`
-1. while `i` < length of `list1`
-    - append `list1[i]` to `result`
-    - increment `i`
-1. while `j `< length of `list2`
-    - append `list2[j]` to `result`
-    - increment `j`
-1. return `result`
+1. Initialize a pointer for each input to 0. These will track the current index we are examining for each list.
+2. Create a new empty list to gather our return value
+3. Iterate through the lists as long as both the pointers we created are less than the length of their respective lists.
+    -  Inside the loop, compare the element at pointer 1 in input 1 to the element at pointer 2 in list 2
+        - If the element from input 1 is smaller than the element from input 2, add the element from input 1 to our new list and increase pointer 1 by one.
+        - If the element from input 1 is larger than or equal to the element from input 2, add the element from input 2 to our new list and increase pointer 2 by one.
+4. At this point either: 
+    - the inputs are the same length and we are done processing
+    - the inputs are different lengths and one of the input lists still has remaining values. 
+        - If one of the input lists has remaining values, add them in order to the result list.
+5. return the result list
 
 ### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: a6f791db-5caf-44b2-afb0-f5a1b673b450
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
