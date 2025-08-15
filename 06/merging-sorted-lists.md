@@ -303,14 +303,14 @@ Write the logical steps here.
 Example Steps for an O(n) solution:
 
 1. Initialize a pointer for each input to 0. These will track the current index we are examining for each list.
-2. Create a new empty list to gather our return value
+2. Create a new empty list to gather our return value.
 3. Iterate through the lists as long as both the pointers we created are less than the length of their respective lists.
     -  Inside the loop, compare the element at pointer 1 in input 1 to the element at pointer 2 in list 2
         - If the element from input 1 is smaller than the element from input 2, add the element from input 1 to our new list and increase pointer 1 by one.
         - If the element from input 1 is larger than or equal to the element from input 2, add the element from input 2 to our new list and increase pointer 2 by one.
 4. At this point either: 
-    - the inputs are the same length and we are done processing
-    - the inputs are different lengths and one of the input lists still has remaining values. 
+    - The inputs are the same length and we are done processing.
+    - The inputs are different lengths and one of the input lists still has remaining values. 
         - If one of the input lists has remaining values, add them in order to the result list.
 5. Return the result list
 
