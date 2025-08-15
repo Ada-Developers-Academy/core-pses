@@ -312,7 +312,7 @@ Example Steps for an O(n) solution:
     - the inputs are the same length and we are done processing
     - the inputs are different lengths and one of the input lists still has remaining values. 
         - If one of the input lists has remaining values, add them in order to the result list.
-5. return the result list
+5. Return the result list
 
 ### !end-explanation
 ### !end-challenge
