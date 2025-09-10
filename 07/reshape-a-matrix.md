@@ -2,13 +2,13 @@
 
 ## Problem
 
-In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
+In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size while keeping its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the wanted reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the intended reshaped matrix, respectively.
 
-The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
-
-If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they were.
+- If the 'reshape' operation with given parameters is possible, output the new reshaped matrix.
+- Otherwise, raise a `ValueError` (You may choose the specific error message)
 
 **Example 1:**
 
@@ -38,13 +38,12 @@ nums =
 r = 2, c = 4
 
 Output: 
-[[1,2],
- [3,4]]
+ValueError
 ```
 
 **Explanation:**
 
-There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
+There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
 
 **Example 3:**
 
@@ -68,71 +67,82 @@ The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill i
 
 **Note:**
 
-The height and width of the given matrix is in range [1, 100].
-The given r and c are all positive.
+It can be assumed that all given `r` and `c` are positive numbers.
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 
 ## Prompts:
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 931b7218-6fc5-4fd5-9b6c-7945856a6041
-* title: Ask Clarifying Questions
+* title: Describe Your Understanding
 * topics: pse
-
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question.
+- For each observation, answer how that observation will affect your approach to the problem.
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
-
-##### !placeholder
-
-Give three clarifying questions.
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-##### !explanation
-
-Here are some example clarifying questions:
-
-1.  Are there any constraints on matrix sizes?
-1.  Can a matrix have 1 row or 1 column?
-1.  What if the matrix is empty or `None`?
-
-##### !end-explanation
-
 ##### !hint
 
-Consider the following for inspiration:
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
+Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+- Previous PSEs
 
 ##### !end-hint
+##### !explanation
 
-##### !rubric
+One of many possible responses could look like:
 
-- The answer is wrong if there aren't at least three questions
+1. The last two bullet points of the description say that we should output a new matrix or raise a ValueError.
+    - This tells me that the return value of the function should be a new matrix if reshaping is possible
 
-##### !end-rubric
+2. The problem statment says the matrix we receive as an argument will be represented as a 2 dimensional array. In the examples, the outputs are also displayed as 2 dimensional arrays 
+    - This means that the new matrix we create should also be a 2 dimensional array
 
+3. When discussing the output, it says we should raise a ValueError if the original matrix cannot be reshaped as requested.
+    - I will need to do some check in my function to see if the number of items in the original matrix is equal to the number of items in the requested matrix before trying the reshape operation.
+
+4. The problem statment says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
+    - This means that the order of the elements in the new matrix matters. I will need to go row by row starting at the front of each list in the original matrix as I fill up the new matrix.
+
+5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `r` and `c` will not be negative, but are there any special considerations if the input matrix is empty?
+    - There is nothing in the problem statment or examples that says this case should be treated any differently.
+        - If I'm given an `r` or `c` greater than 0, then I cannot reshape the matrix and would raise a ValueError
+        - If the `r` and `c` are 0, there are technically the same number of elements in the original as `r * c`, so I would return a new, empty 2 dimensional list.
+
+##### !end-explanation
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
-
 ### !challenge
 * type: code-snippet
 * language: python3.6
