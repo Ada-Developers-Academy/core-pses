@@ -23,9 +23,7 @@ Output:
 [[1,2,3,4]]
 ```
 
-**Explanation:**
-
-The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
 
 
 **Example 2:**
@@ -41,9 +39,7 @@ Output:
 ValueError
 ```
 
-**Explanation:**
-
-There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
+**Explanation:** There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
 
 **Example 3:**
 
@@ -61,9 +57,7 @@ Output:
  [5,6,7,8]]
 ```
 
-**Explanation:**
-
-The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
 
 **Note:**
 
@@ -307,7 +301,7 @@ def test_2_by_2_raises_error_reshaping_to_4_by_2():
     columns = 2
 
     # Act & Assert
-    with pytest.raises(ValueError)
+    with pytest.raises(ValueError):
         result = reshape_matrix(matrix, rows, columns)
 ```
 ##### !end-explanation

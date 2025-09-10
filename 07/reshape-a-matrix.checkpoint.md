@@ -23,9 +23,7 @@ Output:
 [[1,2,3,4]]
 ```
 
-**Explanation:**
-
-The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
 
 
 **Example 2:**
@@ -41,9 +39,7 @@ Output:
 ValueError
 ```
 
-**Explanation:**
-
-There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
+**Explanation:** There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
 
 **Example 3:**
 
@@ -61,9 +57,7 @@ Output:
  [5,6,7,8]]
 ```
 
-**Explanation:**
-
-The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
 
 **Note:**
 
@@ -219,8 +213,8 @@ class TestPython1(unittest.TestCase):
         columns = 2
 
         # Act & Assert
-        with pytest.raises(ValueError)
-            result = reshape_matrix(matrix, rows, columns)
+        with self.assertRaises(ValueError):
+            reshape_matrix(matrix, rows, columns)
 
 ```
 
@@ -255,7 +249,7 @@ def reshape_matrix(matrix, rows, columns):
     for index in range(rows):
         row_start = columns * index
         row_end = columns *(index + 1)
-        new_row = flattend[row_start : row_end]
+        new_row = flattened[row_start : row_end]
         new_matrix.append(new_row)
     return new_matrix
 ```
