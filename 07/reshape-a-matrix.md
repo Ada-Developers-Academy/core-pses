@@ -4,7 +4,7 @@
 
 In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size while keeping its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the intended reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns of the intended reshaped matrix, respectively.
 
 The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they were.
 - If the 'reshape' operation with given parameters is possible, output the new reshaped matrix.
@@ -17,7 +17,7 @@ Input:
 nums = 
 [[1,2],
  [3,4]]
-r = 1, c = 4
+rows = 1, columns = 4
 
 Output: 
 [[1,2,3,4]]
@@ -35,7 +35,7 @@ Input:
 nums = 
 [[1,2],
  [3,4]]
-r = 2, c = 4
+rows = 2, columns = 4
 
 Output: 
 ValueError
@@ -54,7 +54,7 @@ nums =
  [3,4],
  [5,6],
  [7,8]]
-r = 2, c = 4
+rows = 2, columns = 4
 
 Output: 
 [[1,2,3,4],
@@ -67,7 +67,7 @@ The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill i
 
 **Note:**
 
-It can be assumed that all given `r` and `c` are positive numbers.
+It can be assumed that all given `rows` and `columns` are positive numbers.
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 
@@ -133,10 +133,10 @@ One of many possible responses could look like:
 4. The problem statment says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
     - This means that the order of the elements in the new matrix matters. I will need to go row by row starting at the front of each list in the original matrix as I fill up the new matrix.
 
-5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `r` and `c` will not be negative, but are there any special considerations if the input matrix is empty?
+5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `rows` and `columns` will not be negative, but are there any special considerations if the input matrix is empty?
     - There is nothing in the problem statment or examples that says this case should be treated any differently.
-        - If I'm given an `r` or `c` greater than 0, then I cannot reshape the matrix and would raise a ValueError.
-        - If the `r` and `c` are 0, there are technically the same number of elements in the original as `r * c`, so I would return a new, empty 2 dimensional list.
+        - If I'm given an `rows` or `columns` greater than 0, then I cannot reshape the matrix and would raise a ValueError.
+        - If the `rows` and `columns` are 0, there are technically the same number of elements in the original as `rows * columns`, so I would return a new, empty 2 dimensional list.
 
 ##### !end-explanation
 ### !end-challenge
@@ -287,14 +287,14 @@ Example tests:
 
 ```python
 # nominal test case
-def test_4_by_1_can_reshape_into_1_by_4():
+def test_1_by_4_can_reshape_into_4_by_1():
     # Arrange
     matrix = [[1], [2], [3], [4]]
-    r = 1
-    c = 4
+    rows = 1
+    columns = 4
 
     # Act
-    result = reshape_matrix(matrix, r, c)
+    result = reshape_matrix(matrix, rows, columns)
 
     # Assert
     assert result == [[1, 2, 3, 4]]
@@ -303,12 +303,12 @@ def test_4_by_1_can_reshape_into_1_by_4():
 def test_2_by_2_raises_error_reshaping_to_4_by_2():
     # Arrange
     matrix = [[1,2], [3,4]]
-    r = 4
-    c = 2
+    rows = 4
+    columns = 2
 
     # Act & Assert
     with pytest.raises(ValueError)
-        result = reshape_matrix(matrix, r, c)
+        result = reshape_matrix(matrix, rows, columns)
 ```
 ##### !end-explanation
 ### !end-challenge
@@ -346,12 +346,12 @@ Write the logical steps here.
 Example Steps:
 
 1. Check if the reshape can be done:
-    - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (`r` multipled by `c`).
+    - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (the argument `rows` multipled by the argument `columns`).
     - If the reshape cannot be done, raise a `ValueError`
 2. Create a 2 dimensional list to store the return value
 3. Iterate through the input matrix in order. 
 4. For each element in the original matrix: 
-    - Check if we should start a new row in the output matrix. We should start a new row once the current row reaches `c` total elements.
+    - Check if we should start a new row in the output matrix. We should start a new row once the current row reaches the input `column` total elements.
     - Append the value from the input matrix to the row we are building in the output matrix
 5. Once we have iterated through all of the values in the input matrix, return the output matrix
 

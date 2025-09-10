@@ -5,7 +5,7 @@
 Sample solution:
 
 ```py
-def reshape_matrix(matrix, r, c):
+def reshape_matrix(matrix, rows, columns):
     '''
     INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
     OUTPUT: Reshaped matrix
@@ -16,22 +16,21 @@ def reshape_matrix(matrix, r, c):
     # if rows * cols of original matrix is not 
     # equal to given r * c
     # not possible to transform matrix into desired shape 
-    if originalRows * originalColumns != r * c:
-        # return original matrix
-        return matrix
+    if originalRows * originalColumns != rows * columns:
+        raise ValueError("Matrix cannot be reshaped to desired size")
 
     # flatten the original matrix
     flattened = []
     for row in matrix:
-        for elt in row:
-            flattened.append(elt)
+        for element in row:
+            flattened.append(element)
     
     # create result matrix
     new_matrix = []
-    for i in range(r):
-        row_start = c * i
-        row_end = c *(i + 1)
-        new_row = flattened[row_start : row_end]
+    for index in range(rows):
+        row_start = columns * index
+        row_end = columns *(index + 1)
+        new_row = flattend[row_start : row_end]
         new_matrix.append(new_row)
     return new_matrix
 ```
