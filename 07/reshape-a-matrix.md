@@ -359,3 +359,57 @@ Example Steps:
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 2ad12c37-4a7c-41fa-9bf9-8fa91f68bda1
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+ChatGPT's feedback said that the iteration details are clear, especially when to start a new row, and the description mostly avoids Python-specific constructs. There were a couple areas for improvement:
+- I could clarify the output structure in a more language-agnostic way using “matrix” or “2D structure” instead of “2D list”, since lists are pretty specific to Python. 
+- I should explicitly state what I mean by iterating in order, such as "iteration is row-major (left to right, top to bottom)" to avoid confusion. 
+
+<br>
+
+ChatGPT said edge cases like single-row or single-column inputs would make the approach more robust, but it also stated that "your steps do cover it". This is something I will keep in mind that I could clarify, and would want to write tests around, but it doesn't seem useful to break out specific edge cases in the algorithm's steps when those cases will be handled by the main flow of the function.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
