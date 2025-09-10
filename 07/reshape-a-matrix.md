@@ -314,47 +314,48 @@ def test_2_by_2_raises_error_reshaping_to_4_by_2():
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 1ece1eb2-0d72-4068-9ca6-f77ca49d73c5
 * title: Create Logical Steps
 * topics: pse
-
 ##### !question
 
-Without writing code, describe how you would implement `reshape_matrix` in enough detail that someone else could write the code. 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+Without writing code, describe how you would implement `reshape_matrix` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
+
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
-List logical steps to solve the problem
+Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps:
-1. Store the number of rows and number of columns in the matrix in variables `row` and `column`
-2. If `row`*`column` does not equal `r`*`c`, return the `matrix`
-3. Initialize an empty list `reshaped_matrix`
-4. Iterate through the number of rows
-5. Initialize a new row 
-6. Iterate through the columns
-7. Append the correct item to the new row
-8. Append the new row to the `reshaped_matrix`
-9. return the `reshaped_matrix`
+
+1. Check if the reshape can be done:
+    - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (`r` multipled by `c`).
+    - If the reshape cannot be done, raise a `ValueError`
+2. Create a 2 dimensional list to store the return value
+3. Iterate through the input matrix in order. 
+4. For each element in the original matrix: 
+    - Check if we should start a new row in the output matrix. We should start a new row once the current row reaches `c` total elements.
+    - Append the value from the input matrix to the row we are building in the output matrix
+5. Once we have iterated through all of the values in the input matrix, return the output matrix
 
 ### !end-explanation
-
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
+<!-- prettier-ignore-end -->
 
