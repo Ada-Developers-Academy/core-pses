@@ -122,10 +122,10 @@ Consider the following for inspiration:
 One of many possible responses could look like:
 
 1. The last two bullet points of the description say that we should output a new matrix or raise a ValueError.
-    - This tells me that the return value of the function should be a new matrix if reshaping is possible
+    - This tells me that the only expected return value of the function should be a new matrix if reshaping is possible.
 
-2. The problem statment says the matrix we receive as an argument will be represented as a 2 dimensional array. In the examples, the outputs are also displayed as 2 dimensional arrays 
-    - This means that the new matrix we create should also be a 2 dimensional array
+2. The problem statment says the matrix we receive as an argument will be represented as a 2 dimensional array. In the examples, the outputs are also displayed as 2 dimensional arrays.
+    - This means that the new matrix we create should also be a 2 dimensional array.
 
 3. When discussing the output, it says we should raise a ValueError if the original matrix cannot be reshaped as requested.
     - I will need to do some check in my function to see if the number of items in the original matrix is equal to the number of items in the requested matrix before trying the reshape operation.
@@ -135,8 +135,87 @@ One of many possible responses could look like:
 
 5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `r` and `c` will not be negative, but are there any special considerations if the input matrix is empty?
     - There is nothing in the problem statment or examples that says this case should be treated any differently.
-        - If I'm given an `r` or `c` greater than 0, then I cannot reshape the matrix and would raise a ValueError
+        - If I'm given an `r` or `c` greater than 0, then I cannot reshape the matrix and would raise a ValueError.
         - If the `r` and `c` are 0, there are technically the same number of elements in the original as `r * c`, so I would return a new, empty 2 dimensional list.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: b031f26b-0f64-4f58-99e8-f6fc4ea3ee63
+* title: Review Observations & Questions
+* topics: pse
+##### !question
+
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
+- ensure we are asking questions that will tell us new information about the problem space
+- check our understanding of the information we expect to get from those questions
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !hint
+
+**Troubleshooting**
+- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
+- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
+
+<br>
+
+**Summarizing the Review**
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
+    - If so, what updates and why?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
+
+##### !end-hint
+##### !explanation 
+
+For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+
+<br>
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat link: `<url to your conversation>`
+
+<br>
+
+My feedback from ChatGPT suggested I could strengthen my list by asking about whether matrices must always be rectangular or could be jagged and clarifying how an “empty matrix” is defined. These additions would help cover edge cases, define the boundaries of the problem space, and clarify assumptions.
+
+<br>
+
+ChatGPT also recommended asking about what types of data are allowed in the matrix, and whether error messages should be standardized. These don't seem relevant to the problem space since the type of data held by the original matrix does not affect reshaping, and the problem statement says "You may choose the specific error message".
 
 ##### !end-explanation
 ### !end-challenge
