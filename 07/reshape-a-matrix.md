@@ -242,9 +242,8 @@ ChatGPT also recommended asking about what types of data are allowed in the matr
 ##### !placeholder
 
 ```py
-# example input 1: [[1,2], [3,4], [5,6], [7,8]]
-#                  r = 2, c = 4
-# expected output 1: [[1, 2, 3, 4]], [5, 6, 7, 8]]
+# example input 1:
+# expected output 1:
 
 # example input 2: 
 # expected output 2:
@@ -271,7 +270,6 @@ def test_edge_case():
     # assert
 ```
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -283,14 +281,13 @@ class TestPython1(unittest.TestCase):
 ```
 
 ##### !end-tests
-
 ##### !explanation 
 
 Example tests:
 
 ```python
-def test_two_nominal_lists():
-    # nominal test case
+# nominal test case
+def test_4_by_1_can_reshape_into_1_by_4():
     # Arrange
     matrix = [[1], [2], [3], [4]]
     r = 1
@@ -302,34 +299,17 @@ def test_two_nominal_lists():
     # Assert
     assert result == [[1, 2, 3, 4]]
 
-def test_empty_lists():
-    # edge test case
-    # Arrange
-    matrix = []
-    r = 0
-    c = 0
-
-    # Act
-    result = reshape_matrix(matrix, r, c)
-
-    # Assert
-    assert result == []
-
-def test_list_one_all_before_list_two():
-    # alternative edge test case
+# edge test case
+def test_2_by_2_raises_error_reshaping_to_4_by_2():
     # Arrange
     matrix = [[1,2], [3,4]]
-    r = 3
+    r = 4
     c = 2
 
-    # Act
-    result = reshape_matrix(matrix, r, c)
-
-    # Assert
-    assert result == [[1,2], [3,4]]
-
+    # Act & Assert
+    with pytest.raises(ValueError)
+        result = reshape_matrix(matrix, r, c)
 ```
-
 ##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
