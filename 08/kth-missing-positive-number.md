@@ -90,7 +90,7 @@ One of many possible responses could look like:
     - This means that I do not need to consider any negative numbers for the return value. Any looping I may need to do will only need to consider positive numbers.
 
 3. Thinking more about the sentence "find the positive integer at position `missing_target` that is not present in the array", I will need some way to track how many missing numbers I've seen.
-    - This could be done with an array of the missing elements, or a counter variable
+    - This could be done several ways, some options could be creating an array of the missing elements or a counter variable.
 
 4. The input array `numbers` is sorted in a strictly increasing order. If I know the numbers are sorted and increasing, this helps me find missing numbers in the input list. 
     - If I compare the values at positions `i` and `i + 1` in `numbers`, there should be a difference of 1 if there are no missing numbers between them. 
@@ -99,6 +99,85 @@ One of many possible responses could look like:
 5. Is `missing_target` guaranteed to be a missing number between two values in `numbers?
     - Examining the second example input/output, I see that the input `numbers` is not missing any elements between the values present, and `missing_target` is 2. The expected output is "6" which is 2 larger than the last element in `numbers`. 
     - This shows me that the return value can be larger than the last value in `numbers`, it is not guaranteed to be between elements of the input list.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: bf71f5ee-d39d-4daa-bb68-6152fbd3c4ed
+* title: Review Observations & Questions
+* topics: pse
+##### !question
+
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
+- ensure we are asking questions that will tell us new information about the problem space
+- check our understanding of the information we expect to get from those questions
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !hint
+
+**Troubleshooting**
+- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
+- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
+
+<br>
+
+**Summarizing the Review**
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
+    - If so, what updates and why?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
+
+##### !end-hint
+##### !explanation 
+
+For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+
+<br>
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat link: `<url to your conversation>`
+
+<br>
+
+
+
+<br>
+
+
 
 ##### !end-explanation
 ### !end-challenge
