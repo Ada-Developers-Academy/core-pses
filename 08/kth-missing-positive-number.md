@@ -173,11 +173,17 @@ Chat link: `<url to your conversation>`
 
 <br>
 
-
+ChatGPT gave me feedback that the questions and observation I shared were useful and specific ones like recognizing that the target missing number might lie beyond the largest element help prevent wrong assuptions.
 
 <br>
 
+The feedback suggested I could add a few more clarifications.
+- Some seem useful like whether the list could be empty. 
+- Other suggestions leaned into validation that's outside the scope of the problem or wouldn't necessarily change the implementation, like whether the missing target always exists or how large the inputs could get. 
 
+<br>
+
+I asked some questions around feedback that said I could ask if duplicates were possible even though "strictly increasing" means that isn't likely, since I found it a little confusing. This gave me a better understanding that no duplicates and strict ordering is what makes the logic straightforward when finding missing values of the input `numbers`. 
 
 ##### !end-explanation
 ### !end-challenge
