@@ -2,11 +2,11 @@
 
 ## Given this problem prompt
 
-Given an array `arr` of positive integers sorted in a strictly increasing order and an integer `k`, find the kth positive integer that is not present in the array.
+Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `missing_target`, find the positive integer at position `missing_target` that is not present in the array.
 
 **Example 1:**
 ```
-Input: arr = [2, 3, 4, 7, 11], k = 5
+Input: numbers = [2, 3, 4, 7, 11], missing_target = 5
 Output: 9
 
 Explanation: 
@@ -19,7 +19,7 @@ Count:               1  2  3  4  5
 
 **Example 2:**
 ```
-Input: arr = [1, 2, 3, 4], k = 2
+Input: numbers = [1, 2, 3, 4], missing_target = 2
 Output: 6
 
 Explanation: 
@@ -32,9 +32,9 @@ Count:               1  2
 
 **Constraints:**
 ```
-1 <= arr[i]
-1 <= k
-arr[i] < arr[j] for 1 <= i < j <= arr.length
+1 <= numbers[i]
+1 <= missing_target
+numbers[i] < numbers[j] for 1 <= i < j <= numbers.length
 ```
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/kth-missing-positive-number/)
