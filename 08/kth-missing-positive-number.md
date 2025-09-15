@@ -1,4 +1,4 @@
-# Kth Missing Positive Number
+# Find the Target Missing Positive Number
 
 ## Problem Description
 
@@ -202,7 +202,7 @@ I asked some questions around feedback that said I could ask if duplicates were 
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
-2. Write unit tests for `kth_missing_positive_number` for the nominal and edge cases you identified in the first step.
+2. Write unit tests for `find_missing_positive_number` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
@@ -257,25 +257,25 @@ Example tests:
 
 ```python
 # nominal test case
-def test_nominal_list():
+def test_missing_element_inside_list_found():
     # Arrange
-    arr = [2,3,4,7,11]
-    k = 5
+    numbers = [2, 3, 4, 7, 11]
+    missing_target = 5
 
     # Act
-    result = kth_missing_positive_number(arr, k)
+    result = find_missing_positive_number(numbers, missing_target)
 
     # Assert
     assert result == 9
 
 # edge test case
-def test_empty_lists():
+def test_empty_list_returns_missing_target():
     # Arrange
-    arr = []
-    k = 3
+    numbers = []
+    missing_target = 3
 
     # Act
-    result = kth_missing_positive_number(arr, k)
+    result = find_missing_positive_number(numbers, missing_target)
 
     # Assert
     assert result == 3
