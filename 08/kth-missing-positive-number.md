@@ -10,7 +10,7 @@ Input: numbers = [2, 3, 4, 7, 11], missing_target = 5
 Output: 9
 
 Explanation: 
-- The missing positive integers are [1, 5, 6, 8, 9, 10, 12, 13, ...]. 
+- The missing positive integers are [1, 5, 6, 8, 9, 10, 12, 13, ...]
 - The 5th missing positive integer is 9.
 
 Missing numbers:    [1, 5, 6, 8, 9, 10, 12, 13,...]
@@ -96,7 +96,7 @@ One of many possible responses could look like:
     - If I compare the values at positions `i` and `i + 1` in `numbers`, there should be a difference of 1 if there are no missing numbers between them. 
     - If the difference is greater than 1, I know there are missing numbers I should track.
 
-5. Is `missing_target` guaranteed to be a missing number between two values in `numbers?
+5. Is `missing_target` guaranteed to be a missing number between two values in `numbers`?
     - Examining the second example input/output, I see that the input `numbers` is not missing any elements between the values present, and `missing_target` is 2. The expected output is "6" which is 2 larger than the last element in `numbers`. 
     - This shows me that the return value can be larger than the last value in `numbers`, it is not guaranteed to be between elements of the input list.
 
@@ -177,13 +177,13 @@ ChatGPT gave me feedback that the questions and observation I shared were useful
 
 <br>
 
-The feedback suggested I could add a few more clarifications.
+The feedback suggested I could add a few more clarifications:
 - Some seem useful like whether the list could be empty. 
 - Other suggestions leaned into validation that's outside the scope of the problem or wouldn't necessarily change the implementation, like whether the missing target always exists or how large the inputs could get. 
 
 <br>
 
-I asked some questions around feedback that said I could ask if duplicates were possible even though "strictly increasing" means that isn't likely, since I found it a little confusing. This gave me a better understanding that no duplicates and strict ordering is what makes the logic straightforward when finding missing values of the input `numbers`. 
+I asked some questions around feedback that said I could ask if duplicates were possible even though "strictly increasing" means that isn't likely, since I found it a little confusing. This gave me a better understanding that no duplicates and strict ordering is what makes the logic straightforward when checking for missing values between the elements of the input `numbers`.
 
 ##### !end-explanation
 ### !end-challenge
@@ -257,7 +257,7 @@ Example tests:
 
 ```python
 # nominal test case
-def test_missing_element_inside_list_found():
+def test_find_missing_positive_number_missing_element_inside_list_found():
     # Arrange
     numbers = [2, 3, 4, 7, 11]
     missing_target = 5
@@ -269,7 +269,7 @@ def test_missing_element_inside_list_found():
     assert result == 9
 
 # edge test case
-def test_empty_list_returns_missing_target():
+def test_find_missing_positive_number_empty_list_returns_missing_target():
     # Arrange
     numbers = []
     missing_target = 3
@@ -295,35 +295,94 @@ def test_empty_list_returns_missing_target():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `kth_missing_positive_number` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `find_missing_positive_number` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps for an O(n) solution:
 
-1. Check for valid input
-2. If `k` is smaller than the first value in the input list `arr`, return `k`
-3. Create a loop over the input `arr` that: 
-   * starts at the first element of `arr` 
-   * ends one element before the last element of `arr`
-4. Inside the loop:
-    1. Check if there are numbers missing between the current element and the next element in `arr`. Store the difference between the next element and the current element of `arr` in a new variable `missing_count`.
-    2. if `k` is less than or equal to `missing_count`, return the value of `arr` at `index` plus `k` 
-    3. Update the variable `k` by subtracting `missing_count`
-5. If the loop ends, return the last element of the list plus the remaining value of `k`.
+1. Handle edge case:
+   * If `missing_target` is smaller than the first value in `numbers`, return `missing_target`
+2. Create a loop over the input `numbers` that: 
+   * starts at the first element of `numbers` 
+   * ends one element before the last element of `numbers`
+3. Inside the loop:
+    1. Check if there are numbers missing between the current element and the next element in `numbers`. If there are missing numbers, store the count in a variable.
+    2. If `missing_target` is less than or equal to the count variable just created, return the value of `numbers` at the current index plus `missing_target` 
+    3. If we did not return, update the variable `missing_target` by subtracting the new missing count variable
+4. If the loop ends, return the last element of the list plus the remaining value of `missing_target`.
 
 ### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: d424be4c-55d2-4c7f-be56-e14240f51c01
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+I got feedback that my approach did a good job keeping the explanation language-agnostic and focusing on logical conditions instead of Python syntax.
+While my steps can correctly solve the problem, ChatGPT suggested I make my reasoning clearer in a few spots, such as why the loop stops at the second-to-last element and how the missing count between numbers is determined. In asking ChatGPT about why I would want to include this information, it shared that this demonstrates deeper understanding, helps catch small mistakes, makes my approach easier for others to follow, and strengthens my algorithmic thinking skills. 
+
+<br>
+
+It was also suggested to bring up the case where the missing target is far beyond the largest element, so other developers see I’ve considered it. However, this case is already covered by my steps. If I were writing these steps again I could highlight that the last step handles when `missing_target` is beyond the end of `numbers`, but since there aren't constraints on size that we need to consider and the suggestion does not change how the implementation is handled, I don't think this suggestion from ChatGPT is especially useful in this context. 
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
