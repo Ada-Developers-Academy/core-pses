@@ -1,8 +1,5 @@
 # Implement Find the Target Missing Positive Number
 
-
-## Given this problem prompt
-
 Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `missing_target`, find the positive integer at position `missing_target` that is not present in the array.
 
 **Example 1:**
@@ -45,7 +42,7 @@ Sourced from:  [Leetcode](https://leetcode.com/problems/kth-missing-positive-num
 * type: code-snippet
 * language: python3.6
 * id: 5a380194-96e2-4b87-9aa7-2fe407448e1f
-* title: Coding Solution
+* title: Find the Target Missing Positive Number
 * points: 3
 * topics: python, pse, python-lists
 ##### !question
