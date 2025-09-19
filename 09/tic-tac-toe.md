@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe)
+Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
 Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board - Either no player has won yet, it's a tie, `'X'` won, or `'O'` won. 
 - This function should take in 3x3 matrix as a parameter
@@ -253,7 +253,6 @@ def test_edge_case():
     # assert
 ```
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -265,7 +264,6 @@ class TestPython1(unittest.TestCase):
 ```
 
 ##### !end-tests
-
 ##### !explanation 
 
 Example tests:
@@ -314,7 +312,6 @@ def test_tic_tac_toe_no_winner_returns_tie():
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 3 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -323,38 +320,37 @@ def test_tic_tac_toe_no_winner_returns_tie():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `tic_tac_toe_winner` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `tic_tac_toe_winner` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
-Example Steps for an O(n) solution:
+Example Steps:
 
-1. Check for valid input
-1. Create a list of all possible winning combinations
-    * winning_combinations = [ [ (0, 0), (0, 1), (O, 2)],
-                                 [(1, 0), (1, 1), (1, 2)],
-                                 [(2, 0), (2, 1), (2, 2)],
-                                 [ (0, 0), (1, 0), (2, 0)],
-                                 [ (0, 1), (1, 1), (2, 1)],
-                                 [ (0, 2), (1, 2), (2, 2)],
-                                 [ (0, 0), (1, 1), (2, 2)],
-                                 [ (0, 2), (1, 1), (2, 0)]
-                    ]
-1. Loop throught the winning combinations and check to see if each element in the conbination is equal and not empty.
-    * If this is true return the value of the first element in the combination.
+1. Check for a winner `X` or `O`:
+   1. Loop over the input matrix by row, checking if each element is the same and is not an empty string. If so, return the first element of the row.
+   2. Loop over the input matrix by column, checking if each element is the same and is not an empty string. If so, return the first element of the column.
+   3. Check the indices for the left to right diagonal and right to left diagonal. If the strings are all the same and are not empty for one of the diagonals, return the first element of that diagonal.
+2. If we have not returned by this point, check for "Tie" or ongoing game:
+    1. Loop over the input row by row and check for any empty strings. If there are empty strings, moves can still be made so we will return `None` for a game still in progress.
+    2. If the loop ends and we have not returned, then return `Tie` since the board must be full and there is no winner.
 
 ### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->

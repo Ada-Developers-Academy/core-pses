@@ -2,7 +2,7 @@
 
 ## Problem
 
-Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe)
+Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
 Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board - Either no player has won yet, it's a tie, `'X'` won, or `'O'` won. 
 - This function should take in 3x3 matrix as a parameter
