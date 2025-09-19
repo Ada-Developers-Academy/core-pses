@@ -6,53 +6,57 @@ Create a function named `tic_tac_toe_winner` that is responsible for determing t
 - This function should take in 3x3 matrix as a parameter
     - Each element is either an `'X'`, `'O'`, or empty string `''`
 - This function should have a return value of:
-    - the winner `'X'` or `'O'` if a winner exists
+    - The winner `'X'` or `'O'` if a winner exists
     - `'Tie'` for a full board with no winner
     - `None` for a game that is still in progress and has no winner
 
 *Example 1:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'X', 'O']
 ]
+
+Output: 'Tie'
 ```
-Output: `'Tie'`
 
 *Example 2:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'O', '']
 ]
+
+Output: 'O'
 ```
-Output: `'O'`
 
 *Example 3:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'O'],
     ['O', 'X', 'O'],
     ['', '', 'X']
 ]
+
+Output: 'X'
 ```
-Output: `'X'`
 
 *Example 4:*
-Input:
 ```
+Input:
 [
     ['X', '', 'O'],
     ['O', 'X', 'X'],
     ['', '', '']
 ]
+
+Output: None
 ```
-Output: `None`
 
 ## Prompts
 
@@ -198,7 +202,7 @@ ChatGPT positively mentioned my edge-case thinking (empty board, simultaneous wi
 
 <br>
 
-Being explicit about how empty boards are handled could be useful based on the continued conversation I had with ChatGPT around this, but most of the suggestions revolved around validating inputs that isn't relevant to the scope of our problem since we are assuming validation has already been completed. I asked for clarification on why bringing up an empty board is useful since it's already covered by the problem statement, and got feedback that doing so can help clarify between `None` vs `'Tie'` conditions, surface hidden assumptions, and encourage exhaustive thinking.
+Being explicit about how empty boards are handled could be useful based on the continued conversation I had with ChatGPT around this, but most of the suggestions above revolved around validating inputs that aren't relevant to the scope of our problem since we are assuming validation has already been completed. I asked for clarification on why bringing up an empty board is useful since it's already covered by the problem statement, and got feedback that doing so can help clarify between `None` vs `'Tie'` conditions, surface hidden assumptions, and encourage exhaustive thinking.
 
 ##### !end-explanation
 ### !end-challenge
@@ -269,8 +273,8 @@ class TestPython1(unittest.TestCase):
 Example tests:
 
 ```python
+# nominal test case
 def test_tic_tac_toe_winner_row_win_x():
-    # nominal test case
     # Arrange
     board = [['X', 'X', 'X'],
              ['O', 'O', ''],
@@ -282,8 +286,9 @@ def test_tic_tac_toe_winner_row_win_x():
     # Assert
     assert result == 'X'
 
+# edge test case
 def test_tic_tac_toe_winner_empty_board_returns_none():
-    # edge test case
+    # Arrange
     board = [['', '', ''],
              ['', '', ''],
              ['', '', '']]
@@ -294,8 +299,8 @@ def test_tic_tac_toe_winner_empty_board_returns_none():
     # Assert
     assert result is None
 
+# alternative nominal test case
 def test_tic_tac_toe_no_winner_returns_tie():
-    # alternative test case
     # Arrange
     board = [['O', 'X', 'X'],
              ['X', 'O', 'O'],
@@ -344,13 +349,69 @@ Write the logical steps here.
 Example Steps:
 
 1. Check for a winner `X` or `O`:
-   1. Loop over the input matrix by row, checking if each element is the same and is not an empty string. If so, return the first element of the row.
-   2. Loop over the input matrix by column, checking if each element is the same and is not an empty string. If so, return the first element of the column.
-   3. Check the indices for the left to right diagonal and right to left diagonal. If the strings are all the same and are not empty for one of the diagonals, return the first element of that diagonal.
+   1. Loop over the input matrix by row, checking if each element of the row is the same and is not an empty string. If so, return the first element of the row.
+   2. Loop over the input matrix by column, checking if each element of the column is the same and is not an empty string. If so, return the first element of the column.
+   3. Check the indices for the left to right diagonal and right to left diagonal. If the strings are all the same and are not empty for either of the diagonals, return the first element of that diagonal.
 2. If we have not returned by this point, check for "Tie" or ongoing game:
     1. Loop over the input row by row and check for any empty strings. If there are empty strings, moves can still be made so we will return `None` for a game still in progress.
     2. If the loop ends and we have not returned, then return `Tie` since the board must be full and there is no winner.
 
 ### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 4dddccc4-3815-4e20-b39b-b7ef8fa5bae0
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+ChatGpt noted positively that my steps were language-agnostic, organized into phases, and correctly identified the three winning conditions: rows, columns, and diagonals.
+
+<br>
+
+There were some suggestions where I could improve my steps by stating why we want to do something or focus more on the logic:
+- Since it isn't in the problem description, I could note that only one winner can exist at a time, which avoids confusion.
+- I could add clarity to what the diagonal checks are by explicitly stating there are only two diagonals on a 3×3 board.
+- For tie and in-progress checks, I should emphasize the logic (empty spaces mean in progress, none mean tie) instead of describing loops.
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->

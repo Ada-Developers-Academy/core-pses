@@ -8,53 +8,57 @@ Create a function named `tic_tac_toe_winner` that is responsible for determing t
 - This function should take in 3x3 matrix as a parameter
     - Each element is either an `'X'`, `'O'`, or empty string `''`
 - This function should have a return value of:
-    - the winner `'X'` or `'O'` if a winner exists
+    - The winner `'X'` or `'O'` if a winner exists
     - `'Tie'` for a full board with no winner
     - `None` for a game that is still in progress and has no winner
 
 *Example 1:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'X', 'O']
 ]
+
+Output: 'Tie'
 ```
-Output: `'Tie'`
 
 *Example 2:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'O', '']
 ]
+
+Output: 'O'
 ```
-Output: `'O'`
 
 *Example 3:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'O'],
     ['O', 'X', 'O'],
     ['', '', 'X']
 ]
+
+Output: 'X'
 ```
-Output: `'X'`
 
 *Example 4:*
-Input:
 ```
+Input:
 [
     ['X', '', 'O'],
     ['O', 'X', 'X'],
     ['', '', '']
 ]
+
+Output: None
 ```
-Output: `None`
 
 <!-- prettier-ignore-start -->
 ### !challenge
