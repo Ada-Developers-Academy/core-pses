@@ -76,7 +76,7 @@ Code the solution to `tic_tac_toe_winner`
   <summary>Tests converted to Pytest</summary>
 
   ```python
-    def test_tic_tac_toe_no_winner_returns_tie():
+    def test_tic_tac_toe_winner_no_winner_returns_tie():
         # Arrange
         board =[
             ['X', 'O', 'X'],
@@ -184,7 +184,7 @@ import unittest
 from main import tic_tac_toe_winner
 
 class TestPython1(unittest.TestCase):
-    def test_tic_tac_toe_no_winner_returns_tie(self):
+    def test_tic_tac_toe_winner_no_winner_returns_tie(self):
         # Arrange
         board =[
             ['X', 'O', 'X'],
