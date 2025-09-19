@@ -34,7 +34,7 @@ def tic_tac_toe_winner(board):
         # If any space is '' --> Return None for 'game in progress'
         if '' in row:
             return None
-            
+
     return 'Tie'
 ```
 
@@ -43,10 +43,10 @@ def tic_tac_toe_winner(board):
 ```py
 def tic_tac_toe_winner(board):
     counter = 0
-    for i in board:
-        for element in i:
-            if element !="":
-                counter+=1
+    for row in board:
+        for element in row:
+            if element != "":
+                counter += 1
     
     combinations = [
       # horizontal
@@ -57,17 +57,17 @@ def tic_tac_toe_winner(board):
       ((0,0), (0,1), (0,2)),
       ((1,0), (1,1), (1,2)),
       ((2,0), (2,1), (2,2)),
-      # crossed
+      # diagonal
       ((0,0), (1,1), (2,2)),
       ((2,0), (1,1), (0,2))
     ]
 
     for coordinates in combinations:
-        letters = [board[y][x] for x,y in coordinates]
+        letters = [board[y][x] for x, y in coordinates]
         if len(set(letters)) == 1:
             return letters[0] # returns corresponding letter for winner (X/O)
 
-    if counter==9:
+    if counter == 9:
         return "Tie"
     else:
         return None
