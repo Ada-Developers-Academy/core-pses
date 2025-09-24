@@ -64,7 +64,7 @@ def tic_tac_toe_winner(board):
 
     for coordinates in combinations:
         letters = [board[y][x] for x, y in coordinates]
-        if len(set(letters)) == 1:
+        if len(set(letters)) == 1 and letters[0] != "":
             return letters[0] # returns corresponding letter for winner (X/O)
 
     if counter == 9:
