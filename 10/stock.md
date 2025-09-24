@@ -316,33 +316,35 @@ def test_max_profit_only_decreasing_prices_returns_0():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `max_profit` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `max_profit` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
 Example Steps for an O(n) solution:
 
-1. Check for valid input
-1. set `total` to `0`
-1. set `index` to `1`
-1. `while index < len(stocks)`
-    *  if `stocks[index - 1] > stocks[index]`
-        * `total = total + stocks[index - 1] - stocks[index]` 
-    * `index = index + 1`
-1. `return total`
+1. Create a variable to accumulate the total profit initialized to 0.
+2. Loop over the input prices:
+   1. For each index of prices, check if the value at the next index is greater than the value at the current index. If the value at the next index is greater, that means a profit can be made. 
+   2. If a profit can be made, add the difference between the next value and the current value to the variable that's accumulating our total.
+3. When the loop over the input prices is complete, return the accumulator variable
 
 ### !end-explanation
-
 ### !end-challenge
 <!-- prettier-ignore-end -->
