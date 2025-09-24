@@ -61,41 +61,40 @@ Sourced from: [Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell
 
 Write a solution to the Buying Stock function below.  The following tests will evaluate your solution.
 
-<!-- prettier-ignore -->
 <details>
   <summary>Tests converted to Pytest</summary>
 
   ```python
 
-    def test_profit_7_1_5_3_6_4(self):
+    def test_max_profit_nominal_input_can_profit_twice_returns_7():
         # Arrange
         arr = [7, 1, 5, 3, 6, 4]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        assert answer == 7
+        assert result == 7
 
-    def test_profit_1_2_3_4_5(self):
+    def test_max_profit_strictly_increasing_input_returns_4():
         # Arrange
         arr = [1, 2, 3, 4, 5]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        assert answer == 4
+        assert result == 4
 
-    def test_profit_7_6_4_3_1(self):
+    def test_max_profit_only_decreasing_prices_returns_0():
         # Arrange
         arr = [7, 6, 4, 3, 1]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        assert answer == 0
+        assert result == 0
   ```
 </details>
 
@@ -103,7 +102,7 @@ Write a solution to the Buying Stock function below.  The following tests will e
 ##### !placeholder
 
 ```py
-def max_profit(arr):
+def max_profit(prices):
     pass
     
 
@@ -117,35 +116,35 @@ import unittest
 from main import max_profit
 
 class TestPython1(unittest.TestCase):
-    def test_profit_7_1_5_3_6_4(self):
+    def test_max_profit_nominal_input_can_profit_twice_returns_7(self):
         # Arrange
         arr = [7, 1, 5, 3, 6, 4]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        self.assertEqual(answer, 7)
+        self.assertEqual(result, 7)
 
-    def test_profit_1_2_3_4_5(self):
+    def test_max_profit_strictly_increasing_input_returns_4(self):
         # Arrange
         arr = [1, 2, 3, 4, 5]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        self.assertEqual(answer, 4)
+        self.assertEqual(result, 4)
 
-    def test_profit_7_6_4_3_1(self):
+    def test_max_profit_only_decreasing_prices_returns_0(self):
         # Arrange
         arr = [7, 6, 4, 3, 1]
 
         # Act
-        answer = max_profit(arr)
+        result = max_profit(arr)
 
         # Assert
-        self.assertEqual(answer, 0)
+        self.assertEqual(result, 0)
 ```
 
 ##### !end-tests
@@ -156,9 +155,9 @@ Our solution:
 ```python
 def max_profit(prices):
     total_profit = 0
-    for i in range(1, len(prices)):
-        # if prices[i] - prices[i-1] is > 0, then we have a profit
-        total_profit += max(prices[i]-prices[i-1], 0)
+    for day in range(1, len(prices)):
+        # if prices[day] - prices[day - 1] is > 0, then we have a profit
+        total_profit += max(prices[day] - prices[day - 1], 0)
     return total_profit
 ```
 
