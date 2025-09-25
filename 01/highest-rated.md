@@ -274,7 +274,7 @@ def test_get_highest_rated_one_restaurant_returns_dict():
     # assert
     assert output == {"name": "Crow's Nest", "rating": 1}
 
-def test_get_highest_rated_empty_list_returns_none(self):
+def test_get_highest_rated_empty_list_returns_none():
     # edge test case
 
     # arrange
