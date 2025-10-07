@@ -1,6 +1,6 @@
 # Hamming
 
-## Problem Statment
+## Problem Statement
 
 Imagine working on software that analyzes mutations in DNA.
 

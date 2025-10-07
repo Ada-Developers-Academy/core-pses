@@ -1,6 +1,6 @@
 # Palindrome
 
-## Problem Statment
+## Problem Statement
 
 Imagine working on software that processes text. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 

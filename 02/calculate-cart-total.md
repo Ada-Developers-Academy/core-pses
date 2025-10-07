@@ -86,7 +86,7 @@ One of many possible responses could look like:
     - This means that I will need to loop over the input `cart` and access each element.
     - I will need to maintain a variable to hold the running total as I loop through `cart`
 
-2. The problem statment says that we should return the total cost of all items in the list `cart`. 
+2. The problem statement says that we should return the total cost of all items in the list `cart`. 
     - This indicates that we are returning a numeric type. Looking at the examples below, I see prices like "0.75" and "1.25" which tells me that our return value needs to be a float.
 
 3. The problem statement also says that `cart` is a list of strings, not prices.

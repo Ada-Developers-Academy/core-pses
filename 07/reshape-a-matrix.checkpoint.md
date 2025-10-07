@@ -2,29 +2,28 @@
 
 ## Problem
 
-In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
+In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different dimensions while keeping its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers **r** and **c** representing the number of rows and number of columns of the wanted reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns respectively of the intended reshaped matrix.
 
-The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
-
-If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they originally appeared.
+- If the 'reshape' operation with given parameters is possible, output the new reshaped matrix.
+- Otherwise, raise a `ValueError` (You may choose the specific error message)
 
 **Example 1:**
+
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
-r = 1, c = 4
+[[1, 2],
+ [3, 4]]
+rows = 1, columns = 4
 
-Output: 
-[[1,2,3,4]]
+Result: 
+[[1, 2, 3, 4]]
 ```
 
-**Explanation:**
-
-The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 
 **Example 2:**
@@ -32,110 +31,119 @@ The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matr
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
-r = 2, c = 4
+[[1, 2],
+ [3, 4]]
+rows = 2, columns = 4
 
-Output: 
-[[1,2],
- [3,4]]
+Result: 
+ValueError
 ```
 
-**Explanation:**
-
-There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
+**Explanation:** There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix, so we raise a ValueError.
 
 **Example 3:**
 
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4],
- [5,6],
- [7,8]]
-r = 2, c = 4
+[[1, 2],
+ [3, 4],
+ [5, 6],
+ [7, 8]]
+rows = 2, columns = 4
 
-Output: 
-[[1,2,3,4],
- [5,6,7,8]]
+Result: 
+[[1, 2, 3, 4],
+ [5, 6, 7, 8]]
 ```
 
-**Explanation:**
-
-The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 **Note:**
 
-The height and width of the given matrix is in range [1, 100].
-The given r and c are all positive.
+It can be assumed that all given `rows` and `columns` are positive numbers.
 
 Sourced from:  [Leetcode](https://leetcode.com/problems/reshape-the-matrix/)
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: code-snippet
 * language: python3.6
 * id: de8a690a-da2d-46b0-821c-00ed6968d7d5
 * title: Coding Solution
 * points: 3
 * topics: python, pse, python-lists
-
 ##### !question
 
 Implement `reshape_matrix`.
 
-Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your assumptions above, and take these assumptions for this challenge.
+Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your previous submission, and use these assumptions for this challenge.
 
 ```py
-def test_convert_two_by_two_to_one_by_four():
-    matrix = [[1,2],[3,4]]
-    r = 1
-    c = 4
+def test_reshape_matrix_1_by_4_can_reshape_into_4_by_1():
+    # Arrange
+    matrix = [[1], [2], [3], [4]]
+    rows = 1
+    columns = 4
 
-    reshaped_matrix = reshape_matrix(matrix, r, c)
+    # Act
+    result = reshape_matrix(matrix, rows, columns)
 
-    assert reshaped_matrix == [[1,2,3,4]]
+    # Assert
+    assert result == [[1, 2, 3, 4]]
 
-def test_cannot_reshape():
-    matrix = [[1,2],[3,4]]
-    r = 2
-    c = 4
+def test_reshape_matrix_2_by_2_can_reshape_into_1_by_4():
+    # Arrange
+    matrix = [[1, 2], [3, 4]]
+    rows = 1
+    columns = 4
 
-    reshaped_matrix = reshape_matrix(matrix, r, c)
+    # Act
+    result = reshape_matrix(matrix, rows, columns)
 
-    assert reshaped_matrix == [[1,2],[3,4]]
+    # Assert
+    assert result == [[1, 2, 3, 4]]
 
-def test_convert_four_by_two_to_two_by_four():
-    matrix = [[1,2],[3,4],[5,6],[7,8]]
-    r = 2
-    c = 4
+def test_reshape_matrix_4_by_2_can_reshape_into_2_by_4():
+    # Arrange
+    matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
+    rows = 2
+    columns = 4
 
-    reshaped_matrix = reshape_matrix(matrix, r, c)
+    # Act
+    result = reshape_matrix(matrix, rows, columns)
 
-    assert reshaped_matrix == [[1,2,3,4],[5,6,7,8]]
+    # Assert
+    assert result == [[1, 2, 3, 4], [5, 6, 7, 8]]
 
-def test_three_by_three_to_nine_by_one(self):
-        # Arrange
-        matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
-        r = 9
-        c = 1 
-        # Act
-        answer = reshape_matrix(matrix, r, c)
-        # Assert
-        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], answer)
+def test_reshape_matrix_3_by_3_can_reshape_into_9_by_1():
+    # Arrange
+    matrix = [[7, 2, 1], [4, 3, 5], [6, 9, 8]]
+    rows = 9
+    columns = 1 
 
+    # Act
+    result = reshape_matrix(matrix, rows, columns)
+
+    # Assert
+    assert result == [[7], [2], [1], [4], [3], [5], [6], [9], [8]]
+
+def test_reshape_matrix_2_by_2_raises_error_reshaping_to_4_by_2():
+    # Arrange
+    matrix = [[1,2], [3,4]]
+    rows = 4
+    columns = 2
+
+    # Act & Assert
+    with pytest.raises(ValueError)
+        reshape_matrix(matrix, rows, columns)
 ```
 
 ##### !end-question
-
 ##### !placeholder
 
 ```python
-def reshape_matrix(matrix, r, c):
+def reshape_matrix(matrix, rows, columns):
     '''
     INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
     OUTPUT: Reshaped matrix
@@ -144,67 +152,80 @@ def reshape_matrix(matrix, r, c):
 ```
 
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
 import unittest
 from main import reshape_matrix
 class TestPython1(unittest.TestCase):
-    def test_example_one(self):
+    def test_reshape_matrix_1_by_4_can_reshape_into_4_by_1(self):
         # Arrange
-        matrix = [[1,2],[3,4]]
-        r = 1
-        c = 4
-        # Act
-        answer = reshape_matrix(matrix, r, c)
-        # Assert
-        self.assertEqual([[1,2,3,4]], answer)
+        matrix = [[1], [2], [3], [4]]
+        rows = 1
+        columns = 4
 
-    def test_example_two(self):
-        # Arrange
-        matrix = [[1,2],[3,4]]
-        r = 2
-        c = 4
         # Act
-        answer = reshape_matrix(matrix, r, c)
-        # Assert
-        self.assertEqual([[1,2],[3,4]], answer) 
-        
-    def test_example_three(self):
-        # Arrange
-        matrix = [[1,2],[3,4],[5,6],[7,8]]
-        r = 2
-        c = 4
-        # Act
-        answer = reshape_matrix(matrix, r, c)
-        # Assert
-        self.assertEqual([[1,2,3,4],[5,6,7,8]], answer)
+        result = reshape_matrix(matrix, rows, columns)
 
-    def test_three_by_three_to_nine_by_one(self):
+        # Assert
+        self.assertEqual([[1, 2, 3, 4]], result)
+
+    def test_reshape_matrix_2_by_2_can_reshape_into_1_by_4(self):
+        # Arrange
+        matrix = [[1, 2], [3, 4]]
+        rows = 1
+        columns = 4
+
+        # Act
+        result = reshape_matrix(matrix, rows, columns)
+
+        # Assert
+        self.assertEqual([[1,2,3,4]], result)
+
+
+    def test_reshape_matrix_4_by_2_can_reshape_into_2_by_4(self):
+        # Arrange
+        matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
+        rows = 2
+        columns = 4
+
+        # Act
+        result = reshape_matrix(matrix, rows, columns)
+
+        # Assert
+        self.assertEqual([[1, 2, 3, 4], [5, 6, 7, 8]], result)
+
+    def test_reshape_matrix_3_by_3_can_reshape_into_9_by_1(self):
         # Arrange
         matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
-        r = 9
-        c = 1 
+        rows = 9
+        columns = 1 
+
         # Act
-        answer = reshape_matrix(matrix, r, c)
+        result = reshape_matrix(matrix, rows, columns)
+
         # Assert
-        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], answer)
+        self.assertEqual([[7], [2], [1], [4], [3], [5], [6], [9], [8]], result)
+
+    def test_reshape_matrix_2_by_2_raises_error_reshaping_to_4_by_2(self):
+        # Arrange
+        matrix = [[1, 2], [3, 4]]
+        rows = 4
+        columns = 2
+
+        # Act & Assert
+        with self.assertRaises(ValueError):
+            reshape_matrix(matrix, rows, columns)
 
 ```
 
 ##### !end-tests
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
 #### !explanation
+
 An example of a working implementation:
 
 ```py
-def reshape_matrix(matrix, r, c):
+def reshape_matrix(matrix, rows, columns):
     '''
     INPUT: Two dimensional list, and number of rows and columns of reshaped matrix
     OUTPUT: Reshaped matrix
@@ -213,79 +234,77 @@ def reshape_matrix(matrix, r, c):
     originalColumns = len(matrix[0])
     
     # if rows * cols of original matrix is not 
-    # equal to given r * c
+    # equal to given rows * columns
     # not possible to transform matrix into desired shape 
-    if originalRows * originalColumns != r * c:
-        # return original matrix
-        return matrix
+    if originalRows * originalColumns != rows * columns:
+        raise ValueError("Matrix cannot be reshaped to desired size")
 
     # flatten the original matrix
     flattened = []
     for row in matrix:
-        for elt in row:
-            flattened.append(elt)
+        for element in row:
+            flattened.append(element)
     
     # create result matrix
     new_matrix = []
-    for i in range(r):
-        row_start = c * i
-        row_end = c *(i + 1)
-        new_row = flattend[row_start : row_end]
+    for index in range(rows):
+        row_start = columns * index
+        row_end = columns * (index + 1)
+        new_row = flattened[row_start:row_end]
         new_matrix.append(new_row)
     return new_matrix
 ```
+
 #### !end-explanation
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
-<!-- ======================= END CHALLENGE ======================= -->
-
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 976fd220-e3f3-41f4-adb2-908e30d1e363
 * title: What is the time complexity of your solution?
 * points: 1
 * topics: Big-O, Python, lists, matrices
-
 ##### !question
 
 What is the time complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
-
 ##### !placeholder
 
 Time Complexity?
 
 ##### !end-placeholder
-
 ##### !answer
 
 /.+/
 
 ##### !end-answer
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ### !challenge
-
 * type: paragraph
 * id: 7bb7f05e-257c-43ba-a811-8900cfd622e9
 * title: What is the space complexity of your solution?
 * points: 1
 * topics: Big-O, Python, lists, matrices
-
 ##### !question
 
 What is the space complexity of your solution? Explain. Define your variable(s).
 
 ##### !end-question
-
 ##### !placeholder
 
 Space Complexity?
 
 ##### !end-placeholder
-
 ### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
