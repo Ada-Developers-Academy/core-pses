@@ -127,10 +127,8 @@ One of many possible responses could look like:
 4. The problem statement says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
     - This means that the order of the elements in the new matrix matters. I will need to go row by row starting at the front of each list in the original matrix as I fill up the new matrix.
 
-5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `rows` and `columns` will not be negative, but are there any special considerations if the input matrix is empty?
-    - There is nothing in the problem statement or examples that says this case should be treated any differently.
-        - If I'm given an `rows` or `columns` greater than 0, then I cannot reshape the matrix and would raise a ValueError.
-        - If the `rows` and `columns` are 0, there are technically the same number of elements in the original as `rows * columns`, so I would return a new, empty 2 dimensional list.
+5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `rows` and `columns` will not be negative. We have also been given the note "It can be assumed that all given `rows` and `columns` are positive numbers." 
+    - This means that the implementation does not need to worry about a case where the input matrix is empty or how an empty matrix might be represented in this scenario, as it is unclear what the definition of an empty matrix could be for this problem. (For example `[]` reports 0 rows, but would error if we try to read the columns and `[[]]` reports 0 columns, but 1 row).
 
 ##### !end-explanation
 ### !end-challenge
