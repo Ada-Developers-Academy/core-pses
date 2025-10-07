@@ -2,11 +2,11 @@
 
 ## Problem
 
-In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size while keeping its original data.
+In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different dimensions while keeping its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns of the intended reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns respectively of the intended reshaped matrix.
 
-The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they were.
+The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they originally appeared.
 - If the 'reshape' operation with given parameters is possible, output the new reshaped matrix.
 - Otherwise, raise a `ValueError` (You may choose the specific error message)
 
@@ -15,15 +15,15 @@ The reshaped matrix needs to be filled with all the elements of the original mat
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
+[[1, 2],
+ [3, 4]]
 rows = 1, columns = 4
 
-Output: 
-[[1,2,3,4]]
+Result: 
+[[1, 2, 3, 4]]
 ```
 
-**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 
 **Example 2:**
@@ -31,11 +31,11 @@ Output:
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
+[[1, 2],
+ [3, 4]]
 rows = 2, columns = 4
 
-Output: 
+Result: 
 ValueError
 ```
 
@@ -46,18 +46,18 @@ ValueError
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4],
- [5,6],
- [7,8]]
+[[1, 2],
+ [3, 4],
+ [5, 6],
+ [7, 8]]
 rows = 2, columns = 4
 
-Output: 
-[[1,2,3,4],
- [5,6,7,8]]
+Result: 
+[[1, 2, 3, 4],
+ [5, 6, 7, 8]]
 ```
 
-**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 **Note:**
 
@@ -80,7 +80,7 @@ Implement `reshape_matrix`.
 Use these tests to guide your solution. These tests may make different assumptions about the problem than you did! Do not alter your previous submission, and use these assumptions for this challenge.
 
 ```py
-def test_1_by_4_can_reshape_into_4_by_1():
+def test_reshape_matrix_1_by_4_can_reshape_into_4_by_1():
     # Arrange
     matrix = [[1], [2], [3], [4]]
     rows = 1
@@ -92,9 +92,9 @@ def test_1_by_4_can_reshape_into_4_by_1():
     # Assert
     assert result == [[1, 2, 3, 4]]
 
-def test_2_by_2_can_reshape_into_1_by_4():
+def test_reshape_matrix_2_by_2_can_reshape_into_1_by_4():
     # Arrange
-    matrix = [[1,2],[3,4]]
+    matrix = [[1, 2], [3, 4]]
     rows = 1
     columns = 4
 
@@ -102,11 +102,11 @@ def test_2_by_2_can_reshape_into_1_by_4():
     result = reshape_matrix(matrix, rows, columns)
 
     # Assert
-    assert result == [[1,2,3,4]]
+    assert result == [[1, 2, 3, 4]]
 
-def test_4_by_2_can_reshape_into_2_by_4():
+def test_reshape_matrix_4_by_2_can_reshape_into_2_by_4():
     # Arrange
-    matrix = [[1,2],[3,4],[5,6],[7,8]]
+    matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
     rows = 2
     columns = 4
 
@@ -114,11 +114,11 @@ def test_4_by_2_can_reshape_into_2_by_4():
     result = reshape_matrix(matrix, rows, columns)
 
     # Assert
-    assert result == [[1,2,3,4],[5,6,7,8]]
+    assert result == [[1, 2, 3, 4], [5, 6, 7, 8]]
 
-def test_3_by_3_can_reshape_into_9_by_1():
+def test_reshape_matrix_3_by_3_can_reshape_into_9_by_1():
     # Arrange
-    matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
+    matrix = [[7, 2, 1], [4, 3, 5], [6, 9, 8]]
     rows = 9
     columns = 1 
 
@@ -126,9 +126,9 @@ def test_3_by_3_can_reshape_into_9_by_1():
     result = reshape_matrix(matrix, rows, columns)
 
     # Assert
-    self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], result)
+    assert result == [[7], [2], [1], [4], [3], [5], [6], [9], [8]]
 
-def test_2_by_2_raises_error_reshaping_to_4_by_2():
+def test_reshape_matrix_2_by_2_raises_error_reshaping_to_4_by_2():
     # Arrange
     matrix = [[1,2], [3,4]]
     rows = 4
@@ -136,7 +136,7 @@ def test_2_by_2_raises_error_reshaping_to_4_by_2():
 
     # Act & Assert
     with pytest.raises(ValueError)
-        result = reshape_matrix(matrix, rows, columns)
+        reshape_matrix(matrix, rows, columns)
 ```
 
 ##### !end-question
@@ -158,7 +158,7 @@ def reshape_matrix(matrix, rows, columns):
 import unittest
 from main import reshape_matrix
 class TestPython1(unittest.TestCase):
-    def test_1_by_4_can_reshape_into_4_by_1(self):
+    def test_reshape_matrix_1_by_4_can_reshape_into_4_by_1(self):
         # Arrange
         matrix = [[1], [2], [3], [4]]
         rows = 1
@@ -168,11 +168,11 @@ class TestPython1(unittest.TestCase):
         result = reshape_matrix(matrix, rows, columns)
 
         # Assert
-        assert result == [[1, 2, 3, 4]]
+        self.assertEqual([[1, 2, 3, 4]], result)
 
-    def test_2_by_2_can_reshape_into_1_by_4(self):
+    def test_reshape_matrix_2_by_2_can_reshape_into_1_by_4(self):
         # Arrange
-        matrix = [[1,2],[3,4]]
+        matrix = [[1, 2], [3, 4]]
         rows = 1
         columns = 4
 
@@ -180,11 +180,12 @@ class TestPython1(unittest.TestCase):
         result = reshape_matrix(matrix, rows, columns)
 
         # Assert
-        assert result == [[1,2,3,4]]
+        self.assertEqual([[1,2,3,4]], result)
 
-    def test_4_by_2_can_reshape_into_2_by_4(self):
+
+    def test_reshape_matrix_4_by_2_can_reshape_into_2_by_4(self):
         # Arrange
-        matrix = [[1,2],[3,4],[5,6],[7,8]]
+        matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
         rows = 2
         columns = 4
 
@@ -192,9 +193,9 @@ class TestPython1(unittest.TestCase):
         result = reshape_matrix(matrix, rows, columns)
 
         # Assert
-        assert result == [[1,2,3,4],[5,6,7,8]]
+        self.assertEqual([[1, 2, 3, 4], [5, 6, 7, 8]], result)
 
-    def test_3_by_3_can_reshape_into_9_by_1(self):
+    def test_reshape_matrix_3_by_3_can_reshape_into_9_by_1(self):
         # Arrange
         matrix = [[7, 2, 1], [4,3,5], [6,9,8]]
         rows = 9
@@ -204,11 +205,11 @@ class TestPython1(unittest.TestCase):
         result = reshape_matrix(matrix, rows, columns)
 
         # Assert
-        self.assertEqual([[7],[2],[1],[4],[3],[5],[6],[9],[8]], result)
+        self.assertEqual([[7], [2], [1], [4], [3], [5], [6], [9], [8]], result)
 
-    def test_2_by_2_raises_error_reshaping_to_4_by_2(self):
+    def test_reshape_matrix_2_by_2_raises_error_reshaping_to_4_by_2(self):
         # Arrange
-        matrix = [[1,2], [3,4]]
+        matrix = [[1, 2], [3, 4]]
         rows = 4
         columns = 2
 

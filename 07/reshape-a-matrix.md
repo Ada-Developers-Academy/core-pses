@@ -340,10 +340,10 @@ Example Steps:
 1. Check if the reshape can be done:
     - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (the argument `rows` multipled by the argument `columns`).
     - If the reshape cannot be done, raise a `ValueError`
-2. Create a 2 dimensional list to store the return value
+2. Create an empty list where we'll store the rows of the new matrix for our return value
 3. Iterate through the input matrix in order. 
 4. For each element in the original matrix: 
-    - Check if we should start a new row in the output matrix. We should start a new row once the current row reaches the input `column` total elements.
+    - Check if we should start a new row in the output matrix. We should start a new row once the current row reaches the input `column` total elements. This new row should be appended to the list holding the rows of our output matrix.
     - Append the value from the input matrix to the row we are building in the output matrix
 5. Once we have iterated through all of the values in the input matrix, return the output matrix
 
@@ -386,7 +386,7 @@ In the box below, please submit:
 ##### !end-question
 ##### !explanation
 
-As an example, let’s say we provided observations simliar to the logical steps in the explanation for the question above in our prompt. Depending on how our steps differ and exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we used logical steps similar to the explanation for the question above in our prompt. Depending on how the supplied steps differ and exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
