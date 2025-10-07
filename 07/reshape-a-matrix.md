@@ -2,11 +2,11 @@
 
 ## Problem
 
-In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size while keeping its original data.
+In MATLAB, a programming platform for numeric computing, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different dimensions while keeping its original data.
 
-You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns of the intended reshaped matrix, respectively.
+You're given a matrix represented by a two-dimensional array, and two positive integers **rows** and **columns** representing the number of rows and number of columns respectively of the intended reshaped matrix.
 
-The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they were.
+The reshaped matrix needs to be filled with all the elements of the original matrix in the same row-traversing order as they originally appeared.
 - If the 'reshape' operation with given parameters is possible, output the new reshaped matrix.
 - Otherwise, raise a `ValueError` (You may choose the specific error message)
 
@@ -15,15 +15,15 @@ The reshaped matrix needs to be filled with all the elements of the original mat
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
+[[1, 2],
+ [3, 4]]
 rows = 1, columns = 4
 
-Output: 
-[[1,2,3,4]]
+Result: 
+[[1, 2, 3, 4]]
 ```
 
-**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 
 **Example 2:**
@@ -31,11 +31,11 @@ Output:
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4]]
+[[1, 2],
+ [3, 4]]
 rows = 2, columns = 4
 
-Output: 
+Result: 
 ValueError
 ```
 
@@ -46,18 +46,18 @@ ValueError
 ```
 Input: 
 nums = 
-[[1,2],
- [3,4],
- [5,6],
- [7,8]]
+[[1, 2],
+ [3, 4],
+ [5, 6],
+ [7, 8]]
 rows = 2, columns = 4
 
-Output: 
-[[1,2,3,4],
- [5,6,7,8]]
+Result: 
+[[1, 2, 3, 4],
+ [5, 6, 7, 8]]
 ```
 
-**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the previous list.
+**Explanation:** The original matrix was 4 * 2. The new reshaped matrix is a 2 * 4 matrix, fill it row by row by using the values in the order they appear in the original matrix.
 
 **Note:**
 
@@ -118,17 +118,17 @@ One of many possible responses could look like:
 1. The last two bullet points of the description say that we should output a new matrix or raise a ValueError.
     - This tells me that the only expected return value of the function should be a new matrix if reshaping is possible.
 
-2. The problem statment says the matrix we receive as an argument will be represented as a 2 dimensional array. In the examples, the outputs are also displayed as 2 dimensional arrays.
+2. The problem statement says the matrix we receive as an argument will be represented as a 2 dimensional array. In the examples, the outputs are also displayed as 2 dimensional arrays.
     - This means that the new matrix we create should also be a 2 dimensional array.
 
 3. When discussing the output, it says we should raise a ValueError if the original matrix cannot be reshaped as requested.
     - I will need to do some check in my function to see if the number of items in the original matrix is equal to the number of items in the requested matrix before trying the reshape operation.
 
-4. The problem statment says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
+4. The problem statement says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
     - This means that the order of the elements in the new matrix matters. I will need to go row by row starting at the front of each list in the original matrix as I fill up the new matrix.
 
 5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `rows` and `columns` will not be negative, but are there any special considerations if the input matrix is empty?
-    - There is nothing in the problem statment or examples that says this case should be treated any differently.
+    - There is nothing in the problem statement or examples that says this case should be treated any differently.
         - If I'm given an `rows` or `columns` greater than 0, then I cannot reshape the matrix and would raise a ValueError.
         - If the `rows` and `columns` are 0, there are technically the same number of elements in the original as `rows * columns`, so I would return a new, empty 2 dimensional list.
 
