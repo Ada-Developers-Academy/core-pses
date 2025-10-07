@@ -127,7 +127,7 @@ One of many possible responses could look like:
 4. The problem statement says the new matrix needs to be filled with the elements of the old matrix in the same row-traversing order.
     - This means that the order of the elements in the new matrix matters. I will need to go row by row starting at the front of each list in the original matrix as I fill up the new matrix.
 
-5. We can assume that the arguments to the function will be valid, so the input matrix will be a 2 dimensional list, and the `rows` and `columns` will not be negative. We have also been given the note "It can be assumed that all given `rows` and `columns` are positive numbers." 
+5. We can assume that the arguments to the function will be valid, so the input matrix will be a nested list with a consistent number of `rows` and `columns`, and the `rows` and `columns` will not be negative. We have also been given the note "It can be assumed that all given `rows` and `columns` are positive numbers." 
     - This means that the implementation does not need to worry about a case where the input matrix is empty or how an empty matrix might be represented in this scenario, as it is unclear what the definition of an empty matrix could be for this problem. (For example `[]` reports 0 rows, but would error if we try to read the columns and `[[]]` reports 0 columns, but 1 row).
 
 ##### !end-explanation
@@ -191,7 +191,7 @@ In the box below, please submit:
 ##### !end-hint
 ##### !explanation 
 
-For an example of what a review response might look like, let’s say that we provided observations simliar to the example response from the "Explanation" section of the previous question to complete the review prompt. 
+For an example of what a review response might look like, let’s say that we provided observations similar to the example response from the "Explanation" section of the previous question to complete the review prompt. 
 
 <br>
 
@@ -203,7 +203,7 @@ Chat link: `<url to your conversation>`
 
 <br>
 
-My feedback from ChatGPT suggested I could strengthen my list by asking about whether matrices must always be rectangular or could be jagged which would help cover edge cases, define the boundaries of the problem space, and clarify assumptions.
+My feedback from ChatGPT suggested I could strengthen my list by asking about whether matrices must always be rectangular or could be jagged which would help cover edge cases, define the boundaries of the problem space, and clarify assumptions. I asked some follow up questions to better understand what a jagged array is. Since it wouldn't be a valid matrix, it sounds like I can ignore that possibility for this case.
 
 <br>
 
@@ -338,7 +338,7 @@ Write the logical steps here.
 Example Steps:
 
 1. Check if the reshape can be done:
-    - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (the argument `rows` multipled by the argument `columns`).
+    - See if the number of elements in the original matrix (number of rows multiplied by the number of columns) matches the number of elements in the desired output (the argument `rows` multiplied by the argument `columns`).
     - If the reshape cannot be done, raise a `ValueError`
 2. Create an empty list where we'll store the rows of the new matrix for our return value
 3. Iterate through the input matrix in order. 
