@@ -191,11 +191,11 @@ In the box below, please submit:
 ##### !end-hint
 ##### !explanation 
 
-For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+For an example of what a review response might look like, let’s say that we provided observations simliar to the example response from the "Explanation" section of the previous question to complete the review prompt. 
 
 <br>
 
-Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+Depending on how our observations differ and exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
@@ -203,7 +203,7 @@ Chat link: `<url to your conversation>`
 
 <br>
 
-My feedback from ChatGPT suggested I could strengthen my list by asking about whether matrices must always be rectangular or could be jagged and clarifying how an “empty matrix” is defined. These additions would help cover edge cases, define the boundaries of the problem space, and clarify assumptions.
+My feedback from ChatGPT suggested I could strengthen my list by asking about whether matrices must always be rectangular or could be jagged which would help cover edge cases, define the boundaries of the problem space, and clarify assumptions.
 
 <br>
 
@@ -279,7 +279,7 @@ Example tests:
 
 ```python
 # nominal test case
-def test_1_by_4_can_reshape_into_4_by_1():
+def test_reshape_matrix_1_by_4_can_reshape_into_4_by_1():
     # Arrange
     matrix = [[1], [2], [3], [4]]
     rows = 1
@@ -292,15 +292,15 @@ def test_1_by_4_can_reshape_into_4_by_1():
     assert result == [[1, 2, 3, 4]]
 
 # edge test case
-def test_2_by_2_raises_error_reshaping_to_4_by_2():
+def test_reshape_matrix_2_by_2_raises_error_reshaping_to_4_by_2():
     # Arrange
-    matrix = [[1,2], [3,4]]
+    matrix = [[1, 2], [3, 4]]
     rows = 4
     columns = 2
 
     # Act & Assert
     with pytest.raises(ValueError):
-        result = reshape_matrix(matrix, rows, columns)
+        reshape_matrix(matrix, rows, columns)
 ```
 ##### !end-explanation
 ### !end-challenge
@@ -386,7 +386,7 @@ In the box below, please submit:
 ##### !end-question
 ##### !explanation
 
-As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we provided observations simliar to the logical steps in the explanation for the question above in our prompt. Depending on how our steps differ and exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
