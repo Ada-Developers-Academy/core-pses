@@ -154,7 +154,7 @@ Standards:
         Path: /07/reshape-a-matrix.checkpoint.md
   -
     Title: PSE 08
-    Description: Kth Missing Positive Number
+    Description: Find the Target Missing Positive Number
     UID: 104de1dc-9c42-4da8-b94f-802c36bbbd6c
     SuccessCriteria:
       - success criteria
