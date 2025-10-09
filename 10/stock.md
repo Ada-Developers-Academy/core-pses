@@ -1,4 +1,4 @@
-# Best time to sell Stock
+# Best Time to Sell Stock
 
 You are given an integer array `prices` that represents the cost of a stock across a sequence of days. `prices[day]` is the price of a given stock on that day.
 - On each day, you may decide to buy and/or sell the stock. 
