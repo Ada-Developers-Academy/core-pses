@@ -1,4 +1,4 @@
-# Implement Find the Target Missing Positive Number
+# Implement Find the Kth Missing Positive Number
 
 Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `kth_missing`, find the positive integer at position `kth_missing` that is not present in the array.
 
@@ -62,7 +62,7 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
       result = find_missing_positive_number(numbers, kth_missing)
 
       # Assert
-      assert 1 == result
+      assert result == 1
 
   def test_find_missing_number_finds_number_near_end_of_list():
       # Arrange
@@ -73,7 +73,7 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
       result = find_missing_positive_number(numbers, kth_missing)
       
       # Assert
-      assert 9 == result
+      assert result == 9
 
   def test_find_missing_positive_number_when_number_is_after_list():
       # Arrange
@@ -84,7 +84,7 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
       result = find_missing_positive_number(numbers, kth_missing)
       
       # Assert
-      assert 6 == result
+      assert result == 6 
 
   def test_find_missing_positive_number_2nd_number_before_list_starts():
       # Arrange
@@ -94,7 +94,7 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
       # Act
       result = find_missing_positive_number(numbers, kth_missing)
       
-      assert 2 == result
+      assert result == 2
   ```
 
 </details>
@@ -134,40 +134,37 @@ class TestPython1(unittest.TestCase):
     # Assert
     self.assertEqual(1, result)
 
+  def test_find_missing_number_finds_number_near_end_of_list(self):
+      # Arrange
+      numbers = [2, 3, 4, 7, 11]
+      kth_missing = 5
 
-def test_find_missing_number_finds_number_near_end_of_list(self):
-    # Arrange
-    numbers = [2, 3, 4, 7, 11]
-    kth_missing = 5
+      # Act
+      result = find_missing_positive_number(numbers, kth_missing)
+      
+      # Assert
+      self.assertEqual(9, result)
 
-    # Act
-    result = find_missing_positive_number(numbers, kth_missing)
-    
-    # Assert
-    self.assertEqual(9, result)
+  def test_find_missing_positive_number_when_number_is_after_list(self):
+      # Arrange
+      numbers = [1, 2, 3, 4]
+      kth_missing = 2
 
+      # Act
+      result = find_missing_positive_number(numbers, kth_missing)
+      
+      # Assert
+      self.assertEqual(6, result)
 
-def test_find_missing_positive_number_when_number_is_after_list(self):
-    # Arrange
-    numbers = [1, 2, 3, 4]
-    kth_missing = 2
+  def test_find_missing_positive_number_2nd_number_before_list_starts(self):
+      # Arrange
+      numbers = [3, 4, 5, 7, 11]
+      kth_missing = 2
 
-    # Act
-    result = find_missing_positive_number(numbers, kth_missing)
-    
-    # Assert
-    self.assertEqual(6, result)
-
-
-def test_find_missing_positive_number_2nd_number_before_list_starts(self):
-    # Arrange
-    numbers = [3, 4, 5, 7, 11]
-    kth_missing = 2
-
-    # Act
-    result = find_missing_positive_number(numbers, kth_missing)
-    
-    self.assertEqual(2, result)
+      # Act
+      result = find_missing_positive_number(numbers, kth_missing)
+      
+      self.assertEqual(2, result)
 
 ```
 

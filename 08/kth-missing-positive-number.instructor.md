@@ -1,4 +1,4 @@
-# Instructor: Find the Missing Positive Number
+# Instructor: Find the Kth Missing Positive Number
 
 ## O(n) Solution
 
