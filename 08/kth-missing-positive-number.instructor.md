@@ -51,11 +51,11 @@ def find_missing_positive_number(numbers, kth_missing):
 ```
 
 ```py
-def find_missing_positive_number(numbers, missing_target):
+def find_missing_positive_number(numbers, kth_missing):
     lo = 0
     hi = len(numbers)  # exclusive
     
-    # find the lowest index where the number of missing values >= missing_target
+    # find the lowest index where the number of missing values >= kth_missing
     while lo < hi:
         # due to truncate, mid will always be < hi (at least lo)
         # this means mid is always in the array bounds
@@ -68,43 +68,43 @@ def find_missing_positive_number(numbers, missing_target):
         num_missing = numbers[mid] - (mid + 1)
   
         # we are looking for the smallest index where the number of missing values
-        # exceeds or is equal to missing_target
+        # exceeds or is equal to kth_missing
         # finding that position means that we've found the index where we move
         # from having too few missing numbers to having too many or just enough,
         # so the value itself must be "between" the found location and the one before it
-        if num_missing < missing_target:
+        if num_missing < kth_missing:
             lo = mid + 1  # too few, so shift range up
         else:
             hi = mid  # too many or still tied, so shift range down
             
-      return lo + missing_target
+      return lo + kth_missing
 
     # lo is now the index of the first position where the number of missing
-    # values is >= missing_target
+    # values is >= kth_missing
     # our general formula to find the number of missing values at any index
     # is numbers[index] - (index + 1)
     # we can use this to find the number of missing values at the previous index
-    # which tells us how many more we need to count up to reach missing_target.
+    # which tells us how many more we need to count up to reach kth_missing.
     # the index before lo is lo-1, so:
     # num_missing_before = numbers[lo - 1] - (lo - 1 + 1)
     #   = numbers[lo - 1] - lo (distribute the - and simplify)
     # This would fail if lo is 0, but we'll see this works out in the end
-    # The number of missing values we still need to count up to reach missing_target is:
-    # remaining_missing = missing_target - num_missing_before
-    #   = missing_target - (numbers[lo - 1] - lo) (substitute)
-    #   = missing_target - numbers[lo - 1] + lo (distribute)
-    #   = missing_target + lo - numbers[lo - 1] (rearrange)
+    # The number of missing values we still need to count up to reach kth_missing is:
+    # remaining_missing = kth_missing - num_missing_before
+    #   = kth_missing - (numbers[lo - 1] - lo) (substitute)
+    #   = kth_missing - numbers[lo - 1] + lo (distribute)
+    #   = kth_missing + lo - numbers[lo - 1] (rearrange)
     # This means the target missing number is the remaining missing beyond the last
     # number we have, which is
     # target_missing = numbers[lo - 1] + remaining_missing
-    #   = numbers[lo - 1] + missing_target + lo - numbers[lo - 1] (substitute)
-    #   = numbers[lo - 1] - numbers[lo - 1] + missing_target + lo (rearrange)
-    #   = missing_target + lo (simplify)
+    #   = numbers[lo - 1] + kth_missing + lo - numbers[lo - 1] (substitute)
+    #   = numbers[lo - 1] - numbers[lo - 1] + kth_missing + lo (rearrange)
+    #   = kth_missing + lo (simplify)
     # Notice that if lo is 0, this still works, since the expression that would
     # fail (numbers[lo - 1]) is eliminated in the simplification.
     # Though this result may be surprising, we can verify it manually. For example,
     # for an empty list, lo will be 0, and the target missing number will always
-    # be missing_target, which is correct.
+    # be kth_missing, which is correct.
     # We can try this with cases where the target missing comes before the first
     # number in the list, between numbers in the list, and after the last number
     # in the list (with and without missing numbers in the list), and it always works.
