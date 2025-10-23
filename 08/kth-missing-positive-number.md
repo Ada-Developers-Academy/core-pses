@@ -161,7 +161,7 @@ In the box below, please submit:
 ##### !end-hint
 ##### !explanation 
 
-For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+For an example of what a review response might look like, let’s say that we provided observations similar to the example response from the "Explanation" section of the previous question to complete the review prompt. 
 
 <br>
 
@@ -319,15 +319,15 @@ Write the logical steps here.
 Example Steps for an O(n) solution:
 
 1. Handle edge case:
-   * If `missing_target` is smaller than the first value in `numbers`, return `missing_target`
-2. Create a loop over the input `numbers` that: 
-   * starts at the first element of `numbers` 
-   * ends one element before the last element of `numbers`
-3. Inside the loop:
-    1. Check if there are numbers missing between the current element and the next element in `numbers`. If there are missing numbers, store the count in a variable.
-    2. If `missing_target` is less than or equal to the count variable just created, return the value of `numbers` at the current index plus `missing_target` 
-    3. If we did not return, update the variable `missing_target` by subtracting the new missing count variable
-4. If the loop ends, return the last element of the list plus the remaining value of `missing_target`.
+   * If `missing_target` is smaller than the first value in `numbers`, then `missing_target` is itself the missing number since it would take more numbers than `missing_target` to even make us look at the array values. Return `missing_target`
+2. Loop over the input `numbers`: 
+   * start at the first element of `numbers` 
+   * end one element before the last element of `numbers`
+3. Inside the loop, we will look for gaps in the numbers to find the spot where we've seen enough gaps that the current gap includes the missing number. We'll do this by identifying individual gaps, and decreasing the `missing_target` by the number of missing values in the gap. As `missing_target` gets smaller, this will mean that we're getting closer to the gap that actually contains the missing value.
+    1. Check if there are numbers missing between the current element and the next element in `numbers`. If there are missing numbers, store the count in a variable representing the current gap size.
+    2. If `missing_target` is less than or equal to the gap size variable just created, the missing number is found within this gap. `missing_target` has been reduced with each gap we've found, so what's left is the number of values beyond the value at the current index. Return the value of `numbers` at the current index plus `missing_target` (the remaining count of missing values).
+    3. If we did not return, update the variable `missing_target` by subtracting the gap size variable. This works because the gap we just encountered contained some number of missing values, which means the number we have left to find is the number we _had_ left to find `missing_target` decreased by the count of missing numebrs we just found (the gap size).
+4. If the loop ends, this means that even accounting for all of the gaps in the array, there are still numbers left to find. `missing_target` has been reduced by the total size of the gaps found in the array, so the missing value we're looking for is the final value in the array plus the remaining count of missing values `missing_target`. Return the last element of the list plus the remaining value of `missing_target`.
 
 ### !end-explanation
 ### !end-challenge
@@ -368,7 +368,7 @@ In the box below, please submit:
 ##### !end-question
 ##### !explanation
 
-As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we used logical steps similar to the explanation for the question above in our prompt. Depending on how the supplied steps differ and exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
