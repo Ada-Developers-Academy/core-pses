@@ -50,4 +50,66 @@ def find_missing_positive_number(numbers, kth_missing):
     return left + kth_missing
 ```
 
+```py
+def find_missing_positive_number(numbers, missing_target):
+    lo = 0
+    hi = len(numbers)  # exclusive
+    
+    # find the lowest index where the number of missing values >= missing_target
+    while lo < hi:
+        # due to truncate, mid will always be < hi (at least lo)
+        # this means mid is always in the array bounds
+        mid = (lo + hi) // 2
+  
+        # number we expect to find at any position (if there are no missing numbers)
+        # is just the index + 1 (since we start at 1)
+        # the difference between what we expect and what we have is how many are
+        # missing up to that point (prior to the mid index)
+        num_missing = numbers[mid] - (mid + 1)
+  
+        # we are looking for the smallest index where the number of missing values
+        # exceeds or is equal to missing_target
+        # finding that position means that we've found the index where we move
+        # from having too few missing numbers to having too many or just enough,
+        # so the value itself must be "between" the found location and the one before it
+        if num_missing < missing_target:
+            lo = mid + 1  # too few, so shift range up
+        else:
+            hi = mid  # too many or still tied, so shift range down
+            
+      return lo + missing_target
+
+    # lo is now the index of the first position where the number of missing
+    # values is >= missing_target
+    # our general formula to find the number of missing values at any index
+    # is numbers[index] - (index + 1)
+    # we can use this to find the number of missing values at the previous index
+    # which tells us how many more we need to count up to reach missing_target.
+    # the index before lo is lo-1, so:
+    # num_missing_before = numbers[lo - 1] - (lo - 1 + 1)
+    #   = numbers[lo - 1] - lo (distribute the - and simplify)
+    # This would fail if lo is 0, but we'll see this works out in the end
+    # The number of missing values we still need to count up to reach missing_target is:
+    # remaining_missing = missing_target - num_missing_before
+    #   = missing_target - (numbers[lo - 1] - lo) (substitute)
+    #   = missing_target - numbers[lo - 1] + lo (distribute)
+    #   = missing_target + lo - numbers[lo - 1] (rearrange)
+    # This means the target missing number is the remaining missing beyond the last
+    # number we have, which is
+    # target_missing = numbers[lo - 1] + remaining_missing
+    #   = numbers[lo - 1] + missing_target + lo - numbers[lo - 1] (substitute)
+    #   = numbers[lo - 1] - numbers[lo - 1] + missing_target + lo (rearrange)
+    #   = missing_target + lo (simplify)
+    # Notice that if lo is 0, this still works, since the expression that would
+    # fail (numbers[lo - 1]) is eliminated in the simplification.
+    # Though this result may be surprising, we can verify it manually. For example,
+    # for an empty list, lo will be 0, and the target missing number will always
+    # be missing_target, which is correct.
+    # We can try this with cases where the target missing comes before the first
+    # number in the list, between numbers in the list, and after the last number
+    # in the list (with and without missing numbers in the list), and it always works.
+    # This is a case where a relatively simple looking result is not obvious
+    # until you work through the reasoning.
+```
+
 [Source: Leetcode](https://leetcode.com/problems/kth-missing-positive-number/solution/)
