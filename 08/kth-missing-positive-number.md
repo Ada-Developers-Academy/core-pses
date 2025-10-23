@@ -1,12 +1,12 @@
-# Find the Target Missing Positive Number
+# Find the Kth Missing Positive Number
 
 ## Problem Description
 
-Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `missing_target`, find the positive integer at position `missing_target` that is not present in the array.
+Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `kth_missing`, find the positive integer at position `kth_missing` that is not present in the array.
 
 **Example 1:**
 ```
-Input: numbers = [2, 3, 4, 7, 11], missing_target = 5
+Input: numbers = [2, 3, 4, 7, 11], kth_missing = 5
 Output: 9
 
 Explanation: 
@@ -19,7 +19,7 @@ Count:               1  2  3  4  5
 
 **Example 2:**
 ```
-Input: numbers = [1, 2, 3, 4], missing_target = 2
+Input: numbers = [1, 2, 3, 4], kth_missing = 2
 Output: 6
 
 Explanation: 
@@ -82,22 +82,21 @@ Consider the following for inspiration:
 
 One of many possible responses could look like:
 
-1. The problem statement says the input `numbers` is positive integers, does this include 0?
-    - I want to be sure if the count for missing numbers should start at 0 or 1 to prevent off-by-one counting errors.
-    - The two examples given do not count 0 as a missing number, so my implementation will assume that we start at 1.
+1. The problems describes numbers as containing positive integers, but sometimes people talk about positive numbers when really what they mean is not negative. Is 0 allowed in numbers?
+    - The examples only show numbers starting from 1, and the counting of the missing numbers doesn't include 0 as a missing number, so I will assume the lowest number allowed in numbers is 1. This is important because this gives me a consistent starting point for counting the number of missing values.
 
-2. The problem statement mentions that the input `numbers` will be positive integers and we need to "find the positive integer at position `missing_target` that is not present in the array".
-    - This means that I do not need to consider any negative numbers for the return value. Any looping I may need to do will only need to consider positive numbers.
+2. Can `numbers` be empty? Arrays in general can be empty, but how would that affect how we compute the missing numbers?
+    - Though there's no example depicting an empty numbers list, there's no reason it should be disallowed. If we are taking the lowest allowed value in numbers to be 1, this would just result in the missing number being the same as `kth_missing`. This could possibly be handled with an explicit case if the main implementation doesn't handle this gracefully.
 
-3. Thinking more about the sentence "find the positive integer at position `missing_target` that is not present in the array", I will need some way to track how many missing numbers I've seen.
-    - This could be done several ways, some options could be creating an array of the missing elements or a counter variable.
+3. Can `kth_missing` be non-positive? The prompt says that `kth_missing` is an integer, but doesn't explicitly say that it's positive as it did with the contents of `numbers`.
+    - The prompt describes `kth_missing` as a position, and from a common language perspective, we talk about things being first, second, third, etc. So I'll assume that `kth_missing` will also be a positive number. It wouldn't make sense to find the zeroth missing positive number. I could raise an error for this case if needed, but I'll assume the value has already been constrained to positive numbers.
 
 4. The input array `numbers` is sorted in a strictly increasing order. If I know the numbers are sorted and increasing, this helps me find missing numbers in the input list. 
-    - If I compare the values at positions `i` and `i + 1` in `numbers`, there should be a difference of 1 if there are no missing numbers between them. 
-    - If the difference is greater than 1, I know there are missing numbers I should track.
+    - If I compare the values at positions `i` and `i + 1` in `numbers`, there should be a difference of 1 if there are no missing numbers between them. If the difference is greater than 1, I know there are missing numbers I should track.
+    - Since `numbers` is sorted in a strictly increasing order, I can also assume there are no duplicates in `numbers`. If there were, then there would be values in the array that don't increase, either because two identical values are next to one another (no increase), or because the duplicate appears after a higher number has appeared (causing a decrease).
 
-5. Is `missing_target` guaranteed to be a missing number between two values in `numbers`?
-    - Examining the second example input/output, I see that the input `numbers` is not missing any elements between the values present, and `missing_target` is 2. The expected output is "6" which is 2 larger than the last element in `numbers`. 
+5. Is `kth_missing` guaranteed to be a missing number between two values in `numbers`?
+    - Examining the second example input/output, I see that the input `numbers` is not missing any elements between the values present, and `kth_missing` is 2. The expected output is "6" which is 2 larger than the last element in `numbers`. 
     - This shows me that the return value can be larger than the last value in `numbers`, it is not guaranteed to be between elements of the input list.
 
 ##### !end-explanation
@@ -260,22 +259,22 @@ Example tests:
 def test_find_missing_positive_number_missing_element_inside_list_found():
     # Arrange
     numbers = [2, 3, 4, 7, 11]
-    missing_target = 5
+    kth_missing = 5
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
 
     # Assert
     assert result == 9
 
 # edge test case
-def test_find_missing_positive_number_empty_list_returns_missing_target():
+def test_find_missing_positive_number_empty_list_returns_kth_missing():
     # Arrange
     numbers = []
-    missing_target = 3
+    kth_missing = 3
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
 
     # Assert
     assert result == 3
@@ -319,15 +318,15 @@ Write the logical steps here.
 Example Steps for an O(n) solution:
 
 1. Handle edge case:
-   * If `missing_target` is smaller than the first value in `numbers`, then `missing_target` is itself the missing number since it would take more numbers than `missing_target` to even make us look at the array values. Return `missing_target`
+   * If `kth_missing` is smaller than the first value in `numbers`, then `kth_missing` is itself the missing number since it would take more numbers than `kth_missing` to even make us look at the array values. Return `kth_missing`
 2. Loop over the input `numbers`: 
    * start at the first element of `numbers` 
    * end one element before the last element of `numbers`
-3. Inside the loop, we will look for gaps in the numbers to find the spot where we've seen enough gaps that the current gap includes the missing number. We'll do this by identifying individual gaps, and decreasing the `missing_target` by the number of missing values in the gap. As `missing_target` gets smaller, this will mean that we're getting closer to the gap that actually contains the missing value.
+3. Inside the loop, we will look for gaps in the numbers to find the spot where we've seen enough gaps that the current gap includes the missing number. We'll do this by identifying individual gaps, and decreasing the `kth_missing` by the number of missing values in the gap. As `kth_missing` gets smaller, this will mean that we're getting closer to the gap that actually contains the missing value.
     1. Check if there are numbers missing between the current element and the next element in `numbers`. If there are missing numbers, store the count in a variable representing the current gap size.
-    2. If `missing_target` is less than or equal to the gap size variable just created, the missing number is found within this gap. `missing_target` has been reduced with each gap we've found, so what's left is the number of values beyond the value at the current index. Return the value of `numbers` at the current index plus `missing_target` (the remaining count of missing values).
-    3. If we did not return, update the variable `missing_target` by subtracting the gap size variable. This works because the gap we just encountered contained some number of missing values, which means the number we have left to find is the number we _had_ left to find `missing_target` decreased by the count of missing numebrs we just found (the gap size).
-4. If the loop ends, this means that even accounting for all of the gaps in the array, there are still numbers left to find. `missing_target` has been reduced by the total size of the gaps found in the array, so the missing value we're looking for is the final value in the array plus the remaining count of missing values `missing_target`. Return the last element of the list plus the remaining value of `missing_target`.
+    2. If `kth_missing` is less than or equal to the gap size variable just created, the missing number is found within this gap. `kth_missing` has been reduced with each gap we've found, so what's left is the number of values beyond the value at the current index. Return the value of `numbers` at the current index plus `kth_missing` (the remaining count of missing values).
+    3. If we did not return, update the variable `kth_missing` by subtracting the gap size variable. This works because the gap we just encountered contained some number of missing values, which means the number we have left to find is the number we _had_ left to find `kth_missing` decreased by the count of missing numebrs we just found (the gap size).
+4. If the loop ends, this means that even accounting for all of the gaps in the array, there are still numbers left to find. `kth_missing` has been reduced by the total size of the gaps found in the array, so the missing value we're looking for is the final value in the array plus the remaining count of missing values `kth_missing`. Return the last element of the list plus the remaining value of `kth_missing`.
 
 ### !end-explanation
 ### !end-challenge
@@ -381,7 +380,7 @@ While my steps can correctly solve the problem, ChatGPT suggested I make my reas
 
 <br>
 
-It was also suggested to bring up the case where the missing target is far beyond the largest element, so other developers see I’ve considered it. However, this case is already covered by my steps. If I were writing these steps again I could highlight that the last step handles when `missing_target` is beyond the end of `numbers`, but since there aren't constraints on size that we need to consider and the suggestion does not change how the implementation is handled, I don't think this suggestion from ChatGPT is especially useful in this context. 
+It was also suggested to bring up the case where the missing target is far beyond the largest element, so other developers see I’ve considered it. However, this case is already covered by my steps. If I were writing these steps again I could highlight that the last step handles when `kth_missing` is beyond the end of `numbers`, but since there aren't constraints on size that we need to consider and the suggestion does not change how the implementation is handled, I don't think this suggestion from ChatGPT is especially useful in this context. 
 
 ##### !end-explanation
 ### !end-challenge

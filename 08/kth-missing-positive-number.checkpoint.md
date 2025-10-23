@@ -1,10 +1,10 @@
 # Implement Find the Target Missing Positive Number
 
-Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `missing_target`, find the positive integer at position `missing_target` that is not present in the array.
+Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `kth_missing`, find the positive integer at position `kth_missing` that is not present in the array.
 
 **Example 1:**
 ```
-Input: numbers = [2, 3, 4, 7, 11], missing_target = 5
+Input: numbers = [2, 3, 4, 7, 11], kth_missing = 5
 Output: 9
 
 Explanation: 
@@ -17,7 +17,7 @@ Count:               1  2  3  4  5
 
 **Example 2:**
 ```
-Input: numbers = [1, 2, 3, 4], missing_target = 2
+Input: numbers = [1, 2, 3, 4], kth_missing = 2
 Output: 6
 
 Explanation: 
@@ -31,7 +31,7 @@ Count:               1  2
 **Constraints:**
 ```
 1 <= numbers[i]
-1 <= missing_target
+1 <= kth_missing
 numbers[i] < numbers[j] for 1 <= i < j <= numbers.length
 ```
 
@@ -56,10 +56,10 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
   def test_find_missing_positive_number_when_number_is_before_list():
       # Arrange
       numbers = [2, 3, 4, 7, 11]
-      missing_target = 1
+      kth_missing = 1
 
       # Act
-      result = find_missing_positive_number(numbers, missing_target)
+      result = find_missing_positive_number(numbers, kth_missing)
 
       # Assert
       assert 1 == result
@@ -67,10 +67,10 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
   def test_find_missing_number_finds_number_near_end_of_list():
       # Arrange
       numbers = [2, 3, 4, 7, 11]
-      missing_target = 5
+      kth_missing = 5
 
       # Act
-      result = find_missing_positive_number(numbers, missing_target)
+      result = find_missing_positive_number(numbers, kth_missing)
       
       # Assert
       assert 9 == result
@@ -78,10 +78,10 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
   def test_find_missing_positive_number_when_number_is_after_list():
       # Arrange
       numbers = [1, 2, 3, 4]
-      missing_target = 2
+      kth_missing = 2
 
       # Act
-      result = find_missing_positive_number(numbers, missing_target)
+      result = find_missing_positive_number(numbers, kth_missing)
       
       # Assert
       assert 6 == result
@@ -89,10 +89,10 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
   def test_find_missing_positive_number_2nd_number_before_list_starts():
       # Arrange
       numbers = [3, 4, 5, 7, 11]
-      missing_target = 2
+      kth_missing = 2
 
       # Act
-      result = find_missing_positive_number(numbers, missing_target)
+      result = find_missing_positive_number(numbers, kth_missing)
       
       assert 2 == result
   ```
@@ -103,12 +103,12 @@ Implement `find_missing_positive_number`. Use these tests to guide your solution
 ##### !placeholder
 
 ```python
-def find_missing_positive_number(numbers, missing_target):
+def find_missing_positive_number(numbers, kth_missing):
     '''
     INPUTS: 
     - List of positive numbers in increasing order 
-    - Positive integer `missing_target`
-    OUTPUT: The missing number at the missing_target position
+    - Positive integer `kth_missing`
+    OUTPUT: The missing number at the kth_missing position
     '''
 
     pass
@@ -126,10 +126,10 @@ class TestPython1(unittest.TestCase):
   def test_find_missing_positive_number_when_number_is_before_list(self):
     # Arrange
     numbers = [2, 3, 4, 7, 11]
-    missing_target = 1
+    kth_missing = 1
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
 
     # Assert
     self.assertEqual(1, result)
@@ -138,10 +138,10 @@ class TestPython1(unittest.TestCase):
 def test_find_missing_number_finds_number_near_end_of_list(self):
     # Arrange
     numbers = [2, 3, 4, 7, 11]
-    missing_target = 5
+    kth_missing = 5
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
     
     # Assert
     self.assertEqual(9, result)
@@ -150,10 +150,10 @@ def test_find_missing_number_finds_number_near_end_of_list(self):
 def test_find_missing_positive_number_when_number_is_after_list(self):
     # Arrange
     numbers = [1, 2, 3, 4]
-    missing_target = 2
+    kth_missing = 2
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
     
     # Assert
     self.assertEqual(6, result)
@@ -162,10 +162,10 @@ def test_find_missing_positive_number_when_number_is_after_list(self):
 def test_find_missing_positive_number_2nd_number_before_list_starts(self):
     # Arrange
     numbers = [3, 4, 5, 7, 11]
-    missing_target = 2
+    kth_missing = 2
 
     # Act
-    result = find_missing_positive_number(numbers, missing_target)
+    result = find_missing_positive_number(numbers, kth_missing)
     
     self.assertEqual(2, result)
 
@@ -177,25 +177,25 @@ def test_find_missing_positive_number_2nd_number_before_list_starts(self):
 An example of an O(n) implementation:
 
 ```python
-def find_missing_positive_number(numbers, missing_target):
-    # if the missing_target is less than numbers[0]
-    if missing_target <= numbers[0] - 1:
-        return missing_target
-    missing_target -= numbers[0] - 1
+def find_missing_positive_number(numbers, kth_missing):
+    # if the kth_missing is less than numbers[0]
+    if kth_missing <= numbers[0] - 1:
+        return kth_missing
+    kth_missing -= numbers[0] - 1
 
-    # search for missing_target between the array numbers
+    # search for kth_missing between the array numbers
     for i in range(len(numbers) - 1):
         # missing between numbers[i] and numbers[i + 1]
         curr_missing = numbers[i + 1] - numbers[i] - 1
-        # if the missing_target is between
+        # if the kth_missing is between
         # numbers[i] and numbers[i + 1] -> return it
-        if missing_target <= curr_missing:
-            return numbers[i] + missing_target
+        if kth_missing <= curr_missing:
+            return numbers[i] + kth_missing
         # otherwise, proceed further
-        missing_target -= curr_missing
+        kth_missing -= curr_missing
 
     # if the missing number if greater than numbers[-1]
-    return numbers[-1] + missing_target
+    return numbers[-1] + kth_missing
 ```
 
 ### !end-explanation
