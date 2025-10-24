@@ -1,95 +1,214 @@
 # Tic Tac Toe
 
-Imagine working on software that determines the winner of a game of Tic Tac Toe. Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board - Either there's no winner, it's a tie, `'X'` won, or `'O'` won. This function should take in 3x3 matrix as a parameter. Each element is either an `'X'`, `'O'`, or empty string `''`. This function should have a return value of the winner `'X'` or `'O'`, `'Tie'` (for a full board with no winner), or `None` (for a game that is still in progress).
+Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe).
+
+Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board.
+- This function should take in 3x3 matrix as a parameter
+    - Each element is either an `'X'`, `'O'`, or empty string `''`
+- This function should have a return value of:
+    - The winner, `'X'` or `'O'`, if a winner exists
+    - `'Tie'` for a full board with no winner
+    - `None` for a game that is still in progress and has no winner
 
 *Example 1:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'X', 'O']
 ]
+
+Output: 'Tie'
 ```
-Output: `'Tie'`
 
 *Example 2:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'X'],
     ['O', 'O', 'X'],
     ['X', 'O', '']
 ]
+
+Output: 'O'
 ```
-Output: `'O'`
 
 *Example 3:*
-Input:
 ```
+Input:
 [
     ['X', 'O', 'O'],
     ['O', 'X', 'O'],
     ['', '', 'X']
 ]
+
+Output: 'X'
 ```
-Output: `'X'`
 
 *Example 4:*
-Input:
 ```
+Input:
 [
     ['X', '', 'O'],
     ['O', 'X', 'X'],
     ['', '', '']
 ]
+
+Output: None
 ```
-Output: `None`
 
 ## Prompts
 
-<!-- Question 1 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
 * id: 7c868708-8d15-4d5f-a5e9-3301a62feaef
-* title: Ask Clarifying Questions
+* title: Describe Your Understanding
 * topics: pse
 ##### !question
 
-List three or more questions whose answers would clarify the problem statement. For each question, provide an answer which includes the effect your decision would have on how you would approach the problem.
+Before you begin solving this problem, take a moment to think like a professional software engineer. 
+- What do we know about the problem? 
+- What assumptions can we make based on the information in the problem statement? 
+- What further information do the example inputs and outputs give us?
+- What questions would you ask a teammate, product manager, or interviewer to better understand the problem before writing any code?
+
+<br>
+
+In the box below, list 5 or more observations about the problem or questions whose answers would clarify the problem statement. For each observation or question, include information on why that observation is important or why you are asking the question.
+- For each observation, answer how that observation will affect your approach to the problem.
+- For each question, describe what you are hoping to clarify about the problem and provide an answer which includes the effect your decision would have on how you might approach the problem.
+
+<br>
+
+As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
 ##### !hint
 
-Consider the following for inspiration:
+Further questions to ask as you read through the problem statement and examples:
+- What is the goal of the function?
+- What are the types of the expected inputs and outputs?
+- Are there any restrictions on any of the inputs?
+  - For example: if any of the inputs are a list, do we know anything about how the list is ordered?
+- What do the examples show us about the data types and values that are allowed for our inputs?
+- What do the examples tell us about the return value in different scenarios?
+- Reflecting on the observations you have made so far, what questions would give you new information?
 
+<br>
+
+Consider the following for inspiration:
 - [About PSEs](../about-pses/about-pses.md)
 - [Our example PSE with example answers](../about-pses/example-pse.md)
-- Any past PSEs you may have
+- Previous PSEs
 
 ##### !end-hint
 ##### !explanation
 
-Here are some example clarifying questions:
+One of many possible responses could look like:
 
-- What about if no one has won yet?
-- What about if two players have both won for example 3: Os across the top and 3 Xs across the bottom row?
-- Will the matrix always be 3x3?
+1. The problem statement says the input will be a 3x3 matrix. 
+    - This means the input size will not change. While it's useful to think about how to handle any size board for practice, for this problem I can focus on a solution that only needs to account for looping over a 3x3 board.
+
+2. Based on the examples, whether they are `'X'` or `'O'`, a winner needs to get 3 in a row, and this could be done vertically, horizontally, or diagonally. 
+    - I can do something like hard code the indices of the matrix cells I need to check for each win location, or I can loop over the board in a few different ways to be able to check for a win condition.
+
+3. Does the board need to be full for someone to win?
+    - This would affect how we need to check the board for a win since we would need to check all cells, not just for 3 matching `'X'`s or `'O'`s in a row. 
+    - This isn't explicitly described in the problem statment, but digging into the rules of tic tac toe, the game ends when the first person reaches 3 in a row, so there could be spots on the board that were not used.
+    - This is supported by example 3 where there is a diagonal `'X'` win with empty spots left on the board, so I will assume that boards do not need to be full for there to be a winner.
+
+4. What should the function return if two players have both won? For example: 3 `'O'`s across the top and 3 `'X'`s across the bottom row?
+    - This scenario isn't captured in the problem statement or examples. In a standard game of tic tac toe, there can only be one winner and the game ends when the first person reaches 3 in a row, so I will assume boards can only have one winner and I will return the first winner found on the board. 
+
+5. Thinking about when we should return `None` or 'Tie' for a game still in progress, I only need to consider these states if a winner cannot be found. 
+    - The problem statment says to return `None` "for a game that is still in progress and has no winner", and to return 'Tie' for a board with no winner and no places left to make moves. Both of these scenarios depend on there being no winner on the board, which I will only know if I check for winners first. 
 
 ##### !end-explanation
-##### !rubric
-
-- The answer is wrong if there aren't at least 3 questions
-
-##### !end-rubric
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-
-<!-- Question 2 -->
 <!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: beeef053-ced0-4bd2-a9c2-d2cf7cb3204a
+* title: Review Observations & Questions
+* topics: pse
+##### !question
 
+While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
+
+<br>
+
+Our goals are to: 
+- confirm if our observations and assumptions make sense in the context of the code problem
+- ensure we are asking questions that will tell us new information about the problem space
+- check our understanding of the information we expect to get from those questions
+- uncover other observations that would help shape our approach and understand how they would affect our approach
+- uncover further questions that could be useful to ask and understand why those other questions could be helpful
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
+    - ensure your understanding of the analysis of the observations
+    - get more details on the information we could get from asking particular questions
+    - learn more about new information shared by the tool
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !hint
+
+**Troubleshooting**
+- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
+- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
+
+<br>
+
+**Summarizing the Review**
+- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
+- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
+- Did the AI tool suggest updates to the observations you made or questions you asked? 
+    - If so, what updates and why?
+- Did the AI tool suggest any new observations or questions?
+    - If so, what? Why would they be useful?
+
+##### !end-hint
+##### !explanation 
+
+For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
+
+<br>
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat link: `<url to your conversation>`
+
+<br>
+
+ChatGPT positively mentioned my edge-case thinking (empty board, simultaneous wins) and agreed that my decision flow made sense: check for a winner first, then decide between `'Tie'` or `None` (in-progress). The review recommended I add a few explicit checks like how to treat an empty board, whether “invalid” boards must be handled, exact return-value formatting, whether we need move history or just the snapshot, and confirming allowed cell values. 
+
+<br>
+
+Being explicit about how empty boards are handled could be useful based on the continued conversation I had with ChatGPT around this, but most of the suggestions above revolved around validating inputs that aren't relevant to the scope of our problem since we are assuming validation has already been completed. I asked for clarification on why bringing up an empty board is useful since it's already covered by the problem statement, and got feedback that doing so can help clarify between `None` vs `'Tie'` conditions, surface hidden assumptions, and encourage exhaustive thinking.
+
+##### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
 ### !challenge
 * type: code-snippet
 * language: python3.6
@@ -138,7 +257,6 @@ def test_edge_case():
     # assert
 ```
 ##### !end-placeholder
-
 ##### !tests
 
 ```py
@@ -150,14 +268,13 @@ class TestPython1(unittest.TestCase):
 ```
 
 ##### !end-tests
-
 ##### !explanation 
 
 Example tests:
 
 ```python
-def test_nominal_board():
-    # nominal test case
+# nominal test case
+def test_tic_tac_toe_winner_row_win_x():
     # Arrange
     board = [['X', 'X', 'X'],
              ['O', 'O', ''],
@@ -169,8 +286,9 @@ def test_nominal_board():
     # Assert
     assert result == 'X'
 
-def test_empty_board():
-    # edge test case
+# edge test case
+def test_tic_tac_toe_winner_empty_board_returns_none():
+    # Arrange
     board = [['', '', ''],
              ['', '', ''],
              ['', '', '']]
@@ -181,8 +299,8 @@ def test_empty_board():
     # Assert
     assert result is None
 
-def test_tied():
-    # alternative test case
+# alternative nominal test case
+def test_tic_tac_toe_no_winner_returns_tie():
     # Arrange
     board = [['O', 'X', 'X'],
              ['X', 'O', 'O'],
@@ -199,7 +317,6 @@ def test_tied():
 ### !end-challenge
 <!-- prettier-ignore-end -->
 
-<!-- Question 3 -->
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
@@ -208,38 +325,93 @@ def test_tied():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `tic_tac_toe_winner` in enough detail that someone else could write the code. 
+Without writing code, describe how you would implement `tic_tac_toe_winner` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
+- It is okay to leave some of the finer details to be worked out in the implementation itself!
 
-* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. For example, 1. Handle invalid input, 2. Given valid input, perform the computation/solve the problem/etc.
-* Your logical steps could take the form of a numbered list, pseudo code, or anywhere in between. What's important at this stage is to think through and outline the implementation before writing code.
+As you write your steps, keep the following guidelines in mind:
+* We want to think about a general approach rather than what the code would look like line-by-line. 
+* It may be helpful to break up the problem/algorithm into smaller subproblems/algorithms. 
+    * For example: 1. Handle edge cases, 2. Perform the computation/solve the problem/etc.
+* The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
+    * As such, they should not include code syntax in the description.
+
+What's important at this stage is to think through and outline the implementation before writing code.
 
 ##### !end-question
-
 ##### !placeholder
 
 Write the logical steps here.
 
 ##### !end-placeholder
-
 ### !explanation
 
-Example Steps for an O(n) solution:
+Example Steps:
 
-1. Check for valid input
-1. Create a list of all possible winning combinations
-    * winning_combinations = [ [ (0, 0), (0, 1), (O, 2)],
-                                 [(1, 0), (1, 1), (1, 2)],
-                                 [(2, 0), (2, 1), (2, 2)],
-                                 [ (0, 0), (1, 0), (2, 0)],
-                                 [ (0, 1), (1, 1), (2, 1)],
-                                 [ (0, 2), (1, 2), (2, 2)],
-                                 [ (0, 0), (1, 1), (2, 2)],
-                                 [ (0, 2), (1, 1), (2, 0)]
-                    ]
-1. Loop throught the winning combinations and check to see if each element in the conbination is equal and not empty.
-    * If this is true return the value of the first element in the combination.
+1. Check for a winner `X` or `O`:
+   1. Loop over the input matrix by row, checking if each element of the row is the same and is not an empty string. If so, return the first element of the row.
+   2. Loop over the input matrix by column, checking if each element of the column is the same and is not an empty string. If so, return the first element of the column.
+   3. Check the indices for the left to right diagonal and right to left diagonal. If the strings are all the same and are not empty for either of the diagonals, return the first element of that diagonal.
+2. If we have not returned by this point, check for "Tie" or ongoing game:
+    1. Loop over the input row by row and check for any empty strings. If there are empty strings, moves can still be made so we will return `None` for a game still in progress.
+    2. If the loop ends and we have not returned, then return `Tie` since the board must be full and there is no winner.
 
 ### !end-explanation
+### !end-challenge
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+### !challenge
+* type: paragraph
+* id: 4dddccc4-3815-4e20-b39b-b7ef8fa5bae0
+* title: Review Logical Steps
+* topics: pse
+##### !question
+
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
+- the steps make sense for the problem being solved
+- the steps are not missing important steps or scenarios
+- the steps are agnostic of any particular language – steps should not include code syntax.
+- the steps are written with enough detail for another developer to understand how to create a solution
+
+<br>
+
+For this question we will:
+1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
+2. Share the completed prompt with an AI tool like ChatGPT
+3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
+    - areas where we could add clarity
+    - edge cases we might have missed
+    - places where our steps do not meet the expectations of the problem statement
+4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+
+<br>
+
+In the box below, please submit:
+1. A shareable link to your conversation in ChatGPT
+    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
+2. Your reflections and summary of the discussion with ChatGPT
+
+##### !end-question
+##### !explanation
+
+As an example, let’s say we used the logical steps in the explanation for the question above in our prompt. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+
+<br>
+
+Chat Link: `<url to your conversation>`
+
+<br>
+
+ChatGpt noted positively that my steps were language-agnostic, organized into phases, and correctly identified the three winning conditions: rows, columns, and diagonals.
+
+<br>
+
+There were some suggestions where I could improve my steps by stating why we want to do something or focus more on the logic:
+- Since it isn't in the problem description, I could note that only one winner can exist at a time, which avoids confusion.
+- I could add clarity to what the diagonal checks are by explicitly stating there are only two diagonals on a 3×3 board.
+- For tie and in-progress checks, I should emphasize the logic (empty spaces mean in progress, none mean tie) instead of describing loops.
+
+##### !end-explanation
 ### !end-challenge
 <!-- prettier-ignore-end -->
