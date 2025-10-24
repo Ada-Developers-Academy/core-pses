@@ -40,7 +40,7 @@ def tic_tac_toe_winner(board):
 
 ## With an Array of tuples
 
-```py
+```python
 def tic_tac_toe_winner(board):
     counter = 0
     for row in board:
@@ -50,20 +50,20 @@ def tic_tac_toe_winner(board):
     
     combinations = [
       # horizontal
-      ((0,0), (1,0), (2,0)),
-      ((0,1), (1,1), (2,1)),
-      ((0,2), (1,2), (2,2)),
+      ((0, 0), (0, 1), (0, 2)),
+      ((1, 0), (1, 1), (1, 2)),
+      ((2, 0), (2, 1), (2, 2)),
       # vertical
-      ((0,0), (0,1), (0,2)),
-      ((1,0), (1,1), (1,2)),
-      ((2,0), (2,1), (2,2)),
+      ((0, 0), (1, 0), (2, 0)),
+      ((0, 1), (1, 1), (2, 1)),
+      ((0, 2), (1, 2), (2, 2)),
       # diagonal
-      ((0,0), (1,1), (2,2)),
-      ((2,0), (1,1), (0,2))
+      ((0, 0), (1, 1), (2, 2)),
+      ((0, 2), (1, 1), (2, 0))
     ]
 
     for coordinates in combinations:
-        letters = [board[y][x] for x, y in coordinates]
+        letters = [board[row][col] for row, col in coordinates]
         if len(set(letters)) == 1 and letters[0] != "":
             return letters[0] # returns corresponding letter for winner (X/O)
 
