@@ -4,11 +4,11 @@
 
 Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
-Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board: no player has won yet, it's a tie, `'X'` won, or `'O'` won. 
+Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board.
 - This function should take in 3x3 matrix as a parameter
     - Each element is either an `'X'`, `'O'`, or empty string `''`
 - This function should have a return value of:
-    - The winner `'X'` or `'O'` if a winner exists
+    - The winner, `'X'` or `'O'`, if a winner exists
     - `'Tie'` for a full board with no winner
     - `None` for a game that is still in progress and has no winner
 

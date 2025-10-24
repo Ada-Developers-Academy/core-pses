@@ -2,11 +2,11 @@
 
 Imagine working on software that determines the winner of a game of Tic Tac Toe. For more information on the rules of Tic Tac Toe, check out [the wiki here](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
-Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board: no player has won yet, it's a tie, `'X'` won, or `'O'` won. 
+Create a function named `tic_tac_toe_winner` that is responsible for determing the state of a Tic Tac Toe board.
 - This function should take in 3x3 matrix as a parameter
     - Each element is either an `'X'`, `'O'`, or empty string `''`
 - This function should have a return value of:
-    - The winner `'X'` or `'O'` if a winner exists
+    - The winner, `'X'` or `'O'`, if a winner exists
     - `'Tie'` for a full board with no winner
     - `None` for a game that is still in progress and has no winner
 
@@ -111,15 +111,15 @@ One of many possible responses could look like:
 1. The problem statement says the input will be a 3x3 matrix. 
     - This means the input size will not change. While it's useful to think about how to handle any size board for practice, for this problem I can focus on a solution that only needs to account for looping over a 3x3 board.
 
-2. Based on the examples, whether they are X or O, a winner needs to get 3 in a row, and this could be done vertically, horizontally, or diagonally. 
+2. Based on the examples, whether they are `'X'` or `'O'`, a winner needs to get 3 in a row, and this could be done vertically, horizontally, or diagonally. 
     - I can do something like hard code the indices of the matrix cells I need to check for each win location, or I can loop over the board in a few different ways to be able to check for a win condition.
 
 3. Does the board need to be full for someone to win?
-    - This would affect how we need to check the board for a win since we would need to check all cells, not just for 3 matching 'X' or 'O' in a row. 
+    - This would affect how we need to check the board for a win since we would need to check all cells, not just for 3 matching `'X'`s or `'O'`s in a row. 
     - This isn't explicitly described in the problem statment, but digging into the rules of tic tac toe, the game ends when the first person reaches 3 in a row, so there could be spots on the board that were not used.
-    - This is supported by example 3 where there is a diagonal X win with empty spots left on the board, so I will assume that boards do not need to be full for there to be a winner.
+    - This is supported by example 3 where there is a diagonal `'X'` win with empty spots left on the board, so I will assume that boards do not need to be full for there to be a winner.
 
-4. What should the function return if two players have both won? For example: 3 Os across the top and 3 Xs across the bottom row?
+4. What should the function return if two players have both won? For example: 3 `'O'`s across the top and 3 `'X'`s across the bottom row?
     - This scenario isn't captured in the problem statement or examples. In a standard game of tic tac toe, there can only be one winner and the game ends when the first person reaches 3 in a row, so I will assume boards can only have one winner and I will return the first winner found on the board. 
 
 5. Thinking about when we should return `None` or 'Tie' for a game still in progress, I only need to consider these states if a winner cannot be found. 

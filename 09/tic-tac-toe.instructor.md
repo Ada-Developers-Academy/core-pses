@@ -11,7 +11,7 @@ def tic_tac_toe_winner(board):
     OUTPUT: Winner
     '''
     # Determine if any column winners
-    # Ensure we do not conside 3 empty strings a win
+    # Ensure we do not consider 3 empty strings a win
     for col in range(3):
         if ((board[0][col] == board[1][col] == board[2][col]) 
                 and board[0][col] != ''):
