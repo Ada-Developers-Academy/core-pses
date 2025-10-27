@@ -134,7 +134,7 @@ class TestPython1(unittest.TestCase):
     # Assert
     self.assertEqual(1, result)
 
-  def test_find_kth_missing_positive_numberr_finds_number_near_end_of_list(self):
+  def test_find_kth_missing_positive_number_finds_number_near_end_of_list(self):
       # Arrange
       numbers = [2, 3, 4, 7, 11]
       kth_missing = 5
