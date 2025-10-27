@@ -4,6 +4,10 @@
 
 ```py
 def find_missing_positive_number(numbers, kth_missing):
+    # if numbers is empty, the kth missing value is kth_missing itself
+    if not numbers:
+        return kth_missing
+
     # if the kth_missing is less than numbers[0]
     if kth_missing <= numbers[0] - 1:
         return kth_missing
