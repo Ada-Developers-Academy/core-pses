@@ -3,7 +3,7 @@
 ## O(n) Solution
 
 ```py
-def find_missing_positive_number(numbers, kth_missing):
+def find_kth_missing_positive_number(numbers, kth_missing):
     # if the kth_missing is less than numbers[0]
     if kth_missing <= numbers[0] - 1:
         return kth_missing
@@ -27,7 +27,7 @@ def find_missing_positive_number(numbers, kth_missing):
 ## O(n log n) Solution with Binary Search
 
 ```py
-def find_missing_positive_number(numbers, kth_missing):
+def find_kth_missing_positive_number(numbers, kth_missing):
     left, right = 0, len(numbers) - 1
     while left <= right:
         pivot = (left + right) // 2
@@ -51,7 +51,7 @@ def find_missing_positive_number(numbers, kth_missing):
 ```
 
 ```py
-def find_missing_positive_number(numbers, kth_missing):
+def find_kth_missing_positive_number(numbers, kth_missing):
     lo = 0
     hi = len(numbers)  # exclusive
     

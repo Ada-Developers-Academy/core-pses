@@ -2,7 +2,7 @@
 
 ## Problem Description
 
-Given an array `numbers` of positive integers sorted in a strictly increasing order and an integer `kth_missing`, find the positive integer at position `kth_missing` that is not present in the array.
+Given an array `numbers` of positive integers sorted in a strictly increasing order, and an integer `kth_missing`, find the "kth" (read _kayth_) number missing from `numbers`. kth means an unknown _ordinal number_, in other words something like first, second, third, and so on. So if `kth_missing` is `5`, we're looking for the 5th number missing from the input `numbers`.
 
 **Example 1:**
 ```
@@ -201,7 +201,7 @@ I asked some questions around feedback that said I could ask if duplicates were 
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
-2. Write unit tests for `find_missing_positive_number` for the nominal and edge cases you identified in the first step.
+2. Write unit tests for `find_kth_missing_positive_number` for the nominal and edge cases you identified in the first step.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
@@ -256,25 +256,25 @@ Example tests:
 
 ```python
 # nominal test case
-def test_find_missing_positive_number_missing_element_inside_list_found():
+def test_find_kth_missing_positive_number_missing_element_inside_list_found():
     # Arrange
     numbers = [2, 3, 4, 7, 11]
     kth_missing = 5
 
     # Act
-    result = find_missing_positive_number(numbers, kth_missing)
+    result = find_kth_missing_positive_number(numbers, kth_missing)
 
     # Assert
     assert result == 9
 
 # edge test case
-def test_find_missing_positive_number_empty_list_returns_kth_missing():
+def test_find_kth_missing_positive_number_empty_list_returns_kth_missing():
     # Arrange
     numbers = []
     kth_missing = 3
 
     # Act
-    result = find_missing_positive_number(numbers, kth_missing)
+    result = find_kth_missing_positive_number(numbers, kth_missing)
 
     # Assert
     assert result == 3
@@ -294,7 +294,7 @@ def test_find_missing_positive_number_empty_list_returns_kth_missing():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `find_missing_positive_number` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+Without writing code, describe how you would implement `find_kth_missing_positive_number` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
 - The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
 - It is okay to leave some of the finer details to be worked out in the implementation itself!
 
