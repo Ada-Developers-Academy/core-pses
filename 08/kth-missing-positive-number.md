@@ -85,19 +85,27 @@ One of many possible responses could look like:
 1. The problems describes numbers as containing positive integers, but sometimes people talk about positive numbers when really what they mean is not negative. Is 0 allowed in numbers?
     - The examples only show numbers starting from 1, and the counting of the missing numbers doesn't include 0 as a missing number, so I will assume the lowest number allowed in numbers is 1. This is important because this gives me a consistent starting point for counting the number of missing values.
 
-2. Can `numbers` be empty? Arrays in general can be empty, but how would that affect how we compute the missing numbers?
-    - Though there's no example depicting an empty numbers list, there's no reason it should be disallowed. If we are taking the lowest allowed value in numbers to be 1, this would just result in the missing number being the same as `kth_missing`. This could possibly be handled with an explicit case if the main implementation doesn't handle this gracefully.
-
-3. Can `kth_missing` be non-positive? The prompt says that `kth_missing` is an integer, but doesn't explicitly say that it's positive as it did with the contents of `numbers`.
-    - The prompt describes `kth_missing` as a position, and from a common language perspective, we talk about things being first, second, third, etc. So I'll assume that `kth_missing` will also be a positive number. It wouldn't make sense to find the zeroth missing positive number. I could raise an error for this case if needed, but I'll assume the value has already been constrained to positive numbers.
-
-4. The input array `numbers` is sorted in a strictly increasing order. If I know the numbers are sorted and increasing, this helps me find missing numbers in the input list. 
+2. Can `kth_missing` be non-positive? The prompt says that `kth_missing` is an integer, but doesn't explicitly say that it's positive as it did with the contents of `numbers`.
+	- The prompt describes `kth_missing` as something like first, second, third, etc. At least in common language, we don't talk about cases like zeroth or negative first. We start from first. So I'll assume that `kth_missing` will also be a positive number, since a negative value for `kth_missing` doesn't make sense. I could raise an error for this case if needed, but since there's no clear error handling requirement, I'll assume the input value has already been constrained to positive numbers.
+	
+3. The input array `numbers` is sorted in a strictly increasing order. If I know the numbers are sorted and increasing, this helps me find missing numbers in the input list. 
     - If I compare the values at positions `i` and `i + 1` in `numbers`, there should be a difference of 1 if there are no missing numbers between them. If the difference is greater than 1, I know there are missing numbers I should track.
-    - Since `numbers` is sorted in a strictly increasing order, I can also assume there are no duplicates in `numbers`. If there were, then there would be values in the array that don't increase, either because two identical values are next to one another (no increase), or because the duplicate appears after a higher number has appeared (causing a decrease).
 
-5. Is `kth_missing` guaranteed to be a missing number between two values in `numbers`?
+4. Also since `numbers` is sorted in a strictly increasing order, I can also assume there are no duplicates in `numbers`.
+    - If there were duplicate numbers in the list, then there would be values in the array that don't increase, either because two identical values are next to one another (no increase), or because the duplicate appears after a higher number has appeared (causing a decrease).
+
+5. Is the `kth_missing` guaranteed to be found between two values in `numbers`?
     - Examining the second example input/output, I see that the input `numbers` is not missing any elements between the values present, and `kth_missing` is 2. The expected output is "6" which is 2 larger than the last element in `numbers`. 
-    - This shows me that the return value can be larger than the last value in `numbers`, it is not guaranteed to be between elements of the input list.
+    - This shows me that the value of the `kth_missing` number can be larger than the last value in `numbers`, it is not guaranteed to be between elements of the input list.
+
+6. Can the `kth_missing` value come _before_ the values in the list?
+    - While there is no specific example of this, the lowest value in the first example `numbers` is `2`, and the explanation does show that the number 1 is considered to be missing from `numbers`. So if we had been asked to find the first missing number, this would be `1`, which comes before the first value in `numbers`.
+    - In general, if we are asked to find a `kth_missing` value, and `kth_missing` is smaller than the first value in `numbers`, then the resulting value will be the same as `kth_missing` itself.
+
+7. Can `numbers` be empty? Arrays in general can be empty, but how would that affect how we compute the missing numbers?
+    - An empty list doesn't violate the problem statement that `numbers` is in strictly increasing order. Since there are no values, there are no _out of place_ values to violate that requirement. This would also apply to a list with a single value. There's no reason to disallow either case.
+    - If we are taking the lowest allowed value in numbers to be 1, this would just result in the kth missing number being the same as `kth_missing`. This is really just a special case of the `kth_missing` number being found beyond and values in the `numbers`, so being careful to handle the first case might also handle this one. Though this could possibly be handled with an explicit case if the main implementation doesn't handle this gracefully.
+    - Another perspective is that when `numbers` is empty, the `kth_missing` value comes before the first value in `numbers` (since there aren't any values). This still gives us the value of the `kth_missing` number to be the same as `kth_missing` itself, which is consistent with our earlier observation.
 
 ##### !end-explanation
 ### !end-challenge
