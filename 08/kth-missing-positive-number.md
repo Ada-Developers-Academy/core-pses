@@ -172,7 +172,7 @@ Chat link: `<url to your conversation>`
 
 <br>
 
-ChatGPT gave me feedback that the questions and observation I shared were useful and specific ones like recognizing that the target missing number might lie beyond the largest element help prevent wrong assuptions.
+ChatGPT gave me feedback that the questions and observation I shared were useful and specific ones like recognizing that the target missing number might lie beyond the largest element help prevent wrong assumptions.
 
 <br>
 
@@ -318,17 +318,19 @@ Write the logical steps here.
 Example Steps for an O(n) solution:
 
 1. Handle edge case:
+    * If `numbers` is empty, then `kth_missing` is itself the missing number. Return `kth_missing`.
+        * Since every number is missing, and the numbers and `kth_missing` both start from `1`, `kth_missing` is the missing number.
     * If `kth_missing` is smaller than the first value in `numbers`, then `kth_missing` is itself the missing number. Return `kth_missing`.
-        * This is becasue it would take more numbers than `kth_missing` to even make us look at the array values. 
+        * This is because it would take more numbers than `kth_missing` to even make us look at the array values. 
 2. Loop over the input `numbers`: 
     * start at the first element of `numbers` 
     * end one element before the last element of `numbers`
-3. Inside the loop, we will look for gaps between the values in `numbers` until we find the gap that includes the missing number. We'll do this by identifying individual gaps, and decreasing the `kth_missing` by the number of missing values in the gap. As `kth_missing` gets smaller, this will mean that we're getting closer to the gap that actually contains the missing value.
+3. Inside the loop, we will look for gaps between the values in `numbers` until we find the gap that includes the missing number. We'll do this by identifying individual gaps, and decreasing `kth_missing` by the number of missing values in the gap. As `kth_missing` gets smaller, this will mean that we're getting closer to the gap that actually contains the missing value.
     1. Check if there are numbers missing between the current element and the next element in `numbers`. If there are missing numbers, store the count in a variable representing the current gap size.
     2. If `kth_missing` is less than or equal to the gap size variable just created, the missing number is found within this gap. Return the value of `numbers` at the current index plus `kth_missing` (the remaining count of missing values).
         * `kth_missing` has been reduced with each gap we've found, so what's left is the number of values beyond the value at the current index. 
     3. If we did not return, update the variable `kth_missing` by subtracting the gap size variable. 
-        * We want to keep track of how many missing values we've seen so that we know when we've found the kth missing. Each gap we find has some number of missing values, and by reducing `kth_missing` each gap, we keep track of how many missing values we have left before we find our desired value.
+        * We want to keep track of how many missing values we've seen so that we know when we've found the kth missing value. Each gap we find has some number of missing values, and by reducing `kth_missing` each gap, we keep track of how many missing values we have left before we find our desired value.
 4. If the loop ends, this means that even accounting for all of the gaps in the array, there are still numbers left to find. Return the last element of the list plus the remaining value of `kth_missing`.
     * `kth_missing` has been reduced by the total size of the gaps found in the array. This means the missing value we're looking for is the final value in the array plus the remaining count of missing values `kth_missing`. 
 
