@@ -345,6 +345,8 @@ In the box below, please submit:
 
 As an example, let’s say we used a slightly modified version of the sample response from the "Logical Steps" question above to fill in the prompt template. In this example, the only change is that we refer to checking for a tie as an "edge case" in the first step.
 
+<br>
+
 Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
@@ -361,9 +363,15 @@ Chat Link: [https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a
 
 One strength the AI highlighted was my use of "otherwise... must be" phrasing throughout my steps. The feedback noted that this showed I understood "that earlier conditions have already eliminated other possibilities," which is the kind of reasoning interviewers want to see. I think this worked well because it demonstrates I wasn't just listing cases mechanically, I was actively narrowing down what remained, which makes the logic easier to follow and verify.
 
+<br>
+
 The main improvement the AI recommended was dropping the term "edge case" when describing the tie condition. My explanation currently calls it an edge case to justify handling it first, but the feedback pointed out that a tie isn't unusual, it occurs roughly a third of the time. If I were rewriting that step, I'd say something like "we check for a tie first because it's the simplest condition to eliminate, and removing it upfront reduces the branching we need below." 
 
-Around irrelevant feedback, the AI flagged that I was implicitly assuming valid input and suggested I acknowledge that assumption explicitly. I'd push back on this suggestion for this problem since the problem statement itself defines the inputs as exactly "rock", "paper", or "scissors", so there's no ambiguity to address. According to how my instructor has framed problem-solving exercises, we're expected to work within the constraints given, not expand scope by handling cases the problem rules out. Calling that a gap feels like feedback written for a different, more open-ended problem. 
+<br>
+
+Around irrelevant feedback, the AI flagged that I was implicitly assuming valid input and suggested I acknowledge that assumption explicitly. I'd push back on this suggestion for this problem since the problem statement itself defines the inputs as exactly "rock", "paper", or "scissors", so there's no ambiguity to address. According to how my instructors have framed problem-solving exercises, we're expected to work within the constraints given, not expand scope by handling cases the problem rules out. Calling that a gap feels like feedback written for a different, more open-ended problem. 
+
+<br>
 
 Finally, I was genuinely surprised by the reframe around why to handle the tie first. I thought I was identifying it as a special case, but the feedback reframed it as a deliberate structural choice that simplifies the logic below it. That shift from "this is different" to "this makes everything else cleaner" changes how I'll think about ordering conditions in future problems too.
 
