@@ -373,7 +373,7 @@ Around irrelevant feedback, the AI flagged that I was implicitly assuming valid 
 
 <br>
 
-Finally, I was genuinely surprised by the reframe around why to handle the tie first. I thought I was identifying it as a special case, but the feedback reframed it as a deliberate structural choice that simplifies the logic below it. That shift from "this is different" to "this makes everything else cleaner" changes how I'll think about ordering conditions in future problems too.
+Finally, I was genuinely surprised by the reframe around why to handle the tie first. I thought I was identifying it as a special case, but the feedback reframed it as a deliberate structural choice that simplifies the logic below it. That shift from "this is different" to "this makes everything else cleaner" changes how I'll think about ordering conditions in future problems.
 
 ##### !end-explanation
 ### !end-challenge
