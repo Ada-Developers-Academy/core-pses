@@ -156,7 +156,7 @@ Even if we make a decision about how to handle a particular issue here, the unit
 2. Write unit tests for `winner` for the nominal and edge cases you identified in the first step.
     
 When naming a test, we want to ensure the name describes the scenario we are testing by including information like the function being tested, inputs, and expected outputs. 
-* This may not seem useful here where we are only writing two tests, but building strong naming habits now will helps us once we're in production environments where a single function or component may have dozens of tests that we need to be able to quickly distinguish from each other.
+* This may not seem useful here where we are only writing two tests, but building strong naming habits now will benefit us once we're in production environments where a single function or component may have dozens of tests that we need to be able to quickly distinguish from each other.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 ##### !end-question
