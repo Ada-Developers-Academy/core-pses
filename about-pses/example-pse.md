@@ -343,7 +343,9 @@ In the box below, please submit:
 ##### !end-question
 ##### !explanation
 
-As an example, let’s say we used the sample response from the "Logical Steps" question above to fill in the prompt template. Depending on exactly what ChatGPT shares, a reflection and summary might look like:
+As an example, let’s say we used a slightly modified version of the sample response from the "Logical Steps" question above to fill in the prompt template. In this example, the only change is that we refer to checking for a tie as an "edge case" in the first step.
+
+Depending on exactly what ChatGPT shares, a reflection and summary might look like:
 
 <br>
 
