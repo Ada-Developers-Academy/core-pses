@@ -283,7 +283,7 @@ During an interview, we'd still want to be careful not to spend _too_ much time 
 <br>
 
 Example steps:
-1. First, we want to handle our edge case by checking for a tie: 
+1. First, we'll handle our simplest case which is checking for a tie: 
     - if `player_1` is the same as `player_2`, return "It's a tie!"
 2. If it is not a tie, we'll move through the cases where `player_1` is "rock", "paper", or "scissors" to determine a winner, starting with the case that player_1 is "rock":
     - if player_2 is "scissors", return "Player 1 wins!"
