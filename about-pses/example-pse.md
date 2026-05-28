@@ -58,13 +58,13 @@ As you come up with observations and questions, assume that error handling for i
 ##### !end-question
 ##### !placeholder
 
-Add observations, assuptions, and questions here:
+Add observations, assumptions, and questions here:
 
 1. From the problem description, I observe that...
-2. From the example inputs I can see...
+2. In the example inputs I can see...
 3. A question I have around inputs is...
-4. ...
-5. ...
+4. Based on the requirements, I am making the assumption...
+5. What behavior is expected when...
 
 ##### !end-placeholder
 ##### !hint
@@ -156,6 +156,8 @@ Even if we make a decision about how to handle a particular issue here, the unit
 2. Write unit tests for `winner` for the nominal and edge cases you identified in the first step.
     
 When naming a test, we want to ensure the name describes the scenario we are testing by including information like the function being tested, inputs, and expected outputs. 
+
+For example, if we wanted to test that the function `winner` returns a tie when `player_1` and `player_2` have the same value, then we might name the test something like `test_winner_returns_tie_for_players_with_same_value`.
 * This may not seem useful here where we are only writing two tests, but building strong naming habits now will benefit us once we're in production environments where a single function or component may have dozens of tests that we need to be able to quickly distinguish from each other.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
