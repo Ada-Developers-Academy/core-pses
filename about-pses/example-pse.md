@@ -156,8 +156,7 @@ Even if we make a decision about how to handle a particular issue here, the unit
 2. Write unit tests for `winner` for the nominal and edge cases you identified in the first step.
     
 When naming a test, we want to ensure the name describes the scenario we are testing by including information like the function being tested, inputs, and expected outputs. 
-
-For example, if we wanted to test that the function `winner` returns a tie when `player_1` and `player_2` have the same value, then we might name the test something like `test_winner_returns_tie_for_players_with_same_value`.
+* For example, if we wanted to test that the function `winner` returns a tie when `player_1` and `player_2` have the same value, then we might name the test something like `test_winner_both_inputs_paper_returns_tie`.
 * This may not seem useful here where we are only writing two tests, but building strong naming habits now will benefit us once we're in production environments where a single function or component may have dozens of tests that we need to be able to quickly distinguish from each other.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
@@ -287,15 +286,15 @@ During an interview, we'd still want to be careful not to spend _too_ much time 
 Example steps:
 1. First, we'll handle our simplest case which is checking for a tie: 
     - if `player_1` is the same as `player_2`, return "It's a tie!"
-2. If it is not a tie, we'll move through the cases where `player_1` is "rock", "paper", or "scissors" to determine a winner, starting with the case that player_1 is "rock":
-    - if player_2 is "scissors", return "Player 1 wins!"
-    - otherwise player_2 must be "paper", return "Player 2 wins!"
-3. Next we'll deal with the case that player_1 is "paper":
-    - if player_2 is "rock", return "Player 1 wins!"
-    - otherwise player_2 must be "scissors", return "Player 2 wins!"
-4. Otherwise player_1 must be "scissors":
-    - if player_2 is "rock", return "Player 2 wins!"
-    - otherwise player_2 must be "paper", return "Player 1 wins!" 
+2. If it is not a tie, we'll move through the cases where `player_1` is "rock", "paper", or "scissors" to determine a winner, starting with the case that `player_1` is "rock":
+    - if `player_2` is "scissors", return "Player 1 wins!"
+    - otherwise `player_2` must be "paper", return "Player 2 wins!"
+3. Next we'll deal with the case that `player_1` is "paper":
+    - if `player_2` is "rock", return "Player 1 wins!"
+    - otherwise `player_2` must be "scissors", return "Player 2 wins!"
+4. Otherwise `player_1` must be "scissors":
+    - if `player_2` is "rock", return "Player 2 wins!"
+    - otherwise `player_2` must be "paper", return "Player 1 wins!" 
 
 ##### !end-explanation
 ### !end-challenge
