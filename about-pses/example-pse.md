@@ -354,12 +354,17 @@ Depending on exactly what ChatGPT shares, a reflection and summary might look li
 <br>
 
 *Note:*
-
-*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
+Depending on exactly what the AI shares, a reflection and summary might look like:
 
 <br>
 
 Chat Link: [https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1](https://gist.github.com/ada-instructors/56c872acec770c68a9ae8b81b58a80a1)
+
+<br>
+
+*Note:*
+
+*We are using a gist link in this example to ensure that the link exists from cohort to cohort. When submitting your response, the link should be a shareable link to your chat in the AI tool where you held the conversation.*
 
 <br>
 
