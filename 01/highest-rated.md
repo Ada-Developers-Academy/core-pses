@@ -274,22 +274,31 @@ Example Steps:
 * topics: pse
 ##### !question
 
-We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
-- the steps make sense for the problem being solved
-- the steps are not missing important steps or scenarios
-- the steps are agnostic of any particular language – steps should not include code syntax.
-- the steps are written with enough detail for another developer to understand how to create a solution
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. While we build our skills in breaking down and describing algorithms, let’s use an AI tool like ChatGPT to review the Logical Steps we wrote above. Our goals are to check if the steps:
+- convey the technical concepts and requirements of the problem in a way that another person can understand
+- make sense for the problem being solved
+- are not missing important steps or scenarios
+- are agnostic of any particular language – the steps should not include code syntax.
 
 <br>
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
 2. Share the completed prompt with an AI tool like ChatGPT
-3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
-    - areas where we could add clarity
-    - edge cases we might have missed
-    - places where our steps do not meet the expectations of the problem statement
-4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+3. Reflect on the information shared by the AI tool, then use the prompts below to summarize its findings and your learnings.
+
+<br>
+
+Reflection Prompts
+
+1. Identify one specific strength the AI highlighted in your explanation. 
+    * Quote or paraphrase the part of the feedback that mentions this strength, and explain why you think that aspect of your explanation was effective.
+2. Point out at least one specific improvement the AI recommended.
+    * Describe exactly which part of your explanation would benefit from strengthening then outline how you would revise that part if you were rewriting it now.
+3. Identify one piece of AI feedback you believe was inaccurate, irrelevant, or unnecessary. 
+    * Explain why it doesn’t apply to this problem, and cite a source (docs, class notes, instructor explanation, or trusted online reference) that supports your reasoning.
+4. Describe one change the AI suggested that was new or surprised you. 
+    * Share how this suggestion shifted your understanding of the problem or your explanation.
 
 <br>
 
@@ -309,11 +318,19 @@ Chat Link: `<url to your conversation>`
 
 <br>
 
-The review said I broke the problem down into logical steps that correctly handle both regular and edge cases, like an empty list. It also confirmed that my plan makes sense and could be followed in any language, not just Python. It was suggested that I improve the clarity by explaining why each step matters, not just what to do. For example, I could mention that we check for an empty list because there would be nothing to rate, so returning `None` is appropriate. 
+The AI pointed out that handling the edge case first was "the right instinct." I think this worked well in my explanation because addressing the empty list scenario at the very start of my steps mirrors how the code itself should behave. It acts like a guard clause that prevents any of the later logic from running on bad input. Putting it first also makes the flow easier to follow, since a reader doesn't have to keep an empty-list exception in the back of their head while reading the rest of the steps.
 
 <br>
 
-My steps use the first item in the list as our starting highest item. The review mentioned that I should be clear what I'm looping over because of this, which made me curious why. I asked a follow up question and the response made me realize I should loop through the list starting from the second restaurant to avoid the redundancy of comparing the first item to itself. 
+The AI flagged that Step 2 was missing a "why." Looking back at what I wrote, "Set a variable `highest_rated` to the first element in `restaurants`", I can see that I described the action without explaining the reasoning behind it. If I were rewriting it, I'd say something like: "Set `highest_rated` to the first element in `restaurants` so that we have a valid restaurant dictionary as our starting benchmark. This way, every comparison in the loop is between two real restaurants, and we avoid needing extra logic to handle a placeholder value like `None`."
+
+<br>
+
+The AI suggested that starting my loop at index 1 instead of index 0 would be "cleaner," and implied this is an inefficiency I should address. I'd push back on this for our class context. For a junior-level problem with small lists, readability and simplicity outweigh micro-optimization, and my instructors have emphasized that clear, working code comes before optimization at this stage. Calling it an "inefficiency" sets an expectation that isn't really proportionate to the problem.
+
+<br>
+
+I hadn't thought deeply about the difference between initializing `highest_rated` to the first element versus something like `0` or `None`. This shifted how I think about what the variable is actually supposed to hold throughout the function. The AI explained that if I initialized to `0`, my comparison in the loop would be between a number and a dictionary, which would either cause an error or require extra conditional logic. That surprised me because I probably would have instinctively used `0` as a starting value since I was thinking about ratings as numbers; I wasn't thinking about the fact that I need to return the whole dictionary, not just the rating. 
 
 ##### !end-explanation
 ### !end-challenge

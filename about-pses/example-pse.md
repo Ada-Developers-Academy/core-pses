@@ -348,11 +348,6 @@ As an example, let’s say we used a slightly modified version of the sample res
 
 <br>
 
-Depending on exactly what ChatGPT shares, a reflection and summary might look like:
-
-<br>
-
-*Note:*
 Depending on exactly what the AI shares, a reflection and summary might look like:
 
 <br>
