@@ -50,7 +50,7 @@ As you come up with observations and questions, assume that error handling for i
 Add observations, assumptions, and questions here:
 
 Eg. from the sample PSE: 
-The function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
+I observe that the function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
     - Aside from checking if someone wins, I need to consider the edge case where the players could tie.
 
 ##### !end-placeholder
@@ -116,7 +116,7 @@ One of many possible responses could look like:
 2. Write unit tests for `get_highest_rated` for the nominal and edge cases you identified in the first step.
 
 When naming a test, we want to ensure the name describes the scenario we are testing by including information like the function being tested, inputs, and expected outputs. 
-* e.g. from the example PSE: if we wanted to test that the function winner returns a tie when player_1 and player_2 have the same value, then we might name the test something like `test_winner_both_inputs_paper_returns_tie`.
+* e.g. from the example PSE: if we wanted to test that the function winner returns a tie when `player_1` and `player_2` have the same value, then we might name the test something like `test_winner_both_inputs_paper_returns_tie`.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 ##### !end-question
