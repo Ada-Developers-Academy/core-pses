@@ -1,5 +1,7 @@
 # Instructor: Implement Hamming
 
+Noting that the examples in the initial prompt and implementation prompt differ. This is intentional to leave more room for students to ask about how certain scenarios could be handled.
+
 An example of a working implementation:
 
 ```python
