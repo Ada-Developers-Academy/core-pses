@@ -105,12 +105,12 @@ def check_palindrome(to_check):
 * topics: Big-O, Python, lists, matrices
 ##### !question
 
-What is the time complexity of your solution? Explain.
+What is the time complexity of your solution? Explain your reasoning. Focus on the major operations and/or contributors that determine the overall complexity. You do not need to analyze every individual line of code.
 
 ##### !end-question
 ##### !placeholder
 
-Time Complexity?
+The time complexity of my solution is linear O(n), where n is ...
 
 ##### !end-placeholder
 ##### !answer
@@ -130,12 +130,12 @@ Time Complexity?
 * topics: Big-O, Python, lists, matrices
 ##### !question
 
-What is the space complexity of your solution? Explain.
+What is the time complexity of your solution? Explain your reasoning. Focus on the major operations and/or contributors that determine the overall complexity. You do not need to analyze every individual line of code.
 
 ##### !end-question
 ##### !placeholder
 
-Space Complexity?
+The space complexity of my solution is linear O(n), where n is ...
 
 ##### !end-placeholder
 ### !end-challenge
