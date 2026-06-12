@@ -130,7 +130,7 @@ The time complexity of my solution is linear O(n), where n is ...
 * topics: Big-O, Python, lists, matrices
 ##### !question
 
-What is the time complexity of your solution? Explain your reasoning. Focus on the major operations and/or contributors that determine the overall complexity. You do not need to analyze every individual line of code.
+What is the space complexity of your solution? Explain your reasoning. Focus on the major operations and/or contributors that determine the overall complexity. You do not need to analyze every individual line of code.
 
 ##### !end-question
 ##### !placeholder
