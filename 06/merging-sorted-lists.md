@@ -311,7 +311,7 @@ One improvement the AI recommended was strengthening my explanation of _why_ com
 
 <br>
 
-One piece of feedback I found unnecessary was the suggestion to discuss the tie-breaking rule when the two current elements are equal. The AI noted that I could mention that choosing either list first would maintain sorted order and that doing so might demonstrate thoughtfulness. I do not think this detail is especially relevant for this problem because the problem statement only requires producing a correctly sorted merged list. It does not introduce additional requirements related to stability or preserving the relative ordering of duplicate values from different lists.
+One piece of feedback I _initially_ found unnecessary was the suggestion to discuss the tie-breaking rule when the two current elements are equal. The AI noted that I could mention that choosing either list first would maintain sorted order and that doing so might demonstrate thoughtfulness. Since we're working with whole numbers, it didn't seem like this really mattered for the problem at hand. However, after reflecting on this feedback, I realize, since that decision appears arbitrary, it would be worth mentioning that either choice is valid, and then think more about whether there are any implications of that choice. So the feedback seemed unnecessary at first because it didn't feel relevant to the core algorithm, but upon further reflection, I see that it could be an opportunity to demonstrate deeper understanding of the problem and the algorithm's behavior in edge cases.
 
 <br>
 
