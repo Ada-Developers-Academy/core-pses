@@ -116,14 +116,14 @@ One of many possible responses could look like:
 
 3. Does the board need to be full for someone to win?
     - This would affect how we need to check the board for a win since we would need to check all cells, not just for 3 matching `'X'`s or `'O'`s in a row. 
-    - This isn't explicitly described in the problem statment, but digging into the rules of tic tac toe, the game ends when the first person reaches 3 in a row, so there could be spots on the board that were not used.
+    - This isn't explicitly described in the problem statement, but digging into the rules of tic tac toe, the game ends when the first person reaches 3 in a row, so there could be spots on the board that were not used.
     - This is supported by example 3 where there is a diagonal `'X'` win with empty spots left on the board, so I will assume that boards do not need to be full for there to be a winner.
 
 4. What should the function return if two players have both won? For example: 3 `'O'`s across the top and 3 `'X'`s across the bottom row?
     - This scenario isn't captured in the problem statement or examples. In a standard game of tic tac toe, there can only be one winner and the game ends when the first person reaches 3 in a row, so I will assume boards can only have one winner and I will return the first winner found on the board. 
 
 5. Thinking about when we should return `None` or 'Tie' for a game still in progress, I only need to consider these states if a winner cannot be found. 
-    - The problem statment says to return `None` "for a game that is still in progress and has no winner", and to return 'Tie' for a board with no winner and no places left to make moves. Both of these scenarios depend on there being no winner on the board, which I will only know if I check for winners first. 
+    - The problem statement says to return `None` "for a game that is still in progress and has no winner", and to return 'Tie' for a board with no winner and no places left to make moves. Both of these scenarios depend on there being no winner on the board, which I will only know if I check for winners first. 
 
 ##### !end-explanation
 ### !end-challenge
