@@ -76,6 +76,15 @@ In the box below, list 5 or more observations about the problem or questions who
 As you come up with observations and questions, assume that error handling for invalid data is managed outside the function. We want to focus on the core behavior of the function we will write. 
 
 ##### !end-question
+##### !placeholder
+
+Add observations, assumptions, and questions here:
+
+Eg. from the sample PSE: 
+I observe that the function should return a string indicating the result of the game: "Player 1 wins!", "Player 2 wins!", or "It's a tie!"
+    - Aside from checking if someone wins, I need to consider the edge case where the players could tie.
+
+##### !end-placeholder
 ##### !hint
 
 Further questions to ask as you read through the problem statement and examples:
@@ -120,85 +129,6 @@ One of many possible responses could look like:
 
 <!-- prettier-ignore-start -->
 ### !challenge
-* type: paragraph
-* id: a3bd7eff-6c26-4e8b-b3db-210e433ebfd2
-* title: Review Observations & Questions
-* topics: pse
-##### !question
-
-While we build our skills in breaking down a problem and choosing clarifying questions, let’s use an external tool like ChatGPT to review the observations and questions we wrote while describing our understanding. 
-
-<br>
-
-Our goals are to: 
-- confirm if our observations and assumptions make sense in the context of the code problem
-- ensure we are asking questions that will tell us new information about the problem space
-- check our understanding of the information we expect to get from those questions
-- uncover other observations that would help shape our approach and understand how they would affect our approach
-- uncover further questions that could be useful to ask and understand why those other questions could be helpful
-
-<br>
-
-For this question we will:
-1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/16c97dc4b16ab2bf449d9d7a81caeb16/raw/pse_observations_questions_review_template.md)
-2. Share the completed prompt with an AI tool like ChatGPT
-3. After the initial review, ask the AI tool *at least one* follow up question that furthers your understanding of the problem and why certain observations or questions are useful. Some examples could be asking questions to: 
-    - ensure your understanding of the analysis of the observations
-    - get more details on the information we could get from asking particular questions
-    - learn more about new information shared by the tool
-4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
-
-<br>
-
-In the box below, please submit:
-1. A shareable link to your conversation in ChatGPT
-    - [Documentation for creating a shareable link in ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq)
-2. Your reflections and summary of the discussion with ChatGPT
-
-##### !end-question
-##### !hint
-
-**Troubleshooting**
-- If you are having issues with the tool understanding the prompt, try formatting the problem statement or examples differently.
-- If you’ve reformatted the information and are still not getting useful results, reach out in #study-hall and share what you are experiencing and the link to your chat so folks can take a look and help you troubleshoot!
-
-<br>
-
-**Summarizing the Review**
-- Did the AI tool uncover anything about the observations you made that you hadn’t considered?
-- Did the AI tool uncover anything about the questions you asked that you hadn’t considered?
-- Did the AI tool suggest updates to the observations you made or questions you asked? 
-    - If so, what updates and why?
-- Did the AI tool suggest any new observations or questions?
-    - If so, what? Why would they be useful?
-
-##### !end-hint
-##### !explanation 
-
-For an example of what a review response might look like, let’s say that we used the example response from the "Explanation" section of the previous question to complete the review prompt. 
-
-<br>
-
-Depending on exactly what ChatGPT shares, a reflection and summary might look like:
-
-<br>
-
-Chat link: `<url to your conversation>`
-
-<br>
-
-ChatGPT shared that asking about empty lists was called a smart edge-case question, and my assumption that the result should be `0` matched common practice. My point about negative prices was valid, since clarifying input constraints avoids misinterpretation. The reviewer suggested extra questions I could add, like what happens if there’s only one day of prices, whether days are guaranteed to be consecutive, or if transaction history matters.
-
-<br>
-
-The first couple suggestions for ChatGPT seem useful, but since the retun value is pretty explicit for this problem, clarifying the transaction history doesn't feel very applicable or helpful for this problem. I asked about why it's useful to clarify between the empty list and one element list cases and was told that simple cases like a one-day input can be worth clarifying, since it exposes implicit assumptions and distinguishes between the cases where there is no data and when there is not enough data. 
-
-##### !end-explanation
-### !end-challenge
-<!-- prettier-ignore-end -->
-
-<!-- prettier-ignore-start -->
-### !challenge
 * type: code-snippet
 * language: python3.6
 * id: 0f72eb75-455c-48ed-9868-337a32e2c86d
@@ -210,7 +140,11 @@ The first couple suggestions for ChatGPT seem useful, but since the retun value 
     * Consider at least one nominal and one edge case.
     * What is the expected output for the given input?
     * You can use the examples provided in the prompt, or other examples.
+    
 2. Write unit tests for `max_profit` for the nominal and edge cases you identified in the first step.
+
+When naming a test, we want to ensure the name describes the scenario we are testing by including information like the function being tested, inputs, and expected outputs. 
+* e.g. from the example PSE: if we wanted to test that the function winner returns a tie when `player_1` and `player_2` have the same value, then we might name the test something like `test_winner_both_inputs_paper_returns_tie`.
 
 *Note: Click the **Run Tests** button to save your tests for instructor feedback. No real tests are actually run again your unit tests.*
 
