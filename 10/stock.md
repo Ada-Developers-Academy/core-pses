@@ -322,13 +322,19 @@ Chat Link: `<url to your conversation>`
 
 <br>
 
-ChatGPT said my  accumulator initialization and explanation of profit opportunities were strong. Areas I could improve included: 
-- clarifying the loop boundaries to avoid accessing beyond the last day
-- explaining why adding profit only on increases captures the maximum strategy 
-- explicitly addressing edge cases like non-increasing or steadily rising prices
-- the Step 2 sub-points could be merged or clarified for better readability
+One strength the AI tool pointed out was that I clearly established an accumulator variable initialized to zero before beginning the loop. The feedback noted that starting with a defined baseline makes it easy for another developer to understand where the running total lives and ensures the function handles the case where no profitable trades are possible. I think this was effective because it shows that I was thinking about the initial state of the algorithm before describing the loop logic, which helps prevent confusion about where the profit value comes from.
 
-I asked for more information on clarifying the loop boundary and was told that it is particularly important to prevent out-of-range errors, ensure comparisons are valid, and handle arrays of length one properly. 
+<br>
+
+One improvement the AI recommended was being more explicit about the loop boundary. In my steps, I said to "loop over the input prices" and check if the value at the next index is greater than the current index, but I did not specify that the loop should stop before the last element. Because the comparison always looks one position ahead, iterating all the way to the last index would attempt to access a position that does not exist. If I were rewriting my steps, I would specify that the loop runs from the first index up to but not including the last index, so the next-day comparison is always valid.
+
+<br>
+
+One piece of feedback I believe was inaccurate was the suggestion that my steps did not address the edge case of a non-increasing price list. The feedback implied I needed an explicit step for this scenario. However, my steps already handle it implicitly: if the next value is never greater than the current value, the condition in step 2 is never true, the accumulator remains at zero, and zero is returned. Since the behavior is a natural consequence of the described logic rather than a gap, I think the AI was flagging something that does not require a separate step.
+
+<br>
+
+One suggestion that stood out to me was the recommendation to explain *why* capturing every individual upward move across consecutive days produces the maximum total profit, not just *that* we should do it. The AI noted that stating the comparison and profit-adding steps without the reasoning behind them could leave an interviewer uncertain whether I understood the strategy or was just pattern-matching. This shifted my thinking about interview communication because I realized that a roadmap step can be technically correct but still miss an opportunity to demonstrate understanding. If I were revising my explanation, I would add a note that summing every positive day-over-day difference is equivalent to finding the best overall buy-and-sell sequence, because holding through a rise and selling immediately then rebuying yields the same result as a single longer hold.
 
 ##### !end-explanation
 ### !end-challenge
