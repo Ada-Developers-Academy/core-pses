@@ -250,9 +250,9 @@ def test_max_profit_only_decreasing_prices_returns_0():
 * topics: pse
 ##### !question
 
-Without writing code, describe how you would implement `max_profit` in enough detail that another developer could reasonably implement a solution. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
-- The objective is to create a roadmap that we can use to keep ourselves oriented towards our goal
-- It is okay to leave some of the finer details to be worked out in the implementation itself!
+Without writing code, describe how you would implement `max_profit` as if you were talking through the details with another developer who will have to implement the function. We should capture the main use cases, but the steps do not need to be a detailed plan for every contingency. 
+* The objective is to practice describing algorithms and technical concepts while creating a roadmap that we can use to keep ourselves oriented towards our goal during the implementation step.
+* It is okay to leave some of the finer details to be worked out in the implementation itself!
 
 As you write your steps, keep the following guidelines in mind:
 * We want to think about a general approach rather than what the code would look like line-by-line. 
@@ -261,7 +261,7 @@ As you write your steps, keep the following guidelines in mind:
 * The steps should be a description as if you were talking out the problem with another person and should be agnostic of any particular language. 
     * As such, they should not include code syntax in the description.
 
-What's important at this stage is to think through and outline the implementation before writing code.
+What's important at this stage is to think through how you would put an approach into words, and outline the implementation before writing code.
 
 ##### !end-question
 ##### !placeholder
@@ -291,22 +291,18 @@ Example Steps:
 * topics: pse
 ##### !question
 
-We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. Let’s once more use an AI tool like ChatGPT, this time to review the Logical Steps we wrote above. Our goals are to check if:
-- the steps make sense for the problem being solved
-- the steps are not missing important steps or scenarios
-- the steps are agnostic of any particular language – steps should not include code syntax.
-- the steps are written with enough detail for another developer to understand how to create a solution
+We want to know if we are laying out an approach to the coding problem that makes sense for our context and if that approach is clearly conveying our thoughts on technical topics to others. While we build our skills in breaking down and describing algorithms, let’s an AI tool like ChatGPT to review the Logical Steps we wrote above. Our goals are to check if the steps:
+- convey the technical concepts and requirements of the problem in a way that another person can understand
+- make sense of the problem being solved
+- are not missing important steps or scenarios
+- are agnostic of any particular language - the steps should not include code syntax 
 
 <br>
 
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
 2. Share the completed prompt with an AI tool like ChatGPT
-3. After the initial review, ask *at least one* follow up question using the AI tool. We want to ask questions that help us understand: 
-    - areas where we could add clarity
-    - edge cases we might have missed
-    - places where our steps do not meet the expectations of the problem statement
-4. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+3. Reflect on the information shared by the AI tool and summarize its findings and your learnings
 
 <br>
 
