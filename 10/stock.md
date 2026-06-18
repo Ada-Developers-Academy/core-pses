@@ -302,7 +302,20 @@ We want to know if we are laying out an approach to the coding problem that make
 For this question we will:
 1. Build a prompt using [the template linked here](https://gist.githubusercontent.com/ada-instructors/670252696f1625cf0ed77c0997cd165d/raw/pse_logical_steps_review_template.md)
 2. Share the completed prompt with an AI tool like ChatGPT
-3. Reflect on the information shared by the AI tool and summarize its findings and your learnings
+3. Reflect on the information shared by the AI tool, then use the prompts below to summarize its findings and your learnings.
+
+<br>
+
+Reflection Prompts
+
+1. Identify one specific strength the AI highlighted in your explanation. 
+    * Quote or paraphrase the part of the feedback that mentions this strength, and explain why you think that aspect of your explanation was effective.
+2. Point out at least one specific improvement the AI recommended.
+    * Describe exactly which part of your explanation would benefit from strengthening then outline how you would revise that part if you were rewriting it now.
+3. Identify one piece of AI feedback you believe was inaccurate, irrelevant, or unnecessary. 
+    * Explain why it doesn’t apply to this problem, and cite a source (docs, class notes, instructor explanation, or trusted online reference) that supports your reasoning.
+4. Describe one change the AI suggested that was new or surprised you. 
+    * Share how this suggestion shifted your understanding of the problem or your explanation.
 
 <br>
 
