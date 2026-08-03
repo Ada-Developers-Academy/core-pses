@@ -1,4 +1,4 @@
-# Activity: Example PSE
+# (Optional) Activity: Example PSE
 
 ## Problem Statement
 
@@ -29,6 +29,12 @@ Create a function named `winner` that takes two arguments, the move for `player_
 
 ## Prompts
 
+### !callout-info
+## Seeing Explanations & Example Responses
+
+For challenges associated with the problem solving exercises, there will be some information, like explanations and example responses, that you will only see *after* you have submitted a response. To see that information here in the example PSE, you can submit string of text into a challenge's submission box to have the explanations and example responses appear. 
+
+### !end-callout
 <!-- prettier-ignore-start -->
 ### !challenge
 * type: paragraph
